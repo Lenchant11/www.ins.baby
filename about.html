@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Social Growth Academy</title>
+    <meta name="description" content="Learn about Social Growth Academy - Our mission, team, and approach to social media growth.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #4ECDC4;
+            --accent: #FF6B6B;
+            --dark: #121212;
+            --darker: #0A0A0A;
+            --light: #F7F9FC;
+            --gray: #8C8C8C;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--darker);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-cta {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--light);
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .lang-options {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--darker);
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: none;
+            z-index: 1001;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-options.show {
+            display: block;
+        }
+
+        .lang-option {
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lang-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-option.active {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 80px;
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(108, 99, 255, 0.15);
+            color: var(--secondary);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(78, 205, 196, 0.2);
+        }
+
+        .hero-title {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .content-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .content-subtitle {
+            font-size: 16px;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .about-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .about-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-content {
+            color: var(--gray);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+        }
+
+        .about-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .about-content li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .about-content li:before {
+            content: "•";
+            color: var(--secondary);
+            position: absolute;
+            left: -10px;
+        }
+
+        .highlight-box {
+            background: rgba(108, 99, 255, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 80px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .team-member:hover {
+            transform: translateY(-8px);
+            border-color: rgba(108, 99, 255, 0.3);
+        }
+
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+        }
+
+        .member-name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .member-role {
+            color: var(--secondary);
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .member-bio {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(78, 205, 196, 0.2);
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+            color: white;
+        }
+
+        .value-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .value-description {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--gray);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 20px;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cta-subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 15px;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-about {
+            color: var(--gray);
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link-footer {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 16px;
+        }
+
+        .social-link-footer:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-heading {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .team-grid, .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+            
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            
+            .content-card {
+                padding: 25px;
+            }
+            
+            .about-title {
+                font-size: 20px;
+            }
+            
+            .team-grid, .values-grid, .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .content-title {
+                font-size: 26px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">SG</div>
+                    <div class="logo-text">SocialGrowth</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-cn="首页">Home</a></li>
+                        <li><a href="index.html#benefits" data-en="Benefits" data-cn="核心优势">Benefits</a></li>
+                        <li><a href="index.html#methods" data-en="Methods" data-cn="方法策略">Methods</a></li>
+                        <li><a href="index.html#contact" class="nav-cta" data-en="Get Strategy" data-cn="获取策略">Get Strategy</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-options">
+                        <div class="lang-option active" data-lang="en">
+                            <i class="fas fa-check"></i>
+                            English
+                        </div>
+                        <div class="lang-option" data-lang="cn">
+                            简体中文
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge" data-en="Our Story" data-cn="我们的故事">Our Story</span>
+            <h1 class="hero-title" data-en="About Social Growth Academy" data-cn="关于Social Growth Academy">About Social Growth Academy</h1>
+            <p class="hero-subtitle" data-en="We're on a mission to democratize social media growth, helping creators and businesses unlock their full potential through ethical, algorithm-friendly strategies." data-cn="我们的使命是普及社交媒体增长，通过道德、算法友好的策略帮助创作者和企业释放他们的全部潜力。">We're on a mission to democratize social media growth, helping creators and businesses unlock their full potential through ethical, algorithm-friendly strategies.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-card">
+                <div class="content-header">
+                    <h2 class="content-title" data-en="Our Mission & Vision" data-cn="我们的使命与愿景">Our Mission & Vision</h2>
+                    <p class="content-subtitle" data-en="Learn about what drives us and where we're headed in the ever-evolving world of social media." data-cn="了解在不断发展的社交媒体世界中，是什么驱动着我们以及我们将走向何方。">Learn about what drives us and where we're headed in the ever-evolving world of social media.</p>
+                </div>
+
+                <div class="about-section">
+                    <h3 class="about-title"><i class="fas fa-bullseye"></i> <span data-en="Our Mission" data-cn="我们的使命">Our Mission</span></h3>
+                    <div class="about-content">
+                        <p data-en="At Social Growth Academy, our mission is to empower creators, influencers, and businesses with the knowledge and tools needed to thrive in the digital landscape. We believe that everyone deserves the opportunity to build a meaningful online presence without compromising their values or security." data-cn="在Social Growth Academy，我们的使命是赋予创作者、影响者和企业在数字环境中蓬勃发展所需的知识和工具。我们相信每个人都应该有机会在不损害其价值观或安全的情况下建立有意义的在线存在。">At Social Growth Academy, our mission is to empower creators, influencers, and businesses with the knowledge and tools needed to thrive in the digital landscape. We believe that everyone deserves the opportunity to build a meaningful online presence without compromising their values or security.</p>
+                        <p data-en="We're committed to providing ethical growth strategies that respect platform guidelines while delivering tangible results for our clients." data-cn="我们致力于提供尊重平台指南的道德增长策略，同时为我们的客户提供切实的成果。">We're committed to providing ethical growth strategies that respect platform guidelines while delivering tangible results for our clients.</p>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h3 class="about-title"><i class="fas fa-eye"></i> <span data-en="Our Vision" data-cn="我们的愿景">Our Vision</span></h3>
+                    <div class="about-content">
+                        <p data-en="We envision a world where social media success is accessible to all, not just those with large budgets or insider knowledge. Our vision is to become the most trusted resource for sustainable social media growth, known for our integrity, innovation, and commitment to client success." data-cn="我们设想一个社交媒体成功对所有人开放的世界，而不仅仅是那些拥有大预算或内部知识的人。我们的愿景是成为可持续社交媒体增长最受信任的资源，以我们的诚信、创新和对客户成功的承诺而闻名。">We envision a world where social media success is accessible to all, not just those with large budgets or insider knowledge. Our vision is to become the most trusted resource for sustainable social media growth, known for our integrity, innovation, and commitment to client success.</p>
+                        <div class="highlight-box">
+                            <p data-en="<strong>Core Belief:</strong> We believe that authentic growth comes from understanding platform algorithms and creating value for your audience, not from shortcuts or questionable practices." data-cn="<strong>核心理念：</strong>我们相信真正的增长来自于理解平台算法并为您的受众创造价值，而不是来自于捷径或有问题的做法。"><strong>Core Belief:</strong> We believe that authentic growth comes from understanding platform algorithms and creating value for your audience, not from shortcuts or questionable practices.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h3 class="about-title"><i class="fas fa-history"></i> <span data-en="Our Story" data-cn="我们的故事">Our Story</span></h3>
+                    <div class="about-content">
+                        <p data-en="Founded in 2020, Social Growth Academy emerged from a simple observation: while social media platforms were becoming increasingly important for personal and business growth, most people were struggling to understand how to effectively grow their presence." data-cn="Social Growth Academy成立于2020年，源于一个简单的观察：虽然社交媒体平台对个人和业务增长变得越来越重要，但大多数人都在努力理解如何有效地增长他们的存在感。">Founded in 2020, Social Growth Academy emerged from a simple observation: while social media platforms were becoming increasingly important for personal and business growth, most people were struggling to understand how to effectively grow their presence.</p>
+                        <p data-en="Our founders, experienced digital marketers and content creators themselves, recognized that the available solutions were either too technical, too expensive, or relied on practices that put accounts at risk. They set out to create a better way - one that combined deep platform knowledge with practical, actionable strategies." data-cn="我们的创始人本身就是经验丰富的数字营销人员和内容创作者，他们认识到现有的解决方案要么过于技术化，要么过于昂贵，要么依赖于使账户面临风险的做法。他们着手创造一种更好的方式——一种将深厚的平台知识与实用、可操作的策略相结合的方式。">Our founders, experienced digital marketers and content creators themselves, recognized that the available solutions were either too technical, too expensive, or relied on practices that put accounts at risk. They set out to create a better way - one that combined deep platform knowledge with practical, actionable strategies.</p>
+                        <p data-en="Today, we've helped over 5,000 clients across 45 countries grow their social media presence, always staying true to our commitment to ethical, sustainable growth methods." data-cn="今天，我们已经帮助来自45个国家的5,000多名客户增长他们的社交媒体存在感，始终忠于我们对道德、可持续增长方法的承诺。">Today, we've helped over 5,000 clients across 45 countries grow their social media presence, always staying true to our commitment to ethical, sustainable growth methods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="content-title" data-en="Meet Our Team" data-cn="认识我们的团队">Meet Our Team</h2>
+                <p class="content-subtitle" data-en="The passionate experts behind Social Growth Academy's success" data-cn="Social Growth Academy成功背后的热情专家">The passionate experts behind Social Growth Academy's success</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Alex Johnson</h3>
+                    <p class="member-role" data-en="CEO & Founder" data-cn="首席执行官兼创始人">CEO & Founder</p>
+                    <p class="member-bio" data-en="Former growth lead at a major social media platform, Alex brings 8+ years of algorithm expertise and digital strategy experience." data-cn="前主要社交媒体平台的增长负责人，Alex带来了8年以上的算法专业知识和数字战略经验。">Former growth lead at a major social media platform, Alex brings 8+ years of algorithm expertise and digital strategy experience.</p>
+                    <div class="member-social">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Maria Rodriguez</h3>
+                    <p class="member-role" data-en="Head of Strategy" data-cn="战略负责人">Head of Strategy</p>
+                    <p class="member-bio" data-en="Maria specializes in content strategy and audience development, with a background in psychology and behavioral analysis." data-cn="Maria专注于内容策略和受众发展，拥有心理学和行为分析背景。">Maria specializes in content strategy and audience development, with a background in psychology and behavioral analysis.</p>
+                    <div class="member-social">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">James Wilson</h3>
+                    <p class="member-role" data-en="Technical Director" data-cn="技术总监">Technical Director</p>
+                    <p class="member-bio" data-en="James leads our technology development, ensuring our tools remain cutting-edge while maintaining the highest security standards." data-cn="James领导我们的技术开发，确保我们的工具保持前沿，同时维持最高的安全标准。">James leads our technology development, ensuring our tools remain cutting-edge while maintaining the highest security standards.</p>
+                    <div class="member-social">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="content-title" data-en="Our Values" data-cn="我们的价值观">Our Values</h2>
+                <p class="content-subtitle" data-en="The principles that guide everything we do" data-cn">指导我们一切工作的原则">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="value-title" data-en="Security First" data-cn="安全第一">Security First</h3>
+                    <p class="value-description" data-en="We never ask for passwords and prioritize account safety in all our methods and tools." data-cn="我们从不要求密码，并在所有方法和工具中优先考虑账户安全。">We never ask for passwords and prioritize account safety in all our methods and tools.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="value-title" data-en="Sustainable Growth" data-cn="可持续增长">Sustainable Growth</h3>
+                    <p class="value-description" data-en="We focus on long-term strategies that build genuine engagement and lasting presence." data-cn="我们专注于建立真正互动和持久存在的长期策略。">We focus on long-term strategies that build genuine engagement and lasting presence.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="value-title" data-en="Education Focused" data-cn="以教育为中心">Education Focused</h3>
+                    <p class="value-description" data-en="We empower our clients with knowledge, not just tools, so they can continue growing independently." data-cn="我们不仅提供工具，还通过知识赋予客户力量，使他们能够独立持续增长。">We empower our clients with knowledge, not just tools, so they can continue growing independently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="content-header">
+                <h2 class="content-title" data-en="By The Numbers" data-cn="数据统计">By The Numbers</h2>
+                <p class="content-subtitle" data-en="Our impact and reach across the globe" data-cn="我们在全球的影响力和覆盖范围">Our impact and reach across the globe</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">5,000+</span>
+                    <span class="stat-label" data-en="Clients Served" data-cn="服务客户">Clients Served</span>
+                </div>
+                
+                <div class="stat-card">
+                    <span class="stat-number">45</span>
+                    <span class="stat-label" data-en="Countries" data-cn="国家">Countries</span>
+                </div>
+                
+                <div class="stat-card">
+                    <span class="stat-number">94%</span>
+                    <span class="stat-label" data-en="Success Rate" data-cn="成功率">Success Rate</span>
+                </div>
+                
+                <div class="stat-card">
+                    <span class="stat-number">3M+</span>
+                    <span class="stat-label" data-en="Followers Gained" data-cn="获得粉丝">Followers Gained</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title" data-en="Ready to Grow With Us?" data-cn="准备好与我们一同成长了吗？">Ready to Grow With Us?</h2>
+            <p class="cta-subtitle" data-en="Join thousands of creators and businesses who have transformed their social media presence with our proven strategies." data-cn="加入数千名使用我们经过验证的策略改变了社交媒体存在感的创作者和企业。">Join thousands of creators and businesses who have transformed their social media presence with our proven strategies.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" data-en="Start Your Journey" data-cn="开始您的旅程">Start Your Journey</button>
+                <button class="btn btn-secondary" data-en="Book Consultation" data-cn="预约咨询">Book Consultation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">SocialGrowth</div>
+                    <p class="footer-about" data-en="Professional social media growth strategies that deliver sustainable results. We help creators and businesses unlock platform algorithms to increase exposure, followers, and qualified leads." data-cn="专业的社交媒体增长策略，提供可持续成果。我们帮助创作者和企业解锁平台算法，增加曝光、粉丝和合格潜在客户。">Professional social media growth strategies that deliver sustainable results. We help creators and businesses unlock platform algorithms to increase exposure, followers, and qualified leads.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link-footer"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link-footer"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-footer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link-footer"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-heading" data-en="Quick Links" data-cn="快速链接">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-en="Home" data-cn="首页">Home</a></li>
+                        <li><a href="index.html#benefits" data-en="Benefits" data-cn="核心优势">Benefits</a></li>
+                        <li><a href="index.html#methods" data-en="Our Methods" data-cn="方法策略">Our Methods</a></li>
+                        <li><a href="index.html#contact" data-en="Consultation" data-cn="咨询">Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-heading" data-en="Resources" data-cn="资源">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" data-en="Privacy Policy" data-cn="隐私政策">Privacy Policy</a></li>
+                        <li><a href="uersterms.html" data-en="User Guides" data-cn="用户需知">User Guides</a></li>
+                        <li><a href="aboutus.html" data-en="About Us" data-cn="关于我们">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-heading" data-en="Contact" data-cn="联系我们">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@bmx7.top">support@iusd.baby</a></li>
+                        <li><a href="tel:+11234567890">+1 (123) 456-7890</a></li>
+                        <li data-en="New York, NY" data-cn="纽约">New York, NY</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 SocialGrowth Academy. <span data-en="All rights reserved." data-cn="保留所有权利。">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language management
+        let currentLang = 'en';
+
+        // Detect user language preference
+        function detectUserLanguage() {
+            // Check browser language
+            const browserLang = navigator.language || navigator.userLanguage;
+            if (browserLang.startsWith('zh')) {
+                return 'cn';
+            }
+            
+            // In a real implementation, you would also check IP location here
+            // For demo purposes, we'll use browser language only
+            
+            return 'en';
+        }
+
+        // Switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-en], [data-cn]').forEach(element => {
+                if (element.hasAttribute(`data-${lang}`)) {
+                    const text = element.getAttribute(`data-${lang}`);
+                    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
+                        element.setAttribute('placeholder', text);
+                    } else if (element.tagName === 'OPTION') {
+                        element.textContent = text;
+                    } else {
+                        element.innerHTML = text;
+                    }
+                }
+            });
+            
+            // Update current language indicator
+            document.getElementById('current-lang').textContent = lang === 'en' ? 'EN' : '中文';
+            
+            // Update active language option
+            document.querySelectorAll('.lang-option').forEach(option => {
+                if (option.getAttribute('data-lang') === lang) {
+                    option.classList.add('active');
+                } else {
+                    option.classList.remove('active');
+                }
+            });
+            
+            // Store language preference
+            localStorage.setItem('preferredLang', lang);
+        }
+
+        // Initialize language based on detection
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for stored preference first
+            const storedLang = localStorage.getItem('preferredLang');
+            if (storedLang) {
+                currentLang = storedLang;
+            } else {
+                // Auto-detect language
+                currentLang = detectUserLanguage();
+            }
+            
+            // Apply language
+            switchLanguage(currentLang);
+            
+            // Language switcher functionality
+            document.querySelector('.lang-btn').addEventListener('click', function() {
+                document.querySelector('.lang-options').classList.toggle('show');
+            });
+            
+            document.querySelectorAll('.lang-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    switchLanguage(lang);
+                    document.querySelector('.lang-options').classList.remove('show');
+                });
+            });
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.lang-switcher')) {
+                    document.querySelector('.lang-options').classList.remove('show');
+                }
+            });
+
+            // Scroll animations
+            const fadeElems = document.querySelectorAll('.about-section, .team-member, .value-card, .stat-card');
+            
+            const fadeInOnScroll = function() {
+                for (let i = 0; i < fadeElems.length; i++) {
+                    const elem = fadeElems[i];
+                    const distInView = elem.getBoundingClientRect().top - window.innerHeight + 100;
+                    if (distInView < 0) {
+                        elem.style.opacity = 1;
+                        elem.style.transform = 'translateY(0)';
+                    }
+                }
+            };
+            
+            // Initialize element states
+            for (let i = 0; i < fadeElems.length; i++) {
+                fadeElems[i].style.opacity = 0;
+                fadeElems[i].style.transform = 'translateY(20px)';
+                fadeElems[i].style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            }
+            
+            window.addEventListener('scroll', fadeInOnScroll);
+            fadeInOnScroll();
+            
+            // Button click handlers
+            document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    window.location.href = 'index.html#contact';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
