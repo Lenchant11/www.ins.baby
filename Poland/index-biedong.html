@@ -1,1 +1,1555 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profesjonalne Prace Wirtualne w Polsce | Kariera w Sieci</title>
+  <meta name="description" content="Rozpocznij karierę wirtualną w Polsce. Elastyczna praca online z regularnymi zarobkami. Bez żadnych inwestycji początkowych." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17524155246"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17524155246');
+    
+    // Enhanced conversion reporting function
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          setTimeout(function() {
+            window.location = url;
+          }, 300);
+        }
+      };
+      
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17524155246/4XToCKb08M0bEO7GlaRB',
+        'event_callback': callback,
+        'value': 3.5,
+        'currency': 'USD'
+      });
+      
+      gtag('event', 'generate_lead', {
+        'currency': 'USD',
+        'value': 3.5
+      });
+      
+      return false;
+    }
+  </script>
+  
+  <style>
+    :root {
+      --primary-dark: #1a365d;
+      --primary-main: #2d4a8c;
+      --primary-light: #4a6bc5;
+      --accent: #00a8a8;
+      --accent-light: #4dd0d0;
+      --success: #27ae60;
+      --warning: #f39c12;
+      --error: #e74c3c;
+      --gray-900: #1a202c;
+      --gray-700: #4a5568;
+      --gray-500: #718096;
+      --gray-300: #cbd5e0;
+      --gray-100: #f7fafc;
+      --white: #ffffff;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--gray-900);
+      background: linear-gradient(135deg, #f8fafd 0%, #f0f7ff 100%);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--primary-dark);
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Navigation */
+    .main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(45, 74, 140, 0.1);
+      box-shadow: var(--shadow-sm);
+      padding: 16px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: var(--primary-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-icon {
+      color: var(--accent);
+      font-size: 1.5rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-main);
+    }
+
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--primary-main), var(--primary-dark));
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: var(--radius-md);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, var(--primary-light), var(--primary-main));
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 160px 0 80px;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafd 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(45, 74, 140, 0.05) 0%, rgba(0, 168, 168, 0.05) 100%);
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(0, 168, 168, 0.1);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      border: 1px solid rgba(0, 168, 168, 0.2);
+    }
+
+    .hero-title {
+      font-size: 3.2rem;
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+      position: relative;
+    }
+
+    .hero-title span:after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: rgba(0, 168, 168, 0.2);
+      z-index: -1;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: var(--gray-700);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .features-list {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gray-700);
+    }
+
+    .feature-icon {
+      color: var(--success);
+      font-size: 1.2rem;
+    }
+
+    /* Application Form */
+    .application-form-container {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(45, 74, 140, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-header {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .form-title {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+
+    .form-subtitle {
+      color: var(--gray-500);
+      font-size: 0.95rem;
+    }
+
+    .form-step {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      justify-content: center;
+    }
+
+    .step-dot {
+      width: 32px;
+      height: 6px;
+      background: var(--gray-300);
+      border-radius: 3px;
+      transition: var(--transition);
+    }
+
+    .step-dot.active {
+      background: var(--accent);
+      transform: scaleX(1.2);
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--gray-700);
+      font-size: 0.95rem;
+    }
+
+    .required {
+      color: var(--error);
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      transition: var(--transition);
+      background: white;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0, 168, 168, 0.1);
+    }
+
+    .phone-group {
+      display: flex;
+    }
+
+    .country-code {
+      flex: 0 0 80px;
+      background: var(--gray-100);
+      border: 2px solid var(--gray-300);
+      border-right: none;
+      border-radius: var(--radius-md) 0 0 var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-700);
+      font-weight: 500;
+    }
+
+    .phone-input {
+      flex: 1;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .checkbox-input {
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+    }
+
+    .checkbox-label {
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+
+    .checkbox-label a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .checkbox-label a:hover {
+      text-decoration: underline;
+    }
+
+    .form-button {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      color: white;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 8px;
+    }
+
+    .form-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, var(--accent-light), var(--accent));
+    }
+
+    .security-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      padding: 12px;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      color: var(--gray-600);
+    }
+
+    .security-icon {
+      color: var(--success);
+      font-size: 1.2rem;
+    }
+
+    /* Opportunities Section */
+    .opportunities-section {
+      padding: 100px 0;
+      background: white;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--gray-700);
+      line-height: 1.7;
+    }
+
+    .opportunities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: 60px;
+    }
+
+    .opportunity-card {
+      background: white;
+      border: 1px solid rgba(45, 74, 140, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .opportunity-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, var(--primary-main), var(--accent));
+    }
+
+    .opportunity-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .earning-badge {
+      display: inline-block;
+      background: rgba(39, 174, 96, 0.1);
+      color: var(--success);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      border: 1px solid rgba(39, 174, 96, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .card-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .card-list {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .card-list li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 28px;
+      color: var(--gray-700);
+    }
+
+    .card-list li:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      font-style: italic;
+      margin-top: 20px;
+      border-top: 1px solid var(--gray-300);
+      padding-top: 16px;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #f8fafd 0%, #ffffff 100%);
+    }
+
+    .benefits-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .benefits-image {
+      height: 500px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--primary-main), var(--accent));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .benefits-image:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      opacity: 0.2;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .benefit-item {
+      background: white;
+      padding: 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(45, 74, 140, 0.1);
+      transition: var(--transition);
+    }
+
+    .benefit-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .benefit-icon {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .benefit-title {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .benefit-description {
+      color: var(--gray-700);
+      font-size: 0.95rem;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      padding: 100px 0;
+      background: white;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .testimonial-card {
+      background: white;
+      border: 1px solid rgba(45, 74, 140, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--gray-700);
+      margin-bottom: 24px;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    .testimonial-text:before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      font-size: 3rem;
+      color: rgba(0, 168, 168, 0.1);
+      font-family: serif;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary-main), var(--accent));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .author-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .author-name {
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+
+    .author-location {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #f8fafd 0%, #ffffff 100%);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 16px;
+      border: 1px solid rgba(45, 74, 140, 0.1);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: white;
+    }
+
+    .faq-question {
+      padding: 24px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--primary-dark);
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      background: var(--gray-100);
+    }
+
+    .faq-icon {
+      color: var(--accent);
+      transition: var(--transition);
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 24px 24px;
+      color: var(--gray-700);
+      line-height: 1.7;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      padding: 100px 0;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-main));
+      color: white;
+      text-align: center;
+    }
+
+    .cta-title {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .cta-description {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      opacity: 0.9;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button-light {
+      background: white;
+      color: var(--primary-dark);
+      padding: 18px 40px;
+      font-size: 1.1rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      display: inline-block;
+      transition: var(--transition);
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cta-button-light:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      background: var(--gray-100);
+    }
+
+    /* Footer */
+    .main-footer {
+      background: var(--primary-dark);
+      color: white;
+      padding: 60px 0 30px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 60px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .footer-text {
+      opacity: 0.8;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      max-width: 400px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-link {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-link:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      text-align: center;
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    /* Modal Styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(26, 54, 93, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--gray-500);
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .modal-close:hover {
+      background: var(--gray-100);
+      color: var(--gray-700);
+    }
+
+    .modal-title {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: var(--primary-dark);
+    }
+
+    .modal-message {
+      color: var(--gray-700);
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .hero-content,
+      .benefits-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-background {
+        display: none;
+      }
+
+      .opportunities-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .cta-title {
+        font-size: 2.2rem;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .application-form-container {
+        padding: 30px 20px;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .hero-section {
+        padding: 140px 0 60px;
+      }
+
+      .opportunities-section,
+      .benefits-section,
+      .testimonials-section,
+      .faq-section,
+      .final-cta {
+        padding: 60px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .cta-title {
+        font-size: 1.8rem;
+      }
+
+      .application-form-container {
+        padding: 24px 16px;
+      }
+
+      .opportunity-card {
+        padding: 24px;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">📱</span>
+        VirtualCareer<span style="color: var(--accent);">PL</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="#opportunities" class="nav-link">Oferty</a>
+        <a href="#benefits" class="nav-link">Zalety</a>
+        <a href="#testimonials" class="nav-link">Opinie</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#apply" class="cta-button" id="openFormBtn">Rozpocznij Teraz</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="top">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text animate-fade-in">
+          <span class="badge">NOWA FORMA PRACY W POLSCE</span>
+          <h1 class="hero-title">
+            Rozpocznij <span>Karierę Wirtualną</span> w Domowym Zaciszu
+          </h1>
+          <p class="hero-description">
+            Dołącz do elitarnej grupy specjalistów, którzy przekształcili swoje umiejętności w stałe źródło dochodu online. 
+            Działamy wyłącznie na terenie Polski, zapewniając lokalne wsparcie i regularne wypłaty.
+          </p>
+          
+          <div class="features-list">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Elastyczne godziny pracy - dostosuj do swojego stylu życia</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Zero inwestycji - nie wymagamy żadnych opłat startowych</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Profesjonalne wsparcie - polski zespół dostępny 24/7</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Regularne wypłaty - przelewy w ciągu 24 godzin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Application Form -->
+        <div class="application-form-container animate-fade-in delay-1">
+          <div class="form-header">
+            <h2 class="form-title">Zarejestruj Się Na Prezentację</h2>
+            <p class="form-subtitle">Otrzymaj pełen dostęp do platformy i rozmowę z konsultantem</p>
+          </div>
+
+          <div class="form-step">
+            <div class="step-dot active"></div>
+            <div class="step-dot"></div>
+            <div class="step-dot"></div>
+          </div>
+
+          <form id="applicationForm" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">
+                Imię i Nazwisko <span class="required">*</span>
+              </label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Jakub Nowak" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">
+                Numer WhatsApp <span class="required">*</span>
+              </label>
+              <div class="phone-group">
+                <div class="country-code">
+                  <img src="https://flagcdn.com/w20/pl.png" alt="PL" width="20" height="15" style="margin-right: 8px;">
+                  +48
+                </div>
+                <input type="tel" id="phone" name="phone" class="form-input phone-input" placeholder="123 456 789" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="age" class="form-label">
+                Wiek <span class="required">*</span>
+              </label>
+              <input type="number" id="age" name="age" class="form-input" placeholder="25" min="18" max="99" required>
+            </div>
+
+            <div class="form-group">
+              <div class="checkbox-group">
+                <input type="checkbox" id="consent" name="consent" class="checkbox-input" required checked>
+                <label for="consent" class="checkbox-label">
+                  Oświadczam, że zapoznałem/am się z 
+                  <a href="privacy.html">Polityką Prywatności</a> oraz 
+                  <a href="terms.html">Regulaminem Serwisu</a> i akceptuję ich postanowienia.
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="form-button">
+              Rozpocznij Rejestrację
+            </button>
+
+            <div class="security-badge">
+              <span class="security-icon">🔒</span>
+              <span>Gwarantujemy pełną ochronę danych osobowych</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opportunities Section -->
+  <section class="opportunities-section" id="opportunities">
+    <div class="container">
+      <div class="section-header animate-fade-in">
+        <h2 class="section-title">Wybierz Formę Współpracy</h2>
+        <p class="section-subtitle">
+          Dostosuj intensywność pracy do swoich potrzeb i możliwości. 
+          Każda z opcji zapewnia pełne wsparcie i regularne wynagrodzenie.
+        </p>
+      </div>
+
+      <div class="opportunities-grid">
+        <div class="opportunity-card animate-fade-in">
+          <span class="earning-badge">ZAROBKI: 1 500 - 3 000 ZŁ / MIESIĄC</span>
+          <h3 class="card-title">Współpraca Elastyczna</h3>
+          <ul class="card-list">
+            <li>Praca 2-4 godziny dziennie, według Twojego grafiku</li>
+            <li>Zadania dostosowane do codziennych obowiązków</li>
+            <li>Minimum zaangażowania, maksimum swobody</li>
+            <li>Idealne dla studentów i osób aktywnych zawodowo</li>
+            <li>Natychmiastowe wypłaty po wykonaniu zadań</li>
+          </ul>
+          <a href="#apply" class="cta-button open-form-btn" style="width: 100%; text-align: center;">
+            Wybierz Tę Opcję
+          </a>
+          <p class="disclaimer">
+            Przedstawione zarobki są wartościami orientacyjnymi na podstawie danych historycznych. 
+            Ostateczne wynagrodzenie zależy od zaangażowania i dostępności zadań.
+          </p>
+        </div>
+
+        <div class="opportunity-card animate-fade-in delay-1">
+          <span class="earning-badge">ZAROBKI: 3 000+ ZŁ / MIESIĄC</span>
+          <h3 class="card-title">Współpraca Intensywna</h3>
+          <ul class="card-list">
+            <li>Praca 4-6 godzin dziennie, stały dochód</li>
+            <li>Priorytetowy dostęp do premium zadań</li>
+            <li>Dedykowane wsparcie konsultanta</li>
+            <li>Możliwość awansu w strukturze platformy</li>
+            <li>Bonusy za regularność i jakość</li>
+          </ul>
+          <a href="#apply" class="cta-button open-form-btn" style="width: 100%; text-align: center;">
+            Wybierz Tę Opcję
+          </a>
+          <p class="disclaimer">
+            Większe zaangażowanie przekłada się na wyższy potencjał zarobkowy. 
+            Wymagana jest samodyscyplina i regularność w wykonywaniu zadań.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" id="benefits">
+    <div class="container">
+      <div class="benefits-content">
+        <div class="benefits-image animate-fade-in"></div>
+        <div class="benefits-info animate-fade-in delay-1">
+          <h2 class="section-title">Dlaczego VirtualCareerPL?</h2>
+          <p class="section-subtitle" style="margin-bottom: 40px;">
+            Nie jesteśmy kolejną platformą crowdsourcingową. 
+            Tworzymy profesjonalne środowisko pracy wirtualnej dla polskich specjalistów.
+          </p>
+
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <div class="benefit-icon">💼</div>
+              <h4 class="benefit-title">Profesjonalizm</h4>
+              <p class="benefit-description">
+                Działamy wyłącznie na rynku polskim, z pełnym poszanowaniem lokalnych regulacji.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">⚡</div>
+              <h4 class="benefit-title">Natychmiastowość</h4>
+              <p class="benefit-description">
+                Wypłaty w ciągu 24 godzin od wykonania i akceptacji zadania.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">🛡️</div>
+              <h4 class="benefit-title">Bezpieczeństwo</h4>
+              <p class="benefit-description">
+                Zero opłat, pełna ochrona danych, przejrzyste warunki współpracy.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">📈</div>
+              <h4 class="benefit-title">Rozwój</h4>
+              <p class="benefit-description">
+                System premiowania, awanse i dostęp do coraz lepszych zadań.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header animate-fade-in">
+        <h2 class="section-title">Doświadczenia Naszych Specjalistów</h2>
+        <p class="section-subtitle">
+          Poznaj historie osób, które zmieniły swoje podejście do pracy dzięki naszej platformie.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-fade-in">
+          <div class="testimonial-text">
+            "Po miesiącu zarobiłem więcej niż w poprzedniej pracy na pół etatu. 
+            Największą zaletą jest absolutna wolność czasowa."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <div class="author-name">Michał</div>
+              <div class="author-location">Kraków, 2 miesiące z nami</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-fade-in delay-1">
+          <div class="testimonial-text">
+            "Jako mama dwójki dzieci cenię sobie elastyczność. 
+            Mogę pracować kiedy chcę, a dochód jest regularny i przewidywalny."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <div class="author-name">Anna</div>
+              <div class="author-location">Warszawa, 4 miesiące z nami</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-fade-in delay-2">
+          <div class="testimonial-text">
+            "Platforma oferuje różnorodne zadania - od prostych po bardziej wymagające. 
+            Wsparcie techniczne działa błyskawicznie."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">K</div>
+            <div class="author-info">
+              <div class="author-name">Krzysztof</div>
+              <div class="author-location">Wrocław, 6 miesięcy z nami</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header animate-fade-in">
+        <h2 class="section-title">Najczęstsze Pytania</h2>
+        <p class="section-subtitle">
+          Znajdź odpowiedzi na wszystkie nurtujące Cię kwestie.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <details class="faq-item animate-fade-in">
+          <summary class="faq-question">
+            Czy muszę płacić za rejestrację?
+            <span class="faq-icon">▼</span>
+          </summary>
+          <div class="faq-answer">
+            Absolutnie nie. VirtualCareerPL jest całkowicie darmową platformą. 
+            Nie pobieramy żadnych opłat rejestracyjnych, abonamentowych ani prowizyjnych.
+          </div>
+        </details>
+
+        <details class="faq-item animate-fade-in delay-1">
+          <summary class="faq-question">
+            Jak wygląda proces wypłat?
+            <span class="faq-icon">▼</span>
+          </summary>
+          <div class="faq-answer">
+            Wypłaty realizujemy w ciągu 24 godzin od zatwierdzenia wykonanego zadania. 
+            Oferujemy przelewy bankowe oraz wypłaty na konta elektroniczne.
+          </div>
+        </details>
+
+        <details class="faq-item animate-fade-in delay-2">
+          <summary class="faq-question">
+            Jakie są wymagania techniczne?
+            <span class="faq-icon">▼</span>
+          </summary>
+          <div class="faq-answer">
+            Wystarczy smartfon z dostępem do internetu. Większość zadań można wykonać 
+            bezpośrednio w przeglądarce mobilnej. Niektóre zadania preferują komputer.
+          </div>
+        </details>
+
+        <details class="faq-item animate-fade-in delay-3">
+          <summary class="faq-question">
+            Czy zarobki są gwarantowane?
+            <span class="faq-icon">▼</span>
+          </summary>
+          <div class="faq-answer">
+            Zarobki zależą od dostępności zadań i Twojego zaangażowania. 
+            Przedstawione widełki są oparte na historycznych danych naszych użytkowników.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container animate-fade-in">
+      <h2 class="cta-title">Gotowy na Zmianę?</h2>
+      <p class="cta-description">
+        Dołącz do tysięcy Polaków, którzy odkryli nową formę zarobku online. 
+        Rejestracja zajmuje 2 minuty, a pierwsze zadania możesz wykonać już dziś.
+      </p>
+      <a href="#apply" class="cta-button-light open-form-btn">
+        Rozpocznij Swoją Karierę
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="#" class="footer-brand">VirtualCareerPL</a>
+          <p class="footer-text">
+            Platforma profesjonalnej pracy wirtualnej dla polskich specjalistów. 
+            Łączymy elastyczność z profesjonalizmem, zapewniając godziwe wynagrodzenie 
+            i pełne wsparcie operacyjne.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: white; margin-bottom: 20px; font-size: 1.1rem;">Dokumenty</h4>
+          <div class="footer-links">
+            <a href="privacy.html" class="footer-link" rel="nofollow">Polityka Prywatności</a>
+            <a href="terms.html" class="footer-link" rel="nofollow">Regulamin Platformy</a>
+            <a href="contact.html" class="footer-link" rel="nofollow">Kontakt</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2024 VirtualCareerPL. Wszelkie prawa zastrzeżone. 
+        Przedstawione zarobki mają charakter przykładowy i nie stanowią gwarancji dochodu.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      <h3 class="modal-title">Sukces!</h3>
+      <p class="modal-message">
+        Twoja rejestracja została pomyślnie zakończona. 
+        Za chwilę zostaniesz przekierowany do rozmowy z naszym konsultantem.
+      </p>
+      <button class="cta-button" id="modalOkBtn" style="width: 100%;">Przejdź do Rozmowy</button>
+    </div>
+  </div>
+
+  <div class="modal" id="ageWarningModal">
+    <div class="modal-content">
+      <button class="modal-close" id="ageWarningCloseBtn">&times;</button>
+      <h3 class="modal-title">Wymóg Wiekowy</h3>
+      <p class="modal-message">
+        Nasza platforma jest dostępna wyłącznie dla osób pełnoletnich (18+). 
+        Zapraszamy do kontaktu po osiągnięciu wymaganego wieku.
+      </p>
+      <button class="cta-button" id="ageWarningOkBtn" style="width: 100%;">Rozumiem</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('applicationForm');
+      const successModal = document.getElementById('successModal');
+      const ageWarningModal = document.getElementById('ageWarningModal');
+      const openFormBtns = document.querySelectorAll('.open-form-btn, #openFormBtn');
+      
+      const whatsappAccounts = [ 
+         "33607794284",
+      "33625789421",
+      "33626883760",
+      "33651220905",
+      "33651400214",
+      "33652039457",
+      "33658878475",
+      "33678185238"
+      ];
+      
+      function generateWhatsAppLink(phoneNumber) {
+        const message = encodeURIComponent("Dzień dobry, chciałbym/chciałabym uzyskać więcej informacji o platformie VirtualCareerPL!");
+        return `https://wa.me/${phoneNumber}`;
+      }
+      
+      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+      const assignedWhatsAppLink = generateWhatsAppLink(randomAccount);
+      
+      function openModal(modal) {
+        modal.classList.add('active');
+      }
+      
+      function closeModal(modal) {
+        modal.classList.remove('active');
+      }
+      
+      function validateAge(ageValue) {
+        const age = parseInt(ageValue, 10);
+        return !isNaN(age) && age >= 18;
+      }
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const age = document.getElementById('age').value.trim();
+        const consent = document.getElementById('consent').checked;
+        
+        let isValid = true;
+        
+        if (!name) {
+          document.getElementById('name').style.borderColor = 'var(--error)';
+          isValid = false;
+        }
+        
+        if (!phone) {
+          document.getElementById('phone').style.borderColor = 'var(--error)';
+          isValid = false;
+        }
+        
+        if (!age || !validateAge(age)) {
+          document.getElementById('age').style.borderColor = 'var(--error)';
+          openModal(ageWarningModal);
+          return false;
+        }
+        
+        if (!consent) {
+          isValid = false;
+        }
+        
+        if (isValid) {
+          gtag('event', 'submit_form', {
+            event_category: 'lead',
+            event_label: 'Main Form'
+          });
+          
+          openModal(successModal);
+        }
+      });
+      
+      document.getElementById('modalOkBtn').addEventListener('click', function() {
+        gtag_report_conversion(assignedWhatsAppLink);
+      });
+      
+      document.getElementById('modalCloseBtn').addEventListener('click', function() {
+        closeModal(successModal);
+      });
+      
+      document.getElementById('ageWarningCloseBtn').addEventListener('click', function() {
+        closeModal(ageWarningModal);
+      });
+      
+      document.getElementById('ageWarningOkBtn').addEventListener('click', function() {
+        closeModal(ageWarningModal);
+      });
+      
+      openFormBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.getElementById('applicationForm').scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+        });
+      });
+      
+      successModal.addEventListener('click', function(e) {
+        if (e.target === successModal) {
+          closeModal(successModal);
+        }
+      });
+      
+      ageWarningModal.addEventListener('click', function(e) {
+        if (e.target === ageWarningModal) {
+          closeModal(ageWarningModal);
+        }
+      });
+      
+      gtag('event', 'page_view', {
+        page_title: 'VirtualCareer PL',
+        page_location: window.location.href
+      });
+      
+      gtag('event', 'view_form', {
+        event_category: 'engagement',
+        event_label: 'Main Form'
+      });
+    });
+  </script>
+</body>
+</html>
