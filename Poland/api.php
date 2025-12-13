@@ -1,10 +1,10 @@
 <?php
 
 //接口请求密钥（此账号下唯一不变的值；位置：用户后台 -> 我的账号 -> 账号设置 -> 密钥）
-const FANGYU_API_KEY = '111111111111111111111';
+const FANGYU_API_KEY = 'GMh9WKh9wrlwsWyxEvhW0';
 
 //接口请求地址（每个网站规则都要修改；位置：用户后台 -> 我的网站 -> 某个网站 -> 唯一编号）
-const FANGYU_API_URL = 'https://api-visitor.fangyu.io/check/1234/00000000000';
+const FANGYU_API_URL = 'https://api-visitor.fangyu.io/check/28454/B0rIM4EwYKY0EGkg68';
 
 /***********************************************************************
  * 以下四个参数，默认读取 【我的网站 -- 某网站 -- 编辑规则 -- 基础 -- 被允许/被拦截】中的设置。
@@ -29,4 +29,5 @@ const FANGYU_API_URL = 'https://api-visitor.fangyu.io/check/1234/00000000000';
 //被拦截时模式（1-单一地址；2-轮询地址；3-安全页文件名；4-404错误页面）
 //const JUMP_BLOCK_MODE = 4;
 //被拦截时的跳转地址
+
 //const JUMP_BLOCK_URL = '404';
