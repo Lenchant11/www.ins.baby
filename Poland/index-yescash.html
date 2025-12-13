@@ -1,1 +1,2373 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Praca Zdalna w Polsce | Zarabiaj do 900 zł Dziennie Przez Internet</title>
+  <meta name="description" content="Polacy zarabiają teraz nawet 900 zł dziennie z domu! Dołącz do 12,347+ zadowolonych użytkowników. 100% darmowe. Zacznij zarabiać już dziś!" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17524155246"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17524155246');
+  </script>
+  
+  <style>
+    :root{
+      --bg: #f8f9fa;
+      --card: #ffffff;
+      --muted: #6c757d;
+      --text: #2d3748;
+      --white: #ffffff;
+      --primary: #dc2626;
+      --primary-600: #b91c1c;
+      --primary-300: #fca5a5;
+      --accent: #2563eb;
+      --accent-light: #60a5fa;
+      --green: #059669;
+      --yellow: #f59e0b;
+      --red: #dc2626;
+      --orange: #ea580c;
+      --teal: #0d9488;
+      --indigo: #4f46e5;
+      --ring: 0 0 0 3px rgba(220, 38, 38, 0.25);
+      --radius: 12px;
+      --transition: all 0.3s ease;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-xl: 0 25px 50px -12px rgba(220, 38, 38, 0.25);
+    }
 
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;line-height:1.5; font-size: 16px; scroll-behavior: smooth;}
+    img{max-width:100%;display:block}
+    a{color:var(--text);text-decoration:none}
+    a:hover{text-decoration:none}
+    .container{width:min(1120px,94%);margin-inline:auto}
+
+    /* 导航栏 */
+    .nav{position:sticky;top:0;z-index:1000;background:rgba(255, 255, 255, 0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(220, 38, 38, 0.1); box-shadow: 0 4px 20px rgba(220, 38, 38, 0.08);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{font-weight:900;letter-spacing:.3px;font-size:1.4rem; background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; position: relative;}
+    .brand:after {
+      content: "🇵🇱";
+      position: absolute;
+      right: -28px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+    }
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .nav-link{opacity:.9; transition: var(--transition); font-size: 0.9rem; font-weight: 600; padding: 6px 10px; border-radius: 8px;}
+    .nav-link:hover{opacity:1; color: var(--primary); background: rgba(220, 38, 38, 0.05);}
+
+    /* 按钮样式 - 添加脉冲特效 */
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:12px;border:0;font-weight:800;cursor:pointer;transition:var(--transition); font-size: 1rem; position: relative; overflow: hidden;}
+    .btn-lg{padding:16px 32px;font-size:1.2rem; letter-spacing: 0.5px;}
+    .btn-block{width:100%}
+    .btn-primary{
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color:white; 
+      box-shadow: var(--shadow-lg);
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .btn-primary:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(rgba(255,255,255,0.2), transparent);
+      border-radius: 12px 12px 0 0;
+    }
+    .btn-primary:hover{
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: var(--shadow-xl);
+    }
+    .btn-primary:active{
+      transform: translateY(-1px);
+    }
+    .btn:focus{outline:none;box-shadow:var(--ring)}
+    
+    /* 脉冲动画 */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: var(--shadow-lg);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(220, 38, 38, 0.6);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: var(--shadow-lg);
+      }
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    /* Hero区域 */
+    .hero{position:relative;padding:30px 0 20px; overflow: hidden; background: linear-gradient(135deg, #fee2e2 0%, #dbeafe 30%, #f0fdf4 70%);}
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:20px;align-items:stretch}
+    .hero-top {text-align: center; max-width: 900px; margin: 0 auto; position: relative;}
+    .hero-bottom {display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start;}
+    
+    /* 标题 */
+    .hero-copy h1{
+      font-size:36px;
+      margin:0 0 15px; 
+      line-height: 1.1; 
+      font-weight: 900; 
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    
+    /* 收入展示CTA按钮 */
+    .income-highlight-btn {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 16px 32px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 1.3rem;
+      margin: 15px 0;
+      box-shadow: var(--shadow-xl);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      animation: pulse 2s infinite;
+    }
+    
+    .income-highlight-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 0 50px rgba(220, 38, 38, 0.6);
+      animation: none;
+    }
+    
+    .income-highlight-btn span {
+      background: white;
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      margin-left: 8px;
+      font-weight: 900;
+    }
+    
+    /* 描述 */
+    .subtitle{
+      color:var(--text);
+      max-width:50ch;
+      margin:0 auto 20px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    
+    .hero-points{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px;color:#475569; font-weight: 600;}
+    .hero-points li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      padding: 6px 14px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 8px;
+      border-left: 4px solid var(--green);
+    }
+    .hero-points li:before {
+      content: "🔥";
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    
+    .hero-bg{
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:
+        linear-gradient(180deg,rgba(254, 226, 226, 0.85),rgba(219, 234, 254, 0.95)),
+        url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+    }
+
+    /* 社会证明 */
+    .social-proof {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      background: white;
+      padding: 15px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .proof-item {
+      text-align: center;
+      flex: 1;
+      min-width: 150px;
+    }
+    .proof-number {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .proof-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* 紧迫感横幅 */
+    .urgency-banner {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: var(--shadow);
+      border: 2px solid white;
+    }
+
+    /* 信任徽章 */
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 16px 0;
+      flex-wrap: wrap;
+    }
+    
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: white;
+      padding: 10px 16px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text);
+      border: 1px solid rgba(220, 38, 38, 0.1);
+    }
+    
+    .trust-badge svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--green);
+    }
+
+    /* 表单卡片 */
+    .form-card{
+      background:var(--card);
+      border:2px solid rgba(220, 38, 38, 0.15);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      transition: var(--transition);
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    .form-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 60px -12px rgba(220, 38, 38, 0.3);
+    }
+    .form-card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .form-title{
+      margin:0 0 12px; 
+      font-size: 24px; 
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      font-weight: 900; 
+      text-align: center;
+      line-height: 1.2;
+    }
+    .form-note{
+      color:var(--muted);
+      margin:0 0 20px;
+      font-size:0.95rem;
+      line-height: 1.4;
+      text-align: center;
+      font-weight: 500;
+    }
+    .field{
+      margin-bottom:16px; 
+      position: relative;
+    }
+    .field.check{
+      display:flex;
+      align-items:flex-start; 
+      gap: 10px;
+      background: rgba(220, 38, 38, 0.03);
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .field.check label {
+      margin-bottom: 0; 
+      display: inline; 
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    label{
+      display:block;
+      margin-bottom:6px;
+      font-weight:700; 
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .req{color:var(--primary); font-weight: 800;}
+    input,select{
+      width:100%;
+      background:#f8fafc;
+      color:var(--text);
+      border:2px solid rgba(0,0,0,.1);
+      border-radius:10px;
+      padding:12px 14px;
+      outline:none; 
+      font-family: inherit; 
+      font-size: 0.95rem; 
+      transition: var(--transition);
+      font-weight: 500;
+    }
+    input:focus,select:focus{
+      box-shadow:var(--ring);
+      border-color:var(--primary);
+      transform: translateY(-2px);
+      background: white;
+    }
+    .form-status{
+      margin-top:12px;
+      font-size:0.9rem; 
+      padding: 10px; 
+      border-radius: 8px; 
+      background: rgba(32, 201, 151, 0.1); 
+      border: 2px solid rgba(32, 201, 151, 0.2);
+      font-weight: 500;
+    }
+    .form-status.success{color:#059669}
+    .form-status.error{
+      color:#dc2626; 
+      background: rgba(220, 38, 38, 0.1); 
+      border-color: rgba(220, 38, 38, 0.2);
+    }
+
+    /* Phone input styles */
+    .phone-input-group {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .country-code {
+      flex: 0 0 auto; 
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: white;
+      padding: 12px 14px;
+      border: none;
+      border-right: none;
+      border-radius: 10px 0 0 10px;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+    }
+    .phone-input {
+      border-radius: 0 10px 10px 0; 
+      flex: 1;
+      border-left: none;
+    }
+
+    /* 模态框样式 */
+    .modal {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      bottom: 0; 
+      background: rgba(0,0,0,0.8); 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      z-index: 2000; 
+      opacity: 0; 
+      visibility: hidden; 
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+    .modal.active {
+      opacity: 1; 
+      visibility: visible;
+    }
+    .modal-content {
+      background: var(--card); 
+      border-radius: var(--radius); 
+      padding: 28px; 
+      max-width: 500px; 
+      width: 95%; 
+      box-shadow: var(--shadow-xl);
+      animation: modalSlide 0.3s ease;
+      border: 2px solid rgba(220, 38, 38, 0.1);
+    }
+    
+    @keyframes modalSlide {
+      from {
+        transform: translateY(20px) scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+    
+    .modal-title {
+      font-size: 1.4rem; 
+      margin-bottom: 14px; 
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      font-weight: 900; 
+      text-align: center;
+    }
+    .modal-message {
+      margin-bottom: 20px; 
+      line-height: 1.5; 
+      color: var(--muted); 
+      text-align: center;
+      font-weight: 500;
+    }
+    .modal-btn {
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      color: white; 
+      border: none; 
+      border-radius: 10px; 
+      padding: 14px 32px; 
+      font-weight: 800; 
+      cursor: pointer; 
+      transition: var(--transition); 
+      display: block; 
+      margin: 0 auto;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow);
+    }
+    .modal-btn:hover {
+      transform: translateY(-3px); 
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* 模态框表单左侧对齐 */
+    .modal-form-content {
+      text-align: left;
+    }
+    .modal-form-content .form-note,
+    .modal-form-content .field,
+    .modal-form-content .field label,
+    .modal-form-content .field input,
+    .modal-form-content .field select,
+    .modal-form-content .field.check,
+    .modal-form-content .security-badge,
+    .modal-form-content .form-status {
+        text-align: left;
+    }
+    .modal-form-content .field.check {
+        justify-content: flex-start;
+    }
+    .modal-form-content .phone-input-group {
+        direction: ltr;
+    }
+    .modal-form-content .country-code {
+        border-right: 1px solid rgba(0,0,0,.15);
+        border-left: none;
+        border-radius: 8px 0 0 8px;
+    }
+    .modal-form-content .phone-input {
+        border-radius: 0 8px 8px 0;
+    }
+
+    /* Close button for modal */
+    .modal-close { 
+      position: absolute; 
+      top: 16px; 
+      right: 16px; 
+      background: rgba(220, 38, 38, 0.1); 
+      border: none; 
+      border-radius: 50%; 
+      width: 32px; 
+      height: 32px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-size: 20px; 
+      color: var(--primary); 
+      cursor: pointer; 
+      transition: var(--transition);
+    }
+    .modal-close:hover { 
+      background: var(--primary); 
+      color: white;
+      transform: rotate(90deg);
+    }
+
+    /* Age warning modal */
+    .age-warning-modal .modal-content {
+      max-width: 450px;
+    }
+    .age-warning-modal .modal-title {
+      background: linear-gradient(90deg, #ef4444, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Section样式 */
+    .section{padding:40px 0}
+    .section.alt{background:linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);}
+    h2{
+      margin:0 0 16px;
+      font-size:30px; 
+      font-weight: 900; 
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+    .muted{color:var(--muted); line-height: 1.5;}
+    .small{font-size:0.85rem}
+    
+    .section-header {
+      text-align: center; 
+      max-width: 800px; 
+      margin: 0 auto 30px;
+    }
+    
+    .cards{display:grid;gap:20px}
+    .two-col{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .three-col{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{
+      background:var(--card);
+      border:2px solid rgba(0,0,0,.08);
+      border-radius:var(--radius);
+      padding:20px;
+      transition: var(--transition); 
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+    .card:hover {
+      transform: translateY(-8px); 
+      border-color: rgba(220, 38, 38, 0.3); 
+      box-shadow: var(--shadow-xl);
+    }
+    .card-media{
+      height:140px;
+      border-radius:8px;
+      background-size: cover; 
+      background-position: center; 
+      position: relative; 
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .card-body h3{
+      margin:0 0 12px; 
+      font-size: 1.3rem; 
+      font-weight: 900;
+      color: var(--text);
+    }
+    
+    .earnings-badge {
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      color: white; 
+      padding: 6px 16px; 
+      border-radius: 30px; 
+      font-weight: 900; 
+      font-size: 0.9rem; 
+      display: inline-block; 
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+    
+    .list{
+      padding-left:0;
+      margin:0;
+      display:grid;
+      gap:8px
+    }
+    .list li{
+      margin-left:0; 
+      display: flex; 
+      align-items: flex-start; 
+      gap: 10px; 
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .list li:before {
+      content: "✓"; 
+      color: var(--primary); 
+      font-weight: bold;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .requirements{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:16px
+    }
+    .req-item{
+      display:flex;
+      gap:12px;
+      background:var(--card);
+      border:2px solid rgba(0,0,0,.08);
+      border-radius:12px;
+      padding:20px 16px;
+      transition: var(--transition); 
+      box-shadow: var(--shadow);
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .req-item:hover {
+      border-color: rgba(220, 38, 38, 0.3); 
+      transform: translateY(-5px); 
+      box-shadow: var(--shadow-lg);
+    }
+    .req-icon{
+      font-size:28px; 
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent;
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .benefits-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:30px;
+      align-items:center
+    }
+    .benefits-media{
+      height:240px;
+      border-radius:20px;
+      background:
+        radial-gradient(160px 160px at 30% 40%, var(--primary-300) 0%, transparent 60%),
+        linear-gradient(135deg,var(--primary),var(--accent)); 
+      position: relative; 
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+    }
+    .benefits-media:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') center/cover no-repeat;
+        opacity: 0.3;
+        mix-blend-mode: overlay;
+    }
+    .stats{
+      list-style:none;
+      padding:0;
+      margin:0 0 20px;
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px
+    }
+    .stats li{
+      background:var(--card);
+      border:2px solid rgba(0,0,0,.08);
+      border-radius:12px;
+      padding:20px;
+      text-align:center; 
+      transition: var(--transition); 
+      box-shadow: var(--shadow);
+    }
+    .stats li:hover {
+      transform: translateY(-5px); 
+      border-color: rgba(220, 38, 38, 0.3);
+      box-shadow: var(--shadow-lg);
+    }
+    .stats strong {
+      display: block; 
+      font-size: 2.2rem; 
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      margin-bottom: 6px; 
+      font-weight: 900;
+      line-height: 1;
+    }
+    
+    .testimonial{
+      background:var(--card);
+      border:2px solid rgba(0,0,0,.08);
+      border-radius:var(--radius);
+      padding:24px;
+      margin:0; 
+      position: relative; 
+      transition: var(--transition); 
+      box-shadow: var(--shadow);
+    }
+    .testimonial:hover {
+      transform: translateY(-5px); 
+      border-color: rgba(220, 38, 38, 0.3);
+    }
+    .testimonial:before {
+        content: """;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        font-size: 50px;
+        color: rgba(220, 38, 38, 0.1);
+        font-family: Georgia, serif;
+        font-weight: bold;
+    }
+    .testimonial p{
+      margin:0 0 16px; 
+      font-style: italic; 
+      position: relative; 
+      z-index: 1; 
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .testimonial footer { 
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      font-weight: 900; 
+      font-size: 1rem;
+    }
+    
+    .avatar {
+      width: 50px; 
+      height: 50px; 
+      border-radius: 50%; 
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-weight: 900; 
+      margin-bottom: 12px; 
+      font-size: 1.1rem; 
+      color: white;
+      box-shadow: var(--shadow);
+      border: 3px solid white;
+    }
+    
+    .cta{
+      background:linear-gradient(135deg, #fee2e2 0%, #dbeafe 30%, #f0fdf4 70%); 
+      padding: 50px 0; 
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23dc2626' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+    .cta-inner{
+      max-width: 800px; 
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .cta h2 {
+      margin-bottom: 20px;
+      font-size: 34px;
+    }
+    
+    .faq{
+      background:var(--card);
+      border:2px solid rgba(0,0,0,.08);
+      border-radius:12px;
+      padding:20px;
+      margin-bottom:16px;
+      transition: var(--transition); 
+      box-shadow: var(--shadow);
+    }
+    .faq:hover {
+      border-color: rgba(220, 38, 38, 0.3);
+    }
+    .faq summary{
+      cursor:pointer; 
+      font-weight: 800; 
+      padding: 6px 0; 
+      font-size: 1rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq summary:after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+    .faq[open] summary:after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+    .faq div {
+      padding: 12px 0; 
+      color: var(--muted); 
+      font-size: 0.95rem;
+      line-height: 1.5;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      margin-top: 6px;
+    }
+    
+    .footer{
+      border-top:2px solid rgba(0,0,0,.08);
+      padding:30px 0 24px;
+      background:#e9ecef;
+    }
+    .footer-grid{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:flex-start; 
+      margin-bottom: 24px;
+    }
+    .footer-links{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap
+    }
+    
+    /* 安全徽章 */
+    .security-badge {
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+      margin-top: 16px; 
+      padding: 14px; 
+      background: rgba(32, 201, 151, 0.1); 
+      border-radius: 10px; 
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 2px solid rgba(32, 201, 151, 0.2);
+    }
+    .security-badge svg {
+      flex-shrink: 0; 
+      width: 22px; 
+      height: 22px;
+    }
+    
+    /* Urgency elements */
+    .opportunity-badge {
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      color: white; 
+      padding: 8px 20px; 
+      border-radius: 30px; 
+      font-weight: 900; 
+      font-size: 0.9rem; 
+      display: inline-block; 
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+      letter-spacing: 0.5px;
+    }
+    .counter {
+      display: flex; 
+      justify-content: center; 
+      gap: 10px; 
+      margin: 20px 0;
+    }
+    .counter-item {
+      background: var(--card); 
+      border-radius: 12px; 
+      padding: 14px; 
+      min-width: 70px; 
+      text-align: center; 
+      box-shadow: var(--shadow-lg);
+      border: 2px solid rgba(220, 38, 38, 0.1);
+    }
+    .counter-number {
+      font-size: 1.8rem; 
+      font-weight: 900; 
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+    .counter-label {
+      font-size: 0.85rem; 
+      color: var(--muted); 
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+      opacity: 0;
+    }
+    
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    
+    /* User photos section */
+    .user-photos {
+      display: flex; 
+      justify-content: center; 
+      margin: 20px 0; 
+      gap: 10px; 
+      flex-wrap: wrap;
+    }
+    .user-photo {
+      width: 56px; 
+      height: 56px; 
+      border-radius: 50%; 
+      object-fit: cover; 
+      border: 3px solid var(--primary);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .user-photo:hover {
+      transform: scale(1.1);
+      border-color: var(--accent);
+    }
+    
+    /* Hero right content - 优化高度 */
+    .hero-right-content {
+      display: flex; 
+      flex-direction: column; 
+      gap: 16px; /* 减小间距 */
+    }
+    .hero-right-card {
+      background: var(--card); 
+      border-radius: var(--radius); 
+      padding: 18px; /* 减小内边距 */
+      border: 2px solid rgba(0,0,0,.08); 
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+    }
+    .hero-right-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+    .hero-right-card h3 {
+      margin-top: 0; 
+      margin-bottom: 10px; /* 减小底部间距 */
+      font-size: 1.2rem; 
+      background: linear-gradient(90deg, var(--primary), var(--accent)); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      font-weight: 900;
+    }
+    
+    /* PL elements */
+    .pl-flag {
+      display: inline-flex; 
+      align-items: center; 
+      gap: 10px; 
+      margin-bottom: 12px; 
+      padding: 8px 16px; 
+      background: rgba(220, 38, 38, 0.1); 
+      border-radius: 30px;
+      font-weight: 700;
+    }
+    .pl-flag img {
+      width: 24px; 
+      height: 17px; 
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    /* Earnings disclaimer */
+    .earnings-disclaimer {
+      font-size: 0.8rem; 
+      color: var(--muted); 
+      margin-top: 10px; 
+      line-height: 1.4;
+      font-style: italic;
+    }
+    
+    /* 合并的用户收入展示区域 - 优化布局减少高度 */
+    .user-earnings-carousel {
+      background: var(--card); 
+      border-radius: var(--radius); 
+      padding: 18px; /* 减小内边距 */
+      margin: 0; 
+      text-align: center; 
+      box-shadow: var(--shadow-lg);
+      border: 2px solid rgba(220, 38, 38, 0.1);
+      min-height: 280px; /* 设置最小高度 */
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .user-earnings-item {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px; /* 减小间距 */
+      flex: 1;
+    }
+    
+    .user-earnings-item.active {
+      display: flex;
+    }
+    
+    .user-earnings-avatar {
+      width: 70px; /* 减小头像大小 */
+      height: 70px; 
+      border-radius: 50%; 
+      object-fit: cover; 
+      border: 3px solid var(--primary);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .user-earnings-info {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px; /* 减小信息项间距 */
+    }
+    
+    /* 优化：姓名和城市在一行显示 */
+    .user-earnings-name-location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .user-earnings-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    
+    .user-earnings-location {
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding: 2px 8px;
+      background: rgba(0,0,0,0.05);
+      border-radius: 12px;
+    }
+    
+    .user-earnings-amount {
+      font-size: 1.8rem; /* 减小字体大小 */
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 4px 0;
+      line-height: 1.2;
+    }
+    
+    .user-earnings-period {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px; /* 减小上边距 */
+    }
+    
+    .carousel-dot {
+      width: 8px; /* 减小圆点大小 */
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .carousel-dot.active {
+      background: var(--primary);
+    }
+    
+    /* Hero区域优化 - 减小右侧内容间距 */
+    .hero-right-card .hero-points {
+      margin: 15px 0 0 0;
+      gap: 8px;
+    }
+    
+    .hero-right-card .hero-points li {
+      font-size: 0.9rem;
+      padding: 5px 12px;
+    }
+    
+    /* 倒计时区域优化 */
+    .counter {
+      margin: 15px 0;
+    }
+    
+    .counter-item {
+      padding: 12px;
+      min-width: 65px;
+    }
+    
+    .counter-number {
+      font-size: 1.6rem;
+    }
+    
+    /* 增强的移动CTA栏 */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 12px 16px;
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.2);
+      z-index: 1000;
+      border-top: 2px solid var(--primary);
+    }
+    .mobile-cta-bar .btn {
+      font-size: 1rem;
+      padding: 12px;
+    }
+
+    /* 移动端响应式设计 */
+    @media (max-width: 1080px){
+      .hero-grid{grid-template-columns:1fr; gap: 24px;}
+      .hero-bottom {grid-template-columns: 1fr; gap: 24px;}
+      .two-col{grid-template-columns:1fr; gap: 20px;}
+      .three-col{grid-template-columns:repeat(2,1fr); gap: 20px;}
+      .requirements{grid-template-columns:repeat(3,minmax(0,1fr)); gap: 16px;}
+      .benefits-grid{grid-template-columns:1fr; gap: 24px;}
+      .cta-inner{flex-direction:column;align-items:flex-start}
+      .stats{grid-template-columns:repeat(2,1fr); gap: 16px;}
+      .hero-copy h1 {font-size: 32px;}
+      h2 {font-size: 28px;}
+      .section {padding: 36px 0;}
+      .section-header {margin-bottom: 28px;}
+      .social-proof {gap: 24px;}
+      .counter-item {min-width: 60px;}
+      .hero {padding: 24px 0 16px;}
+      .hero-right-content {gap: 20px;}
+    }
+    
+    @media (max-width: 768px) {
+      .hero-copy h1 {font-size: 28px;}
+      h2 {font-size: 24px;}
+      .subtitle {font-size: 1rem;}
+      .income-highlight-btn {font-size: 1.1rem; padding: 14px 28px;}
+      .income-highlight-btn span {font-size: 1rem;}
+      .three-col {grid-template-columns: 1fr;}
+      .requirements {grid-template-columns: repeat(2, 1fr);}
+      .counter-item {min-width: 55px; padding: 10px;}
+      .counter-number {font-size: 1.4rem;}
+      .stats li {padding: 16px;}
+      .stats strong {font-size: 1.8rem;}
+      .trust-badges {flex-direction: column; align-items: center;}
+      .trust-badge {width: 100%; max-width: 280px;}
+      .user-photo {width: 48px; height: 48px;}
+      .hero-bottom {gap: 20px;}
+      .hero-right-content {gap: 16px;}
+      .hero-right-card {padding: 16px;}
+      .form-card {padding: 20px;}
+      .card {padding: 16px;}
+      .testimonial {padding: 20px;}
+      .requirements {gap: 12px;}
+      .req-item {padding: 16px 12px;}
+      .benefits-media {height: 180px;}
+      .section {padding: 32px 0;}
+      .cta {padding: 40px 0;}
+      .nav-inner {padding: 8px 0;}
+      .brand {font-size: 1.2rem;}
+      /* 移动端隐藏导航栏菜单，只显示CTA按钮 */
+      .nav-link {display: none;}
+      .nav-links .btn {display: block;}
+      .user-earnings-carousel {
+        min-height: 260px;
+        padding: 16px;
+      }
+      .user-earnings-avatar {
+        width: 65px;
+        height: 65px;
+      }
+      .user-earnings-amount {
+        font-size: 1.6rem;
+      }
+      .hero-right-card .hero-points li {
+        font-size: 0.85rem;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .nav-links {gap: 8px;}
+      .btn {padding: 10px 20px; font-size: 0.95rem;}
+      .btn-lg {padding: 14px 24px; font-size: 1rem;}
+      .footer-grid {flex-direction: column; gap: 20px; align-items: center; text-align: center;}
+      .footer-links {justify-content: center;}
+      .requirements {grid-template-columns: 1fr; gap: 12px;}
+      .hero {padding: 20px 0 12px;}
+      .hero-copy h1 {font-size: 24px;}
+      h2 {font-size: 22px;}
+      .section {padding: 28px 0;}
+      .cta {padding: 36px 0;}
+      .cta h2 {font-size: 26px;}
+      .logos {justify-content: center;}
+      .form-card {padding: 18px;}
+      .card {padding: 14px;}
+      .testimonial {padding: 16px;}
+      .stats li {padding: 14px;}
+      .benefits-media {height: 160px;}
+      .counter {gap: 6px;}
+      .counter-item {min-width: 50px; padding: 10px 6px;}
+      .counter-number {font-size: 1.2rem;}
+      .user-photos {gap: 8px;}
+      .user-photo {width: 40px; height: 40px;}
+      .social-proof {gap: 16px; padding: 12px;}
+      .proof-item {min-width: 120px;}
+      .proof-number {font-size: 1.4rem;}
+      .mobile-cta-bar {
+        display: block;
+        padding: 10px 12px;
+      }
+      .income-highlight-btn {
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
+      .income-highlight-btn span {
+        font-size: 0.9rem;
+        padding: 3px 10px;
+      }
+      .hero-points li {
+        font-size: 0.9rem;
+        padding: 5px 12px;
+      }
+      .hero-bottom {gap: 16px;}
+      .section-header {margin-bottom: 24px;}
+      .trust-badge {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+      }
+      .user-earnings-carousel {
+        min-height: 240px;
+      }
+      .user-earnings-avatar {
+        width: 60px;
+        height: 60px;
+      }
+      .user-earnings-amount {
+        font-size: 1.5rem;
+      }
+      .user-earnings-name {
+        font-size: 1rem;
+      }
+      .user-earnings-location {
+        font-size: 0.8rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-copy h1 {font-size: 22px;}
+      h2 {font-size: 20px;}
+      .cta h2 {font-size: 22px;}
+      .brand {font-size: 1.1rem;}
+      .nav-link {font-size: 0.85rem;}
+      .btn {font-size: 0.9rem; padding: 8px 16px;}
+      .hero-points li {font-size: 0.85rem;}
+      .subtitle {font-size: 0.95rem;}
+      .social-proof {flex-direction: column; gap: 12px;}
+      .proof-item {min-width: 100%;}
+      .urgency-banner {font-size: 0.9rem; padding: 10px 14px;}
+      .modal-content {padding: 20px;}
+      .form-card {padding: 16px;}
+      .earnings-badge {font-size: 0.85rem; padding: 5px 12px;}
+      .requirements {gap: 10px;}
+      .req-item {padding: 14px 10px;}
+      .faq {padding: 16px;}
+      .faq summary {font-size: 0.95rem;}
+      .testimonial p {font-size: 0.95rem;}
+      .avatar {width: 40px; height: 40px; font-size: 1rem;}
+      .stats li {padding: 12px 10px;}
+      .stats strong {font-size: 1.6rem;}
+      .counter-item {min-width: 45px;}
+      .counter-number {font-size: 1.1rem;}
+      .hero-bottom {gap: 14px;}
+      .hero-right-card {padding: 14px;}
+      .hero {padding: 16px 0 10px;}
+      .section {padding: 24px 0;}
+      .cta {padding: 32px 0;}
+      .mobile-cta-bar .btn {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+      .income-highlight-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+      .income-highlight-btn span {
+        margin-left: 4px;
+      }
+      .user-earnings-carousel {
+        min-height: 220px;
+        padding: 14px;
+      }
+      .user-earnings-avatar {
+        width: 55px;
+        height: 55px;
+      }
+      .user-earnings-amount {
+        font-size: 1.4rem;
+      }
+      .user-earnings-name-location {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .hero-copy h1 {font-size: 20px;}
+      h2 {font-size: 18px;}
+      .income-highlight-btn {font-size: 0.85rem; padding: 8px 16px;}
+      .subtitle {font-size: 0.9rem;}
+      .btn {padding: 8px 14px; font-size: 0.85rem;}
+      .form-title {font-size: 20px;}
+      .requirements {gap: 8px;}
+      .req-item {padding: 12px 8px;}
+      .hero-points li {
+        font-size: 0.8rem;
+        gap: 6px;
+      }
+      .trust-badge {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+      }
+      .user-earnings-carousel {
+        min-height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Home">Zdalni.PL</a>
+      <nav class="nav-links">
+        <a href="#roles" class="nav-link">Stanowiska</a>
+        <a href="#benefits" class="nav-link">Korzyści</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <button class="btn btn-primary pulse open-form-btn">Zacznij Zarabiać</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero + Form -->
+  <section id="top" class="hero">
+    <div class="container hero-grid">
+      <!-- Top section -->
+      <div class="hero-top fade-in">
+        <div class="opportunity-badge">🔥 DARMOWA REJESTRACJA • BRAK OPŁAT • GWARANCJA WYPŁAT</div>
+        <h1>Polacy Zarabiają Do <span style="background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">900 ZŁ DZIENNIE</span> z Domu!</h1>
+        
+        <!-- 收入展示CTA按钮 -->
+        <button class="income-highlight-btn open-form-btn">
+          🚀 ZARABIAJ ŚREDNIO <span>900 ZŁ / DZIEŃ</span>
+        </button>
+        
+        <p class="subtitle">
+          <strong>Odkryj jak tysiące Polaków zarabia realne pieniądze przez telefon.</strong> 
+          Bez doświadczenia, bez inwestycji. Pierwsze zarobki w 24 godziny!
+        </p>
+        
+        <!-- 信任徽章 -->
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Gwarancja Wypłat
+          </div>
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            100% Bezpieczne
+          </div>
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            Natychmiastowy Start
+          </div>
+        </div>
+        
+        <div class="urgency-banner">
+          <span>🚨 DZISIAJ OSTATNIE: 18 miejsc dostępnych dla nowych użytkowników z Polski!</span>
+        </div>
+      </div>
+      
+      <!-- Bottom section -->
+      <div class="hero-bottom">
+        <!-- Left: Form -->
+        <aside id="apply" class="form-card fade-in delay-1" aria-label="Formularz aplikacyjny">
+          <h2 class="form-title">Zacznij Zarabiać Już Dziś!</h2>
+          <p class="form-note"><strong>Wypełnij formularz w 30 sekund i odblokuj dostęp do zarobków 900 zł dziennie.</strong></p>
+
+          <form id="applicationForm" novalidate>
+            <div class="field">
+              <label for="name">Imię i Nazwisko<span class="req">*</span></label>
+              <input id="name" name="name" type="text" placeholder="np. Jan Kowalski" required autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="phone">Numer WhatsApp<span class="req">*</span></label>
+              <div class="phone-input-group">
+                <div class="country-code">
+                  <img src="https://flagcdn.com/w20/pl.png" alt="Flaga Polski" width="20" height="14" style="display:inline-block;vertical-align:middle;margin-right:8px;border-radius:2px;">
+                  +48
+                </div>
+                <input id="phone" name="phone" type="tel" class="phone-input" placeholder="123 456 789" required inputmode="tel" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="age">Wiek<span class="req">*</span></label>
+              <input id="age" name="age" type="text" placeholder="np. 25" required inputmode="numeric" pattern="[0-9]*" />
+              <p class="muted small" style="margin-top: 4px;">Tylko cyfry. Musisz mieć 18 lat lub więcej.</p>
+            </div>
+
+            <div class="field check">
+              <input id="consent" name="consent" type="checkbox" required style="width: auto; margin-top: 4px;" checked />
+              <label for="consent">Akceptuję <a href="privacy.html">Politykę Prywatności</a> i <a href="userterms.html">Regulamin</a>.</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block pulse">ODBLOKUJ DOSTĘP 🚀</button>
+            
+            <div class="security-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#20c997" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 12L11 14L15 10" stroke="#20c997" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span><strong>Twoje dane są chronione:</strong> Szyfrowanie SSL + RODO + Nigdy nie sprzedajemy danych</span>
+            </div>
+            
+            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          
+          <!-- 社会证明 -->
+          <div class="social-proof">
+            <div class="proof-item">
+              <span class="proof-number">12,347+</span>
+              <span class="proof-text">Polaków już zarabia</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-number">98%</span>
+              <span class="proof-text">Zadowolonych użytkowników</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-number">24h</span>
+              <span class="proof-text">Gwarantowane wypłaty</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right: Additional content -->
+        <div class="hero-right-content fade-in delay-2">
+          <!-- 合并的用户收入展示轮播 - 优化布局 -->
+          <div class="user-earnings-carousel">
+            <h3>🔥 Prawdziwe zarobki naszych użytkowników</h3>
+            
+            <div class="user-earnings-item active">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80" alt="Katarzyna" class="user-earnings-avatar">
+              <div class="user-earnings-info">
+                <div class="user-earnings-name-location">
+                  <div class="user-earnings-name">Katarzyna</div>
+                  <div class="user-earnings-location">Warszawa</div>
+                </div>
+                <div class="user-earnings-amount">1275 zł</div>
+                <div class="user-earnings-period">w tym miesiącu</div>
+              </div>
+            </div>
+            
+            <div class="user-earnings-item">
+              <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80" alt="Marek" class="user-earnings-avatar">
+              <div class="user-earnings-info">
+                <div class="user-earnings-name-location">
+                  <div class="user-earnings-name">Marek</div>
+                  <div class="user-earnings-location">Kraków</div>
+                </div>
+                <div class="user-earnings-amount">890 zł</div>
+                <div class="user-earnings-period">w tym tygodniu</div>
+              </div>
+            </div>
+            
+            <div class="user-earnings-item">
+              <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80" alt="Anna" class="user-earnings-avatar">
+              <div class="user-earnings-info">
+                <div class="user-earnings-name-location">
+                  <div class="user-earnings-name">Anna</div>
+                  <div class="user-earnings-location">Wrocław</div>
+                </div>
+                <div class="user-earnings-amount">2150 zł</div>
+                <div class="user-earnings-period">w tym miesiącu</div>
+              </div>
+            </div>
+            
+            <div class="user-earnings-item">
+              <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80" alt="Piotr" class="user-earnings-avatar">
+              <div class="user-earnings-info">
+                <div class="user-earnings-name-location">
+                  <div class="user-earnings-name">Piotr</div>
+                  <div class="user-earnings-location">Gdańsk</div>
+                </div>
+                <div class="user-earnings-amount">1650 zł</div>
+                <div class="user-earnings-period">w tym miesiącu</div>
+              </div>
+            </div>
+            
+            <div class="user-earnings-item">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80" alt="Maria" class="user-earnings-avatar">
+              <div class="user-earnings-info">
+                <div class="user-earnings-name-location">
+                  <div class="user-earnings-name">Maria</div>
+                  <div class="user-earnings-location">Poznań</div>
+                </div>
+                <div class="user-earnings-amount">980 zł</div>
+                <div class="user-earnings-period">w tym tygodniu</div>
+              </div>
+            </div>
+            
+            <div class="carousel-dots">
+              <div class="carousel-dot active" data-index="0"></div>
+              <div class="carousel-dot" data-index="1"></div>
+              <div class="carousel-dot" data-index="2"></div>
+              <div class="carousel-dot" data-index="3"></div>
+              <div class="carousel-dot" data-index="4"></div>
+            </div>
+            
+            <p class="muted" style="margin-top: 16px; font-weight: 500; font-size: 0.9rem;">
+              Polacy dołączają każdego dnia i zaczynają zarabiać realne pieniądze!
+            </p>
+          </div>
+          
+          <!-- Benefits points -->
+          <div class="hero-right-card">
+            <h3>✅ Dlaczego Polacy Wybierają Nas?</h3>
+            <ul class="hero-points">
+              <li>Elastyczne godziny • Praca z dowolnego miejsca w Polsce</li>
+              <li>Brak opłat rejestracyjnych — 100% darmowe</li>
+              <li>Różnorodne zadania online po polsku</li>
+              <li>Szybkie wypłaty na konto bankowe</li>
+              <li>Polski zespół wsparcia 7 dni w tygodniu</li>
+              <li>Idealne dla studentów, mam, emerytów</li>
+            </ul>
+          </div>
+          
+          <!-- Counter -->
+          <div class="hero-right-card">
+            <h3>⏰ Oferta aktywna przez:</h3>
+            <div class="counter">
+              <div class="counter-item">
+                <div class="counter-number" id="hours">12</div>
+                <div class="counter-label">Godziny</div>
+              </div>
+              <div class="counter-item">
+                <div class="counter-number" id="minutes">45</div>
+                <div class="counter-label">Minuty</div>
+              </div>
+              <div class="counter-item">
+                <div class="counter-number" id="seconds">30</div>
+                <div class="counter-label">Sekundy</div>
+              </div>
+            </div>
+            <p class="muted" style="text-align: center; margin-top: 12px; font-weight: 600; font-size: 0.9rem;">Miejsca zapełniają się szybko - nie przegap szansy!</p>
+            <button class="btn btn-primary btn-block pulse open-form-btn" style="margin-top: 12px;">ZAREJESTRUJ SIĘ TERAZ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-bg" role="img" aria-label="Scena pracy zdalnej: osoba korzystająca z laptopa w domu"></div>
+  </section>
+
+  <!-- Mobile CTA Bar -->
+  <div class="mobile-cta-bar">
+    <button class="btn btn-primary btn-block pulse open-form-btn">Zacznij Zarabiać 🚀</button>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content" aria-labelledby="modalTitle" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Zamknij">&times;</button>
+      <h3 class="modal-title" id="modalTitle">🎉 Sukces! Dostęp Odblokowany!</h3>
+      <p class="modal-message">Twoja aplikacja została zaakceptowana! Kliknij OK, aby natychmiast połączyć się z naszym zespołem wsparcia przez WhatsApp i otrzymać instrukcje startowe.</p>
+      <button class="modal-btn pulse" id="modalOkBtn">PRZEJDŹ DO WHATSAPP</button>
+    </div>
+  </div>
+
+  <!-- Age Warning Modal -->
+  <div class="modal age-warning-modal" id="ageWarningModal">
+    <div class="modal-content" aria-labelledby="ageWarningTitle" role="dialog" aria-modal="true">
+      <button class="modal-close" id="ageWarningCloseBtn" aria-label="Zamknij">&times;</button>
+      <h3 class="modal-title" id="ageWarningTitle">⚠️ Wymagania wiekowe</h3>
+      <p class="modal-message">Przepraszamy, ale nasze usługi są dostępne tylko dla osób w wieku 18 lat i starszych. Możesz złożyć aplikację, gdy skończysz 18 lat.</p>
+      <button class="modal-btn" id="ageWarningOkBtn">Rozumiem</button>
+    </div>
+  </div>
+
+  <!-- Form Modal -->
+  <div class="modal" id="formModal">
+    <div class="modal-content" aria-labelledby="modalFormTitle" role="dialog" aria-modal="true">
+      <button class="modal-close" id="formModalCloseBtn" aria-label="Zamknij">&times;</button>
+      <h2 class="modal-title" id="modalFormTitle">🔥 Aplikuj Teraz i Zarabiaj 900 zł Dziennie</h2>
+      <p class="modal-message">Wypełnij formularz w 30 sekund i odblokuj dostęp do zarobków 900 zł dziennie z domu.</p>
+
+      <div class="modal-form-content">
+        <form id="modalApplicationForm" novalidate>
+          <div class="field">
+            <label for="modal-name">Imię i Nazwisko<span class="req">*</span></label>
+            <input id="modal-name" name="name" type="text" placeholder="np. Jan Kowalski" required autocomplete="name" />
+          </div>
+
+          <div class="field">
+            <label for="modal-phone">Numer WhatsApp<span class="req">*</span></label>
+            <div class="phone-input-group">
+              <div class="country-code">
+                <img src="https://flagcdn.com/w20/pl.png" alt="Flaga Polski" width="20" height="14" style="display:inline-block;vertical-align:middle;margin-right:8px;border-radius:2px;">
+                +48
+              </div>
+              <input id="modal-phone" name="phone" type="tel" class="phone-input" placeholder="123 456 789" required inputmode="tel" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="modal-age">Wiek<span class="req">*</span></label>
+            <input id="modal-age" name="age" type="text" placeholder="np. 25" required inputmode="numeric" pattern="[0-9]*" />
+            <p class="muted small" style="margin-top: 4px;">Tylko cyfry. Musisz mieć 18 lat lub więcej.</p>
+          </div>
+
+          <div class="field check">
+            <input id="modal-consent" name="consent" type="checkbox" required style="width: auto; margin-top: 4px;" checked />
+            <label for="modal-consent">Akceptuję <a href="privacy.html">Politykę Prywatności</a> i <a href="userterms.html">Regulamin</a>.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block pulse">ODBLOKUJ DOSTĘP 🚀</button>
+          
+          <div class="security-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#20c997" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 12L11 14L15 10" stroke="#20c997" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span><strong>Twoje dane są chronione:</strong> Szyfrowanie SSL + RODO + Nigdy nie sprzedajemy danych</span>
+          </div>
+          
+          <p id="modalFormStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hiring (Part-time & Full-time) -->
+  <section id="roles" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="pl-flag">
+          <img src="https://flagcdn.com/w20/pl.png" alt="Flaga Polski">
+          <span>🇵🇱 100% POLSKIE MOŻLIWOŚCI ZAROBKU</span>
+        </div>
+        <h2>Wybierz Swoją Drogę do 900 zł Dziennie</h2>
+        <p class="muted">Dostosuj zarobki do swojego stylu życia. Zarówno praca na część etatu, jak i pełny etat może przynieść Ci realne dochody.</p>
+      </div>
+
+      <div class="cards two-col">
+        <article class="card fade-in">
+          <div class="card-media" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80')"></div>
+          <div class="card-body">
+            <div class="earnings-badge">🔥 Możliwe zarobki: 1500 - 5000 zł / miesiąc</div>
+            <h3>🏠 Praca Zdalna w Niepełnym Wymiarze</h3>
+            <ul class="list">
+              <li><strong>Elastyczne godziny:</strong> 1–3 godziny/dzień w dowolnym czasie</li>
+              <li><strong>Gwarantowane płatności:</strong> Wypłata w ciągu 24h</li>
+              <li><strong>Wszystko czego potrzebujesz:</strong> Tylko smartfon i internet</li>
+              <li><strong>Proste zadania:</strong> Ankiety, testy, oceny online</li>
+              <li><strong>Idealne dla:</strong> Studentów, mam, dodatkowy dochód</li>
+            </ul>
+            <p class="earnings-disclaimer">* Przedstawione zarobki są przykładowe i zależą od Twojej aktywności. Niektóre osoby mogą osiągać wyższe wyniki.</p>
+            <button class="btn btn-primary pulse open-form-btn" style="margin-top: 16px;">ZACZNIJ ZARABIAĆ DZIŚ</button>
+          </div>
+        </article>
+
+        <article class="card fade-in delay-1">
+          <div class="card-media" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80')"></div>
+          <div class="card-body">
+            <div class="earnings-badge">🚀 Możliwe zarobki: 5000+ zł / miesiąc</div>
+            <h3>💼 Praca Zdalna w Pełnym Wymiarze</h3>
+            <ul class="list">
+              <li><strong>Stabilny dochód:</strong> 3–6 godzin/dzień w elastycznych godzin</li>
+              <li><strong>Szybkie wypłaty:</strong> Codzienne przelewy na konto</li>
+              <li><strong>Zaawansowane zadania:</strong> Wyższe stawki za bardziej złożone projekty</li>
+              <li><strong>Wsparcie 24/7:</strong> Polski zespół pomocy dostępny non-stop</li>
+              <li><strong>Idealne dla:</strong> Osób szukających głównego źródła dochodu</li>
+            </ul>
+            <p class="earnings-disclaimer">* Przedstawione zarobki są przykładowe i zależą od Twojej aktywności. Niektóre osoby mogą osiągać wyższe wyniki.</p>
+            <button class="btn btn-primary pulse open-form-btn" style="margin-top: 16px;">ZOSTAŃ PROFESJONALISTĄ</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Requirements -->
+  <section class="section" aria-labelledby="req-title">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 id="req-title">✅ Wszystko, Czego Potrzebujesz, Aby Zacząć Zarabiać</h2>
+        <p class="muted">Proste wymagania, które spełnia prawie każdy w Polsce. Nie potrzebujesz żadnych specjalnych umiejętności!</p>
+      </div>
+      
+      <div class="requirements">
+        <div class="req-item fade-in">
+          <div class="req-icon">📱</div>
+          <div>
+            <h4>Smartfon z Internetem</h4>
+            <p>Android lub iOS. Internet LTE/5G/WiFi. To wszystko!</p>
+          </div>
+        </div>
+        <div class="req-item fade-in delay-1">
+          <div class="req-icon">💸</div>
+          <div>
+            <h4>Chęci do Zarobku</h4>
+            <p>Odrobina czasu i chęć na dodatkowy dochód. Nic więcej!</p>
+          </div>
+        </div>
+        <div class="req-item fade-in delay-1">
+          <div class="req-icon">🎯</div>
+          <div>
+            <h4>Wiek 18+</h4>
+            <p>Weryfikacja wieku dla bezpieczeństwa i zgodności z prawem.</p>
+          </div>
+        </div>
+        <div class="req-item fade-in delay-2">
+          <div class="req-icon">🤝</div>
+          <div>
+            <h4>Wszystkie płcie</h4>
+            <p>Równe szanse dla wszystkich. Nie ma znaczenia kim jesteś!</p>
+          </div>
+        </div>
+        <div class="req-item fade-in delay-2">
+          <div class="req-icon">⚡</div>
+          <div>
+            <h4>Podstawowa obsługa smartfona</h4>
+            <p>Potrafisz klikać, przewijać, wpisywać tekst? Wystarczy!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work From Home Benefits -->
+  <section id="benefits" class="section alt">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefits-media fade-in"></div>
+        <div class="benefits-copy fade-in delay-1">
+          <h2>🏡 Pracuj z Domu Lub Gdziekolwiek Chcesz</h2>
+          <ul class="stats">
+            <li><strong>50 000+</strong> zarejestrowanych Polaków</li>
+            <li><strong>100 000+</strong> zadań miesięcznie</li>
+            <li><strong>500+</strong> polski zespół wsparcia</li>
+            <li><strong>95%</strong> satysfakcji użytkowników</li>
+          </ul>
+          <p class="muted"><strong>Dołącz do największej polskiej społeczności zarabiającej online.</strong> Nasze liczby mówią same za siebie - tysiące Polaków już zarabia z nami realne pieniądze.</p>
+          
+          <!-- 信任元素 -->
+          <div class="trust-badges" style="margin-top: 20px;">
+            <div class="trust-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Zweryfikowana firma
+            </div>
+            <div class="trust-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Wypłaty 24h
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>💬 Posłuchaj Naszych Pracowników Zdalnych</h2>
+        <p class="muted">Prawdziwi Polacy, prawdziwe zarobki, prawdziwe opinie.</p>
+      </div>
+      
+      <div class="cards three-col">
+        <blockquote class="testimonial fade-in">
+          <div class="avatar">A</div>
+          <p>"Zaczynałam z przymusu, bo potrzebowałam dodatkowego dochodu. Teraz zarabiam więcej niż w poprzedniej pracy! Zadania są proste, płatności szybkie. Polecam każdej mamie!"</p>
+          <footer>— Anna, 32 lata, Warszawa</footer>
+        </blockquote>
+        <blockquote class="testimonial fade-in delay-1">
+          <div class="avatar">P</div>
+          <p>"Jako student zawsze brakowało mi pieniędzy. Dzięki tej platformie opłacam czesne i mam na życie. Elastyczne godziny pozwalają mi pogodzić studia z pracą."</p>
+          <footer>— Piotr, 21 lat, Kraków</footer>
+        </blockquote>
+        <blockquote class="testimonial fade-in delay-2">
+          <div class="avatar">M</div>
+          <p>"Po przejściu na emeryturę myślałam, że już nie zarobię. A tu proszę - 2-3 godziny dziennie i mam dodatkowe 1500 zł miesięcznie. Zespół wsparcia pomaga na każdym kroku!"</p>
+          <footer>— Maria, 67 lat, Wrocław</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Limited Opportunity -->
+  <section class="section cta">
+    <div class="container cta-inner fade-in">
+      <div>
+        <div class="opportunity-badge">🚀 OSTATNIA SZANSA NA DOŁĄCZENIE</div>
+        <h2>Czas Na Twoje 900 zł Dziennie!</h2>
+        <p class="muted" style="font-size: 1.1rem; font-weight: 500;">Nie czekaj dłużej. Miejsca dla nowych użytkowników z Polski szybko się kończą. Dołącz teraz i zacznij zarabiać jeszcze dziś.</p>
+        
+        <!-- 信任徽章 -->
+        <div class="trust-badges" style="margin: 24px 0;">
+          <div class="trust-badge" style="background: white;">
+            <svg viewBox="0 0 24 24" fill="#059669">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Gwarancja Przyjęcia
+          </div>
+          <div class="trust-badge" style="background: white;">
+            <svg viewBox="0 0 24 24" fill="#dc2626">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            Start w 5 Minut
+          </div>
+          <div class="trust-badge" style="background: white;">
+            <svg viewBox="0 0 24 24" fill="#2563eb">
+              <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Wypłaty 24h
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-lg pulse open-form-btn" style="font-size: 1.2rem; padding: 16px 32px;">ZACZNIJ ZARABIAĆ TERAZ 🚀</button>
+      
+      <p class="muted" style="margin-top: 16px; font-size: 0.85rem;">
+        <strong>Bez ryzyka:</strong> 100% darmowa rejestracja, brak umów, możesz przestać w dowolnym momenty.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>❓ Najczęstsze Pytania</h2>
+        <p class="muted">Wszystko, co musisz wiedzieć przed rozpoczęciem zarabiania z nami.</p>
+      </div>
+      
+      <details class="faq fade-in">
+        <summary>Czy jest jakaś opłata za rejestrację?</summary>
+        <div><strong>Absolutnie żadnej!</strong> Rejestracja, dostęp do zadań i wsparcie są całkowicie darmowe. Zarabiasz, my zarabiamy - to uczciwy model biznesowy.</div>
+      </details>
+      <details class="faq fade-in">
+        <summary>Jak szybko dostanę pierwszą wypłatę?</summary>
+        <div><strong>Pierwszą wypłatę dostajesz w ciągu 24 godzin</strong> od wykonania pierwszego zadania. Wypłaty są przetwarzane codziennie, a środki trafiają bezpośrednio na Twoje konto bankowe.</div>
+      </details>
+      <details class="faq fade-in">
+        <summary>Czy potrzebuję komputera?</summary>
+        <div><strong>Nie, wystarczy smartfon!</strong> Wszystkie zadania są zoptymalizowane pod urządzenia mobilne. Możesz pracować z dowolnego miejsca w Polsce, gdzie masz internet.</div>
+      </details>
+      <details class="faq fade-in">
+        <summary>Jak się ze mną skontaktujecie po rejestracji?</summary>
+        <div><strong>Natychmiast po rejestracji</strong> nasz polski zespół wsparcia kontaktuje się z Tobą przez WhatsApp. Otrzymasz szczegółowe instrukcje i pomoc na każdym kroku.</div>
+      </details>
+      <details class="faq fade-in">
+        <summary>Jakie są konkretne zadania?</summary>
+        <div>Oferujemy różnorodne proste zadania online: <strong>ankiety marketingowe, testowanie aplikacji, ocena treści, mikrozadania</strong> - wszystko w języku polskim i dostosowane do Polaków.</div>
+      </details>
+      <details class="faq fade-in">
+        <summary>Czy zarobki 900 zł dziennie są realne?</summary>
+        <div><strong>Tak, ale wymaga to regularności.</strong> Najaktywniejsi użytkownicy osiągają takie wyniki. Średnio zaczynasz od 150-300 zł dziennie, a z czasem i doświadczeniem zarobki rosną.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#top">Zdalni.PL</a>
+        <p class="muted small"><strong>Polska platforma zarobków online.</strong> Przejrzyste zasady, realne zarobki, żadnych ukrytych kosztów.</p>
+        
+        <!-- 信任信息 -->
+        <div class="trust-badges" style="margin-top: 12px; justify-content: flex-start;">
+          <div class="trust-badge" style="background: transparent; padding: 6px 10px;">
+            <svg viewBox="0 0 24 24" fill="#059669">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span style="font-size: 0.75rem;">Zweryfikowana firma</span>
+          </div>
+        </div>
+      </div>
+      <nav class="footer-links">
+        <a id="privacy" href="privacy.html" rel="nofollow" style="font-weight: 600;">Polityka Prywatności</a>
+        <a id="terms" href="userterms.html" rel="nofollow" style="font-weight: 600;">Regulamin</a>
+        <a href="contact.html" rel="nofollow" style="font-weight: 600;">Kontakt</a>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="muted small">© 2024 Zdalni.PL. Wszelkie prawa zastrzeżone. Przedstawione zarobki są przykładami tego, co niektórzy użytkownicy mogą osiągnąć. Twoje rzeczywiste zarobki zależą od Twojej aktywności i dostępności zadań. Nie gwarantujemy określonych dochodów. Usługa dostępna wyłącznie dla mieszkańców Polski w wieku 18+.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('applicationForm');
+      const modalForm = document.getElementById('modalApplicationForm');
+      const formStatus = document.getElementById('formStatus');
+      const modalFormStatus = document.getElementById('modalFormStatus');
+      const successModal = document.getElementById('successModal');
+      const ageWarningModal = document.getElementById('ageWarningModal');
+      const formModal = document.getElementById('formModal');
+      const modalOkBtn = document.getElementById('modalOkBtn');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const ageWarningCloseBtn = document.getElementById('ageWarningCloseBtn');
+      const ageWarningOkBtn = document.getElementById('ageWarningOkBtn');
+      const formModalCloseBtn = document.getElementById('formModalCloseBtn');
+      const openFormBtns = document.querySelectorAll('.open-form-btn');
+      
+      // WhatsApp账号数组
+      const whatsappAccounts = [ 
+        "33757129560",
+        "33780190566",
+        "33685304864",
+        "33686738093",
+        "33695149450",
+        "33781231298",
+        "33699632559",
+        "33744647459",
+        "33745830992",
+        "33749626406"
+      ];
+      
+      // 生成WhatsApp链接
+      function generateWhatsAppLink(phoneNumber) {
+        const message = encodeURIComponent("Cześć! Właśnie zarejestrowałem/am się na Zdalni.PL i chcę zacząć zarabiać! Proszę o instrukcje.");
+        return `https://wa.me/${phoneNumber}?text=${message}`;
+      }
+      
+      // 随机分配一个账号并生成链接
+      let assignedWhatsAppLink = '';
+      function assignWhatsAppLink() {
+        const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+        assignedWhatsAppLink = generateWhatsAppLink(randomAccount);
+      }
+      assignWhatsAppLink();
+      
+      // 轮播功能
+      function initCarousel() {
+        const items = document.querySelectorAll('.user-earnings-item');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let currentIndex = 0;
+        
+        function showItem(index) {
+          // 隐藏所有项目
+          items.forEach(item => item.classList.remove('active'));
+          dots.forEach(dot => dot.classList.remove('active'));
+          
+          // 显示当前项目
+          items[index].classList.add('active');
+          dots[index].classList.add('active');
+          
+          currentIndex = index;
+        }
+        
+        // 点击圆点切换
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            showItem(index);
+          });
+        });
+        
+        // 自动轮播
+        setInterval(() => {
+          let nextIndex = currentIndex + 1;
+          if (nextIndex >= items.length) {
+            nextIndex = 0;
+          }
+          showItem(nextIndex);
+        }, 5000); // 每5秒切换一次
+      }
+      
+      // 倒计时计时器
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const endTime = new Date();
+        endTime.setHours(23, 59, 59, 999);
+        
+        if (now > endTime.getTime()) {
+          endTime.setDate(endTime.getDate() + 1);
+        }
+        
+        const distance = endTime.getTime() - now;
+        
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+      }
+      
+      // 初始化倒计时
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+      
+      // 打开表单模态框
+      function openFormModal() {
+        formModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      // 关闭表单模态框
+      function closeFormModal() {
+        formModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      
+      // 打开成功模态框
+      function openSuccessModal() {
+        successModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      // 关闭成功模态框
+      function closeSuccessModal() {
+        successModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      
+      // 打开年龄警告模态框
+      function openAgeWarningModal() {
+        ageWarningModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      // 关闭年龄警告模态框
+      function closeAgeWarningModal() {
+        ageWarningModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      
+      // 验证年龄（必须18岁或以上）
+      function validateAge(ageValue) {
+        const age = parseInt(ageValue, 10);
+        return !isNaN(age) && age >= 18 && age <= 100;
+      }
+      
+      // 限制年龄输入为数字
+      function setupAgeInputRestrictions() {
+        const ageInputs = [
+          document.getElementById('age'),
+          document.getElementById('modal-age')
+        ];
+        
+        ageInputs.forEach(input => {
+          if (input) {
+            input.addEventListener('input', function(e) {
+              this.value = this.value.replace(/[^0-9]/g, '');
+              
+              if (this.value.length > 3) {
+                this.value = this.value.slice(0, 3);
+              }
+              
+              if (this.value && !validateAge(this.value)) {
+                this.style.borderColor = '#dc2626';
+                this.style.background = 'rgba(220, 38, 38, 0.05)';
+              } else {
+                this.style.borderColor = '';
+                this.style.background = '';
+              }
+            });
+            
+            input.addEventListener('paste', function(e) {
+              e.preventDefault();
+              const pasteData = e.clipboardData.getData('text');
+              const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 3);
+              document.execCommand('insertText', false, numbersOnly);
+            });
+          }
+        });
+      }
+      
+      // 处理表单提交和验证
+      function handleFormSubmit(e, formElement, statusElement) {
+        e.preventDefault();
+        
+        const inputs = formElement.querySelectorAll('input');
+        inputs.forEach(input => {
+          input.style.borderColor = '';
+          input.style.background = '';
+        });
+        
+        let isValid = true;
+        let errorMessage = '';
+        
+        // 验证姓名
+        const nameInput = formElement.querySelector('input[name="name"]');
+        if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+          isValid = false;
+          errorMessage = 'Proszę podać pełne imię i nazwisko (minimum 2 znaki)';
+          nameInput.style.borderColor = '#dc2626';
+          nameInput.style.background = 'rgba(220, 38, 38, 0.05)';
+        }
+        
+        // 验证电话
+        const phoneInput = formElement.querySelector('input[name="phone"]');
+        const phoneRegex = /^[0-9\s]{9,}$/;
+        if (!phoneInput.value.trim() || !phoneRegex.test(phoneInput.value.replace(/\s/g, ''))) {
+          isValid = false;
+          errorMessage = 'Proszę podać prawidłowy numer telefonu (9 cyfr)';
+          phoneInput.style.borderColor = '#dc2626';
+          phoneInput.style.background = 'rgba(220, 38, 38, 0.05)';
+        }
+        
+        // 验证年龄
+        const ageInput = formElement.querySelector('input[name="age"]');
+        const ageValue = ageInput.value.trim();
+        
+        if (!ageValue) {
+          isValid = false;
+          errorMessage = 'Proszę podać swój wiek';
+          ageInput.style.borderColor = '#dc2626';
+          ageInput.style.background = 'rgba(220, 38, 38, 0.05)';
+        } else if (!validateAge(ageValue)) {
+          openAgeWarningModal();
+          ageInput.style.borderColor = '#dc2626';
+          ageInput.style.background = 'rgba(220, 38, 38, 0.05)';
+          return false;
+        }
+        
+        // 验证条款同意
+        const consentInput = formElement.querySelector('input[name="consent"]');
+        if (!consentInput.checked) {
+          isValid = false;
+          errorMessage = 'Musisz zaakceptować regulamin';
+          formElement.querySelector('.field.check').style.border = '2px solid #dc2626';
+          formElement.querySelector('.field.check').style.background = 'rgba(220, 38, 38, 0.05)';
+        } else {
+          formElement.querySelector('.field.check').style.border = '';
+          formElement.querySelector('.field.check').style.background = '';
+        }
+        
+        if (!isValid) {
+          statusElement.textContent = errorMessage;
+          statusElement.className = 'form-status error';
+          statusElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+        
+        // 表单验证通过，显示成功消息
+        statusElement.textContent = '✅ Formularz wysłany pomyślnie! Przekierowujemy...';
+        statusElement.className = 'form-status success';
+        
+        // 禁用提交按钮
+        const submitBtn = formElement.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'WYSŁANO ✓';
+        submitBtn.style.background = '#059669';
+        
+        // 短延迟后显示成功模态框
+        setTimeout(() => {
+          openSuccessModal();
+        }, 800);
+        
+        // 如果是模态框表单，关闭它
+        if (formElement === modalForm) {
+          setTimeout(closeFormModal, 500);
+        }
+        
+        return true;
+      }
+      
+      // 事件监听器
+      form.addEventListener('submit', function(e) {
+        handleFormSubmit(e, form, formStatus);
+      });
+      
+      modalForm.addEventListener('submit', function(e) {
+        handleFormSubmit(e, modalForm, modalFormStatus);
+      });
+      
+      // 所有CTA按钮点击打开模态框表单
+      openFormBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          openFormModal();
+        });
+      });
+      
+      // 模态框关闭按钮
+      modalCloseBtn.addEventListener('click', closeSuccessModal);
+      ageWarningCloseBtn.addEventListener('click', closeAgeWarningModal);
+      ageWarningOkBtn.addEventListener('click', closeAgeWarningModal);
+      formModalCloseBtn.addEventListener('click', closeFormModal);
+      
+      // 点击背景关闭模态框
+      successModal.addEventListener('click', function(e) {
+        if (e.target === successModal) {
+          closeSuccessModal();
+        }
+      });
+      
+      ageWarningModal.addEventListener('click', function(e) {
+        if (e.target === ageWarningModal) {
+          closeAgeWarningModal();
+        }
+      });
+      
+      formModal.addEventListener('click', function(e) {
+        if (e.target === formModal) {
+          closeFormModal();
+        }
+      });
+      
+      // 成功模态框OK按钮 - 只在点击WhatsApp跳转时上报谷歌事件
+      modalOkBtn.addEventListener('click', function() {
+        // 重新分配WhatsApp链接
+        assignWhatsAppLink();
+        
+        // 谷歌官方推荐的标准方式上报转化事件
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17524155246/20w0CPTq2c4bEO7GlaRB',
+          'value': 3.5,
+          'currency': 'USD',
+          'transaction_id': Date.now().toString()
+        });
+        
+        // 300毫秒延迟后跳转到WhatsApp（新标签页）
+        setTimeout(() => {
+          window.open(assignedWhatsAppLink, '_blank');
+        }, 300);
+        
+        // 关闭成功模态框
+        setTimeout(() => {
+          closeSuccessModal();
+        }, 500);
+      });
+      
+      // 锚点链接平滑滚动
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        if (anchor.getAttribute('href') !== '#' && !anchor.classList.contains('open-form-btn')) {
+          anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId !== '#') {
+              e.preventDefault();
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                targetElement.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
+            }
+          });
+        }
+      });
+      
+      // 淡入动画
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // 设置年龄输入限制
+      setupAgeInputRestrictions();
+      
+      // 初始化轮播
+      initCarousel();
+    });
+  </script>
+</body>
+</html>
