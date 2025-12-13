@@ -4,7 +4,7 @@
 const FANGYU_API_KEY = 'GMh9WKh9wrlwsWyxEvhW0';
 
 //接口请求地址（每个网站规则都要修改；位置：用户后台 -> 我的网站 -> 某个网站 -> 唯一编号）
-const FANGYU_API_URL = 'https://api-visitor.fangyu.io/check/28454/B0rIM4EwYKY0EGkg68';
+const FANGYU_API_URL = 'https://api-visitor.fangyu.io/check/28454/s41DoNGxWowhlXNaYO';
 
 /***********************************************************************
  * 以下四个参数，默认读取 【我的网站 -- 某网站 -- 编辑规则 -- 基础 -- 被允许/被拦截】中的设置。
@@ -31,3 +31,4 @@ const FANGYU_API_URL = 'https://api-visitor.fangyu.io/check/28454/B0rIM4EwYKY0EG
 //被拦截时的跳转地址
 
 //const JUMP_BLOCK_URL = '404';
+
