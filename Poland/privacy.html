@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Polityka Prywatności | PracaZdalnaPL</title>
+  <meta name="description" content="Polityka prywatności PracaZdalnaPL. Dowiedz się, jak chronimy Twoje dane osobowe i zapewniamy bezpieczeństwo informacji." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root{
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --muted: #64748b;
+      --text: #1e293b;
+      --white: #ffffff;
+      --primary: #3b82f6;
+      --primary-600: #2563eb;
+      --primary-300: #93c5fd;
+      --accent: #8b5cf6;
+      --accent-light: #c4b5fd;
+      --green: #10b981;
+      --yellow: #f59e0b;
+      --red: #ef4444;
+      --ring: 0 0 0 3px rgba(59, 130, 246, 0.25);
+      --radius: 12px;
+      --transition: all 0.3s ease;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;line-height:1.5; font-size: 16px;}
+    img{max-width:100%;display:block}
+    a{color:var(--text);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1120px,94%);margin-inline:auto}
+
+    .nav{position:sticky;top:0;z-index:50;background:rgba(248, 250, 252, 0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.06); box-shadow: 0 1px 3px rgba(0,0,0,0.05);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{font-weight:800;letter-spacing:.3px;font-size:1.3rem; background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .nav-link{opacity:.85; transition: var(--transition); font-size: 0.95rem; font-weight: 500;}
+    .nav-link:hover{opacity:1; color: var(--primary);}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;border-radius:8px;border:0;font-weight:600;cursor:pointer;transition:var(--transition); font-size: 0.95rem;}
+    .btn-primary{background: var(--primary);color:white; box-shadow: var(--shadow);}
+    .btn-primary:hover{background:var(--primary-600); transform: translateY(-2px); box-shadow: var(--shadow-lg);}
+    
+    .section{padding:60px 0}
+    .section.alt{background:#f1f5f9}
+    h1{margin:0 0 16px;font-size:32px; font-weight: 800; background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+    h2{margin:32px 0 16px;font-size:24px; font-weight: 700; color: var(--text);}
+    h3{margin:24px 0 12px;font-size:20px; font-weight: 600; color: var(--text);}
+    .muted{color:var(--muted); line-height: 1.6;}
+    .small{font-size:0.88rem}
+    
+    .content-card{background:var(--card);border:1px solid rgba(0,0,0,.08);border-radius:var(--radius);padding:32px; box-shadow: var(--shadow); position: relative;}
+    .content-card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        border-radius: var(--radius) var(--radius) 0 0;
+    }
+    
+    .footer{border-top:1px solid rgba(0,0,0,.08);padding:32px 0 20px;background:#f1f5f9}
+    .footer-grid{display:flex;justify-content:space-between;gap:16px;align-items:flex-start; margin-bottom: 20px;}
+    .footer-links{display:flex;gap:16px;flex-wrap:wrap}
+    
+    .security-badge {display: flex; align-items: center; gap: 10px; margin-top: 16px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; font-size: 0.9rem;}
+    .security-badge svg {flex-shrink: 0; width: 20px; height: 20px;}
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.6s ease forwards;
+    }
+    
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.3s; }
+    
+    /* PL elements */
+    .pl-flag {display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px; padding: 6px 12px; background: rgba(0,0,0,0.05); border-radius: 20px;}
+    .pl-flag img {width: 24px; height: 16px; border-radius: 2px;}
+    
+    /* Mobile responsiveness */
+    @media (max-width: 980px){
+      h1 {font-size: 28px;}
+      h2 {font-size: 22px;}
+      .section {padding: 40px 0;}
+      .nav-links .nav-link {display: none;}
+    }
+    
+    @media (max-width: 640px) {
+      .nav-links {gap: 8px;}
+      .btn {padding: 8px 16px; font-size: 0.92rem;}
+      .footer-grid {flex-direction: column; gap: 16px;}
+      .footer-links {flex-direction: column; gap: 8px;}
+      .section {padding: 32px 0;}
+      .content-card {padding: 20px;}
+    }
+    
+    @media (max-width: 480px) {
+      h1 {font-size: 24px;}
+      h2 {font-size: 20px;}
+      .brand {font-size: 1.2rem;}
+      .nav-link {font-size: 0.9rem;}
+      .btn {font-size: 0.9rem;}
+    }
+    
+    /* Content styling */
+    .privacy-content ul, .privacy-content ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    
+    .privacy-content li {
+      margin-bottom: 8px;
+    }
+    
+    .privacy-content p {
+      margin-bottom: 16px;
+    }
+    
+    .highlight-box {
+      background: rgba(59, 130, 246, 0.05);
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">PracaZdalnaPL</a>
+      <nav class="nav-links">
+        <a href="index.html#roles" class="nav-link">Stanowiska</a>
+        <a href="index.html#benefits" class="nav-link">Korzyści</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="index.html" class="btn btn-primary">Aplikuj Teraz</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Privacy Policy Content -->
+  <section class="section">
+    <div class="container">
+      <div class="pl-flag fade-in">
+        <img src="https://flagcdn.com/w20/pl.png" alt="Flaga Polski">
+        <span>POLSKA PLATFORMA PRACY ZDALNEJ</span>
+      </div>
+      
+      <div class="content-card fade-in delay-1">
+        <h1>Polityka Prywatności</h1>
+        <p class="muted">Ostatnia aktualizacja: 1 czerwca 2024</p>
+        
+        <div class="privacy-content">
+          <p>W PracaZdalnaPL szanujemy Twoją prywatność i jesteśmy zaangażowani w ochronę Twoich danych osobowych. Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób zbieramy, wykorzystujemy, ujawniamy i chronimy Twoje informacje podczas korzystania z naszej platformy.</p>
+          
+          <div class="highlight-box">
+            <p><strong>Kluczowe informacje:</strong> Zbieramy tylko niezbędne dane do świadczenia naszych usług. Nigdy nie sprzedajemy Twoich danych osobowych stronom trzecim. Twoje informacje są bezpieczne dzięki zaawansowanym środkom ochrony.</p>
+          </div>
+          
+          <h2>1. Informacje, Które Zbieramy</h2>
+          
+          <h3>Dane Osobowe</h3>
+          <p>Podczas składania aplikacji zbieramy następujące informacje:</p>
+          <ul>
+            <li><strong>Imię i nazwisko:</strong> Do personalizacji komunikacji i weryfikacji tożsamości</li>
+            <li><strong>Numer telefonu (WhatsApp):</strong> Do kontaktu w sprawie zadań i wypłat</li>
+            <li><strong>Wiek:</strong> Aby upewnić się, że spełniasz minimalne wymagania wiekowe</li>
+            <li><strong>Zgoda na przetwarzanie danych:</strong> Rejestrujemy Twoją zgodę na przetwarzanie danych</li>
+          </ul>
+          
+          <h3>Dane Automatycznie Zbierane</h3>
+          <p>Podczas korzystania z naszej strony internetowej możemy zbierać:</p>
+          <ul>
+            <li><strong>Dane techniczne:</strong> Adres IP, typ przeglądarki, wersja, ustawienia językowe</li>
+            <li><strong>Informacje o urządzeniu:</strong> Typ urządzenia, system operacyjny, rozdzielczość ekranu</li>
+            <li><strong>Dane o korzystaniu:</strong> Strony odwiedzane, czas spędzony na stronie, źródło ruchu</li>
+          </ul>
+          
+          <h2>2. Jak Wykorzystujemy Twoje Informacje</h2>
+          
+          <p>Wykorzystujemy zebrane informacje w następujących celach:</p>
+          <ul>
+            <li><strong>Świadczenie usług:</strong> Przekazywanie zadań, koordynacja pracy, przetwarzanie wypłat</li>
+            <li><strong>Komunikacja:</strong> Kontakt w sprawie nowych zadań, zmian w usłudze, ważnych ogłoszeń</li>
+            <li><strong>Poprawa usług:</strong> Analiza wzorców korzystania w celu ulepszania platformy</li>
+            <li><strong>Bezpieczeństwo:</strong> Wykrywanie i zapobieganie oszustwom, nadużyciom i nieautoryzowanym działaniom</li>
+            <li><strong>Zgodność z prawem:</strong> Spełnienie obowiązków prawnych i regulacyjnych</li>
+          </ul>
+          
+          <h2>3. Podstawy Prawne Przetwarzania</h2>
+          
+          <p>Przetwarzamy Twoje dane osobowe na następujących podstawach prawnych:</p>
+          <ul>
+            <li><strong>Zgoda:</strong> Gdy wyraźnie wyraziłeś zgodę na przetwarzanie danych</li>
+            <li><strong>Wykonanie umowy:</strong> Gdy przetwarzanie jest niezbędne do realizacji usług</li>
+            <li><strong>Prawny obowiązek:</strong> Gdy przetwarzanie jest wymagane przez obowiązujące prawo</li>
+            <li><strong>Uzasadniony interes:</strong> Gdy przetwarzanie jest konieczne dla naszych uzasadnionych interesów</li>
+          </ul>
+          
+          <h2>4. Udostępnianie Danych</h2>
+          
+          <p>Twoje dane osobowe mogą być udostępniane w następujących sytuacjach:</p>
+          <ul>
+            <li><strong>Dostawcy usług:</strong> Zaufani partnerzy techniczni, którzy pomagają nam świadczyć usługi</li>
+            <li><strong>Wymogi prawne:</strong> Gdy jest to wymagane przez prawo lub postępowanie sądowe</li>
+            <li><strong>Ochrona praw:</strong> Aby chronić nasze prawa, własność lub bezpieczeństwo</li>
+          </ul>
+          
+          <p><strong>Zapewniamy, że:</strong> Wszyscy nasi partnerzy są zobowiązani do ochrony Twoich danych i przestrzegania obowiązujących przepisów o ochronie danych.</p>
+          
+          <h2>5. Przechowywanie Danych</h2>
+          
+          <p>Przechowujemy Twoje dane osobowe tylko przez okres niezbędny do realizacji celów, dla których zostały zebrane, chyba że dłuższe przechowywanie jest wymagane lub dozwolone przez prawo.</p>
+          
+          <p>Ogólne okresy przechowywania:</p>
+          <ul>
+            <li><strong>Dane aplikacyjne:</strong> 3 lata od ostatniej aktywności</li>
+            <li><strong>Dane transakcyjne:</strong> 7 lat zgodnie z wymogami podatkowymi</li>
+            <li><strong>Dane komunikacyjne:</strong> 2 lata od zakończenia współpracy</li>
+          </ul>
+          
+          <h2>6. Twoje Prawa</h2>
+          
+          <p>Zgodnie z RODO masz następujące prawa dotyczące swoich danych osobowych:</p>
+          <ul>
+            <li><strong>Prawo dostępu:</strong> Możesz poprosić o kopię swoich danych osobowych</li>
+            <li><strong>Prawo do sprostowania:</strong> Możesz żądać poprawienia nieprawidłowych danych</li>
+            <li><strong>Prawo do usunięcia:</strong> Możesz żądać usunięcia swoich danych w określonych sytuacjach</li>
+            <li><strong>Prawo do ograniczenia przetwarzania:</strong> Możesz żądać ograniczenia sposobu przetwarzania danych</li>
+            <li><strong>Prawo do przenoszenia danych:</strong> Możesz otrzymać swoje dane w formacie ustrukturyzowanym</li>
+            <li><strong>Prawo do sprzeciwu:</strong> Możesz sprzeciwić się przetwarzaniu danych w określonych sytuacjach</li>
+          </ul>
+          
+          <div class="highlight-box">
+            <p>Aby skorzystać z któregokolwiek z tych praw, skontaktuj się z nami za pomocą informacji podanych w sekcji "Kontakt" poniżej.</p>
+          </div>
+          
+          <h2>7. Bezpieczeństwo Danych</h2>
+          
+          <p>Wdrażamy odpowiednie środki techniczne i organizacyjne, aby chronić Twoje dane osobowe przed nieautoryzowanym dostępem, przypadkową utratą, zniszczeniem lub uszkodzeniem.</p>
+          
+          <p>Nasze środki bezpieczeństwa obejmują:</p>
+          <ul>
+            <li>Szyfrowanie danych podczas przesyłania i przechowywania</li>
+            <li>Regularne przeglądy bezpieczeństwa i testy penetracyjne</li>
+            <li>Ograniczony dostęp do danych tylko dla upoważnionych pracowników</li>
+            <li>Regularne szkolenia z ochrony danych dla personelu</li>
+          </ul>
+          
+          <div class="security-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 12L11 14L15 10" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Twoje dane są chronione zaawansowanymi środkami bezpieczeństwa</span>
+          </div>
+          
+          <h2>8. Pliki Cookies i Technologie Śledzące</h2>
+          
+          <p>Używamy plików cookies i podobnych technologii do:</p>
+          <ul>
+            <li>Zapewnienia prawidłowego działania strony</li>
+            <li>Zapamiętywania Twoich preferencji</li>
+            <li>Analizy korzystania z naszej strony w celu jej ulepszania</li>
+            <li>Personalizacji treści i reklam</li>
+          </ul>
+          
+          <p>Możesz kontrolować użycie plików cookies przez ustawienia swojej przeglądarki. Pamiętaj, że wyłączenie niektórych plików cookies może wpłynąć na funkcjonalność naszej strony.</p>
+          
+          <h2>9. Zmiany w Polityce Prywatności</h2>
+          
+          <p>Możemy okresowo aktualizować tę Politykę Prywatności, aby odzwierciedlić zmiany w naszych praktykach lub z innych powodów operacyjnych, prawnych lub regulacyjnych. O wszelkich istotnych zmianach poinformujemy Cię za pośrednictwem prominentnego ogłoszenia na naszej stronie internetowej lub bezpośrednio.</p>
+          
+          <p>Zachęcamy do okresowego przeglądania tej Polityki Prywatności, aby być na bieżąco z tym, w jaki sposób chronimy Twoje informacje.</p>
+          
+          <h2>10. Kontakt</h2>
+          
+          <p>Jeśli masz jakiekolwiek pytania, uwagi lub prośby dotyczące tej Polityki Prywatności lub naszych praktyk w zakresie ochrony danych, skontaktuj się z nami:</p>
+          
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <span>Email: service@ins.baby</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <span>WhatsApp: +48 500 123 456</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🏢</div>
+              <span>Adres: ul. Pracy Zdalnej 15, 00-001 Warszawa, Polska</span>
+            </div>
+          </div>
+          
+          <p class="muted small" style="margin-top: 24px;">Niniejsza Polityka Prywatności została opracowana zgodnie z wymogami Rozporządzenia Ogólnego o Ochronie Danych (RODO) oraz polskiej ustawy o ochronie danych osobowych.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">PracaZdalnaPL</a>
+        <p class="muted small">Przejrzyste możliwości. Brak gwarancji dochodu. Brak opłat aplikacyjnych.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html" rel="nofollow">Strona Główna</a>
+        <a href="privacy.html" rel="nofollow">Polityka Prywatności</a>
+        <a href="userterms.html" rel="nofollow">Regulamin</a>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="muted small">© 2024 PracaZdalnaPL. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+      
+      // Add fade-in animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
