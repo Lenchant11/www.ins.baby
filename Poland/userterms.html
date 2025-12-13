@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Regulamin | PracaZdalnaPL</title>
+  <meta name="description" content="Regulamin korzystania z platformy PracaZdalnaPL. Zasady współpracy, wypłat i korzystania z usług." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root{
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --muted: #64748b;
+      --text: #1e293b;
+      --white: #ffffff;
+      --primary: #3b82f6;
+      --primary-600: #2563eb;
+      --primary-300: #93c5fd;
+      --accent: #8b5cf6;
+      --accent-light: #c4b5fd;
+      --green: #10b981;
+      --yellow: #f59e0b;
+      --red: #ef4444;
+      --ring: 0 0 0 3px rgba(59, 130, 246, 0.25);
+      --radius: 12px;
+      --transition: all 0.3s ease;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;line-height:1.5; font-size: 16px;}
+    img{max-width:100%;display:block}
+    a{color:var(--text);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1120px,94%);margin-inline:auto}
+
+    .nav{position:sticky;top:0;z-index:50;background:rgba(248, 250, 252, 0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.06); box-shadow: 0 1px 3px rgba(0,0,0,0.05);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{font-weight:800;letter-spacing:.3px;font-size:1.3rem; background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .nav-link{opacity:.85; transition: var(--transition); font-size: 0.95rem; font-weight: 500;}
+    .nav-link:hover{opacity:1; color: var(--primary);}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;border-radius:8px;border:0;font-weight:600;cursor:pointer;transition:var(--transition); font-size: 0.95rem;}
+    .btn-primary{background: var(--primary);color:white; box-shadow: var(--shadow);}
+    .btn-primary:hover{background:var(--primary-600); transform: translateY(-2px); box-shadow: var(--shadow-lg);}
+    
+    .section{padding:60px 0}
+    .section.alt{background:#f1f5f9}
+    h1{margin:0 0 16px;font-size:32px; font-weight: 800; background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+    h2{margin:32px 0 16px;font-size:24px; font-weight: 700; color: var(--text);}
+    h3{margin:24px 0 12px;font-size:20px; font-weight: 600; color: var(--text);}
+    .muted{color:var(--muted); line-height: 1.6;}
+    .small{font-size:0.88rem}
+    
+    .content-card{background:var(--card);border:1px solid rgba(0,0,0,.08);border-radius:var(--radius);padding:32px; box-shadow: var(--shadow); position: relative;}
+    .content-card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        border-radius: var(--radius) var(--radius) 0 0;
+    }
+    
+    .footer{border-top:1px solid rgba(0,0,0,.08);padding:32px 0 20px;background:#f1f5f9}
+    .footer-grid{display:flex;justify-content:space-between;gap:16px;align-items:flex-start; margin-bottom: 20px;}
+    .footer-links{display:flex;gap:16px;flex-wrap:wrap}
+    
+    .security-badge {display: flex; align-items: center; gap: 10px; margin-top: 16px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; font-size: 0.9rem;}
+    .security-badge svg {flex-shrink: 0; width: 20px; height: 20px;}
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.6s ease forwards;
+    }
+    
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.3s; }
+    
+    /* PL elements */
+    .pl-flag {display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px; padding: 6px 12px; background: rgba(0,0,0,0.05); border-radius: 20px;}
+    .pl-flag img {width: 24px; height: 16px; border-radius: 2px;}
+    
+    /* Mobile responsiveness */
+    @media (max-width: 980px){
+      h1 {font-size: 28px;}
+      h2 {font-size: 22px;}
+      .section {padding: 40px 0;}
+      .nav-links .nav-link {display: none;}
+    }
+    
+    @media (max-width: 640px) {
+      .nav-links {gap: 8px;}
+      .btn {padding: 8px 16px; font-size: 0.92rem;}
+      .footer-grid {flex-direction: column; gap: 16px;}
+      .footer-links {flex-direction: column; gap: 8px;}
+      .section {padding: 32px 0;}
+      .content-card {padding: 20px;}
+    }
+    
+    @media (max-width: 480px) {
+      h1 {font-size: 24px;}
+      h2 {font-size: 20px;}
+      .brand {font-size: 1.2rem;}
+      .nav-link {font-size: 0.9rem;}
+      .btn {font-size: 0.9rem;}
+    }
+    
+    /* Content styling */
+    .terms-content ul, .terms-content ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    
+    .terms-content li {
+      margin-bottom: 8px;
+    }
+    
+    .terms-content p {
+      margin-bottom: 16px;
+    }
+    
+    .highlight-box {
+      background: rgba(59, 130, 246, 0.05);
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: rgba(239, 68, 68, 0.05);
+      border-left: 4px solid var(--red);
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: rgba(245, 158, 11, 0.05);
+      border-left: 4px solid var(--yellow);
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .terms-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    
+    .terms-table th, .terms-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .terms-table th {
+      background: rgba(59, 130, 246, 0.05);
+      font-weight: 600;
+    }
+    
+    .terms-table tr:hover {
+      background: rgba(0,0,0,0.02);
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">PracaZdalnaPL</a>
+      <nav class="nav-links">
+        <a href="index.html#roles" class="nav-link">Stanowiska</a>
+        <a href="index.html#benefits" class="nav-link">Korzyści</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="index.html" class="btn btn-primary">Aplikuj Teraz</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Terms of Service Content -->
+  <section class="section">
+    <div class="container">
+      <div class="pl-flag fade-in">
+        <img src="https://flagcdn.com/w20/pl.png" alt="Flaga Polski">
+        <span>REGULAMIN PLATFORMY PRACY ZDALNEJ</span>
+      </div>
+      
+      <div class="content-card fade-in delay-1">
+        <h1>Regulamin Korzystania z Platformy</h1>
+        <p class="muted">Ostatnia aktualizacja: 1 czerwca 2024</p>
+        
+        <div class="terms-content">
+          <p>Niniejszy Regulamin określa zasady korzystania z platformy PracaZdalnaPL oraz warunki współpracy pomiędzy Użytkownikiem a Administratorem platformy.</p>
+          
+          <div class="highlight-box">
+            <p><strong>Kluczowe informacje:</strong> Korzystając z platformy PracaZdalnaPL, akceptujesz niniejszy Regulamin. Przeczytaj go uważnie przed rozpoczęciem współpracy.</p>
+          </div>
+          
+          <h2>1. Definicje</h2>
+          
+          <ul>
+            <li><strong>Platforma</strong> - serwis internetowy PracaZdalnaPL dostępny pod adresem www.pracazdalnapl.pl</li>
+            <li><strong>Użytkownik</strong> - osoba fizyczna korzystająca z Platformy w celu świadczenia usług</li>
+            <li><strong>Zadanie</strong> - pojedyncza aktywność do wykonania przez Użytkownika</li>
+            <li><strong>Wypłata</strong> - przekazanie wynagrodzenia za wykonane Zadania</li>
+            <li><strong>Administrator</strong> - podmiot zarządzający Platformą</li>
+          </ul>
+          
+          <h2>2. Warunki Korzystania z Platformy</h2>
+          
+          <h3>2.1. Wymagania Wiekowe</h3>
+          <p>Korzystanie z Platformy jest możliwe wyłącznie dla osób, które ukończyły 18 lat. Osoby niepełnoletnie nie mogą korzystać z usług Platformy.</p>
+          
+          <h3>2.2. Rejestracja i Konto</h3>
+          <p>Do korzystania z Platformy konieczne jest:</p>
+          <ul>
+            <li>Wypełnienie formularza aplikacyjnego</li>
+            <li>Podanie prawdziwych danych osobowych</li>
+            <li>Akceptacja Polityki Prywatności i Regulaminu</li>
+            <li>Posiadanie aktywnego numeru telefonu z WhatsApp</li>
+          </ul>
+          
+          <div class="warning-box">
+            <p><strong>Uwaga:</strong> Podanie nieprawdziwych danych może skutkować natychmiastowym zawieszeniem lub usunięciem konta.</p>
+          </div>
+          
+          <h2>3. Zasady Współpracy</h2>
+          
+          <h3>3.1. Rodzaje Zadań</h3>
+          <p>Platforma oferuje różnorodne zadania zdalne, w tym:</p>
+          <ul>
+            <li>Oglądanie filmów i treści wideo</li>
+            <li>Wypełnianie ankiet i formularzy</li>
+            <li>Testowanie aplikacji i stron internetowych</li>
+            <li>Proste zadania wprowadzania danych</li>
+            <li>Inne aktywności online</li>
+          </ul>
+          
+          <h3>3.2. Dostępność Zadań</h3>
+          <p>Liczba i rodzaj dostępnych zadań może się zmieniać w zależności od:</p>
+          <ul>
+            <li>Zapotrzebowania ze strony partnerów Platformy</li>
+            <li>Pory dnia i dnia tygodnia</li>
+            <li>Regionu zamieszkania Użytkownika</li>
+            <li>Historii wykonanych zadań</li>
+          </ul>
+          
+          <div class="info-box">
+            <p><strong>Informacja:</strong> Platforma nie gwarantuje stałej dostępności zadań. Liczba zadań może się zmieniać.</p>
+          </div>
+          
+          <h2>4. Wynagrodzenia i Wypłaty</h2>
+          
+          <h3>4.1. Stawki i Zarobki</h3>
+          <p>Wynagrodzenie za poszczególne zadania jest ustalane indywidualnie i zależy od:</p>
+          <ul>
+            <li>Rodzaju i złożoności zadania</li>
+            <li>Czasu potrzebnego na wykonanie</li>
+            <li>Wymagań jakościowych</li>
+          </ul>
+          
+          <table class="terms-table">
+            <thead>
+              <tr>
+                <th>Rodzaj Zadania</th>
+                <th>Przybliżony czas wykonania</th>
+                <th>Przybliżone wynagrodzenie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Oglądanie filmów</td>
+                <td>5-15 minut</td>
+                <td>2-5 PLN</td>
+              </tr>
+              <tr>
+                <td>Ankiety</td>
+                <td>10-20 minut</td>
+                <td>5-10 PLN</td>
+              </tr>
+              <tr>
+                <td>Testowanie aplikacji</td>
+                <td>15-30 minut</td>
+                <td>10-20 PLN</td>
+              </tr>
+              <tr>
+                <td>Wprowadzanie danych</td>
+                <td>Zależy od objętości</td>
+                <td>Od 15 PLN/godz.</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p class="muted small">* Przedstawione stawki są orientacyjne i mogą ulec zmianie.</p>
+          
+          <h3>4.2. Warunki Wypłat</h3>
+          <p>Wypłaty są realizowane po spełnieniu następujących warunków:</p>
+          <ul>
+            <li>Zadanie zostało wykonane poprawnie i zaakceptowane</li>
+            <li>Użytkownik osiągnął minimalny próg wypłaty (50 PLN)</li>
+            <li>Weryfikacja tożsamości została pomyślnie zakończona</li>
+          </ul>
+          
+          <h3>4.3. Metody Wypłat</h3>
+          <p>Platforma oferuje następujące metody wypłat:</p>
+          <ul>
+            <li>Przelew bankowy (1-3 dni robocze)</li>
+            <li>Przelewy natychmiastowe (do 24 godzin)</li>
+            <li>Płatności mobilne (Blik, PayPal)</li>
+          </ul>
+          
+          <h2>5. Obowiązki Użytkownika</h2>
+          
+          <p>Użytkownik zobowiązuje się do:</p>
+          <ul>
+            <li>Wykonywania zadań sumiennie i zgodnie z instrukcjami</li>
+            <li>Przestrzegania terminów wykonania zadań</li>
+            <li>Nieudostępniania swoich danych logowania osobom trzecim</li>
+            <li>Niekorzystania z automatycznych skryptów lub botów</li>
+            <li>Przestrzegania zasad ochrony danych osobowych</li>
+            <li>Niepodejmowania działań mogących zakłócić działanie Platformy</li>
+          </ul>
+          
+          <div class="warning-box">
+            <p><strong>Zakazane działania:</strong> Wykrycie oszustw, wielokrotnych kont lub korzystania z automatycznych systemów skutkuje natychmiastowym zablokowaniem konta i utratą niewypłaconych środków.</p>
+          </div>
+          
+          <h2>6. Prawa i Obowiązki Administratora</h2>
+          
+          <p>Administrator ma prawo do:</p>
+          <ul>
+            <li>Weryfikacji poprawności wykonanych zadań</li>
+            <li>Odrzucenia zadania w przypadku nieprawidłowego wykonania</li>
+            <li>Zawieszenia lub usunięcia konta Użytkownika łamiącego Regulamin</li>
+            <li>Zmiany stawek za zadania</li>
+            <li>Modyfikacji dostępnych zadań i funkcji Platformy</li>
+          </ul>
+          
+          <p>Administrator zobowiązuje się do:</p>
+          <ul>
+            <li>Terminowego przetwarzania wypłat</li>
+            <li>Ochrony danych osobowych Użytkowników</li>
+            <li>Udzielania wsparcia technicznego</li>
+            <li>Informowania o istotnych zmianach w Regulaminie</li>
+          </ul>
+          
+          <h2>7. Reklamacje i Rozstrzyganie Sporów</h2>
+          
+          <h3>7.1. Procedura Reklamacyjna</h3>
+          <p>W przypadku nieporozumień Użytkownik może złożyć reklamację:</p>
+          <ol>
+            <li>Kontakt przez WhatsApp w ciągu 48 godzin od zdarzenia</li>
+            <li>Przesłanie szczegółowego opisu problemu</li>
+            <li>Dostarczenie dowodów (zrzuty ekranu, opisy)</li>
+          </ol>
+          
+          <p>Administrator rozpatruje reklamacje w ciągu 7 dni roboczych.</p>
+          
+          <h3>7.2. Rozstrzyganie Sporów</h3>
+          <p>W przypadku sporów niewyjaśnionych w drodze reklamacji, strony mogą:</p>
+          <ul>
+            <li>Skorzystać z mediacji</li>
+            <li>Zwrócić się do sądu powszechnego właściwego dla siedziby Administratora</li>
+          </ul>
+          
+          <h2>8. Odpowiedzialność</h2>
+          
+          <h3>8.1. Ograniczenie Odpowiedzialności</h3>
+          <p>Administrator nie ponosi odpowiedzialności za:</p>
+          <ul>
+            <li>Przerwy w działaniu Platformy spowodowane czynnikami zewnętrznymi</li>
+            <li>Błędy Użytkownika przy wykonywaniu zadań</li>
+            <li>Konsekwencje udostępnienia danych logowania osobom trzecim</li>
+            <li>Zmiany w dostępności zadań</li>
+          </ul>
+          
+          <h3>8.2. Odpowiedzialność Użytkownika</h3>
+          <p>Użytkownik ponosi pełną odpowiedzialność za:</p>
+          <ul>
+            <li>Prawdziwość podanych danych</li>
+            <li>Jakość wykonanych zadań</li>
+            <li>Przestrzeganie przepisów prawa</li>
+            <li>Bezpieczeństwo swoich danych logowania</li>
+          </ul>
+          
+          <h2>9. Zmiany Regulaminu</h2>
+          
+          <p>Administrator zastrzega sobie prawo do zmiany Regulaminu. O wszelkich zmianach Użytkownicy zostaną powiadomieni z 14-dniowym wyprzedzeniem poprzez:</p>
+          <ul>
+            <li>Wiadomość na Platformie</li>
+            <li>Komunikat wysłany przez WhatsApp</li>
+            <li>Ogłoszenie na stronie głównej</li>
+          </ul>
+          
+          <p>Kontynuowanie korzystania z Platformy po wejściu w życie zmian oznacza ich akceptację.</p>
+          
+          <h2>10. Postanowienia Końcowe</h2>
+          
+          <h3>10.1. Prawo Właściwe</h3>
+          <p>Regulamin podlega prawu polskiemu. Wszelkie spory rozstrzygane będą przez sądy właściwe dla siedziby Administratora.</p>
+          
+          <h3>10.2. Ważność Postanowień</h3>
+          <p>Ewentualna nieważność któregokolwiek postanowienia Regulaminu nie wpływa na ważność pozostałych postanowień.</p>
+          
+          <h3>10.3. Czas Trwania Umowy</h3>
+          <p>Umowa zawarta na podstawie Regulaminu jest zawierana na czas nieoznaczony i może zostać rozwiązana przez każdą ze stron z zachowaniem 14-dniowego okresu wypowiedzenia.</p>
+          
+          <div class="security-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 12L11 14L15 10" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Twoje prawa są chronione zgodnie z polskim prawem i zasadami uczciwego handlu</span>
+          </div>
+          
+          <h2>11. Kontakt</h2>
+          
+          <p>W sprawach związanych z Regulaminem prosimy o kontakt:</p>
+          
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <span>Email: service@ins.baby</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <span>WhatsApp: +48 500 123 456</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🏢</div>
+              <span>Adres: ul. Pracy Zdalnej 15, 00-001 Warszawa, Polska</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">⏰</div>
+              <span>Godziny pracy: Pon-Pt 9:00-17:00</span>
+            </div>
+          </div>
+          
+          <p class="muted small" style="margin-top: 24px;">Niniejszy Regulamin wchodzi w życie z dniem 1 czerwca 2024 roku i zastępuje wszystkie poprzednie wersje.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">PracaZdalnaPL</a>
+        <p class="muted small">Przejrzyste możliwości. Brak gwarancji dochodu. Brak opłat aplikacyjnych.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html" rel="nofollow">Strona Główna</a>
+        <a href="privacy.html" rel="nofollow">Polityka Prywatności</a>
+        <a href="userterms.html" rel="nofollow">Regulamin</a>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="muted small">© 2024 PracaZdalnaPL. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+      
+      // Add fade-in animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
