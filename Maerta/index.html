@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discover Online Earning Opportunities in Malta | FlexiJobsMT</title>
+  <meta name="description" content="Access diverse online tasks from Malta. No startup fees, flexible hours, transparent payment system." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17630380718"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17630380718');
+    
+    // Enhanced conversion reporting with fallback
+    function gtag_report_conversion(url) {
+      const callback = function () {
+        if (typeof(url) != 'undefined') {
+          setTimeout(function() {
+            // Open WhatsApp link in new tab
+            const newWindow = window.open(url, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+              window.location.href = url;
+            }
+          }, 300);
+        }
+      };
+      
+      // Send conversion event with retry mechanism
+      let eventSent = false;
+      const maxAttempts = 2;
+      let attempts = 0;
+      
+      const sendEvent = () => {
+        try {
+          if (!eventSent) {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17630380718/W2akCPiss88bEK6F6dZB',
+              'event_callback': callback,
+              'value': 17,
+              'currency': 'USD'
+            });
+            
+            gtag('event', 'generate_lead', {
+              'currency': 'USD',
+              'value': 17
+            });
+            eventSent = true;
+          }
+        } catch (e) {
+          attempts++;
+          if (attempts < maxAttempts) {
+            setTimeout(sendEvent, 100);
+          } else {
+            callback();
+          }
+        }
+      };
+      
+      sendEvent();
+      
+      // Fallback - always open WhatsApp after timeout
+      setTimeout(() => {
+        if (!eventSent) {
+          callback();
+        }
+      }, 1000);
+      
+      return false;
+    }
+  </script>
+  
+  <!-- 新增的成功模态框样式 -->
+  <style>
+    /* WhatsApp按钮样式 */
+    .whatsapp-button-modal {
+      display: inline-block;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 16px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .whatsapp-button-modal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      background: linear-gradient(135deg, #2be475, #25D366);
+    }
+
+    .whatsapp-icon-modal {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
+    /* 成功步骤样式 */
+    .success-steps-modal {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+
+    .step-item-modal {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .step-number-modal {
+      background: #00a8a8;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .step-content-modal {
+      flex: 1;
+    }
+
+    .step-title-modal {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #1a365d;
+    }
+
+    .step-description-modal {
+      font-size: 0.9rem;
+      color: #4a5568;
+    }
+
+    .assigned-number-modal {
+      display: inline-block;
+      background: #f8fafc;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-weight: 600;
+      color: #1a365d;
+      margin: 8px 0;
+    }
+
+    /* 收入免责声明样式 */
+    .earnings-disclaimer-modal {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #92400e;
+    }
+
+    .earnings-disclaimer-modal strong {
+      color: #b45309;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <span class="logo-text">RemoteWork.mt</span>
+        </a>
+        
+        <div class="nav-links">
+          <a href="#opportunities" class="nav-link" data-i18n="nav.opportunities">Opportunities</a>
+          <a href="#how" class="nav-link" data-i18n="nav.how">How It Works</a>
+          <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Testimonials</a>
+          <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+          <a href="#" class="btn btn-primary nav-cta open-form-btn" data-i18n="nav.apply">
+            Check Availability
+          </a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Urgency Bar -->
+  <div class="urgency-bar">
+    <div class="container urgency-container">
+      <div class="urgency-scroll">
+        <div class="urgency-content">
+          <div class="urgency-item">
+            <span class="urgency-icon">📱</span>
+            <span data-i18n="urgency.item1">Work From Your Smartphone</span>
+          </div>
+          <div class="urgency-item">
+            <span class="urgency-icon">💰</span>
+            <span data-i18n="urgency.item2">Flexible Payment Options</span>
+          </div>
+          <div class="urgency-item">
+            <span class="urgency-icon">🏠</span>
+            <span data-i18n="urgency.item3">100% Remote Positions</span>
+          </div>
+          <div class="urgency-item">
+            <span class="urgency-icon">⭐</span>
+            <span data-i18n="urgency.item4">Trusted by Maltese Workers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in">
+          <div class="hero-badge">
+            <i class="fas fa-bolt"></i>
+            <span data-i18n="hero.badge">Online Work Opportunities</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span data-i18n="hero.title">DISCOVER FLEXIBLE</span> 
+            <span class="text-primary" data-i18n="hero.titleHighlight">ONLINE OPPORTUNITIES</span>
+            <br>
+            <span data-i18n="hero.title2">FROM YOUR HOME IN MALTA</span>
+          </h1>
+          
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Access to various online tasks. Check if this way of earning extra income is right for you - no obligations and no startup fees.
+          </p>
+          
+          <!-- Mobile CTA Button -->
+          <div class="mobile-cta">
+            <button class="btn btn-primary btn-lg btn-block open-form-btn mb-2">
+              <i class="fas fa-rocket btn-icon"></i>
+              <span data-i18n="hero.cta">Check Available Tasks</span>
+            </button>
+            <p style="color: var(--gray-600); font-size: 0.85rem; font-weight: 600;">
+              <i class="fas fa-shield-alt text-primary"></i>
+              <span data-i18n="hero.secure">Free to Apply • Secure Platform • Verified Opportunities</span>
+            </p>
+          </div>
+          
+          <div class="hero-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-euro-sign"></i>
+              </div>
+              <div class="feature-text">
+                <strong data-i18n="hero.feature1.title">Regular Payments</strong>
+                <p data-i18n="hero.feature1.desc">Multiple payment options available</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="feature-text">
+                <strong data-i18n="hero.feature2.title">Flexible Hours</strong>
+                <p data-i18n="hero.feature2.desc">Choose hours that fit your schedule</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="feature-text">
+                <strong data-i18n="hero.feature3.title">Fully Remote</strong>
+                <p data-i18n="hero.feature3.desc">Work from anywhere in Malta</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <div class="feature-text">
+                <strong data-i18n="hero.feature4.title">Quick Start</strong>
+                <p data-i18n="hero.feature4.desc">Simple application process</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 收入示例和免责声明 -->
+          <div class="earnings-example" style="margin-top: 30px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+            <p style="font-weight: 600; margin-bottom: 10px; color: #1a365d;">Example Compensation*:</p>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+              <div style="text-align: center;">
+                <div style="font-weight: 700; color: #00a8a8;">€15-€45</div>
+                <div style="font-size: 0.8rem; color: #4a5568;">per day with 1-3 tasks</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-weight: 700; color: #00a8a8;">€60-€120</div>
+                <div style="font-size: 0.8rem; color: #4a5568;">per day with 4-6 tasks</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-weight: 700; color: #00a8a8;">€140+</div>
+                <div style="font-size: 0.8rem; color: #4a5568;">per day with 7+ tasks</div>
+              </div>
+            </div>
+            <p style="font-size: 0.75rem; color: #718096; font-style: italic;">
+              *Compensation rates are examples based on historical data. Actual earnings depend on the number of accepted tasks and work pace. Platform charges a 10% service fee per completed task.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Hero Form -->
+        <div class="hero-form form-card fade-in delay-1">
+          <div class="form-header">
+            <h2 class="form-title" data-i18n="form.title">Check Task Availability</h2>
+            <p class="form-subtitle" data-i18n="form.subtitle">
+              Complete this form to receive information about matching online tasks.
+            </p>
+          </div>
+          
+          <div class="form-step">
+            <div class="step-item active"></div>
+            <div class="step-item"></div>
+            <div class="step-item"></div>
+          </div>
+          
+          <form id="applicationForm">
+            <div class="form-group">
+              <label for="name" class="form-label">
+                <span data-i18n="form.name">Full Name</span> <span class="required">*</span>
+              </label>
+              <input type="text" id="name" class="form-control" placeholder="e.g. Mario Borg" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">
+                <span data-i18n="form.phone">Phone Number</span> <span class="required">*</span>
+              </label>
+              <div class="phone-group">
+                <div class="country-code">
+                  <img src="https://flagcdn.com/w20/mt.png" alt="Malta Flag" width="20" height="14">
+                  <span>+356</span>
+                </div>
+                <input type="tel" id="phone" class="form-control phone-input" placeholder="e.g. 79231234" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="age" class="form-label">
+                <span data-i18n="form.age">Age</span> <span class="required">*</span>
+              </label>
+              <input type="number" id="age" class="form-control" placeholder="e.g. 25" min="18" max="99" required>
+            </div>
+            
+            <div class="form-check">
+              <input type="checkbox" id="consent" class="form-check-input" required checked>
+              <label for="consent" class="form-check-label">
+                <span data-i18n="form.consent">I accept the</span> 
+                <a href="privacy.html" target="_blank" data-i18n="form.privacy">Privacy Policy</a> 
+                <span data-i18n="form.and">and</span> 
+                <a href="terms.html" target="_blank" data-i18n="form.terms">Terms of Service</a>.
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane btn-icon"></i>
+              <span data-i18n="form.submit">Check Available Tasks</span>
+            </button>
+            
+            <div class="security-badge">
+              <i class="fas fa-lock security-icon"></i>
+              <span data-i18n="form.secure">Your information is secure and confidential</span>
+            </div>
+            
+            <!-- 重要声明 -->
+            <div class="important-notice" style="margin-top: 20px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #4a6bc5;">
+              <p style="font-size: 0.8rem; color: #1a365d; margin-bottom: 0;">
+                <strong>Important:</strong> RemoteWork.mt connects contractors with clients. We are not an employer - each user acts as an independent contractor. Income depends on the number and type of accepted tasks. Platform charges 10% service fee per completed task.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jobs Section -->
+  <section class="section jobs-section" id="opportunities">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="jobs.title">Example Task Categories</h2>
+        <p class="section-subtitle" data-i18n="jobs.subtitle">
+          Access to different types of online tasks. Choose the intensity that matches your availability.
+        </p>
+      </div>
+      
+      <div class="jobs-grid">
+        <!-- Job 1 -->
+        <div class="job-card fade-in">
+          <div class="job-badge" data-i18n="jobs.popular">Basic Access</div>
+          <h3 class="job-title" data-i18n="jobs.job1.title">Basic Online Tasks</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span data-i18n="jobs.job1.salary">Tasks from €15 each</span>
+          </div>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span data-i18n="jobs.job1.feature1">1-3 tasks daily at your pace</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-home"></i>
+              <span data-i18n="jobs.job1.feature2">Work from home</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-graduation-cap"></i>
+              <span data-i18n="jobs.job1.feature3">Simple verification tasks</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-bolt"></i>
+              <span data-i18n="jobs.job1.feature4">Option to stop anytime</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-form-btn" data-i18n="jobs.apply">
+            Check Availability
+          </button>
+          <p class="disclaimer" style="font-size: 0.75rem; color: #718096; margin-top: 10px;">
+            *Example compensation based on historical data. Payment after task completion and approval.
+          </p>
+        </div>
+        
+        <!-- Job 2 -->
+        <div class="job-card fade-in delay-1">
+          <div class="job-badge" data-i18n="jobs.flexible">Extended Access</div>
+          <h3 class="job-title" data-i18n="jobs.job2.title">Varied Online Tasks</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span data-i18n="jobs.job2.salary">Tasks from €30 each</span>
+          </div>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span data-i18n="jobs.job2.feature1">4-6 tasks daily available</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-mobile-alt"></i>
+              <span data-i18n="jobs.job2.feature2">Access to mid-level tasks</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-bolt"></i>
+              <span data-i18n="jobs.job2.feature3">Regular payments</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-star"></i>
+              <span data-i18n="jobs.job2.feature4">Priority in task assignment</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-form-btn" data-i18n="jobs.apply">
+            Check Availability
+          </button>
+          <p class="disclaimer" style="font-size: 0.75rem; color: #718096; margin-top: 10px;">
+            More engagement may lead to higher earnings. Self-discipline in task completion required.
+          </p>
+        </div>
+        
+        <!-- Job 3 -->
+        <div class="job-card fade-in delay-2">
+          <div class="job-badge">Digital Sector</div>
+          <h3 class="job-title">Platform Support Tasks</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Tasks vary by complexity</span>
+          </div>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-headset"></i>
+              <span>Customer service for digital platforms</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Flexible shift patterns</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-euro-sign"></i>
+              <span>Performance incentives available</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-gift"></i>
+              <span>Guidance provided</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-form-btn">
+            Check Availability
+          </button>
+          <p class="disclaimer" style="font-size: 0.75rem; color: #718096; margin-top: 10px;">
+            Suitable for those with good communication skills. Tasks available based on client needs.
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <div class="earnings-disclaimer-modal">
+          <strong>Important Note:</strong> Compensation varies based on task type, complexity, and hours worked. 
+          Platform charges a 10% service fee per completed task. No guaranteed minimum income or constant task availability.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid fade-in">
+        <div class="stat-item">
+          <div class="stat-number">Various</div>
+          <div class="stat-label" data-i18n="stats.maltese">Task Types Available</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Multiple</div>
+          <div class="stat-label" data-i18n="stats.paid">Payment Methods</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10%</div>
+          <div class="stat-label">Service Fee</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Local</div>
+          <div class="stat-label" data-i18n="stats.support">Malta Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section how-it-works" id="how">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="how.title">How Our Platform Works</h2>
+        <p class="section-subtitle" data-i18n="how.subtitle">
+          Simple process to access online tasks
+        </p>
+      </div>
+      
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1</div>
+          <h3 class="step-title" data-i18n="how.step1.title">Complete Registration</h3>
+          <p class="step-description" data-i18n="how.step1.desc">
+            Submit your basic information through our simple form.
+          </p>
+        </div>
+        
+        <div class="step-card fade-in delay-1">
+          <div class="step-number">2</div>
+          <h3 class="step-title" data-i18n="how.step2.title">Receive Task Access</h3>
+          <p class="step-description" data-i18n="how.step2.desc">
+            Get access to available online tasks matching your profile.
+          </p>
+        </div>
+        
+        <div class="step-card fade-in delay-2">
+          <div class="step-number">3</div>
+          <h3 class="step-title" data-i18n="how.step3.title">Begin Tasks</h3>
+          <p class="step-description" data-i18n="how.step3.desc">
+            Start completing tasks and receive compensation as agreed.
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg open-form-btn">
+          <i class="fas fa-play-circle btn-icon"></i>
+          <span data-i18n="how.cta">Check Task Availability</span>
+        </button>
+        <p class="mt-2" style="color: var(--gray-600); font-size: 0.9rem;">
+          <i class="fas fa-check-circle text-primary"></i>
+          <span data-i18n="how.guarantee">No fees to register or check availability</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="testimonials.title">What Maltese Users Say</h2>
+        <p class="section-subtitle" data-i18n="testimonials.subtitle">
+          Experiences from people using our platform
+        </p>
+      </div>
+      
+      <div class="testimonials-slider">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content" data-i18n="testimonials.testimonial1.text">
+                "The flexible hours work perfectly with my schedule. I appreciate being able to work from home on my own time."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">M</div>
+                <div class="author-info">
+                  <h4 data-i18n="testimonials.testimonial1.name">Maria, 24</h4>
+                  <p data-i18n="testimonials.testimonial1.role">University Student - Msida</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content" data-i18n="testimonials.testimonial2.text">
+                "As a mother, the online tasks allow me to balance family and earn extra income when I have time."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">S</div>
+                <div class="author-info">
+                  <h4 data-i18n="testimonials.testimonial2.name">Sarah, 32</h4>
+                  <p data-i18n="testimonials.testimonial2.role">Parent - Birkirkara</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content" data-i18n="testimonials.testimonial3.text">
+                "I found tasks that match my skills. The application process was straightforward and registration was free."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">J</div>
+                <div class="author-info">
+                  <h4 data-i18n="testimonials.testimonial3.name">Joseph, 41</h4>
+                  <p data-i18n="testimonials.testimonial3.role">Professional - Valletta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-dots" id="sliderDots">
+          <button class="slider-dot active" data-slide="0"></button>
+          <button class="slider-dot" data-slide="1"></button>
+          <button class="slider-dot" data-slide="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+        <p class="section-subtitle" data-i18n="faq.subtitle">
+          Common questions about online tasks in Malta
+        </p>
+      </div>
+      
+      <div class="faq-grid">
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span data-i18n="faq.q1">Are there any fees to use this platform?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a1">Registration and access to the platform are completely free. <strong>The platform charges a 10% service fee per completed task.</strong> There are no hidden costs or subscriptions.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span data-i18n="faq.q2">How are payments handled?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a2">Payments are made regularly after task approval. We offer bank transfers to Maltese accounts. Minimum payout is €50.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span data-i18n="faq.q3">What if I have no online task experience?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a3">Many tasks provide guidance and are suitable for beginners. We match users with tasks based on their skills and experience level.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span data-i18n="faq.q4">Is this available throughout Malta?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a4">Yes, all tasks are fully remote and available to residents throughout Malta, including Gozo. You only need a reliable internet connection.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg open-form-btn">
+          <i class="fas fa-question-circle btn-icon"></i>
+          <span data-i18n="faq.cta">Check Task Availability</span>
+        </button>
+        <p class="mt-2" style="color: var(--gray-600); font-size: 0.85rem;">
+          <i class="fas fa-phone-alt text-primary"></i>
+          <span data-i18n="faq.support">Support available for registered users</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section" id="apply">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="cta-title" data-i18n="cta.title">Ready to Check Availability?</h2>
+        <p class="cta-subtitle" data-i18n="cta.subtitle">
+          Complete the form to check available online tasks in your area
+        </p>
+        
+        <div class="mt-4">
+          <button class="btn btn-primary btn-lg open-form-btn" style="background: white; color: var(--primary); border: 3px solid white;">
+            <i class="fas fa-rocket btn-icon"></i>
+            <span data-i18n="cta.cta">Check Available Tasks</span>
+          </button>
+        </div>
+        
+        <div class="mt-3" style="color: rgba(255,255,255,0.9);">
+          <p><i class="fas fa-check-circle"></i> <span data-i18n="cta.benefit1">Free to check availability</span></p>
+          <p><i class="fas fa-check-circle"></i> <span data-i18n="cta.benefit2">Flexible hours</span></p>
+          <p><i class="fas fa-check-circle"></i> <span data-i18n="cta.benefit3">Remote work options</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="footer-logo">RemoteWork.mt</a>
+          <p class="footer-description" data-i18n="footer.description">
+            Platform providing access to various online tasks for Maltese residents.
+          </p>
+          <div class="compliance-badge">
+            <i class="fas fa-balance-scale"></i>
+            <span data-i18n="footer.compliance">Compliant with Maltese regulations</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3 data-i18n="footer.links">QUICK LINKS</h3>
+          <ul>
+            <li><a href="#opportunities" data-i18n="nav.opportunities">Task Categories</a></li>
+            <li><a href="#how" data-i18n="nav.how">How It Works</a></li>
+            <li><a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3 data-i18n="footer.legal">LEGAL & COMPLIANCE</h3>
+          <ul>
+            <li><a href="privacy.html" data-i18n="form.privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-i18n="form.terms">Terms of Service</a></li>
+            <li><a href="compliance.html">Compliance Information</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2024 RemoteWork.mt | Platform for online tasks</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+          <i class="fas fa-flag"></i> Serving Maltese residents
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.7rem; opacity: 0.6;">
+          Presented earnings are example values based on user data from the previous month. 
+          We do not guarantee minimum income or constant task availability. 
+          Full terms: <a href="/terms" style="color: rgba(255,255,255,0.8);">Terms</a> | <a href="/privacy" style="color: rgba(255,255,255,0.8);">Privacy</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal (新设计的模态框) -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      <h3 class="modal-title">✅ Access Confirmed!</h3>
+      <p class="modal-message">
+        <strong>Your access to tasks has been confirmed.</strong>
+        <br>
+        To get started and receive your first tasks, contact our consultant.
+      </p>
+      
+      <div class="success-steps-modal">
+        <div class="step-item-modal">
+          <div class="step-number-modal">1</div>
+          <div class="step-content-modal">
+            <div class="step-title-modal">Contact consultant</div>
+            <div class="step-description-modal">Contact via WhatsApp to receive details</div>
+          </div>
+        </div>
+        
+        <div class="step-item-modal">
+          <div class="step-number-modal">2</div>
+          <div class="step-content-modal">
+            <div class="step-title-modal">Receive tasks</div>
+            <div class="step-description-modal">Consultant will provide access to available tasks</div>
+          </div>
+        </div>
+        
+        <div class="step-item-modal">
+          <div class="step-number-modal">3</div>
+          <div class="step-content-modal">
+            <div class="step-title-modal">Start earning</div>
+            <div class="step-description-modal">Complete tasks and receive compensation</div>
+          </div>
+        </div>
+      </div>
+      
+      <p style="margin: 20px 0; text-align: center; font-weight: 600;">
+        Your assigned consultant:
+        <br>
+        <span class="assigned-number-modal" id="assignedWhatsAppNumber">Loading...</span>
+      </p>
+      
+      <!-- WhatsApp button with empty href -->
+      <a href="#" id="whatsappRedirectBtn" class="whatsapp-button-modal" onclick="redirectToWhatsApp(event)">
+        <span class="whatsapp-icon-modal">💬</span> Contact via WhatsApp
+      </a>
+      
+      <p style="text-align: center; margin-top: 16px; font-size: 0.9rem; color: var(--gray-600);">
+        Click above button to start conversation with consultant
+      </p>
+      
+      <button class="btn btn-primary" id="modalOkBtn" style="width: 100%; margin-top: 20px;">
+        Confirm - Let's Start
+      </button>
+    </div>
+  </div>
+
+  <!-- Age Warning Modal -->
+  <div class="modal age-warning-modal" id="ageWarningModal">
+    <div class="modal-content">
+      <button class="modal-close" id="ageWarningCloseBtn">&times;</button>
+      <h3 class="modal-title">⚠️ <span data-i18n="age.title">Age Requirement</span></h3>
+      <p class="modal-message" data-i18n="age.message">
+        Platform is available only for adults (18+). Please contact us after reaching the required age.
+      </p>
+      <button class="btn btn-primary btn-block" id="ageWarningOkBtn">
+        <span data-i18n="age.ok">I UNDERSTAND</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // WhatsApp配置
+      const whatsappAccounts = [ 
+        "13024064912",
+        "15716762314"
+      ];
+      
+      // 页面加载时随机分配WhatsApp账号
+      let assignedWhatsAppAccount = null;
+      let whatsappLink = "#";
+      
+      function assignRandomWhatsApp() {
+        const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+        assignedWhatsAppAccount = randomAccount;
+        whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent("Hello! I received access to RemoteWork.mt and would like to receive my first tasks.")}`;
+        
+        // 显示分配的号码（格式化显示）
+        const formattedNumber = `+1 ${randomAccount.slice(0, 3)} ${randomAccount.slice(3, 6)} ${randomAccount.slice(6)}`;
+        document.getElementById('assignedWhatsAppNumber').textContent = formattedNumber;
+        
+        console.log('Assigned WhatsApp number:', formattedNumber);
+      }
+      
+      // 页面加载时立即分配
+      assignRandomWhatsApp();
+      
+      // WhatsApp重定向函数
+      function redirectToWhatsApp(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        if (assignedWhatsAppAccount && whatsappLink !== "#") {
+          console.log('Redirecting to WhatsApp:', assignedWhatsAppAccount);
+          window.open(whatsappLink, '_blank');
+          
+          // 可选：跟踪WhatsApp点击
+          gtag('event', 'whatsapp_click', {
+            'event_category': 'engagement',
+            'event_label': 'WhatsApp Contact Initiated'
+          });
+        } else {
+          console.error('Error: No WhatsApp number assigned');
+          alert('Sorry, an error occurred. Please try again.');
+        }
+        
+        return false;
+      }
+      
+      // 翻译数据（简化版）
+      const translations = {
+        en: {
+          // 导航
+          "nav.opportunities": "Opportunities",
+          "nav.how": "How It Works",
+          "nav.testimonials": "Testimonials",
+          "nav.faq": "FAQ",
+          "nav.apply": "Check Availability",
+          
+          // 紧急栏
+          "urgency.item1": "Work From Your Smartphone",
+          "urgency.item2": "Flexible Payment Options",
+          "urgency.item3": "100% Remote Positions",
+          "urgency.item4": "Trusted by Maltese Users",
+          
+          // 英雄部分
+          "hero.badge": "Online Work Opportunities",
+          "hero.title": "DISCOVER FLEXIBLE",
+          "hero.titleHighlight": "ONLINE OPPORTUNITIES",
+          "hero.title2": "FROM YOUR HOME IN MALTA",
+          "hero.subtitle": "Access to various online tasks. Check if this way of earning extra income is right for you - no obligations and no startup fees.",
+          "hero.cta": "Check Available Tasks",
+          "hero.secure": "Free to Apply • Secure Platform • Verified Opportunities",
+          "hero.feature1.title": "Regular Payments",
+          "hero.feature1.desc": "Multiple payment options available",
+          "hero.feature2.title": "Flexible Hours",
+          "hero.feature2.desc": "Choose hours that fit your schedule",
+          "hero.feature3.title": "Fully Remote",
+          "hero.feature3.desc": "Work from anywhere in Malta",
+          "hero.feature4.title": "Quick Start",
+          "hero.feature4.desc": "Simple application process",
+          
+          // 表单
+          "form.title": "Check Task Availability",
+          "form.subtitle": "Complete this form to receive information about matching online tasks.",
+          "form.name": "Full Name",
+          "form.phone": "Phone Number",
+          "form.age": "Age",
+          "form.consent": "I accept the",
+          "form.privacy": "Privacy Policy",
+          "form.and": "and",
+          "form.terms": "Terms of Service",
+          "form.submit": "Check Available Tasks",
+          "form.secure": "Your information is secure and confidential",
+          
+          // 工作
+          "jobs.title": "Example Task Categories",
+          "jobs.subtitle": "Access to different types of online tasks. Choose the intensity that matches your availability.",
+          "jobs.popular": "Basic Access",
+          "jobs.flexible": "Extended Access",
+          "jobs.job1.title": "Basic Online Tasks",
+          "jobs.job1.salary": "Tasks from €15 each",
+          "jobs.job1.feature1": "1-3 tasks daily at your pace",
+          "jobs.job1.feature2": "Work from home",
+          "jobs.job1.feature3": "Simple verification tasks",
+          "jobs.job1.feature4": "Option to stop anytime",
+          "jobs.job2.title": "Varied Online Tasks",
+          "jobs.job2.salary": "Tasks from €30 each",
+          "jobs.job2.feature1": "4-6 tasks daily available",
+          "jobs.job2.feature2": "Access to mid-level tasks",
+          "jobs.job2.feature3": "Regular payments",
+          "jobs.job2.feature4": "Priority in task assignment",
+          "jobs.apply": "Check Availability",
+          
+          // 统计数据
+          "stats.maltese": "Task Types Available",
+          "stats.paid": "Payment Methods",
+          "stats.support": "Malta Support",
+          
+          // 工作原理
+          "how.title": "How Our Platform Works",
+          "how.subtitle": "Simple process to access online tasks",
+          "how.step1.title": "Complete Registration",
+          "how.step1.desc": "Submit your basic information through our simple form.",
+          "how.step2.title": "Receive Task Access",
+          "how.step2.desc": "Get access to available online tasks matching your profile.",
+          "how.step3.title": "Begin Tasks",
+          "how.step3.desc": "Start completing tasks and receive compensation as agreed.",
+          "how.cta": "Check Task Availability",
+          "how.guarantee": "No fees to register or check availability",
+          
+          // 推荐
+          "testimonials.title": "What Maltese Users Say",
+          "testimonials.subtitle": "Experiences from people using our platform",
+          "testimonials.testimonial1.text": "\"The flexible hours work perfectly with my schedule. I appreciate being able to work from home on my own time.\"",
+          "testimonials.testimonial1.name": "Maria, 24",
+          "testimonials.testimonial1.role": "University Student - Msida",
+          "testimonials.testimonial2.text": "\"As a mother, the online tasks allow me to balance family and earn extra income when I have time.\"",
+          "testimonials.testimonial2.name": "Sarah, 32",
+          "testimonials.testimonial2.role": "Parent - Birkirkara",
+          "testimonials.testimonial3.text": "\"I found tasks that match my skills. The application process was straightforward and registration was free.\"",
+          "testimonials.testimonial3.name": "Joseph, 41",
+          "testimonials.testimonial3.role": "Professional - Valletta",
+          
+          // FAQ
+          "faq.title": "Frequently Asked Questions",
+          "faq.subtitle": "Common questions about online tasks in Malta",
+          "faq.q1": "Are there any fees to use this platform?",
+          "faq.a1": "Registration and access to the platform are completely free. The platform charges a 10% service fee per completed task. There are no hidden costs or subscriptions.",
+          "faq.q2": "How are payments handled?",
+          "faq.a2": "Payments are made regularly after task approval. We offer bank transfers to Maltese accounts. Minimum payout is €50.",
+          "faq.q3": "What if I have no online task experience?",
+          "faq.a3": "Many tasks provide guidance and are suitable for beginners. We match users with tasks based on their skills and experience level.",
+          "faq.q4": "Is this available throughout Malta?",
+          "faq.a4": "Yes, all tasks are fully remote and available to residents throughout Malta, including Gozo. You only need a reliable internet connection.",
+          "faq.cta": "Check Task Availability",
+          "faq.support": "Support available for registered users",
+          
+          // CTA
+          "cta.title": "Ready to Check Availability?",
+          "cta.subtitle": "Complete the form to check available online tasks in your area",
+          "cta.cta": "Check Available Tasks",
+          "cta.benefit1": "Free to check availability",
+          "cta.benefit2": "Flexible hours",
+          "cta.benefit3": "Remote work options",
+          
+          // 页脚
+          "footer.description": "Platform providing access to various online tasks for Maltese residents.",
+          "footer.compliance": "Compliant with Maltese regulations",
+          "footer.links": "QUICK LINKS",
+          "footer.legal": "LEGAL & COMPLIANCE",
+          "footer.copyright": "© 2024 RemoteWork.mt | Platform for online tasks"
+        }
+      };
+      
+      // 元素
+      const form = document.getElementById('applicationForm');
+      const successModal = document.getElementById('successModal');
+      const ageWarningModal = document.getElementById('ageWarningModal');
+      const openFormBtns = document.querySelectorAll('.open-form-btn');
+      const whatsappRedirectBtn = document.getElementById('whatsappRedirectBtn');
+      const modalOkBtn = document.getElementById('modalOkBtn');
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navLinks = document.querySelector('.nav-links');
+      
+      // 移动菜单切换
+      mobileMenuBtn.addEventListener('click', function() {
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none';
+        } else {
+          navLinks.style.display = 'flex';
+          navLinks.style.flexDirection = 'column';
+          navLinks.style.position = 'absolute';
+          navLinks.style.top = '100%';
+          navLinks.style.left = '0';
+          navLinks.style.right = '0';
+          navLinks.style.background = 'white';
+          navLinks.style.padding = '1rem';
+          navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+          navLinks.style.gap = '1rem';
+        }
+      });
+      
+      // FAQ切换
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          item.classList.toggle('active');
+        });
+      });
+      
+      // 推荐滑块
+      let currentSlide = 0;
+      const totalSlides = 3;
+      let slideInterval;
+      
+      function initTestimonialsSlider() {
+        const testimonialsTrack = document.getElementById('testimonialsTrack');
+        const sliderDots = document.getElementById('sliderDots');
+        
+        // 转到幻灯片函数
+        function goToSlide(slideIndex) {
+          currentSlide = slideIndex;
+          testimonialsTrack.style.transform = `translateX(-${slideIndex * 100}%)`;
+          
+          // 更新点
+          document.querySelectorAll('.slider-dot').forEach((dot, index) => {
+            if (index === slideIndex) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+        
+        // 点点击事件
+        document.querySelectorAll('.slider-dot').forEach(dot => {
+          dot.addEventListener('click', function() {
+            const slideIndex = parseInt(this.dataset.slide);
+            goToSlide(slideIndex);
+            resetSlideInterval();
+          });
+        });
+        
+        // 自动幻灯片函数
+        function autoSlide() {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          goToSlide(currentSlide);
+        }
+        
+        // 开始自动滑动
+        function startSlideInterval() {
+          slideInterval = setInterval(autoSlide, 5000); // 5秒
+        }
+        
+        // 用户交互时重置间隔
+        function resetSlideInterval() {
+          clearInterval(slideInterval);
+          startSlideInterval();
+        }
+        
+        // 开始滑块
+        startSlideInterval();
+        
+        // 悬停时暂停
+        if (testimonialsTrack) {
+          testimonialsTrack.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+          });
+          
+          testimonialsTrack.addEventListener('mouseleave', () => {
+            startSlideInterval();
+          });
+        }
+      }
+      
+      // 打开表单按钮
+      openFormBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.getElementById('applicationForm').scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+        });
+      });
+      
+      // 模态框函数
+      function openModal(modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeModal(modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      
+      // 模态框关闭按钮
+      document.getElementById('modalCloseBtn').addEventListener('click', function() {
+        closeModal(successModal);
+      });
+      
+      document.getElementById('ageWarningCloseBtn').addEventListener('click', function() {
+        closeModal(ageWarningModal);
+      });
+      
+      document.getElementById('ageWarningOkBtn').addEventListener('click', function() {
+        closeModal(ageWarningModal);
+      });
+      
+      // 年龄验证
+      function validateAge(ageValue) {
+        const age = parseInt(ageValue, 10);
+        return !isNaN(age) && age >= 18;
+      }
+      
+      // 表单验证
+      function validateForm() {
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const age = document.getElementById('age').value.trim();
+        const consent = document.getElementById('consent').checked;
+        
+        // 重置错误状态
+        document.querySelectorAll('.form-control').forEach(input => {
+          input.style.borderColor = '';
+        });
+        
+        let isValid = true;
+        
+        if (!name) {
+          document.getElementById('name').style.borderColor = '#e74c3c';
+          isValid = false;
+        }
+        
+        if (!phone) {
+          document.getElementById('phone').style.borderColor = '#e74c3c';
+          isValid = false;
+        } else if (!/^[0-9\s\-]+$/.test(phone.replace(/\s/g, ''))) {
+          document.getElementById('phone').style.borderColor = '#e74c3c';
+          isValid = false;
+          alert('Please enter a valid phone number');
+        }
+        
+        if (!age || !validateAge(age)) {
+          document.getElementById('age').style.borderColor = '#e74c3c';
+          if (age && !validateAge(age)) {
+            openModal(ageWarningModal);
+          }
+          isValid = false;
+        }
+        
+        if (!consent) {
+          alert('Please accept the terms and privacy policy');
+          isValid = false;
+        }
+        
+        return isValid;
+      }
+      
+      // 表单提交处理
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (validateForm()) {
+          // 验证通过，显示成功模态框
+          openModal(successModal);
+          
+          // 这里不上报谷歌事件，等到用户点击确认按钮时再上报
+        }
+      });
+      
+      // 模态框确认按钮 - 点击时上报谷歌事件
+      modalOkBtn.addEventListener('click', function() {
+        // 上报谷歌转化事件
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17630380718/W2akCPiss88bEK6F6dZB',
+          'event_callback': function() {
+            console.log('Google Ads conversion reported successfully');
+          },
+          'value': 17,
+          'currency': 'USD'
+        });
+        
+        gtag('event', 'generate_lead', {
+          'currency': 'USD',
+          'value': 17
+        });
+        
+        // 可选：上报标准事件
+        gtag('event', 'lead', {
+          'event_category': 'conversion',
+          'event_label': 'Form Submission Confirmed'
+        });
+        
+        console.log('Google events reported after user confirmation');
+        
+        // 关闭模态框
+        closeModal(successModal);
+      });
+      
+      // 点击模态框背景关闭
+      successModal.addEventListener('click', function(e) {
+        if (e.target === successModal) {
+          closeModal(successModal);
+        }
+      });
+      
+      ageWarningModal.addEventListener('click', function(e) {
+        if (e.target === ageWarningModal) {
+          closeModal(ageWarningModal);
+        }
+      });
+      
+      // WhatsApp按钮悬停提示
+      whatsappRedirectBtn.addEventListener('mouseenter', function() {
+        if (assignedWhatsAppAccount) {
+          this.title = `Click to open WhatsApp with number +1 ${assignedWhatsAppAccount}`;
+        }
+      });
+      
+      // 页面加载事件
+      gtag('event', 'page_view', {
+        'page_title': 'RemoteWork.mt - Online Task Platform Malta',
+        'page_location': window.location.href
+      });
+      
+      // 表单查看事件（可选）
+      const formObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            gtag('event', 'view_form', {
+              'event_category': 'engagement',
+              'event_label': 'Application Form Viewed'
+            });
+            formObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      if (form) {
+        formObserver.observe(form);
+      }
+      
+      // 输入限制
+      function setupInputRestrictions() {
+        // 电话输入
+        const phoneInputs = document.querySelectorAll('input[type="tel"]');
+        phoneInputs.forEach(input => {
+          input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 8) {
+              this.value = this.value.slice(0, 8);
+            }
+          });
+          
+          input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text');
+            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 8);
+            this.value = numbersOnly;
+          });
+        });
+        
+        // 年龄输入
+        const ageInputs = document.querySelectorAll('input[type="number"]');
+        ageInputs.forEach(input => {
+          input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 2) {
+              this.value = this.value.slice(0, 2);
+            }
+          });
+          
+          input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text');
+            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 2);
+            this.value = numbersOnly;
+          });
+        });
+      }
+      
+      // 淡入动画
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // 观察具有淡入类的元素
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // 初始化一切
+      function init() {
+        setupInputRestrictions();
+        initTestimonialsSlider();
+        
+        // 发送页面查看事件
+        gtag('event', 'page_view', {
+          page_title: 'Remote Work Opportunities in Malta - Flexible Jobs',
+          page_location: window.location.href
+        });
+      }
+      
+      // 开始初始化
+      init();
+    });
+  </script>
+</body>
+</html>
