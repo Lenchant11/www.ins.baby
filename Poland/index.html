@@ -64,7 +64,7 @@
     }
 
     .container {
-      width: min(1200px, 92%);
+      width: min(1200px, 94%);
       margin: 0 auto;
       padding: 0 20px;
     }
@@ -80,7 +80,7 @@
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(45, 74, 140, 0.1);
       box-shadow: var(--shadow-sm);
-      padding: 16px 0;
+      padding: 12px 0;
     }
 
     .nav-container {
@@ -92,7 +92,7 @@
     .logo {
       font-family: 'Poppins', sans-serif;
       font-weight: 800;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       color: var(--primary-main);
       text-decoration: none;
       display: flex;
@@ -102,12 +102,12 @@
 
     .logo-icon {
       color: var(--accent);
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
 
     .nav-menu {
       display: flex;
-      gap: 32px;
+      gap: 24px;
       align-items: center;
     }
 
@@ -115,7 +115,7 @@
       color: var(--gray-700);
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: var(--transition);
       position: relative;
       padding: 4px 0;
@@ -144,11 +144,11 @@
       background: linear-gradient(135deg, var(--primary-main), var(--primary-dark));
       color: white;
       border: none;
-      padding: 12px 28px;
+      padding: 10px 24px;
       border-radius: var(--radius-md);
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       cursor: pointer;
       transition: var(--transition);
       text-decoration: none;
@@ -166,19 +166,21 @@
     .mobile-cta-button {
       display: none;
       position: fixed;
-      bottom: 20px;
+      bottom: 16px;
       left: 50%;
       transform: translateX(-50%);
-      width: 90%;
+      width: 92%;
       max-width: 400px;
       z-index: 999;
       box-shadow: var(--shadow-lg);
       text-align: center;
+      padding: 14px;
+      font-size: 1rem;
     }
 
     /* Hero Section */
     .hero-section {
-      padding: 160px 0 80px;
+      padding: 120px 0 60px;
       background: linear-gradient(135deg, #ffffff 0%, #f8fafd 100%);
       position: relative;
       overflow: hidden;
@@ -197,30 +199,30 @@
     .hero-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 40px;
       align-items: center;
       position: relative;
     }
 
     .hero-text {
-      max-width: 600px;
+      max-width: 580px;
     }
 
     .badge {
       display: inline-block;
       background: rgba(0, 168, 168, 0.1);
       color: var(--accent);
-      padding: 6px 16px;
+      padding: 6px 14px;
       border-radius: 20px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       border: 1px solid rgba(0, 168, 168, 0.2);
     }
 
     .hero-title {
-      font-size: 3.2rem;
-      margin-bottom: 24px;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
       line-height: 1.1;
     }
 
@@ -235,47 +237,49 @@
       bottom: 4px;
       left: 0;
       width: 100%;
-      height: 6px;
+      height: 4px;
       background: rgba(0, 168, 168, 0.2);
       z-index: -1;
     }
 
     .hero-description {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--gray-700);
-      margin-bottom: 32px;
-      line-height: 1.7;
+      margin-bottom: 28px;
+      line-height: 1.6;
     }
 
     .features-list {
       display: grid;
-      gap: 12px;
-      margin-bottom: 40px;
+      gap: 10px;
+      margin-bottom: 32px;
     }
 
     .feature-item {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       color: var(--gray-700);
+      font-size: 0.95rem;
     }
 
     .feature-icon {
       color: var(--success);
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      flex-shrink: 0;
     }
 
     /* 移动端额外的CTA按钮 */
     .mobile-cta-container {
       display: none;
-      margin-top: 30px;
+      margin-top: 24px;
     }
 
     /* Application Form */
     .application-form-container {
       background: white;
       border-radius: var(--radius-lg);
-      padding: 40px;
+      padding: 32px;
       box-shadow: var(--shadow-lg);
       border: 1px solid rgba(45, 74, 140, 0.1);
       position: relative;
@@ -283,31 +287,31 @@
     }
 
     .form-header {
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       text-align: center;
     }
 
     .form-title {
-      font-size: 1.8rem;
-      margin-bottom: 8px;
+      font-size: 1.6rem;
+      margin-bottom: 6px;
       color: var(--primary-dark);
     }
 
     .form-subtitle {
       color: var(--gray-500);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     .form-step {
       display: flex;
-      gap: 8px;
-      margin-bottom: 24px;
+      gap: 6px;
+      margin-bottom: 20px;
       justify-content: center;
     }
 
     .step-dot {
-      width: 32px;
-      height: 6px;
+      width: 28px;
+      height: 5px;
       background: var(--gray-300);
       border-radius: 3px;
       transition: var(--transition);
@@ -319,15 +323,15 @@
     }
 
     .form-group {
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .form-label {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       font-weight: 600;
       color: var(--gray-700);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     .required {
@@ -336,11 +340,11 @@
 
     .form-input {
       width: 100%;
-      padding: 14px 16px;
+      padding: 12px 14px;
       border: 2px solid var(--gray-300);
       border-radius: var(--radius-md);
       font-family: 'Open Sans', sans-serif;
-      font-size: 1rem;
+      font-size: 0.95rem;
       transition: var(--transition);
       background: white;
     }
@@ -356,7 +360,7 @@
     }
 
     .country-code {
-      flex: 0 0 80px;
+      flex: 0 0 70px;
       background: var(--gray-100);
       border: 2px solid var(--gray-300);
       border-right: none;
@@ -366,6 +370,7 @@
       justify-content: center;
       color: var(--gray-700);
       font-weight: 500;
+      font-size: 0.9rem;
     }
 
     .phone-input {
@@ -376,19 +381,20 @@
     .checkbox-group {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
+      gap: 10px;
     }
 
     .checkbox-input {
-      margin-top: 4px;
-      width: 18px;
-      height: 18px;
+      margin-top: 3px;
+      width: 16px;
+      height: 16px;
       accent-color: var(--accent);
     }
 
     .checkbox-label {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--gray-700);
+      line-height: 1.5;
     }
 
     .checkbox-label a {
@@ -402,14 +408,14 @@
 
     .form-button {
       width: 100%;
-      padding: 16px;
+      padding: 14px;
       background: linear-gradient(135deg, var(--accent), var(--accent-light));
       color: white;
       border: none;
       border-radius: var(--radius-md);
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: 1.05rem;
+      font-size: 1rem;
       cursor: pointer;
       transition: var(--transition);
       margin-top: 8px;
@@ -425,55 +431,55 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-      padding: 12px;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 10px;
       background: var(--gray-100);
       border-radius: var(--radius-md);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--gray-600);
     }
 
     .security-icon {
       color: var(--success);
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     /* Opportunities Section */
     .opportunities-section {
-      padding: 100px 0;
+      padding: 80px 0;
       background: white;
     }
 
     .section-header {
       text-align: center;
       max-width: 800px;
-      margin: 0 auto 60px;
+      margin: 0 auto 48px;
     }
 
     .section-title {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
+      font-size: 2.4rem;
+      margin-bottom: 16px;
     }
 
     .section-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--gray-700);
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
     .opportunities-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      margin-bottom: 60px;
+      gap: 28px;
+      margin-bottom: 48px;
     }
 
     .opportunity-card {
       background: white;
       border: 1px solid rgba(45, 74, 140, 0.1);
       border-radius: var(--radius-lg);
-      padding: 40px;
+      padding: 32px;
       transition: var(--transition);
       position: relative;
       overflow: hidden;
@@ -490,7 +496,7 @@
     }
 
     .opportunity-card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
       box-shadow: var(--shadow-lg);
     }
 
@@ -498,29 +504,30 @@
       display: inline-block;
       background: rgba(39, 174, 96, 0.1);
       color: var(--success);
-      padding: 8px 16px;
+      padding: 6px 14px;
       border-radius: 20px;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       border: 1px solid rgba(39, 174, 96, 0.2);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .card-title {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+      font-size: 1.6rem;
+      margin-bottom: 16px;
     }
 
     .card-list {
       list-style: none;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
     }
 
     .card-list li {
-      padding: 8px 0;
+      padding: 6px 0;
       position: relative;
-      padding-left: 28px;
+      padding-left: 24px;
       color: var(--gray-700);
+      font-size: 0.95rem;
     }
 
     .card-list li:before {
@@ -532,29 +539,29 @@
     }
 
     .disclaimer {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--gray-500);
       font-style: italic;
-      margin-top: 20px;
+      margin-top: 16px;
       border-top: 1px solid var(--gray-300);
-      padding-top: 16px;
+      padding-top: 12px;
     }
 
     /* Benefits Section */
     .benefits-section {
-      padding: 100px 0;
+      padding: 80px 0;
       background: linear-gradient(135deg, #f8fafd 0%, #ffffff 100%);
     }
 
     .benefits-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 48px;
       align-items: center;
     }
 
     .benefits-image {
-      height: 500px;
+      height: 420px;
       border-radius: var(--radius-lg);
       background: linear-gradient(135deg, var(--primary-main), var(--accent));
       position: relative;
@@ -575,78 +582,80 @@
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-bottom: 40px;
+      gap: 20px;
+      margin-bottom: 32px;
     }
 
     .benefit-item {
       background: white;
-      padding: 24px;
+      padding: 20px;
       border-radius: var(--radius-md);
       border: 1px solid rgba(45, 74, 140, 0.1);
       transition: var(--transition);
     }
 
     .benefit-item:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       box-shadow: var(--shadow-md);
     }
 
     .benefit-icon {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: var(--accent);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .benefit-title {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
     }
 
     .benefit-description {
       color: var(--gray-700);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
     /* Testimonials */
     .testimonials-section {
-      padding: 100px 0;
+      padding: 80px 0;
       background: white;
     }
 
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      gap: 28px;
     }
 
     .testimonial-card {
       background: white;
       border: 1px solid rgba(45, 74, 140, 0.1);
       border-radius: var(--radius-lg);
-      padding: 32px;
+      padding: 28px;
       transition: var(--transition);
     }
 
     .testimonial-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       box-shadow: var(--shadow-md);
     }
 
     .testimonial-text {
       font-style: italic;
       color: var(--gray-700);
-      margin-bottom: 24px;
-      line-height: 1.7;
+      margin-bottom: 20px;
+      line-height: 1.6;
       position: relative;
+      font-size: 0.95rem;
     }
 
     .testimonial-text:before {
       content: '"';
       position: absolute;
-      top: -10px;
-      left: -10px;
-      font-size: 3rem;
+      top: -8px;
+      left: -8px;
+      font-size: 2.5rem;
       color: rgba(0, 168, 168, 0.1);
       font-family: serif;
     }
@@ -654,12 +663,12 @@
     .testimonial-author {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .author-avatar {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       background: linear-gradient(135deg, var(--primary-main), var(--accent));
       border-radius: 50%;
       display: flex;
@@ -667,7 +676,7 @@
       justify-content: center;
       color: white;
       font-weight: 600;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     .author-info {
@@ -678,16 +687,17 @@
     .author-name {
       font-weight: 600;
       color: var(--primary-dark);
+      font-size: 0.95rem;
     }
 
     .author-location {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--gray-500);
     }
 
     /* FAQ Section */
     .faq-section {
-      padding: 100px 0;
+      padding: 80px 0;
       background: linear-gradient(135deg, #f8fafd 0%, #ffffff 100%);
     }
 
@@ -697,7 +707,7 @@
     }
 
     .faq-item {
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       border: 1px solid rgba(45, 74, 140, 0.1);
       border-radius: var(--radius-md);
       overflow: hidden;
@@ -705,9 +715,9 @@
     }
 
     .faq-question {
-      padding: 24px;
+      padding: 20px;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1rem;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
@@ -723,6 +733,7 @@
     .faq-icon {
       color: var(--accent);
       transition: var(--transition);
+      font-size: 0.9rem;
     }
 
     .faq-item[open] .faq-icon {
@@ -730,39 +741,41 @@
     }
 
     .faq-answer {
-      padding: 0 24px 24px;
+      padding: 0 20px 20px;
       color: var(--gray-700);
-      line-height: 1.7;
+      line-height: 1.6;
+      font-size: 0.95rem;
     }
 
     /* Final CTA */
     .final-cta {
-      padding: 100px 0;
+      padding: 80px 0;
       background: linear-gradient(135deg, var(--primary-dark), var(--primary-main));
       color: white;
       text-align: center;
     }
 
     .cta-title {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
+      font-size: 2.4rem;
+      margin-bottom: 16px;
       color: white;
     }
 
     .cta-description {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
+      font-size: 1.1rem;
+      margin-bottom: 32px;
       opacity: 0.9;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.6;
     }
 
     .cta-button-light {
       background: white;
       color: var(--primary-dark);
-      padding: 18px 40px;
-      font-size: 1.1rem;
+      padding: 16px 36px;
+      font-size: 1.05rem;
       border-radius: var(--radius-md);
       text-decoration: none;
       display: inline-block;
@@ -772,7 +785,7 @@
     }
 
     .cta-button-light:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       box-shadow: var(--shadow-lg);
       background: var(--gray-100);
     }
@@ -781,20 +794,20 @@
     .main-footer {
       background: var(--primary-dark);
       color: white;
-      padding: 60px 0 30px;
+      padding: 48px 0 24px;
     }
 
     .footer-content {
       display: grid;
       grid-template-columns: 2fr 1fr;
-      gap: 60px;
-      margin-bottom: 40px;
+      gap: 48px;
+      margin-bottom: 32px;
     }
 
     .footer-brand {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       color: white;
       text-decoration: none;
       display: inline-block;
@@ -802,21 +815,23 @@
 
     .footer-text {
       opacity: 0.8;
-      line-height: 1.7;
-      margin-bottom: 20px;
+      line-height: 1.6;
+      margin-bottom: 16px;
       max-width: 400px;
+      font-size: 0.95rem;
     }
 
     .footer-links {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .footer-link {
       color: rgba(255, 255, 255, 0.8);
       text-decoration: none;
       transition: var(--transition);
+      font-size: 0.95rem;
     }
 
     .footer-link:hover {
@@ -825,10 +840,11 @@
 
     .footer-bottom {
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 30px;
+      padding-top: 24px;
       text-align: center;
       opacity: 0.7;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      line-height: 1.5;
     }
 
     /* Modal Styles */
@@ -838,7 +854,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(26, 54, 93, 0.9);
+      background: rgba(26, 54, 93, 0.95);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -856,7 +872,7 @@
     .modal-content {
       background: white;
       border-radius: var(--radius-lg);
-      padding: 40px;
+      padding: 32px;
       max-width: 500px;
       width: 90%;
       position: relative;
@@ -867,15 +883,15 @@
 
     .modal-close {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 16px;
+      right: 16px;
       background: none;
       border: none;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: var(--gray-500);
       cursor: pointer;
-      width: 32px;
-      height: 32px;
+      width: 30px;
+      height: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -888,74 +904,50 @@
       color: var(--gray-700);
     }
 
-    .modal-title {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-      color: var(--primary-dark);
-    }
-
-    .modal-message {
-      color: var(--gray-700);
-      line-height: 1.7;
-      margin-bottom: 30px;
-    }
-
-    /* WhatsApp Button Styles */
-    .whatsapp-button {
-      display: inline-block;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      color: white;
-      text-decoration: none;
-      padding: 14px 24px;
-      border-radius: var(--radius-md);
-      font-weight: 600;
-      font-size: 1rem;
-      text-align: center;
-      transition: var(--transition);
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      margin-top: 16px;
-      box-shadow: var(--shadow-md);
-    }
-
-    .whatsapp-button:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-      background: linear-gradient(135deg, #2be475, #25D366);
-    }
-
-    .whatsapp-icon {
-      margin-right: 8px;
-      font-size: 1.2rem;
-    }
-
     /* Success Modal Specific */
+    .success-message {
+      font-size: 1rem;
+      color: var(--success);
+      font-weight: 600;
+      text-align: center;
+      margin: 0 0 20px 0;
+      padding: 15px;
+      background: rgba(39, 174, 96, 0.1);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(39, 174, 96, 0.2);
+      line-height: 1.5;
+    }
+
     .success-steps {
       background: var(--gray-100);
       border-radius: var(--radius-md);
-      padding: 20px;
-      margin: 24px 0;
+      padding: 16px;
+      margin: 0 0 20px 0;
     }
 
     .step-item {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 16px;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .step-item:last-child {
+      margin-bottom: 0;
     }
 
     .step-number {
       background: var(--accent);
       color: white;
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 600;
       flex-shrink: 0;
+      font-size: 0.9rem;
     }
 
     .step-content {
@@ -964,13 +956,15 @@
 
     .step-title {
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       color: var(--primary-dark);
+      font-size: 0.95rem;
     }
 
     .step-description {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--gray-700);
+      line-height: 1.4;
     }
 
     .assigned-number {
@@ -982,27 +976,61 @@
       font-weight: 600;
       color: var(--primary-dark);
       margin: 8px 0;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      letter-spacing: 1px;
     }
 
-    .success-message {
-      font-size: 1.1rem;
-      color: var(--success);
-      font-weight: 600;
-      text-align: center;
-      margin: 20px 0;
-      padding: 15px;
-      background: rgba(39, 174, 96, 0.1);
+    /* WhatsApp Button Styles */
+    .whatsapp-button {
+      display: block;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
       border-radius: var(--radius-md);
-      border: 1px solid rgba(39, 174, 96, 0.2);
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 16px;
+      box-shadow: var(--shadow-md);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .whatsapp-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, #2be475, #25D366);
+    }
+
+    .whatsapp-icon {
+      margin-right: 6px;
+      font-size: 1.1rem;
     }
 
     /* Responsive Design */
-    @media (max-width: 1024px) {
+    @media (max-width: 1100px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+      }
+      
+      .benefits-image {
+        height: 380px;
+      }
+    }
+
+    @media (max-width: 992px) {
       .hero-content,
       .benefits-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 32px;
       }
 
       .hero-background {
@@ -1020,21 +1048,26 @@
 
       .footer-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 32px;
+      }
+      
+      .benefits-image {
+        height: 300px;
+        order: -1;
       }
     }
 
     @media (max-width: 768px) {
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
       .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       .cta-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       .benefits-grid {
@@ -1042,7 +1075,7 @@
       }
 
       .application-form-container {
-        padding: 30px 20px;
+        padding: 24px;
       }
 
       .nav-menu {
@@ -1050,7 +1083,7 @@
       }
 
       .hero-section {
-        padding: 140px 0 60px;
+        padding: 100px 0 40px;
       }
 
       .opportunities-section,
@@ -1059,6 +1092,18 @@
       .faq-section,
       .final-cta {
         padding: 60px 0;
+      }
+      
+      .opportunity-card {
+        padding: 24px;
+      }
+      
+      .testimonials-grid {
+        gap: 20px;
+      }
+      
+      .testimonial-card {
+        padding: 20px;
       }
 
       /* 显示移动端CTA按钮 */
@@ -1069,11 +1114,20 @@
       .mobile-cta-container {
         display: block;
       }
+      
+      .modal-content {
+        padding: 24px;
+      }
+      
+      .success-message {
+        padding: 12px;
+        font-size: 0.95rem;
+      }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 576px) {
       .hero-title {
-        font-size: 2rem;
+        font-size: 1.9rem;
       }
 
       .section-title {
@@ -1085,15 +1139,81 @@
       }
 
       .application-form-container {
-        padding: 24px 16px;
+        padding: 20px;
       }
 
       .opportunity-card {
-        padding: 24px;
+        padding: 20px;
       }
-
+      
+      .hero-content {
+        gap: 24px;
+      }
+      
+      .form-title {
+        font-size: 1.4rem;
+      }
+      
+      .hero-description {
+        font-size: 1rem;
+      }
+      
+      .features-list {
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+      
+      .feature-item {
+        font-size: 0.9rem;
+      }
+      
       .modal-content {
-        padding: 30px 20px;
+        padding: 20px;
+        width: 95%;
+      }
+      
+      .whatsapp-button {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.7rem;
+      }
+      
+      .container {
+        padding: 0 16px;
+      }
+      
+      .hero-section {
+        padding: 90px 0 32px;
+      }
+      
+      .opportunities-section,
+      .benefits-section,
+      .testimonials-section,
+      .faq-section,
+      .final-cta {
+        padding: 48px 0;
+      }
+      
+      .section-header {
+        margin-bottom: 32px;
+      }
+      
+      .cta-description {
+        font-size: 1rem;
+      }
+      
+      .footer-content {
+        gap: 24px;
+      }
+      
+      .mobile-cta-button {
+        padding: 12px;
+        font-size: 0.95rem;
       }
     }
 
@@ -1101,7 +1221,7 @@
     @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
@@ -1110,19 +1230,19 @@
     }
 
     .animate-fade-in {
-      animation: fadeInUp 0.6s ease forwards;
+      animation: fadeInUp 0.5s ease forwards;
     }
 
     .delay-1 {
-      animation-delay: 0.2s;
+      animation-delay: 0.15s;
     }
 
     .delay-2 {
-      animation-delay: 0.4s;
+      animation-delay: 0.3s;
     }
 
     .delay-3 {
-      animation-delay: 0.6s;
+      animation-delay: 0.45s;
     }
   </style>
 </head>
@@ -1145,9 +1265,9 @@
   </header>
 
   <!-- 移动端固定CTA按钮 -->
-  <a href="#" class="mobile-cta-button cta-button open-modal-form-btn">
+  <button type="button" class="mobile-cta-button cta-button open-modal-form-btn">
     Sprawdź Dostępne Zadania
-  </a>
+  </button>
 
   <!-- Hero Section -->
   <section class="hero-section" id="top">
@@ -1185,9 +1305,9 @@
 
           <!-- 移动端额外CTA按钮 -->
           <div class="mobile-cta-container">
-            <a href="#" class="cta-button open-modal-form-btn" style="width: 100%; text-align: center;">
+            <button type="button" class="cta-button open-modal-form-btn" style="width: 100%; text-align: center;">
               Sprawdź Dostępne Zadania Teraz
-            </a>
+            </button>
           </div>
         </div>
 
@@ -1278,9 +1398,9 @@
             <li>Idealne na początek lub jako dodatkowe zajęcie</li>
             <li>Wypłaty po wykonaniu i akceptacji zadań</li>
           </ul>
-          <a href="#" class="cta-button open-modal-form-btn" style="width: 100%; text-align: center;">
+          <button type="button" class="cta-button open-modal-form-btn" style="width: 100%; text-align: center;">
             Wybierz Tę Opcję
-          </a>
+          </button>
           <p class="disclaimer">
             *Przedstawione zarobki są wartościami orientacyjnymi na podstawie danych historycznych. 
             Rzeczywisty dochód zależy od liczby przyjętych zleceń i tempa pracy.
@@ -1297,9 +1417,9 @@
             <li>Możliwość rozwoju w platformie</li>
             <li>Bonusy za regularność i jakość wykonania</li>
           </ul>
-          <a href="#" class="cta-button open-modal-form-btn" style="width: 100%; text-align: center;">
+          <button type="button" class="cta-button open-modal-form-btn" style="width: 100%; text-align: center;">
             Wybierz Tę Opcję
-          </a>
+          </button>
           <p class="disclaimer">
             Większe zaangażowanie może przełożyć się na wyższe zarobki. 
             Wymagana jest samodyscyplina w realizacji zadań.
@@ -1308,10 +1428,10 @@
       </div>
 
       <!-- 机会区域额外CTA按钮 -->
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="#" class="cta-button-light open-modal-form-btn">
+      <div style="text-align: center; margin-top: 32px;">
+        <button type="button" class="cta-button-light open-modal-form-btn">
           Sprawdź Wszystkie Możliwości
-        </a>
+        </button>
       </div>
     </div>
   </section>
@@ -1323,7 +1443,7 @@
         <div class="benefits-image animate-fade-in"></div>
         <div class="benefits-info animate-fade-in delay-1">
           <h2 class="section-title">Dlaczego VirtualCareerPL?</h2>
-          <p class="section-subtitle" style="margin-bottom: 40px;">
+          <p class="section-subtitle" style="margin-bottom: 32px;">
             Platforma stworzona z myślą o osobach szukających elastycznego sposobu na dodatkowy dochód.
           </p>
 
@@ -1362,10 +1482,10 @@
           </div>
 
           <!-- 优势区域额外CTA按钮 -->
-          <div style="text-align: center; margin-top: 40px;">
-            <a href="#" class="cta-button open-modal-form-btn">
+          <div style="text-align: center; margin-top: 32px;">
+            <button type="button" class="cta-button open-modal-form-btn">
               Rozpocznij Zarabianie
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -1427,10 +1547,10 @@
       </div>
 
       <!-- 评价区域额外CTA按钮 -->
-      <div style="text-align: center; margin-top: 60px;">
-        <a href="#" class="cta-button-light open-modal-form-btn">
+      <div style="text-align: center; margin-top: 48px;">
+        <button type="button" class="cta-button-light open-modal-form-btn">
           Dołącz Do Zadowolonych Użytkowników
-        </a>
+        </button>
       </div>
     </div>
   </section>
@@ -1493,10 +1613,10 @@
       </div>
 
       <!-- FAQ区域额外CTA按钮 -->
-      <div style="text-align: center; margin-top: 60px;">
-        <a href="#" class="cta-button open-modal-form-btn">
+      <div style="text-align: center; margin-top: 48px;">
+        <button type="button" class="cta-button open-modal-form-btn">
           Masz Pytania? Sprawdź Dostępność
-        </a>
+        </button>
       </div>
     </div>
   </section>
@@ -1509,9 +1629,9 @@
         Wypełnij formularz, aby poznać dostępne możliwości. 
         Bez zobowiązań, bez opłat - po prostu sprawdź, czy to dla Ciebie.
       </p>
-      <a href="#" class="cta-button-light open-modal-form-btn">
+      <button type="button" class="cta-button-light open-modal-form-btn">
         Sprawdź Dostępne Zadania
-      </a>
+      </button>
     </div>
   </section>
 
@@ -1525,8 +1645,8 @@
             Platforma umożliwiająca dostęp do różnorodnych zadań online. 
             Łączymy osoby poszukujące dodatkowego dochodu z zleceniodawcami.
           </p>
-          <div class="important-notice" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin-top: 20px;">
-            <p style="font-size: 0.9rem; margin-bottom: 0;">
+          <div class="important-notice" style="background: rgba(255,255,255,0.1); padding: 12px; border-radius: 8px; margin-top: 16px;">
+            <p style="font-size: 0.85rem; margin-bottom: 0; line-height: 1.5;">
               <strong>Ważne:</strong> VirtualCareerPL to platforma łącząca wykonawców z zleceniodawcami. 
               Nie jesteśmy pracodawcą - każdy użytkownik działa jako niezależny wykonawca. 
               Dochód zależy od liczby i rodzaju przyjętych zleceń.
@@ -1534,7 +1654,7 @@
           </div>
         </div>
         <div>
-          <h4 style="color: white; margin-bottom: 20px; font-size: 1.1rem;">Dokumenty</h4>
+          <h4 style="color: white; margin-bottom: 16px; font-size: 1.05rem;">Dokumenty</h4>
           <div class="footer-links">
             <a href="privacy.html" class="footer-link" rel="nofollow">Polityka Prywatności</a>
             <a href="terms.html" class="footer-link" rel="nofollow">Regulamin Platformy</a>
@@ -1624,12 +1744,11 @@
   <div class="modal" id="successModal">
     <div class="modal-content">
       <button class="modal-close" id="modalCloseBtn">&times;</button>
-      <h3 class="modal-title">✅ Sukces! Dostęp Potwierdzony</h3>
       
       <div class="success-message">
-        <strong>✅ Udało się! Pomyślnie zablokowano miejsce w zadaniach.</strong>
+        <strong>✅ Sukces! Miejsce w zadaniach zablokowane</strong>
         <br>
-        Kliknij przycisk WhatsApp poniżej, aby odebrać zadania robocze i otrzymać nagrodę.
+        Kliknij przycisk WhatsApp poniżej, aby odebrać zadania i nagrodę.
       </div>
       
       <div class="success-steps">
@@ -1658,19 +1777,19 @@
         </div>
       </div>
       
-      <p style="margin: 20px 0; text-align: center; font-weight: 600;">
+      <p style="margin: 16px 0; text-align: center; font-weight: 600;">
         Twój przydzielony konsultant WhatsApp:
         <br>
         <span class="assigned-number" id="assignedWhatsAppNumber">Ładowanie...</span>
       </p>
       
       <!-- WhatsApp button with onclick function -->
-      <a href="#" id="whatsappRedirectBtn" class="whatsapp-button" onclick="handleWhatsAppClick(event)">
-        <span class="whatsapp-icon">💬</span> Kliknij, aby skontaktować się przez WhatsApp i odebrać zadania
-      </a>
+      <button type="button" id="whatsappRedirectBtn" class="whatsapp-button" onclick="handleWhatsAppClick(event)">
+        <span class="whatsapp-icon">💬</span> Odbierz zadania przez WhatsApp
+      </button>
       
-      <p style="text-align: center; margin-top: 16px; font-size: 0.9rem; color: var(--gray-600);">
-        Kliknij powyższy przycisk, aby rozpocząć rozmowę z konsultantem i odebrać zadania
+      <p style="text-align: center; margin-top: 12px; font-size: 0.85rem; color: var(--gray-600);">
+        Kliknij powyższy przycisk, aby rozpocząć rozmowę z konsultantem
       </p>
     </div>
   </div>
@@ -1702,7 +1821,6 @@
       // Global variables
       let assignedWhatsAppAccount = null;
       let whatsappLink = "#";
-      let isReportingGoogleEvent = false;
       
       // DOM Elements
       const form = document.getElementById('applicationForm');
@@ -1723,13 +1841,13 @@
         const message = encodeURIComponent("Cześć! Otrzymałem dostęp do VirtualCareerPL i chciałbym/chciałabym otrzymać pierwsze zadania.");
         whatsappLink = `https://wa.me/${randomAccount}?text=${message}`;
         
-        // Display assigned number (formatted)
-        const formattedNumber = `+48 ${randomAccount.slice(2, 5)} ${randomAccount.slice(5, 8)} ${randomAccount.slice(8)}`;
+        // Display assigned number (raw format, no +48 prefix)
         if (assignedNumberDisplay) {
-          assignedNumberDisplay.textContent = formattedNumber;
+          assignedNumberDisplay.textContent = randomAccount;
         }
         
-        console.log('Przydzielono numer WhatsApp:', formattedNumber);
+        console.log('Przydzielono numer WhatsApp:', randomAccount);
+        console.log('Link WhatsApp:', whatsappLink);
         return whatsappLink;
       }
       
@@ -1748,45 +1866,50 @@
         const btn = event.target.closest('.whatsapp-button') || event.target;
         const originalText = btn.innerHTML;
         btn.innerHTML = '<span class="whatsapp-icon">⏳</span> Przekierowywanie...';
-        btn.style.opacity = '0.8';
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
         btn.style.cursor = 'not-allowed';
         
         console.log('Rozpoczynanie procesu przekierowania do WhatsApp...');
         
-        // Report Google conversion event
-        if (!isReportingGoogleEvent) {
-          isReportingGoogleEvent = true;
-          
+        // Try to report Google conversion event (but don't wait for it)
+        try {
           gtag('event', 'conversion', {
             'send_to': 'AW-17694994857/z0rOCLrOm9EbEKnj0PVB',
-            'event_callback': function() {
-              console.log('Zdarzenie konwersji Google Ads zgłoszone pomyślnie');
-              isReportingGoogleEvent = false;
-            },
             'value': 3.5,
             'currency': 'USD'
           });
           
-          // Also report as lead generation
           gtag('event', 'generate_lead', {
             'currency': 'USD',
             'value': 3.5
           });
+          
+          console.log('Zdarzenie Google zgłoszone');
+        } catch (error) {
+          console.log('Błąd w raportowaniu Google:', error);
+          // Continue even if Google event fails
         }
         
-        // Wait 300ms for Google event to be sent, then open WhatsApp
+        // Wait 300ms, then open WhatsApp regardless of Google event status
         setTimeout(function() {
           console.log('Przekierowanie do WhatsApp po 300ms:', assignedWhatsAppAccount);
           
           // Open WhatsApp in new tab
-          window.open(whatsappLink, '_blank', 'noopener,noreferrer');
+          const newWindow = window.open(whatsappLink, '_blank', 'noopener,noreferrer');
+          
+          if (!newWindow) {
+            // If popup is blocked, show alert
+            alert('Otwieranie WhatsApp zostało zablokowane. Sprawdź blokadę wyskakujących okienek w przeglądarce.');
+          }
           
           // Restore button state after a delay
           setTimeout(function() {
             btn.innerHTML = originalText;
+            btn.disabled = false;
             btn.style.opacity = '';
             btn.style.cursor = '';
-          }, 1000);
+          }, 1500);
           
         }, 300);
         
@@ -1932,8 +2055,7 @@
       if (whatsappRedirectBtn) {
         whatsappRedirectBtn.addEventListener('mouseenter', function() {
           if (assignedWhatsAppAccount) {
-            const formattedNumber = `+48 ${assignedWhatsAppAccount.slice(2, 5)} ${assignedWhatsAppAccount.slice(5, 8)} ${assignedWhatsAppAccount.slice(8)}`;
-            this.title = `Kliknij, aby otworzyć WhatsApp z konsultantem (${formattedNumber})`;
+            this.title = `Kliknij, aby otworzyć WhatsApp z konsultantem (${assignedWhatsAppAccount})`;
           }
         });
       }
