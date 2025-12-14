@@ -1808,264 +1808,243 @@
   </div>
 
   <!-- JavaScript -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // WhatsApp accounts pool
-      const whatsappAccounts = [ 
-        "112268000973",
-        "113676674277",
-        "114378902769",
-        "114385544210"
-      ];
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // WhatsApp accounts pool
+    const whatsappAccounts = [ 
+      "112268000973",
+      "113676674277",
+      "114378902769",
+      "114385544210"
+    ];
+    
+    // Global variables
+    let assignedWhatsAppAccount = null;
+    
+    // DOM Elements
+    const form = document.getElementById('applicationForm');
+    const modalForm = document.getElementById('modalApplicationForm');
+    const successModal = document.getElementById('successModal');
+    const ageWarningModal = document.getElementById('ageWarningModal');
+    const modalFormContainer = document.getElementById('modalForm');
+    const openFormBtns = document.querySelectorAll('.open-modal-form-btn');
+    const whatsappRedirectBtn = document.getElementById('whatsappRedirectBtn');
+    const assignedNumberDisplay = document.getElementById('assignedWhatsAppNumber');
+    
+    // Function to assign random WhatsApp account
+    function assignRandomWhatsApp() {
+      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+      assignedWhatsAppAccount = randomAccount;
       
-      // Global variables
-      let assignedWhatsAppAccount = null;
-      let whatsappLink = "#";
-      
-      // DOM Elements
-      const form = document.getElementById('applicationForm');
-      const modalForm = document.getElementById('modalApplicationForm');
-      const successModal = document.getElementById('successModal');
-      const ageWarningModal = document.getElementById('ageWarningModal');
-      const modalFormContainer = document.getElementById('modalForm');
-      const openFormBtns = document.querySelectorAll('.open-modal-form-btn');
-      const whatsappRedirectBtn = document.getElementById('whatsappRedirectBtn');
-      const assignedNumberDisplay = document.getElementById('assignedWhatsAppNumber');
-      
-      // Function to assign random WhatsApp account
-      function assignRandomWhatsApp() {
-        const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
-        assignedWhatsAppAccount = randomAccount;
-        
-        // Build WhatsApp message
-        const message = encodeURIComponent("Cześć! Otrzymałem dostęp do VirtualCareerPL i chciałbym/chciałabym otrzymać pierwsze zadania.");
-        whatsappLink = `https://wa.me/${randomAccount}?text=${message}`;
-        
-        // Display assigned number (raw format, no +48 prefix)
-        if (assignedNumberDisplay) {
-          assignedNumberDisplay.textContent = randomAccount;
-        }
-        
-        console.log('Przydzielono numer WhatsApp:', randomAccount);
-        console.log('Link WhatsApp:', whatsappLink);
-        return whatsappLink;
+      // Display assigned number (raw format)
+      if (assignedNumberDisplay) {
+        assignedNumberDisplay.textContent = randomAccount;
       }
       
-      // Function to handle WhatsApp button click
-      function handleWhatsAppClick(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        
-        if (!assignedWhatsAppAccount || !whatsappLink || whatsappLink === "#") {
-          console.error('Błąd: Nie przydzielono numeru WhatsApp');
-          alert('Przepraszamy, wystąpił błąd. Prosimy spróbować ponownie.');
-          return false;
-        }
-        
-        // Disable button to prevent multiple clicks
-        const btn = event.target.closest('.whatsapp-button') || event.target;
-        const originalText = btn.innerHTML;
-        btn.innerHTML = '<span class="whatsapp-icon">⏳</span> Przekierowywanie...';
-        btn.disabled = true;
-        btn.style.opacity = '0.7';
-        btn.style.cursor = 'not-allowed';
-        
-        console.log('Rozpoczynanie procesu przekierowania do WhatsApp...');
-        
-        // Try to report Google conversion event (but don't wait for it)
-        try {
-          gtag('event', 'conversion', {
-            'send_to': 'AW-17694994857/z0rOCLrOm9EbEKnj0PVB',
-            'value': 3.5,
-            'currency': 'USD'
-          });
-          
-          gtag('event', 'generate_lead', {
-            'currency': 'USD',
-            'value': 3.5
-          });
-          
-          console.log('Zdarzenie Google zgłoszone');
-        } catch (error) {
-          console.log('Błąd w raportowaniu Google:', error);
-          // Continue even if Google event fails
-        }
-        
-        // Wait 300ms, then open WhatsApp regardless of Google event status
-        setTimeout(function() {
-          console.log('Przekierowanie do WhatsApp po 300ms:', assignedWhatsAppAccount);
-          
-          // Open WhatsApp in new tab
-          const newWindow = window.open(whatsappLink, '_blank', 'noopener,noreferrer');
-          
-          if (!newWindow) {
-            // If popup is blocked, show alert
-            alert('Otwieranie WhatsApp zostało zablokowane. Sprawdź blokadę wyskakujących okienek w przeglądarce.');
-          }
-          
-          // Restore button state after a delay
-          setTimeout(function() {
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-            btn.style.opacity = '';
-            btn.style.cursor = '';
-          }, 1500);
-          
-        }, 300);
-        
-        return false;
+      console.log('Przydzielono numer WhatsApp:', randomAccount);
+      return randomAccount;
+    }
+    
+    // Function to handle WhatsApp button click - SIMPLIFIED VERSION
+    function handleWhatsAppClick(event) {
+      console.log('Kliknięto przycisk WhatsApp');
+      
+      // 确保有分配的WhatsApp账号
+      if (!assignedWhatsAppAccount) {
+        console.error('Błąd: Nie przydzielono numeru WhatsApp');
+        alert('Przepraszamy, wystąpił błąd. Prosimy spróbować ponownie.');
+        return;
       }
       
-      // Modal functions
-      function openModal(modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
+      // 构建WhatsApp链接
+      const message = "Cześć! Otrzymałem dostęp do VirtualCareerPL i chciałbym/chciałabym otrzymać pierwsze zadania.";
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${assignedWhatsAppAccount}?text=${encodedMessage}`;
       
-      function closeModal(modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
+      console.log('Otwieranie linku WhatsApp:', whatsappUrl);
       
-      // Age validation
-      function validateAge(ageValue) {
-        const age = parseInt(ageValue, 10);
-        return !isNaN(age) && age >= 18;
-      }
-      
-      // Form validation function
-      function validateForm(formElement) {
-        let isValid = true;
-        
-        // Reset error states
-        formElement.querySelectorAll('.form-input').forEach(input => {
-          input.style.borderColor = '';
+      // 上报Google事件
+      try {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17694994857/z0rOCLrOm9EbEKnj0PVB',
+          'value': 3.5,
+          'currency': 'USD'
         });
         
-        // Get form inputs
-        const nameInput = formElement.querySelector('input[name="name"]');
-        const phoneInput = formElement.querySelector('input[name="phone"]');
-        const ageInput = formElement.querySelector('input[name="age"]');
-        const consentInput = formElement.querySelector('input[name="consent"]');
+        gtag('event', 'generate_lead', {
+          'currency': 'USD',
+          'value': 3.5
+        });
         
-        // Validate name
-        if (!nameInput || !nameInput.value.trim()) {
-          if (nameInput) nameInput.style.borderColor = 'var(--error)';
-          isValid = false;
-        }
-        
-        // Validate phone
-        if (!phoneInput || !phoneInput.value.trim()) {
-          if (phoneInput) phoneInput.style.borderColor = 'var(--error)';
-          isValid = false;
-        } else if (phoneInput && !/^[0-9\s\-]+$/.test(phoneInput.value.replace(/\s/g, ''))) {
-          phoneInput.style.borderColor = 'var(--error)';
-          isValid = false;
-          alert('Proszę podać poprawny numer telefonu');
-        }
-        
-        // Validate age
-        if (!ageInput || !ageInput.value.trim() || !validateAge(ageInput.value)) {
-          if (ageInput) ageInput.style.borderColor = 'var(--error)';
-          if (ageInput && ageInput.value && !validateAge(ageInput.value)) {
-            openModal(ageWarningModal);
-          }
-          isValid = false;
-        }
-        
-        // Validate consent
-        if (!consentInput || !consentInput.checked) {
-          alert('Proszę zaakceptować regulamin i politykę prywatności');
-          isValid = false;
-        }
-        
-        return isValid;
+        console.log('Zdarzenie Google zgłoszone');
+      } catch (error) {
+        console.log('Błąd raportowania Google:', error);
       }
       
-      // Handle main form submission
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          if (validateForm(this)) {
-            // Assign WhatsApp account
-            assignRandomWhatsApp();
-            // Show success modal
-            openModal(successModal);
-          }
-        });
+      // 300ms后打开WhatsApp链接
+      setTimeout(function() {
+        console.log('Otwieranie WhatsApp po 300ms opóźnienia');
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      }, 300);
+    }
+    
+    // Modal functions
+    function openModal(modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal(modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    // Age validation
+    function validateAge(ageValue) {
+      const age = parseInt(ageValue, 10);
+      return !isNaN(age) && age >= 18;
+    }
+    
+    // Form validation function
+    function validateForm(formElement) {
+      let isValid = true;
+      
+      // Reset error states
+      formElement.querySelectorAll('.form-input').forEach(input => {
+        input.style.borderColor = '';
+      });
+      
+      // Get form inputs
+      const nameInput = formElement.querySelector('input[name="name"]');
+      const phoneInput = formElement.querySelector('input[name="phone"]');
+      const ageInput = formElement.querySelector('input[name="age"]');
+      const consentInput = formElement.querySelector('input[name="consent"]');
+      
+      // Validate name
+      if (!nameInput || !nameInput.value.trim()) {
+        if (nameInput) nameInput.style.borderColor = 'var(--error)';
+        isValid = false;
       }
       
-      // Handle modal form submission
-      if (modalForm) {
-        modalForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          if (validateForm(this)) {
-            // Assign WhatsApp account
-            assignRandomWhatsApp();
-            // Close modal form
-            closeModal(modalFormContainer);
-            // Show success modal
-            openModal(successModal);
-          }
-        });
+      // Validate phone
+      if (!phoneInput || !phoneInput.value.trim()) {
+        if (phoneInput) phoneInput.style.borderColor = 'var(--error)';
+        isValid = false;
+      } else if (phoneInput && !/^[0-9\s\-]+$/.test(phoneInput.value.replace(/\s/g, ''))) {
+        phoneInput.style.borderColor = 'var(--error)';
+        isValid = false;
+        alert('Proszę podać poprawny numer telefonu');
       }
       
-      // Open modal form when CTA buttons are clicked
-      openFormBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          openModal(modalFormContainer);
-        });
-      });
+      // Validate age
+      if (!ageInput || !ageInput.value.trim() || !validateAge(ageInput.value)) {
+        if (ageInput) ageInput.style.borderColor = 'var(--error)';
+        if (ageInput && ageInput.value && !validateAge(ageInput.value)) {
+          openModal(ageWarningModal);
+        }
+        isValid = false;
+      }
       
-      // Close buttons
-      document.getElementById('modalFormCloseBtn')?.addEventListener('click', function() {
-        closeModal(modalFormContainer);
-      });
+      // Validate consent
+      if (!consentInput || !consentInput.checked) {
+        alert('Proszę zaakceptować regulamin i politykę prywatności');
+        isValid = false;
+      }
       
-      document.getElementById('modalCloseBtn')?.addEventListener('click', function() {
-        closeModal(successModal);
-      });
-      
-      document.getElementById('ageWarningCloseBtn')?.addEventListener('click', function() {
-        closeModal(ageWarningModal);
-      });
-      
-      document.getElementById('ageWarningOkBtn')?.addEventListener('click', function() {
-        closeModal(ageWarningModal);
-      });
-      
-      // Close modals when clicking outside
-      [successModal, ageWarningModal, modalFormContainer].forEach(modal => {
-        if (modal) {
-          modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-              closeModal(modal);
-            }
-          });
+      return isValid;
+    }
+    
+    // Handle main form submission
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (validateForm(this)) {
+          // Assign WhatsApp account
+          assignRandomWhatsApp();
+          // Show success modal
+          openModal(successModal);
         }
       });
-      
-      // Initialize WhatsApp account on page load
-      assignRandomWhatsApp();
-      
-      // Set up WhatsApp button hover title
-      if (whatsappRedirectBtn) {
-        whatsappRedirectBtn.addEventListener('mouseenter', function() {
-          if (assignedWhatsAppAccount) {
-            this.title = `Kliknij, aby otworzyć WhatsApp z konsultantem (${assignedWhatsAppAccount})`;
-          }
-        });
-      }
-      
-      // Page view event
-      gtag('event', 'page_view', {
-        'page_title': 'VirtualCareer PL - Platforma Zadań Online',
-        'page_location': window.location.href
+    }
+    
+    // Handle modal form submission
+    if (modalForm) {
+      modalForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (validateForm(this)) {
+          // Assign WhatsApp account
+          assignRandomWhatsApp();
+          // Close modal form
+          closeModal(modalFormContainer);
+          // Show success modal
+          openModal(successModal);
+        }
+      });
+    }
+    
+    // Open modal form when CTA buttons are clicked
+    openFormBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal(modalFormContainer);
       });
     });
-  </script>
+    
+    // Close buttons
+    document.getElementById('modalFormCloseBtn')?.addEventListener('click', function() {
+      closeModal(modalFormContainer);
+    });
+    
+    document.getElementById('modalCloseBtn')?.addEventListener('click', function() {
+      closeModal(successModal);
+    });
+    
+    document.getElementById('ageWarningCloseBtn')?.addEventListener('click', function() {
+      closeModal(ageWarningModal);
+    });
+    
+    document.getElementById('ageWarningOkBtn')?.addEventListener('click', function() {
+      closeModal(ageWarningModal);
+    });
+    
+    // Close modals when clicking outside
+    [successModal, ageWarningModal, modalFormContainer].forEach(modal => {
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            closeModal(modal);
+          }
+        });
+      }
+    });
+    
+    // Initialize WhatsApp account on page load
+    assignRandomWhatsApp();
+    
+    // Bind the simplified WhatsApp click handler
+    if (whatsappRedirectBtn) {
+      // Remove any existing onclick handler
+      whatsappRedirectBtn.onclick = null;
+      
+      // Add new event listener
+      whatsappRedirectBtn.addEventListener('click', handleWhatsAppClick);
+      
+      // Set up hover title
+      whatsappRedirectBtn.addEventListener('mouseenter', function() {
+        if (assignedWhatsAppAccount) {
+          this.title = `Kliknij, aby otworzyć WhatsApp z konsultantem (${assignedWhatsAppAccount})`;
+        }
+      });
+    }
+    
+    // Page view event
+    gtag('event', 'page_view', {
+      'page_title': 'VirtualCareer PL - Platforma Zadań Online',
+      'page_location': window.location.href
+    });
+  });
+</script>
 </body>
 </html>
