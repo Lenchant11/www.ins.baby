@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Remote Work Malta | High-Paying Home-Based Jobs in Malta</title>
+  <meta name="description" content="Discover genuine remote work opportunities in Malta. Work from home with flexible hours and get paid daily. iGaming, customer service & data entry jobs available. Apply now!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17630380718"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17630380718');
+    
+    // Enhanced conversion reporting with fallback
+    function gtag_report_conversion(url) {
+      const callback = function () {
+        if (typeof(url) != 'undefined') {
+          setTimeout(function() {
+            // Open WhatsApp link in new tab
+            const newWindow = window.open(url, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+              window.location.href = url;
+            }
+          }, 300);
+        }
+      };
+      
+      // Send conversion event with retry mechanism
+      let eventSent = false;
+      const maxAttempts = 2;
+      let attempts = 0;
+      
+      const sendEvent = () => {
+        try {
+          if (!eventSent) {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17630380718/W2akCPiss88bEK6F6dZB',
+              'event_callback': callback,
+              'value': 17,
+              'currency': 'USD'
+            });
+            
+            gtag('event', 'generate_lead', {
+              'currency': 'USD',
+              'value': 17
+            });
+            eventSent = true;
+          }
+        } catch (e) {
+          attempts++;
+          if (attempts < maxAttempts) {
+            setTimeout(sendEvent, 100);
+          } else {
+            callback();
+          }
+        }
+      };
+      
+      sendEvent();
+      
+      // Fallback - always open WhatsApp after timeout
+      setTimeout(() => {
+        if (!eventSent) {
+          callback();
+        }
+      }, 1000);
+      
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <span class="logo-text">RemoteWork.mt</span>
+        </a>
+        
+        <div class="nav-links">
+          <a href="#opportunities" class="nav-link" data-i18n="nav.opportunities">Opportunities</a>
+          <a href="#how" class="nav-link" data-i18n="nav.how">How It Works</a>
+          <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Testimonials</a>
+          <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+          <a href="#" class="btn btn-primary nav-cta open-modal-btn" data-i18n="nav.apply">
+            Apply Now
+          </a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Urgency Bar -->
+  <div class="urgency-bar">
+    <div class="container urgency-container">
+      <div class="urgency-scroll">
+        <div class="urgency-content">
+          <div class="urgency-item">
+            <span class="urgency-icon">🔥</span>
+            <span data-i18n="urgency.item1">URGENT: LIMITED POSITIONS AVAILABLE!</span>
+          </div>
+          <div class="urgency-item">
+            <span class="urgency-icon">💰</span>
+            <span data-i18n="urgency.item2">GET PAID TODAY - APPLY NOW!</span>
+          </div>
+          <div class="urgency-item">
+            <span class="urgency-icon">🚀</span>
+            <span data-i18n="urgency.item3">START EARNING IN 30 MINUTES!</span>
+          </div>
+          <div class="urgency-item">
+            <span class="urgency-icon">⭐</span>
+            <span data-i18n="urgency.item4">MALTA'S #1 REMOTE WORK PLATFORM!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in">
+          <div class="hero-badge">
+            <i class="fas fa-bolt"></i>
+            <span data-i18n="hero.badge">🔴 LIMITED TIME OFFER 🔴</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span data-i18n="hero.title">START EARNING</span> 
+            <span class="text-primary" data-i18n="hero.titleHighlight">€25-€125 DAILY</span>
+            <br>
+            <span data-i18n="hero.title2">FROM YOUR HOME IN MALTA</span>
+          </h1>
+          
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            <strong>No experience needed!</strong> Join 3,200+ Maltese who work from home, set their own hours, and get paid <strong>DAILY</strong>. 
+            Just a smartphone and internet required.
+          </p>
+          
+          <!-- Mobile CTA Button -->
+          <div class="mobile-cta">
+            <button class="btn btn-primary btn-lg btn-block open-modal-btn mb-2">
+              <i class="fas fa-rocket btn-icon"></i>
+              <span data-i18n="hero.cta">👉 CLICK HERE TO START NOW 👈</span>
+            </button>
+            <p style="color: var(--gray-600); font-size: 0.85rem; font-weight: 600;">
+              <i class="fas fa-shield-alt text-primary"></i>
+              <span data-i18n="hero.secure">100% FREE • 100% SECURE • 100% VERIFIED</span>
+            </p>
+          </div>
+          
+          <div class="hero-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-euro-sign"></i>
+              </div>
+              <div class="feature-text">
+                <strong data-i18n="hero.feature1.title">💰 INSTANT PAYMENTS</strong>
+                <p data-i18n="hero.feature1.desc">Get paid SAME DAY or within 24 hours</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="feature-text">
+                <strong data-i18n="hero.feature2.title">⏰ ULTRA FLEXIBLE</strong>
+                <p data-i18n="hero.feature2.desc">Work 2-8 hours whenever you want</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="feature-text">
+                <strong data-i18n="hero.feature3.title">🏡 100% REMOTE</strong>
+                <p data-i18n="hero.feature3.desc">No commute, work from anywhere in Malta</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <div class="feature-text">
+                <strong data-i18n="hero.feature4.title">⚡ START TODAY</strong>
+                <p data-i18n="hero.feature4.desc">No interviews, start within 30 minutes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hero Form -->
+        <div class="hero-form form-card fade-in delay-1">
+          <div class="form-header">
+            <h2 class="form-title" data-i18n="form.title">⚠️ LIMITED POSITIONS AVAILABLE!</h2>
+            <p class="form-subtitle" data-i18n="form.subtitle">
+              <strong>Fill this form NOW</strong> and we'll contact you on WhatsApp within <strong>15 MINUTES</strong> to start working TODAY!
+            </p>
+          </div>
+          
+          <div class="form-step">
+            <div class="step-item active"></div>
+            <div class="step-item"></div>
+            <div class="step-item"></div>
+          </div>
+          
+          <form id="applicationForm">
+            <div class="form-group">
+              <label for="name" class="form-label">
+                <span data-i18n="form.name">Full Name</span> <span class="required">*</span>
+              </label>
+              <input type="text" id="name" class="form-control" placeholder="e.g. Mario Borg" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">
+                <span data-i18n="form.phone">WhatsApp Number</span> <span class="required">*</span>
+              </label>
+              <div class="phone-group">
+                <div class="country-code">
+                  <img src="https://flagcdn.com/w20/mt.png" alt="Malta Flag" width="20" height="14">
+                  <span>+356</span>
+                </div>
+                <input type="tel" id="phone" class="form-control phone-input" placeholder="e.g. 79231234" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="age" class="form-label">
+                <span data-i18n="form.age">Age</span> <span class="required">*</span>
+              </label>
+              <input type="number" id="age" class="form-control" placeholder="e.g. 25" min="18" max="99" required>
+            </div>
+            
+            <div class="form-check">
+              <input type="checkbox" id="consent" class="form-check-input" required checked>
+              <label for="consent" class="form-check-label">
+                <span data-i18n="form.consent">I accept the</span> 
+                <a href="privacy.html" target="_blank" data-i18n="form.privacy">Privacy Policy</a> 
+                <span data-i18n="form.and">and</span> 
+                <a href="terms.html" target="_blank" data-i18n="form.terms">Terms of Service</a>.
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane btn-icon"></i>
+              <span data-i18n="form.submit">✅ YES, I WANT TO START EARNING!</span>
+            </button>
+            
+            <div class="security-badge">
+              <i class="fas fa-lock security-icon"></i>
+              <span data-i18n="form.secure">🔒 Your information is 100% secure & confidential</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jobs Section -->
+  <section class="section jobs-section" id="opportunities">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="jobs.title">🔥 HIGH-DEMAND REMOTE JOBS IN MALTA</h2>
+        <p class="section-subtitle" data-i18n="jobs.subtitle">
+          Choose from our <strong>most popular</strong> remote positions. Start TODAY and get paid TOMORROW!
+        </p>
+      </div>
+      
+      <div class="jobs-grid">
+        <!-- Existing Job 1 -->
+        <div class="job-card fade-in">
+          <div class="job-badge" data-i18n="jobs.popular">🔥 MOST POPULAR</div>
+          <h3 class="job-title" data-i18n="jobs.job1.title">📞 Online Customer Support Agent</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span data-i18n="jobs.job1.salary">€30-€125 DAILY</span>
+          </div>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span data-i18n="jobs.job1.feature1">⏰ 2-5 flexible hours/day</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-home"></i>
+              <span data-i18n="jobs.job1.feature2">🏡 100% work from home</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-graduation-cap"></i>
+              <span data-i18n="jobs.job1.feature3">🎓 No experience needed</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-bolt"></i>
+              <span data-i18n="jobs.job1.feature4">⚡ Start within 1 hour</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn" data-i18n="jobs.apply">
+            🚀 APPLY FOR THIS JOB
+          </button>
+        </div>
+        
+        <!-- Existing Job 2 -->
+        <div class="job-card fade-in delay-1">
+          <div class="job-badge" data-i18n="jobs.flexible">⚡ URGENT HIRING</div>
+          <h3 class="job-title" data-i18n="jobs.job2.title">⌨️ Data Entry Specialist</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span data-i18n="jobs.job2.salary">€25-€75 DAILY</span>
+          </div>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span data-i18n="jobs.job2.feature1">🕒 Work ANY time</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-mobile-alt"></i>
+              <span data-i18n="jobs.job2.feature2">📱 Smartphone only</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-bolt"></i>
+              <span data-i18n="jobs.job2.feature3">💰 Daily payments</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-star"></i>
+              <span data-i18n="jobs.job2.feature4">⭐ Perfect for beginners</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn" data-i18n="jobs.apply">
+            🚀 APPLY FOR THIS JOB
+          </button>
+        </div>
+        
+        <!-- New Job 1: iGaming Customer Support -->
+        <div class="job-card fade-in delay-2">
+          <div class="job-badge" data-i18n="jobs.igaming">🎮 iGAMING SPECIALIST</div>
+          <h3 class="job-title">🎯 Online Support Representative</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>€35-€110 DAILY</span>
+          </div>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-headset"></i>
+              <span>Customer service for digital platforms</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Flexible 4-8 hour shifts</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-euro-sign"></i>
+              <span>Performance bonuses available</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-gift"></i>
+              <span>€50 welcome bonus</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            🚀 APPLY FOR THIS JOB
+          </button>
+        </div>
+        
+        <!-- New Job 2: Payment Processing -->
+        <div class="job-card fade-in">
+          <div class="job-badge" data-i18n="jobs.highpay">💰 HIGH EARNING</div>
+          <h3 class="job-title">💳 Digital Transactions Assistant</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>€40-€95 DAILY</span>
+          </div>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-shield-alt"></i>
+              <span>Secure payment processing</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span>Computer & internet required</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-chart-line"></i>
+              <span>Weekly performance reviews</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Choose your own schedule</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            🚀 APPLY FOR THIS JOB
+          </button>
+        </div>
+        
+        <!-- New Job 3: Content Moderation -->
+        <div class="job-card fade-in delay-1">
+          <div class="job-badge" data-i18n="jobs.bonus">⭐ POPULAR IN MALTA</div>
+          <h3 class="job-title">📱 Content Review Specialist</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>€45-€105 DAILY</span>
+          </div>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-eye"></i>
+              <span>Review digital content</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-home"></i>
+              <span>100% remote work</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-trophy"></i>
+              <span>Quality-based incentives</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-users"></i>
+              <span>Supportive team environment</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            🚀 APPLY FOR THIS JOB
+          </button>
+        </div>
+        
+        <!-- Existing Job 3 (Modified) -->
+        <div class="job-card fade-in delay-2">
+          <div class="job-badge" data-i18n="jobs.bonus">🎁 BONUS €50</div>
+          <h3 class="job-title" data-i18n="jobs.job3.title">📊 Quality Assurance Assistant</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span data-i18n="jobs.job3.salary">€40-€100 DAILY</span>
+          </div>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span data-i18n="jobs.job3.feature1">3-7 hours daily</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span data-i18n="jobs.job3.feature2">Computer or tablet</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-gift"></i>
+              <span data-i18n="jobs.job3.feature3">€50 welcome bonus</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-calendar-check"></i>
+              <span>Start immediately</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn" data-i18n="jobs.apply">
+            🚀 APPLY FOR THIS JOB
+          </button>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <p style="color: var(--gray-600); font-size: 0.9rem;">
+          <i class="fas fa-exclamation-circle text-primary"></i>
+          <strong data-i18n="jobs.note">Positions fill quickly! Apply NOW to secure your spot.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid fade-in">
+        <div class="stat-item">
+          <div class="stat-number">3,200+</div>
+          <div class="stat-label" data-i18n="stats.maltese">MALTESE WORKING</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">€680K+</div>
+          <div class="stat-label" data-i18n="stats.paid">PAID TO MALTA</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">99%</div>
+          <div class="stat-label" data-i18n="stats.satisfaction">SATISFACTION RATE</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label" data-i18n="stats.support">MALTA SUPPORT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section how-it-works" id="how">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="how.title">⚡ HOW TO START EARNING IN 30 MINUTES</h2>
+        <p class="section-subtitle" data-i18n="how.subtitle">
+          <strong>3 simple steps</strong> to begin working from home TODAY
+        </p>
+      </div>
+      
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1</div>
+          <h3 class="step-title" data-i18n="how.step1.title">📝 QUICK APPLICATION</h3>
+          <p class="step-description" data-i18n="how.step1.desc">
+            Fill our 30-second form. <strong>No CV needed!</strong> Just basic information.
+          </p>
+        </div>
+        
+        <div class="step-card fade-in delay-1">
+          <div class="step-number">2</div>
+          <h3 class="step-title" data-i18n="how.step2.title">💬 WHATSAPP CHAT</h3>
+          <p class="step-description" data-i18n="how.step2.desc">
+            We contact you on WhatsApp within <strong>15-30 minutes</strong> with job details.
+          </p>
+        </div>
+        
+        <div class="step-card fade-in delay-2">
+          <div class="step-number">3</div>
+          <h3 class="step-title" data-i18n="how.step3.title">💰 START & GET PAID</h3>
+          <p class="step-description" data-i18n="how.step3.desc">
+            Begin working immediately. Get your <strong>first payment within 24 hours!</strong>
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg open-modal-btn">
+          <i class="fas fa-play-circle btn-icon"></i>
+          <span data-i18n="how.cta">⚡ CLICK HERE TO START STEP 1 ⚡</span>
+        </button>
+        <p class="mt-2" style="color: var(--gray-600); font-size: 0.9rem;">
+          <i class="fas fa-check-circle text-primary"></i>
+          <span data-i18n="how.guarantee">100% FREE - No hidden fees ever!</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="testimonials.title">🏆 REAL MALTA SUCCESS STORIES</h2>
+        <p class="section-subtitle" data-i18n="testimonials.subtitle">
+          Hear from Maltese who changed their lives working from home
+        </p>
+      </div>
+      
+      <div class="testimonials-slider">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content" data-i18n="testimonials.testimonial1.text">
+                "I was skeptical at first, but after earning €120 on my first day, I was convinced! Now I work 3 hours daily from my sofa. Perfect for students!"
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">M</div>
+                <div class="author-info">
+                  <h4 data-i18n="testimonials.testimonial1.name">Maria, 24</h4>
+                  <p data-i18n="testimonials.testimonial1.role">University Student - Msida</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content" data-i18n="testimonials.testimonial2.text">
+                "As a mother of two, I needed flexible work. This changed everything! I earn €450 weekly working when my kids are at school. Life-changing!"
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">S</div>
+                <div class="author-info">
+                  <h4 data-i18n="testimonials.testimonial2.name">Sarah, 32</h4>
+                  <p data-i18n="testimonials.testimonial2.role">Stay-at-home mother - Birkirkara</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content" data-i18n="testimonials.testimonial3.text">
+                "Lost my job last year. Found this and now earn MORE than before! The support team is amazing and payments are always on time."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">J</div>
+                <div class="author-info">
+                  <h4 data-i18n="testimonials.testimonial3.name">Joseph, 41</h4>
+                  <p data-i18n="testimonials.testimonial3.role">Former manager - Valletta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content" data-i18n="testimonials.testimonial4.text">
+                "Perfect side income! I work 2 hours after my day job. Extra €600 monthly without stress. Highly recommend to all Maltese!"
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">D</div>
+                <div class="author-info">
+                  <h4 data-i18n="testimonials.testimonial4.name">David, 28</h4>
+                  <p data-i18n="testimonials.testimonial4.role">Office worker - Sliema</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content" data-i18n="testimonials.testimonial5.text">
+                "Started 3 months ago. Already saved €2,000 for my wedding! So easy to use and the team really cares about Maltese workers."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">L</div>
+                <div class="author-info">
+                  <h4 data-i18n="testimonials.testimonial5.name">Lisa, 26</h4>
+                  <p data-i18n="testimonials.testimonial5.role">Part-time worker - Mosta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-dots" id="sliderDots">
+          <button class="slider-dot active" data-slide="0"></button>
+          <button class="slider-dot" data-slide="1"></button>
+          <button class="slider-dot" data-slide="2"></button>
+          <button class="slider-dot" data-slide="3"></button>
+          <button class="slider-dot" data-slide="4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="faq.title">❓ FREQUENTLY ASKED QUESTIONS</h2>
+        <p class="section-subtitle" data-i18n="faq.subtitle">
+          Everything you need to know about working remotely in Malta
+        </p>
+      </div>
+      
+      <div class="faq-grid">
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span data-i18n="faq.q1">Is this really 100% FREE? No hidden fees?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a1"><strong>ABSOLUTELY FREE!</strong> We never charge any fees - not for applying, not for training, not for getting paid. We make money when YOU make money.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span data-i18n="faq.q2">How fast will I get my FIRST payment?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a2"><strong>WITHIN 24 HOURS!</strong> Many tasks pay same-day. We process payments daily to Maltese bank accounts or digital wallets.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span data-i18n="faq.q3">What if I have no experience?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a3"><strong>NO EXPERIENCE NEEDED!</strong> We provide simple training. Most tasks require only basic smartphone skills. Perfect for beginners!</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span data-i18n="faq.q4">Is this available everywhere in Malta?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq.a4"><strong>YES, ALL OF MALTA!</strong> From Valletta to Gozo. All you need is internet. We have workers in every town and village.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg open-modal-btn">
+          <i class="fas fa-question-circle btn-icon"></i>
+          <span data-i18n="faq.cta">⚡ STILL HAVE QUESTIONS? APPLY NOW! ⚡</span>
+        </button>
+        <p class="mt-2" style="color: var(--gray-600); font-size: 0.85rem;">
+          <i class="fas fa-phone-alt text-primary"></i>
+          <span data-i18n="faq.support">WhatsApp support available 24/7 for Maltese workers</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section" id="apply">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="cta-title" data-i18n="cta.title">⏰ TIME IS RUNNING OUT!</h2>
+        <p class="cta-subtitle" data-i18n="cta.subtitle">
+          <strong>Only 8 positions left</strong> for today's batch. Don't miss your chance to start earning from home TOMORROW!
+        </p>
+        
+        <div class="mt-4">
+          <button class="btn btn-primary btn-lg open-modal-btn" style="background: white; color: var(--primary); border: 3px solid white;">
+            <i class="fas fa-rocket btn-icon"></i>
+            <span data-i18n="cta.cta">🎯 CLICK HERE TO SECURE YOUR SPOT NOW! 🎯</span>
+          </button>
+        </div>
+        
+        <div class="mt-3" style="color: rgba(255,255,255,0.9);">
+          <p><i class="fas fa-check-circle"></i> <span data-i18n="cta.benefit1">100% Free - No payments ever</span></p>
+          <p><i class="fas fa-check-circle"></i> <span data-i18n="cta.benefit2">Start within 30 minutes</span></p>
+          <p><i class="fas fa-check-circle"></i> <span data-i18n="cta.benefit3">Get paid tomorrow</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="footer-logo">RemoteWork.mt</a>
+          <p class="footer-description" data-i18n="footer.description">
+            <strong>Malta's #1 remote work platform.</strong> Helping Maltese find genuine, flexible work from home opportunities since 2022.
+          </p>
+          <div class="compliance-badge">
+            <i class="fas fa-balance-scale"></i>
+            <span data-i18n="footer.compliance">✓ Fully compliant with Maltese employment laws</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3 data-i18n="footer.links">QUICK LINKS</h3>
+          <ul>
+            <li><a href="#opportunities" data-i18n="nav.opportunities">Available Jobs</a></li>
+            <li><a href="#how" data-i18n="nav.how">How It Works</a></li>
+            <li><a href="#testimonials" data-i18n="nav.testimonials">Success Stories</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3 data-i18n="footer.legal">LEGAL & COMPLIANCE</h3>
+          <ul>
+            <li><a href="privacy.html" data-i18n="form.privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-i18n="form.terms">Terms of Service</a></li>
+            <li><a href="compliance.html">Malta Compliance</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2024 RemoteWork.mt | Registered in Malta | All operations comply with Maltese law</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+          <i class="fas fa-flag"></i> Proudly serving the Maltese community
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Form -->
+  <div class="modal" id="modalForm">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      <div class="form-header">
+        <h2 class="form-title">⏰ LAST CHANCE TO APPLY TODAY!</h2>
+        <p class="form-subtitle">
+          <strong>Fill this form NOW</strong> to secure one of the last available positions. We'll contact you within <strong>15 MINUTES!</strong>
+        </p>
+      </div>
+      
+      <div class="form-step">
+        <div class="step-item active"></div>
+        <div class="step-item"></div>
+        <div class="step-item"></div>
+      </div>
+      
+      <form id="modalApplicationForm">
+        <div class="form-group">
+          <label for="modal-name" class="form-label">
+            <span data-i18n="form.name">Full Name</span> <span class="required">*</span>
+          </label>
+          <input type="text" id="modal-name" class="form-control" placeholder="e.g. Mario Borg" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-phone" class="form-label">
+            <span data-i18n="form.phone">WhatsApp Number</span> <span class="required">*</span>
+          </label>
+          <div class="phone-group">
+            <div class="country-code">
+              <img src="https://flagcdn.com/w20/mt.png" alt="Malta Flag" width="20" height="14">
+              <span>+356</span>
+            </div>
+            <input type="tel" id="modal-phone" class="form-control phone-input" placeholder="e.g. 79231234" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-age" class="form-label">
+            <span data-i18n="form.age">Age</span> <span class="required">*</span>
+          </label>
+          <input type="number" id="modal-age" class="form-control" placeholder="e.g. 25" min="18" max="99" required>
+        </div>
+        
+        <div class="form-check">
+          <input type="checkbox" id="modal-consent" class="form-check-input" required checked>
+          <label for="modal-consent" class="form-check-label">
+            <span data-i18n="form.consent">I accept the</span> 
+            <a href="privacy.html" target="_blank" data-i18n="form.privacy">Privacy Policy</a> 
+            <span data-i18n="form.and">and</span> 
+            <a href="terms.html" target="_blank" data-i18n="form.terms">Terms of Service</a>.
+          </label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fas fa-paper-plane btn-icon"></i>
+          <span data-i18n="form.submit">✅ YES, I WANT TO START EARNING TODAY!</span>
+        </button>
+        
+        <div class="security-badge">
+          <i class="fas fa-lock security-icon"></i>
+          <span data-i18n="form.secure">🔒 100% secure & confidential - Malta-based support</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <button class="modal-close" id="successCloseBtn">&times;</button>
+      <h3 class="modal-title">🎉 <span data-i18n="success.title">CONGRATULATIONS!</span></h3>
+      <p class="modal-message" data-i18n="success.message">
+        <strong>Application successful!</strong> We'll contact you on WhatsApp within <strong>15 minutes</strong> with your first job assignment.
+      </p>
+      <button class="btn btn-primary btn-block" id="successOkBtn">
+        <i class="fas fa-whatsapp btn-icon"></i>
+        <span data-i18n="success.ok">✅ OPEN WHATSAPP NOW</span>
+      </button>
+      <p class="mt-2" style="text-align: center; color: var(--gray-600); font-size: 0.85rem;">
+        <i class="fas fa-info-circle"></i> If WhatsApp doesn't open, check your notifications
+      </p>
+    </div>
+  </div>
+
+  <!-- Age Warning Modal -->
+  <div class="modal age-warning-modal" id="ageWarningModal">
+    <div class="modal-content">
+      <button class="modal-close" id="ageWarningCloseBtn">&times;</button>
+      <h3 class="modal-title">⚠️ <span data-i18n="age.title">AGE REQUIREMENT</span></h3>
+      <p class="modal-message" data-i18n="age.message">
+        To work with us, you must be at least 18 years old, as required by Maltese employment law.
+      </p>
+      <button class="btn btn-primary btn-block" id="ageWarningOkBtn">
+        <span data-i18n="age.ok">I UNDERSTAND</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // WhatsApp configuration
+      const whatsappAccounts = [ 
+        "15716762314",
+        "12153770475"
+      ];
+      
+      // Select random WhatsApp account
+      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+      
+      // Translation data
+      const translations = {
+        en: {
+          // Navigation
+          "nav.opportunities": "Opportunities",
+          "nav.how": "How It Works",
+          "nav.testimonials": "Testimonials",
+          "nav.faq": "FAQ",
+          "nav.apply": "Apply Now",
+          
+          // Urgency bar
+          "urgency.item1": "URGENT: LIMITED POSITIONS AVAILABLE!",
+          "urgency.item2": "GET PAID TODAY - APPLY NOW!",
+          "urgency.item3": "START EARNING IN 30 MINUTES!",
+          "urgency.item4": "MALTA'S #1 REMOTE WORK PLATFORM!",
+          
+          // Hero section
+          "hero.badge": "🔴 LIMITED TIME OFFER 🔴",
+          "hero.title": "START EARNING",
+          "hero.titleHighlight": "€25-€125 DAILY",
+          "hero.title2": "FROM YOUR HOME IN MALTA",
+          "hero.subtitle": "No experience needed! Join 3,200+ Maltese who work from home, set their own hours, and get paid DAILY. Just a smartphone and internet required.",
+          "hero.cta": "👉 CLICK HERE TO START NOW 👈",
+          "hero.secure": "100% FREE • 100% SECURE • 100% VERIFIED",
+          "hero.feature1.title": "💰 INSTANT PAYMENTS",
+          "hero.feature1.desc": "Get paid SAME DAY or within 24 hours",
+          "hero.feature2.title": "⏰ ULTRA FLEXIBLE",
+          "hero.feature2.desc": "Work 2-8 hours whenever you want",
+          "hero.feature3.title": "🏡 100% REMOTE",
+          "hero.feature3.desc": "No commute, work from anywhere in Malta",
+          "hero.feature4.title": "⚡ START TODAY",
+          "hero.feature4.desc": "No interviews, start within 30 minutes",
+          
+          // Form
+          "form.title": "⚠️ LIMITED POSITIONS AVAILABLE!",
+          "form.subtitle": "Fill this form NOW and we'll contact you on WhatsApp within 15 MINUTES to start working TODAY!",
+          "form.name": "Full Name",
+          "form.phone": "WhatsApp Number",
+          "form.age": "Age",
+          "form.consent": "I accept the",
+          "form.privacy": "Privacy Policy",
+          "form.and": "and",
+          "form.terms": "Terms of Service",
+          "form.submit": "✅ YES, I WANT TO START EARNING!",
+          "form.secure": "🔒 Your information is 100% secure & confidential",
+          
+          // Jobs
+          "jobs.title": "🔥 HIGH-DEMAND REMOTE JOBS IN MALTA",
+          "jobs.subtitle": "Choose from our most popular remote positions. Start TODAY and get paid TOMORROW!",
+          "jobs.popular": "🔥 MOST POPULAR",
+          "jobs.flexible": "⚡ URGENT HIRING",
+          "jobs.igaming": "🎮 iGAMING SPECIALIST",
+          "jobs.highpay": "💰 HIGH EARNING",
+          "jobs.bonus": "⭐ POPULAR IN MALTA",
+          "jobs.job1.title": "📞 Online Customer Support Agent",
+          "jobs.job1.salary": "€30-€125 DAILY",
+          "jobs.job1.feature1": "⏰ 2-5 flexible hours/day",
+          "jobs.job1.feature2": "🏡 100% work from home",
+          "jobs.job1.feature3": "🎓 No experience needed",
+          "jobs.job1.feature4": "⚡ Start within 1 hour",
+          "jobs.job2.title": "⌨️ Data Entry Specialist",
+          "jobs.job2.salary": "€25-€75 DAILY",
+          "jobs.job2.feature1": "🕒 Work ANY time",
+          "jobs.job2.feature2": "📱 Smartphone only",
+          "jobs.job2.feature3": "💰 Daily payments",
+          "jobs.job2.feature4": "⭐ Perfect for beginners",
+          "jobs.job3.title": "📊 Quality Assurance Assistant",
+          "jobs.job3.salary": "€40-€100 DAILY",
+          "jobs.job3.feature1": "3-7 hours daily",
+          "jobs.job3.feature2": "Computer or tablet",
+          "jobs.job3.feature3": "€50 welcome bonus",
+          "jobs.apply": "🚀 APPLY FOR THIS JOB",
+          "jobs.note": "Positions fill quickly! Apply NOW to secure your spot.",
+          
+          // Stats
+          "stats.maltese": "MALTESE WORKING",
+          "stats.paid": "PAID TO MALTA",
+          "stats.satisfaction": "SATISFACTION RATE",
+          "stats.support": "MALTA SUPPORT",
+          
+          // How it works
+          "how.title": "⚡ HOW TO START EARNING IN 30 MINUTES",
+          "how.subtitle": "3 simple steps to begin working from home TODAY",
+          "how.step1.title": "📝 QUICK APPLICATION",
+          "how.step1.desc": "Fill our 30-second form. No CV needed! Just basic information.",
+          "how.step2.title": "💬 WHATSAPP CHAT",
+          "how.step2.desc": "We contact you on WhatsApp within 15-30 minutes with job details.",
+          "how.step3.title": "💰 START & GET PAID",
+          "how.step3.desc": "Begin working immediately. Get your first payment within 24 hours!",
+          "how.cta": "⚡ CLICK HERE TO START STEP 1 ⚡",
+          "how.guarantee": "100% FREE - No hidden fees ever!",
+          
+          // Testimonials
+          "testimonials.title": "🏆 REAL MALTA SUCCESS STORIES",
+          "testimonials.subtitle": "Hear from Maltese who changed their lives working from home",
+          "testimonials.testimonial1.text": "\"I was skeptical at first, but after earning €120 on my first day, I was convinced! Now I work 3 hours daily from my sofa. Perfect for students!\"",
+          "testimonials.testimonial1.name": "Maria, 24",
+          "testimonials.testimonial1.role": "University Student - Msida",
+          "testimonials.testimonial2.text": "\"As a mother of two, I needed flexible work. This changed everything! I earn €450 weekly working when my kids are at school. Life-changing!\"",
+          "testimonials.testimonial2.name": "Sarah, 32",
+          "testimonials.testimonial2.role": "Stay-at-home mother - Birkirkara",
+          "testimonials.testimonial3.text": "\"Lost my job last year. Found this and now earn MORE than before! The support team is amazing and payments are always on time.\"",
+          "testimonials.testimonial3.name": "Joseph, 41",
+          "testimonials.testimonial3.role": "Former manager - Valletta",
+          "testimonials.testimonial4.text": "\"Perfect side income! I work 2 hours after my day job. Extra €600 monthly without stress. Highly recommend to all Maltese!\"",
+          "testimonials.testimonial4.name": "David, 28",
+          "testimonials.testimonial4.role": "Office worker - Sliema",
+          "testimonials.testimonial5.text": "\"Started 3 months ago. Already saved €2,000 for my wedding! So easy to use and the team really cares about Maltese workers.\"",
+          "testimonials.testimonial5.name": "Lisa, 26",
+          "testimonials.testimonial5.role": "Part-time worker - Mosta",
+          
+          // FAQ
+          "faq.title": "❓ FREQUENTLY ASKED QUESTIONS",
+          "faq.subtitle": "Everything you need to know about working remotely in Malta",
+          "faq.q1": "Is this really 100% FREE? No hidden fees?",
+          "faq.a1": "ABSOLUTELY FREE! We never charge any fees - not for applying, not for training, not for getting paid. We make money when YOU make money.",
+          "faq.q2": "How fast will I get my FIRST payment?",
+          "faq.a2": "WITHIN 24 HOURS! Many tasks pay same-day. We process payments daily to Maltese bank accounts or digital wallets.",
+          "faq.q3": "What if I have no experience?",
+          "faq.a3": "NO EXPERIENCE NEEDED! We provide simple training. Most tasks require only basic smartphone skills. Perfect for beginners!",
+          "faq.q4": "Is this available everywhere in Malta?",
+          "faq.a4": "YES, ALL OF MALTA! From Valletta to Gozo. All you need is internet. We have workers in every town and village.",
+          "faq.cta": "⚡ STILL HAVE QUESTIONS? APPLY NOW! ⚡",
+          "faq.support": "WhatsApp support available 24/7 for Maltese workers",
+          
+          // CTA
+          "cta.title": "⏰ TIME IS RUNNING OUT!",
+          "cta.subtitle": "Only 8 positions left for today's batch. Don't miss your chance to start earning from home TOMORROW!",
+          "cta.cta": "🎯 CLICK HERE TO SECURE YOUR SPOT NOW! 🎯",
+          "cta.benefit1": "100% Free - No payments ever",
+          "cta.benefit2": "Start within 30 minutes",
+          "cta.benefit3": "Get paid tomorrow",
+          
+          // Footer
+          "footer.description": "Malta's #1 remote work platform. Helping Maltese find genuine, flexible work from home opportunities since 2022.",
+          "footer.compliance": "✓ Fully compliant with Maltese employment laws",
+          "footer.links": "QUICK LINKS",
+          "footer.legal": "LEGAL & COMPLIANCE",
+          "footer.copyright": "© 2024 RemoteWork.mt | Registered in Malta | All operations comply with Maltese law",
+          
+          // Modals
+          "success.title": "CONGRATULATIONS!",
+          "success.message": "Application successful! We'll contact you on WhatsApp within 15 minutes with your first job assignment.",
+          "success.ok": "✅ OPEN WHATSAPP NOW",
+          "age.title": "AGE REQUIREMENT",
+          "age.message": "To work with us, you must be at least 18 years old, as required by Maltese employment law.",
+          "age.ok": "I UNDERSTAND"
+        },
+        
+        mt: {
+          // Navigation
+          "nav.opportunities": "Opportunitajiet",
+          "nav.how": "Kif Taħdem",
+          "nav.testimonials": "Testimonjali",
+          "nav.faq": "Mistoqsijiet",
+          "nav.apply": "Applika Issa",
+          
+          // Urgency bar
+          "urgency.item1": "URĠENTI: POSTIJIET LIMITATI DISPONIBBLI!",
+          "urgency.item2": "ĦALLAS ILLUM - APPLIKA ISSA!",
+          "urgency.item3": "IBDA TAQLA' FI 30 MINUTA!",
+          "urgency.item4": "L-EWWEL PIJATTAFORMA TA' XIEGĦ REMOT F'MALTA!",
+          
+          // Hero section
+          "hero.badge": "🔴 OFFERTA TA' ĦIN LIMITAT 🔴",
+          "hero.title": "IBDA TAQLA'",
+          "hero.titleHighlight": "€25-€125 KULJUM",
+          "hero.title2": "MID-DAR TIEGĦEK F'MALTA",
+          "hero.subtitle": "Bla esperjenza meħtieġa! Ingħaqad ma' 3,200+ Maltin li jaħdmu mid-dar, jistabbilixxu l-ħin tagħhom, u jħallsu KULJUM. Biss smartphone u internet meħtieġ.",
+          "hero.cta": "👉 AĦBAR HAWN BIEX TIBDA ISSA 👈",
+          "hero.secure": "100% B'XEJN • 100% SIGUR • 100% VERIFIKAT",
+          "hero.feature1.title": "💰 ĦLAS IMMEDJAT",
+          "hero.feature1.desc": "Ħallas L-ISTESS ĠURNATA jew fi 24 siegħa",
+          "hero.feature2.title": "⏰ ĦAFNA FLESSIBBLI",
+          "hero.feature2.desc": "Aħdem 2-8 sigħat meta trid",
+          "hero.feature3.title": "🏡 100% REMOT",
+          "hero.feature3.desc": "Bla vjaġġ, aħdem minn kullimkien f'Malta",
+          "hero.feature4.title": "⚡ IBDA ILLUM",
+          "hero.feature4.desc": "Bla intervisti, ibda fi żmien 30 minuta",
+          
+          // Form
+          "form.title": "⚠️ POSTIJIET LIMITATI DISPONIBBLI!",
+          "form.subtitle": "Imla din il-formola ISSA u nikkuntattjawk fuq WhatsApp fi żmien 15 MINUTA biex tibda taħdem ILLUM!",
+          "form.name": "Isem u Kujam",
+          "form.phone": "Numru WhatsApp",
+          "form.age": "Età",
+          "form.consent": "Naċċetta l-",
+          "form.privacy": "Politika tal-Privatezza",
+          "form.and": "u",
+          "form.terms": "Termini tas-Servizz",
+          "form.submit": "✅ IVA, IRRID NIBDA NAQLA'!",
+          "form.secure": "🔒 L-informazzjoni tiegħek hija 100% sigura u kunfidenzjali",
+          
+          // Jobs
+          "jobs.title": "🔥 XIEGĦIJIET REMOTI POPOLARI F'MALTA",
+          "jobs.subtitle": "Agħżel minn pożizzjonijiet remoti popolari. Ibda ILLUM u Ħallas GHADA!",
+          "jobs.popular": "🔥 L-AKTAR POPOLARI",
+          "jobs.flexible": "⚡ HIRING URĠENTI",
+          "jobs.igaming": "🎮 SPEĊJALIST iGAMING",
+          "jobs.highpay": "💰 TQALA' GĦOLI",
+          "jobs.bonus": "⭐ POPOLARI F'MALTA",
+          "jobs.job1.title": "📞 Aġent Support Online",
+          "jobs.job1.salary": "€30-€125 KULJUM",
+          "jobs.job1.feature1": "⏰ 2-5 sigħat flessibbli/kuljum",
+          "jobs.job1.feature2": "🏡 100% xogħol mid-dar",
+          "jobs.job1.feature3": "🎓 Bla esperjenza meħtieġa",
+          "jobs.job1.feature4": "⚡ Ibda fi żmien siegħa",
+          "jobs.job2.title": "⌨️ Speċjalista Data Entry",
+          "jobs.job2.salary": "€25-€75 KULJUM",
+          "jobs.job2.feature1": "🕒 Aħdem FI KWALUNKI ĦIN",
+          "jobs.job2.feature2": "📱 Smartphone biss",
+          "jobs.job2.feature3": "💰 Ħlas ta' kuljum",
+          "jobs.job2.feature4": "⭐ Perfett għal dawk li jibdew",
+          "jobs.job3.title": "📊 Assistit Assigurazzjoni tal-Kwalità",
+          "jobs.job3.salary": "€40-€100 KULJUM",
+          "jobs.job3.feature1": "3-7 sigħat kuljum",
+          "jobs.job3.feature2": "Kompjuter jew tablet",
+          "jobs.job3.feature3": "€50 bonus ta' merħba",
+          "jobs.apply": "🚀 APPLIKA GĦAL DAN IX-XOGĦOL",
+          "jobs.note": "Il-pożizzjonijiet jimlew malajr! Applika ISSA biex tżomm postek.",
+          
+          // Stats
+          "stats.maltese": "MALTIN JAĦDMU",
+          "stats.paid": "IMĦALLSA LIL MALTA",
+          "stats.satisfaction": "RATA TA' SODISFAZZJON",
+          "stats.support": "SUPPORT MALTI",
+          
+          // How it works
+          "how.title": "⚡ KIF TIBDA TAQLA' FI 30 MINUTA",
+          "how.subtitle": "3 passi sempliċi biex tibda taħdem mid-dar ILLUM",
+          "how.step1.title": "📝 APPLIKAZZJONI MALAJRA",
+          "how.step1.desc": "Imla l-formola ta' 30 sekonda tagħna. Bla CV meħtieġ! Biss informazzjoni bażika.",
+          "how.step2.title": "💬 CHAT FUQ WHATSAPP",
+          "how.step2.desc": "Nikkuntattjawk fuq WhatsApp fi żmien 15-30 minuta b'dettalji tax-xogħol.",
+          "how.step3.title": "💰 IBDA U ĦALLAS",
+          "how.step3.desc": "Ibda taħdem immedjatament. Ikollok l-ewwel ħlas fi żmien 24 siegħa!",
+          "how.cta": "⚡ AĦBAR HAWN BIEX TIBDA L-EWWEL PASS ⚡",
+          "how.guarantee": "100% B'XEJN - Bla ħlasijiet moħbija qatt!",
+          
+          // Testimonials
+          "testimonials.title": "🏆 STEJJER TA' SUĊĊESS VERI F'MALTA",
+          "testimonials.subtitle": "Isma' minn Maltin li biddlu ħajjithom jaħdmu mid-dar",
+          "testimonials.testimonial1.text": "\"Kont skeptiku fl-ewwel, imma wara li qlajt €120 fl-ewwel jum tiegħi, ċertifikajt! Issa naħdem 3 sigħat kuljum mis-sofa tiegħi. Perfett għall-istudenti!\"",
+          "testimonials.testimonial1.name": "Maria, 24",
+          "testimonials.testimonial1.role": "Student Universitarju - Msida",
+          "testimonials.testimonial2.text": "\"Bħala omm ta' tnejn, kelli bżonn xogħol flessibbli. Dan bidel kollox! Naqla' €450 fil-ġimgħa naħdem meta t-tfal tiegħi jkunu fl-iskola. Bidla fil-ħajja!\"",
+          "testimonials.testimonial2.name": "Sarah, 32",
+          "testimonials.testimonial2.role": "Omm tad-dar - Birkirkara",
+          "testimonials.testimonial3.text": "\"Tlift ix-xogħol is-sena l-oħra. Sibt dan u issa naqla' AKTAR minn qabel! It-tim ta' appoġġ huwa tal-għajnuna kbira u l-ħlasijiet dejjem jasal fi żmien.\"",
+          "testimonials.testimonial3.name": "Joseph, 41",
+          "testimonials.testimonial3.role": "Eks-maniġer - Valletta",
+          "testimonials.testimonial4.text": "\"Side hustle perfett! Naħdem 2 sigħat wara x-xogħol ta' kuljum tiegħi. €600 extra kull xahar bla stress. Nirrakkomanda lil kulħadd f'Malta!\"",
+          "testimonials.testimonial4.name": "David, 28",
+          "testimonials.testimonial4.role": "Ħaddiem ta' l-uffiċċju - Sliema",
+          "testimonials.testimonial5.text": "\"Bdejt 3 xhur ilu. Diġà ġbart €2,000 għall-festa taz-żwieg tiegħi! Tanti facli biex tuża u t-tim verament jimpurtah mill-ħaddiema Maltin.\"",
+          "testimonials.testimonial5.name": "Lisa, 26",
+          "testimonials.testimonial5.role": "Ħaddiem part-time - Mosta",
+          
+          // FAQ
+          "faq.title": "❓ MISTOQSIJIET FREKWENTI",
+          "faq.subtitle": "Kollha li trid tkun taf dwar ix-xogħol remot f'Malta",
+          "faq.q1": "Dan verament 100% B'XEJN? Bla ħlasijiet moħbija?",
+          "faq.a1": "ASSOLUTAMENT B'XEJN! Qatt ma nħallsu ħlasijiet - la għall-applikazzjoni, la għat-taħriġ, la għall-ħlas. Aħna naqilghu flus meta INTI taqla' flus.",
+          "faq.q2": "Kif malajr se jkolli l-EWWEL ħlas tiegħi?",
+          "faq.a2": "FI ŻMIEN 24 SIGĦA! Ħafna xogħoljitħallsu fl-istess ġurnata. Aħna nimplimentaw ħlasijiet kuljum għall-kontijiet bankarji Maltin jew wallets diġitali.",
+          "faq.q3": "X'jiġri jekk ma għandi l-ebda esperjenza?",
+          "faq.a3": "BLAN ESPERJENZA MEĦTIEĠA! Aħna nipprovdu taħriġ sempliċi. Ħafna xogħoljit-tiegħu biss ħiliet bażiċi ta' smartphone. Perfett għal dawk li jibdew!",
+          "faq.q4": "Dan disponibbli f'kullimkien f'Malta?",
+          "faq.a4": "IVA, FI KMALTA KOLLHA! Minn Valletta sa Għawdex. Kulma għandek bżonn huwa internet. Għandna ħaddiema f'kull belt u villaġġ.",
+          "faq.cta": "⚡ GHADEX GHANDEK MISTOQSIJA? APPLIKA ISSA! ⚡",
+          "faq.support": "Support fuq WhatsApp disponibbli 24/7 għall-ħaddiema Maltin",
+          
+          // CTA
+          "cta.title": "⏰ IŻ-ŻMIEN QED JISPIĊĊA!",
+          "cta.subtitle": "Biss 8 pożizzjonijiet fadlilna għal-lum. Titlifx id-dinja tiegħek biex tibda taqla' mid-dar GHADA!",
+          "cta.cta": "🎯 AĦBAR HAWN BIEX IŻŻOMM IL-POST TIEGĦEK ISSA! 🎯",
+          "cta.benefit1": "100% B'Xejn - Bla ħlasijiet qatt",
+          "cta.benefit2": "Ibda fi żmien 30 minuta",
+          "cta.benefit3": "Ħallas ghada",
+          
+          // Footer
+          "footer.description": "L-ewwel pjattaforma ta' xogħol remot f'Malta. Ngħinu lil Maltin issibu opportunitajiet veri, flessibbli ta' xogħol mid-dar mis-sena 2022.",
+          "footer.compliance": "✓ Kompletament konformi mal-liġijiet tax-xogħol Maltin",
+          "footer.links": "LINKS MALAJRIN",
+          "footer.legal": "LEGALI & KONFORMITÀ",
+          "footer.copyright": "© 2024 RemoteWork.mt | Reġistrat f'Malta | L-operazzjonijiet kollha jikkonformaw mal-liġi Maltija",
+          
+          // Modals
+          "success.title": "PROSIT!",
+          "success.message": "Applika b'suċċess! Se nikkuntattjawk fuq WhatsApp fi żmien 15 minuta bl-ewwel xogħol tiegħek.",
+          "success.ok": "✅ IFTAAĦ WHATSAPP ISSA",
+          "age.title": "REKWIŻIT TAL-ETÀ",
+          "age.message": "Biex taħdem magħna, trid tkun ta' mill-inqas 18-il sena, skont il-liġi Maltija tax-xogħol.",
+          "age.ok": "FEHIMT"
+        }
+      };
+      
+      // Language management
+      let currentLang = 'en';
+      
+      // Detect browser language and set default
+      function detectBrowserLanguage() {
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (browserLang.startsWith('mt')) {
+          return 'mt';
+        }
+        return 'en';
+      }
+      
+      // Initialize language
+      function initLanguage() {
+        currentLang = detectBrowserLanguage();
+        setLanguage(currentLang);
+      }
+      
+      // Set language function
+      function setLanguage(lang) {
+        currentLang = lang;
+        
+        // Update all translatable elements
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              element.placeholder = translations[lang][key];
+            } else if (element.tagName === 'IMG') {
+              element.alt = translations[lang][key];
+            } else {
+              // Check if translation contains HTML
+              const translation = translations[lang][key];
+              if (translation.includes('<')) {
+                element.innerHTML = translation;
+              } else {
+                element.textContent = translation;
+              }
+            }
+          }
+        });
+        
+        // Update WhatsApp message based on language
+        updateWhatsAppMessage();
+      }
+      
+      // Update WhatsApp message
+      function updateWhatsAppMessage() {
+        const message = currentLang === 'mt' 
+          ? "Hello! Jien applika għall-opportunitajiet ta' xogħol remot u nixtieq nibda taħdem. Jista' jgħini?"
+          : "Hello! I applied for the remote work opportunities and I want to start working. Can you help me?";
+        return encodeURIComponent(message);
+      }
+      
+      // Elements
+      const applicationForm = document.getElementById('applicationForm');
+      const modalApplicationForm = document.getElementById('modalApplicationForm');
+      const modalForm = document.getElementById('modalForm');
+      const successModal = document.getElementById('successModal');
+      const ageWarningModal = document.getElementById('ageWarningModal');
+      const openModalBtns = document.querySelectorAll('.open-modal-btn');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const successCloseBtn = document.getElementById('successCloseBtn');
+      const successOkBtn = document.getElementById('successOkBtn');
+      const ageWarningCloseBtn = document.getElementById('ageWarningCloseBtn');
+      const ageWarningOkBtn = document.getElementById('ageWarningOkBtn');
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navLinks = document.querySelector('.nav-links');
+      const faqItems = document.querySelectorAll('.faq-item');
+      const testimonialsTrack = document.getElementById('testimonialsTrack');
+      const sliderDots = document.getElementById('sliderDots');
+      
+      // Mobile menu toggle
+      mobileMenuBtn.addEventListener('click', function() {
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none';
+        } else {
+          navLinks.style.display = 'flex';
+          navLinks.style.flexDirection = 'column';
+          navLinks.style.position = 'absolute';
+          navLinks.style.top = '100%';
+          navLinks.style.left = '0';
+          navLinks.style.right = '0';
+          navLinks.style.background = 'white';
+          navLinks.style.padding = '1rem';
+          navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+          navLinks.style.gap = '1rem';
+        }
+      });
+      
+      // FAQ toggle
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          item.classList.toggle('active');
+        });
+      });
+      
+      // Testimonials slider
+      let currentSlide = 0;
+      const totalSlides = 5;
+      let slideInterval;
+      
+      function initTestimonialsSlider() {
+        // Go to slide function
+        function goToSlide(slideIndex) {
+          currentSlide = slideIndex;
+          testimonialsTrack.style.transform = `translateX(-${slideIndex * 20}%)`;
+          
+          // Update dots
+          document.querySelectorAll('.slider-dot').forEach((dot, index) => {
+            if (index === slideIndex) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+        
+        // Dot click events
+        document.querySelectorAll('.slider-dot').forEach(dot => {
+          dot.addEventListener('click', function() {
+            const slideIndex = parseInt(this.dataset.slide);
+            goToSlide(slideIndex);
+            resetSlideInterval();
+          });
+        });
+        
+        // Auto slide function
+        function autoSlide() {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          goToSlide(currentSlide);
+        }
+        
+        // Start auto sliding
+        function startSlideInterval() {
+          slideInterval = setInterval(autoSlide, 5000); // 5 seconds
+        }
+        
+        // Reset interval when user interacts
+        function resetSlideInterval() {
+          clearInterval(slideInterval);
+          startSlideInterval();
+        }
+        
+        // Start the slider
+        startSlideInterval();
+        
+        // Pause on hover
+        testimonialsTrack.addEventListener('mouseenter', () => {
+          clearInterval(slideInterval);
+        });
+        
+        testimonialsTrack.addEventListener('mouseleave', () => {
+          startSlideInterval();
+        });
+      }
+      
+      // Open modal buttons
+      openModalBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          modalForm.classList.add('active');
+        });
+      });
+      
+      // Close modal buttons
+      modalCloseBtn.addEventListener('click', function() {
+        modalForm.classList.remove('active');
+      });
+      
+      successCloseBtn.addEventListener('click', function() {
+        successModal.classList.remove('active');
+      });
+      
+      ageWarningCloseBtn.addEventListener('click', function() {
+        ageWarningModal.classList.remove('active');
+      });
+      
+      ageWarningOkBtn.addEventListener('click', function() {
+        ageWarningModal.classList.remove('active');
+      });
+      
+      // Success modal OK button
+      successOkBtn.addEventListener('click', function() {
+        successModal.classList.remove('active');
+        // Send conversion event and open WhatsApp
+        const whatsappMessage = updateWhatsAppMessage();
+        const whatsappLink = `https://wa.me/${randomAccount}?text=${whatsappMessage}`;
+        gtag_report_conversion(whatsappLink);
+      });
+      
+      // Close modals on background click
+      [modalForm, successModal, ageWarningModal].forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            this.classList.remove('active');
+          }
+        });
+      });
+      
+      // Form validation function
+      function validateForm(form) {
+        const name = form.querySelector('input[type="text"]').value.trim();
+        const phone = form.querySelector('input[type="tel"]').value.trim();
+        const age = form.querySelector('input[type="number"]').value;
+        const consent = form.querySelector('input[type="checkbox"]').checked;
+        
+        // Reset styles
+        const inputs = form.querySelectorAll('input');
+        inputs.forEach(input => {
+          input.style.borderColor = '';
+        });
+        form.querySelector('.form-check-label').style.color = '';
+        
+        // Validate name
+        if (!name) {
+          form.querySelector('input[type="text"]').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // Validate phone (Malta mobile: 8 digits, cannot start with 0)
+        const phoneRegex = /^[1-9][0-9]{7}$/;
+        if (!phoneRegex.test(phone)) {
+          form.querySelector('input[type="tel"]').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // Validate age
+        const ageNum = parseInt(age);
+        if (!age || ageNum < 18) {
+          form.querySelector('input[type="number"]').style.borderColor = 'var(--primary)';
+          ageWarningModal.classList.add('active');
+          return false;
+        }
+        
+        // Validate consent
+        if (!consent) {
+          form.querySelector('.form-check-label').style.color = 'var(--primary)';
+          return false;
+        }
+        
+        return true;
+      }
+      
+      // Form submission handler
+      function handleFormSubmit(form, isModalForm = false) {
+        if (validateForm(form)) {
+          // Send Google Analytics event
+          try {
+            gtag('event', 'submit_form', {
+              event_category: 'lead',
+              event_label: isModalForm ? 'Modal Form Submission' : 'Main Form Submission'
+            });
+            
+            // Send conversion event
+            const whatsappMessage = updateWhatsAppMessage();
+            const whatsappLink = `https://wa.me/${randomAccount}?text=${whatsappMessage}`;
+            gtag_report_conversion(whatsappLink);
+          } catch (error) {
+            console.log('Google Analytics error:', error);
+            // Fallback: open WhatsApp after delay
+            setTimeout(() => {
+              const whatsappMessage = updateWhatsAppMessage();
+              const whatsappLink = `https://wa.me/${randomAccount}?text=${whatsappMessage}`;
+              window.open(whatsappLink, '_blank');
+            }, 300);
+          }
+          
+          // Show success modal
+          successModal.classList.add('active');
+          
+          // Close modal form if it was modal
+          if (isModalForm) {
+            modalForm.classList.remove('active');
+          }
+          
+          return true;
+        }
+        return false;
+      }
+      
+      // Main form submission
+      if (applicationForm) {
+        applicationForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          handleFormSubmit(this, false);
+        });
+      }
+      
+      // Modal form submission
+      if (modalApplicationForm) {
+        modalApplicationForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          handleFormSubmit(this, true);
+        });
+      }
+      
+      // Input restrictions
+      function setupInputRestrictions() {
+        // Phone inputs
+        const phoneInputs = document.querySelectorAll('input[type="tel"]');
+        phoneInputs.forEach(input => {
+          input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 8) {
+              this.value = this.value.slice(0, 8);
+            }
+          });
+          
+          input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text');
+            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 8);
+            this.value = numbersOnly;
+          });
+        });
+        
+        // Age inputs
+        const ageInputs = document.querySelectorAll('input[type="number"]');
+        ageInputs.forEach(input => {
+          input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 2) {
+              this.value = this.value.slice(0, 2);
+            }
+          });
+          
+          input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text');
+            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 2);
+            this.value = numbersOnly;
+          });
+        });
+      }
+      
+      // Fade in animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // Observe elements with fade-in class
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // Initialize everything
+      function init() {
+        initLanguage();
+        setupInputRestrictions();
+        initTestimonialsSlider();
+        
+        // Send page view event
+        gtag('event', 'page_view', {
+          page_title: 'Malta Remote Work Opportunities - High Paying Jobs',
+          page_location: window.location.href
+        });
+        
+        // Send form view event for modal
+        setTimeout(() => {
+          gtag('event', 'view_form', {
+            event_category: 'engagement',
+            event_label: 'Modal Form View'
+          });
+        }, 1000);
+      }
+      
+      // Start initialization
+      init();
+    });
+  </script>
+</body>
+</html>
