@@ -15,31 +15,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-17694994857');
-    
-    // Enhanced conversion reporting function (保留原功能)
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          setTimeout(function() {
-            window.location = url;
-          }, 300);
-        }
-      };
-      
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17694994857/z0rOCLrOm9EbEKnj0PVB',
-        'event_callback': callback,
-        'value': 3.5,
-        'currency': 'USD'
-      });
-      
-      gtag('event', 'generate_lead', {
-        'currency': 'USD',
-        'value': 3.5
-      });
-      
-      return false;
-    }
   </script>
   
   <style>
@@ -187,6 +162,20 @@
       background: linear-gradient(135deg, var(--primary-light), var(--primary-main));
     }
 
+    /* 移动端CTA按钮 */
+    .mobile-cta-button {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 400px;
+      z-index: 999;
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+
     /* Hero Section */
     .hero-section {
       padding: 160px 0 80px;
@@ -274,6 +263,12 @@
     .feature-icon {
       color: var(--success);
       font-size: 1.2rem;
+    }
+
+    /* 移动端额外的CTA按钮 */
+    .mobile-cta-container {
+      display: none;
+      margin-top: 30px;
     }
 
     /* Application Form */
@@ -866,6 +861,8 @@
       width: 90%;
       position: relative;
       box-shadow: var(--shadow-lg);
+      max-height: 90vh;
+      overflow-y: auto;
     }
 
     .modal-close {
@@ -985,6 +982,19 @@
       font-weight: 600;
       color: var(--primary-dark);
       margin: 8px 0;
+      font-size: 1.1rem;
+    }
+
+    .success-message {
+      font-size: 1.1rem;
+      color: var(--success);
+      font-weight: 600;
+      text-align: center;
+      margin: 20px 0;
+      padding: 15px;
+      background: rgba(39, 174, 96, 0.1);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(39, 174, 96, 0.2);
     }
 
     /* Responsive Design */
@@ -1050,6 +1060,15 @@
       .final-cta {
         padding: 60px 0;
       }
+
+      /* 显示移动端CTA按钮 */
+      .mobile-cta-button {
+        display: block;
+      }
+
+      .mobile-cta-container {
+        display: block;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1071,6 +1090,10 @@
 
       .opportunity-card {
         padding: 24px;
+      }
+
+      .modal-content {
+        padding: 30px 20px;
       }
     }
 
@@ -1116,10 +1139,15 @@
         <a href="#benefits" class="nav-link">Zalety</a>
         <a href="#testimonials" class="nav-link">Opinie</a>
         <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#apply" class="cta-button" id="openFormBtn">Sprawdź Dostęp</a>
+        <a href="#" class="cta-button open-modal-form-btn">Sprawdź Dostęp</a>
       </nav>
     </div>
   </header>
+
+  <!-- 移动端固定CTA按钮 -->
+  <a href="#" class="mobile-cta-button cta-button open-modal-form-btn">
+    Sprawdź Dostępne Zadania
+  </a>
 
   <!-- Hero Section -->
   <section class="hero-section" id="top">
@@ -1153,6 +1181,13 @@
               <span class="feature-icon">💸</span>
               <span><strong>Przejrzyste wynagrodzenie</strong> - stawki od 15 zł za zadanie</span>
             </div>
+          </div>
+
+          <!-- 移动端额外CTA按钮 -->
+          <div class="mobile-cta-container">
+            <a href="#" class="cta-button open-modal-form-btn" style="width: 100%; text-align: center;">
+              Sprawdź Dostępne Zadania Teraz
+            </a>
           </div>
         </div>
 
@@ -1243,7 +1278,7 @@
             <li>Idealne na początek lub jako dodatkowe zajęcie</li>
             <li>Wypłaty po wykonaniu i akceptacji zadań</li>
           </ul>
-          <a href="#apply" class="cta-button open-form-btn" style="width: 100%; text-align: center;">
+          <a href="#" class="cta-button open-modal-form-btn" style="width: 100%; text-align: center;">
             Wybierz Tę Opcję
           </a>
           <p class="disclaimer">
@@ -1262,7 +1297,7 @@
             <li>Możliwość rozwoju w platformie</li>
             <li>Bonusy za regularność i jakość wykonania</li>
           </ul>
-          <a href="#apply" class="cta-button open-form-btn" style="width: 100%; text-align: center;">
+          <a href="#" class="cta-button open-modal-form-btn" style="width: 100%; text-align: center;">
             Wybierz Tę Opcję
           </a>
           <p class="disclaimer">
@@ -1270,6 +1305,13 @@
             Wymagana jest samodyscyplina w realizacji zadań.
           </p>
         </div>
+      </div>
+
+      <!-- 机会区域额外CTA按钮 -->
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#" class="cta-button-light open-modal-form-btn">
+          Sprawdź Wszystkie Możliwości
+        </a>
       </div>
     </div>
   </section>
@@ -1317,6 +1359,13 @@
                 Im więcej zadań wykonasz, tym ciekawsze możliwości otrzymasz.
               </p>
             </div>
+          </div>
+
+          <!-- 优势区域额外CTA按钮 -->
+          <div style="text-align: center; margin-top: 40px;">
+            <a href="#" class="cta-button open-modal-form-btn">
+              Rozpocznij Zarabianie
+            </a>
           </div>
         </div>
       </div>
@@ -1375,6 +1424,13 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- 评价区域额外CTA按钮 -->
+      <div style="text-align: center; margin-top: 60px;">
+        <a href="#" class="cta-button-light open-modal-form-btn">
+          Dołącz Do Zadowolonych Użytkowników
+        </a>
       </div>
     </div>
   </section>
@@ -1435,6 +1491,13 @@
           </div>
         </details>
       </div>
+
+      <!-- FAQ区域额外CTA按钮 -->
+      <div style="text-align: center; margin-top: 60px;">
+        <a href="#" class="cta-button open-modal-form-btn">
+          Masz Pytania? Sprawdź Dostępność
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1446,7 +1509,7 @@
         Wypełnij formularz, aby poznać dostępne możliwości. 
         Bez zobowiązań, bez opłat - po prostu sprawdź, czy to dla Ciebie.
       </p>
-      <a href="#apply" class="cta-button-light open-form-btn">
+      <a href="#" class="cta-button-light open-modal-form-btn">
         Sprawdź Dostępne Zadania
       </a>
     </div>
@@ -1491,31 +1554,98 @@
     </div>
   </footer>
 
-  <!-- Modals -->
+  <!-- 模态框表单 -->
+  <div class="modal" id="modalForm">
+    <div class="modal-content">
+      <button class="modal-close" id="modalFormCloseBtn">&times;</button>
+      <div class="form-header">
+        <h2 class="form-title">Sprawdź Dostępność Zadań</h2>
+        <p class="form-subtitle">Wypełnij formularz, aby poznać dostępne możliwości</p>
+      </div>
+
+      <div class="form-step">
+        <div class="step-dot active"></div>
+        <div class="step-dot"></div>
+        <div class="step-dot"></div>
+      </div>
+
+      <form id="modalApplicationForm" novalidate>
+        <div class="form-group">
+          <label for="modalName" class="form-label">
+            Imię i Nazwisko <span class="required">*</span>
+          </label>
+          <input type="text" id="modalName" name="name" class="form-input" placeholder="Jakub Nowak" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="modalPhone" class="form-label">
+            Numer WhatsApp <span class="required">*</span>
+          </label>
+          <div class="phone-group">
+            <div class="country-code">
+              <img src="https://flagcdn.com/w20/pl.png" alt="PL" width="20" height="15" style="margin-right: 8px;">
+              +48
+            </div>
+            <input type="tel" id="modalPhone" name="phone" class="form-input phone-input" placeholder="123 456 789" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="modalAge" class="form-label">
+            Wiek <span class="required">*</span>
+          </label>
+          <input type="number" id="modalAge" name="age" class="form-input" placeholder="25" min="18" max="99" required>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="modalConsent" name="consent" class="checkbox-input" required checked>
+            <label for="modalConsent" class="checkbox-label">
+              Oświadczam, że zapoznałem/am się z 
+              <a href="privacy.html">Polityką Prywatności</a> oraz 
+              <a href="terms.html">Regulaminem Serwisu</a> i akceptuję ich postanowienia.
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="form-button">
+          Sprawdź Dostępne Zadania
+        </button>
+
+        <div class="security-badge">
+          <span class="security-icon">🔒</span>
+          <span>Twoje dane są chronione zgodnie z RODO</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
   <div class="modal" id="successModal">
     <div class="modal-content">
       <button class="modal-close" id="modalCloseBtn">&times;</button>
-      <h3 class="modal-title">✅ Dostęp Potwierdzony!</h3>
-      <p class="modal-message">
-        <strong>Twój dostęp do zadań został potwierdzony.</strong>
+      <h3 class="modal-title">✅ Sukces! Dostęp Potwierdzony</h3>
+      
+      <div class="success-message">
+        <strong>✅ Udało się! Pomyślnie zablokowano miejsce w zadaniach.</strong>
         <br>
-        Aby rozpocząć i otrzymać pierwsze zadania, skontaktuj się z naszym konsultantem.
-      </p>
+        Kliknij przycisk WhatsApp poniżej, aby odebrać zadania robocze i otrzymać nagrodę.
+      </div>
       
       <div class="success-steps">
         <div class="step-item">
           <div class="step-number">1</div>
           <div class="step-content">
-            <div class="step-title">Kontakt z konsultantem</div>
-            <div class="step-description">Skontaktuj się przez WhatsApp, aby uzyskać szczegóły</div>
+            <div class="step-title">Skontaktuj się przez WhatsApp</div>
+            <div class="step-description">Skorzystaj z poniższego przycisku, aby rozpocząć rozmowę</div>
           </div>
         </div>
         
         <div class="step-item">
           <div class="step-number">2</div>
           <div class="step-content">
-            <div class="step-title">Odbierz zadania</div>
-            <div class="step-description">Konsultant przekaże Ci dostęp do dostępnych zleceń</div>
+            <div class="step-title">Odbierz zadania robocze</div>
+            <div class="step-description">Konsultant przekaże Ci szczegóły dostępnych zleceń</div>
           </div>
         </div>
         
@@ -1529,26 +1659,23 @@
       </div>
       
       <p style="margin: 20px 0; text-align: center; font-weight: 600;">
-        Twój przydzielony konsultant:
+        Twój przydzielony konsultant WhatsApp:
         <br>
         <span class="assigned-number" id="assignedWhatsAppNumber">Ładowanie...</span>
       </p>
       
-      <!-- WhatsApp button with empty href -->
-      <a href="#" id="whatsappRedirectBtn" class="whatsapp-button" onclick="redirectToWhatsApp(event)">
-        <span class="whatsapp-icon">💬</span> Skontaktuj się przez WhatsApp
+      <!-- WhatsApp button with onclick function -->
+      <a href="#" id="whatsappRedirectBtn" class="whatsapp-button" onclick="handleWhatsAppClick(event)">
+        <span class="whatsapp-icon">💬</span> Kliknij, aby skontaktować się przez WhatsApp i odebrać zadania
       </a>
       
       <p style="text-align: center; margin-top: 16px; font-size: 0.9rem; color: var(--gray-600);">
-        Kliknij powyższy przycisk, aby rozpocząć rozmowę z konsultantem
+        Kliknij powyższy przycisk, aby rozpocząć rozmowę z konsultantem i odebrać zadania
       </p>
-      
-      <button class="cta-button" id="modalOkBtn" style="width: 100%; margin-top: 20px;">
-        Potwierdzam - Rozpoczynam
-      </button>
     </div>
   </div>
 
+  <!-- Age Warning Modal -->
   <div class="modal" id="ageWarningModal">
     <div class="modal-content">
       <button class="modal-close" id="ageWarningCloseBtn">&times;</button>
@@ -1564,15 +1691,7 @@
   <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('applicationForm');
-      const successModal = document.getElementById('successModal');
-      const ageWarningModal = document.getElementById('ageWarningModal');
-      const openFormBtns = document.querySelectorAll('.open-form-btn, #openFormBtn');
-      const whatsappRedirectBtn = document.getElementById('whatsappRedirectBtn');
-      const assignedNumberDisplay = document.getElementById('assignedWhatsAppNumber');
-      const modalOkBtn = document.getElementById('modalOkBtn');
-      
-      // WhatsApp accounts pool (保持原有逻辑)
+      // WhatsApp accounts pool
       const whatsappAccounts = [ 
         "112268000973",
         "113676674277",
@@ -1580,47 +1699,101 @@
         "114385544210"
       ];
       
-      // 页面加载时随机分配WhatsApp账号
+      // Global variables
       let assignedWhatsAppAccount = null;
       let whatsappLink = "#";
+      let isReportingGoogleEvent = false;
       
+      // DOM Elements
+      const form = document.getElementById('applicationForm');
+      const modalForm = document.getElementById('modalApplicationForm');
+      const successModal = document.getElementById('successModal');
+      const ageWarningModal = document.getElementById('ageWarningModal');
+      const modalFormContainer = document.getElementById('modalForm');
+      const openFormBtns = document.querySelectorAll('.open-modal-form-btn');
+      const whatsappRedirectBtn = document.getElementById('whatsappRedirectBtn');
+      const assignedNumberDisplay = document.getElementById('assignedWhatsAppNumber');
+      
+      // Function to assign random WhatsApp account
       function assignRandomWhatsApp() {
         const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
         assignedWhatsAppAccount = randomAccount;
-        whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent("Cześć! Otrzymałem dostęp do VirtualCareerPL i chciałbym/chciałabym otrzymać pierwsze zadania.")}`;
         
-        // 显示分配的号码（格式化显示）
+        // Build WhatsApp message
+        const message = encodeURIComponent("Cześć! Otrzymałem dostęp do VirtualCareerPL i chciałbym/chciałabym otrzymać pierwsze zadania.");
+        whatsappLink = `https://wa.me/${randomAccount}?text=${message}`;
+        
+        // Display assigned number (formatted)
         const formattedNumber = `+48 ${randomAccount.slice(2, 5)} ${randomAccount.slice(5, 8)} ${randomAccount.slice(8)}`;
-        assignedNumberDisplay.textContent = formattedNumber;
+        if (assignedNumberDisplay) {
+          assignedNumberDisplay.textContent = formattedNumber;
+        }
         
-        console.log('Przydzielony numer WhatsApp:', formattedNumber);
+        console.log('Przydzielono numer WhatsApp:', formattedNumber);
+        return whatsappLink;
       }
       
-      // 页面加载时立即分配
-      assignRandomWhatsApp();
-      
-      // WhatsApp重定向函数
-      function redirectToWhatsApp(event) {
+      // Function to handle WhatsApp button click
+      function handleWhatsAppClick(event) {
         event.preventDefault();
         event.stopPropagation();
         
-        if (assignedWhatsAppAccount && whatsappLink !== "#") {
-          console.log('Przekierowanie do WhatsApp:', assignedWhatsAppAccount);
-          window.open(whatsappLink, '_blank');
-          
-          // 可选：跟踪WhatsApp点击
-          gtag('event', 'whatsapp_click', {
-            'event_category': 'engagement',
-            'event_label': 'WhatsApp Contact Initiated'
-          });
-        } else {
+        if (!assignedWhatsAppAccount || !whatsappLink || whatsappLink === "#") {
           console.error('Błąd: Nie przydzielono numeru WhatsApp');
           alert('Przepraszamy, wystąpił błąd. Prosimy spróbować ponownie.');
+          return false;
         }
+        
+        // Disable button to prevent multiple clicks
+        const btn = event.target.closest('.whatsapp-button') || event.target;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span class="whatsapp-icon">⏳</span> Przekierowywanie...';
+        btn.style.opacity = '0.8';
+        btn.style.cursor = 'not-allowed';
+        
+        console.log('Rozpoczynanie procesu przekierowania do WhatsApp...');
+        
+        // Report Google conversion event
+        if (!isReportingGoogleEvent) {
+          isReportingGoogleEvent = true;
+          
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17694994857/z0rOCLrOm9EbEKnj0PVB',
+            'event_callback': function() {
+              console.log('Zdarzenie konwersji Google Ads zgłoszone pomyślnie');
+              isReportingGoogleEvent = false;
+            },
+            'value': 3.5,
+            'currency': 'USD'
+          });
+          
+          // Also report as lead generation
+          gtag('event', 'generate_lead', {
+            'currency': 'USD',
+            'value': 3.5
+          });
+        }
+        
+        // Wait 300ms for Google event to be sent, then open WhatsApp
+        setTimeout(function() {
+          console.log('Przekierowanie do WhatsApp po 300ms:', assignedWhatsAppAccount);
+          
+          // Open WhatsApp in new tab
+          window.open(whatsappLink, '_blank', 'noopener,noreferrer');
+          
+          // Restore button state after a delay
+          setTimeout(function() {
+            btn.innerHTML = originalText;
+            btn.style.opacity = '';
+            btn.style.cursor = '';
+          }, 1000);
+          
+        }, 300);
         
         return false;
       }
       
+      // Modal functions
       function openModal(modal) {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -1631,47 +1804,54 @@
         document.body.style.overflow = '';
       }
       
+      // Age validation
       function validateAge(ageValue) {
         const age = parseInt(ageValue, 10);
         return !isNaN(age) && age >= 18;
       }
       
-      function validateForm() {
-        const name = document.getElementById('name').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const age = document.getElementById('age').value.trim();
-        const consent = document.getElementById('consent').checked;
+      // Form validation function
+      function validateForm(formElement) {
+        let isValid = true;
         
-        // 重置错误状态
-        document.querySelectorAll('.form-input').forEach(input => {
+        // Reset error states
+        formElement.querySelectorAll('.form-input').forEach(input => {
           input.style.borderColor = '';
         });
         
-        let isValid = true;
+        // Get form inputs
+        const nameInput = formElement.querySelector('input[name="name"]');
+        const phoneInput = formElement.querySelector('input[name="phone"]');
+        const ageInput = formElement.querySelector('input[name="age"]');
+        const consentInput = formElement.querySelector('input[name="consent"]');
         
-        if (!name) {
-          document.getElementById('name').style.borderColor = 'var(--error)';
+        // Validate name
+        if (!nameInput || !nameInput.value.trim()) {
+          if (nameInput) nameInput.style.borderColor = 'var(--error)';
           isValid = false;
         }
         
-        if (!phone) {
-          document.getElementById('phone').style.borderColor = 'var(--error)';
+        // Validate phone
+        if (!phoneInput || !phoneInput.value.trim()) {
+          if (phoneInput) phoneInput.style.borderColor = 'var(--error)';
           isValid = false;
-        } else if (!/^[0-9\s\-]+$/.test(phone.replace(/\s/g, ''))) {
-          document.getElementById('phone').style.borderColor = 'var(--error)';
+        } else if (phoneInput && !/^[0-9\s\-]+$/.test(phoneInput.value.replace(/\s/g, ''))) {
+          phoneInput.style.borderColor = 'var(--error)';
           isValid = false;
           alert('Proszę podać poprawny numer telefonu');
         }
         
-        if (!age || !validateAge(age)) {
-          document.getElementById('age').style.borderColor = 'var(--error)';
-          if (age && !validateAge(age)) {
+        // Validate age
+        if (!ageInput || !ageInput.value.trim() || !validateAge(ageInput.value)) {
+          if (ageInput) ageInput.style.borderColor = 'var(--error)';
+          if (ageInput && ageInput.value && !validateAge(ageInput.value)) {
             openModal(ageWarningModal);
           }
           isValid = false;
         }
         
-        if (!consent) {
+        // Validate consent
+        if (!consentInput || !consentInput.checked) {
           alert('Proszę zaakceptować regulamin i politykę prywatności');
           isValid = false;
         }
@@ -1679,116 +1859,89 @@
         return isValid;
       }
       
-      // 表单提交处理
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        if (validateForm()) {
-          // 验证通过，显示成功模态框
-          openModal(successModal);
+      // Handle main form submission
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
           
-          // 这里不上报谷歌事件，等到用户点击确认按钮时再上报
-        }
-      });
-      
-      // 模态框确认按钮 - 点击时上报谷歌事件
-      modalOkBtn.addEventListener('click', function() {
-        // 上报谷歌转化事件
-        gtag('event', 'conversion', {
-          'send_to': 'AW-17524155246/4XToCKb08M0bEO7GlaRB',
-          'event_callback': function() {
-            console.log('Konwersja Google Ads zgłoszona pomyślnie');
-          },
-          'value': 3.5,
-          'currency': 'USD'
+          if (validateForm(this)) {
+            // Assign WhatsApp account
+            assignRandomWhatsApp();
+            // Show success modal
+            openModal(successModal);
+          }
         });
-        
-        gtag('event', 'generate_lead', {
-          'currency': 'USD',
-          'value': 3.5
+      }
+      
+      // Handle modal form submission
+      if (modalForm) {
+        modalForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          if (validateForm(this)) {
+            // Assign WhatsApp account
+            assignRandomWhatsApp();
+            // Close modal form
+            closeModal(modalFormContainer);
+            // Show success modal
+            openModal(successModal);
+          }
         });
-        
-        // 可选：上报标准事件
-        gtag('event', 'lead', {
-          'event_category': 'conversion',
-          'event_label': 'Form Submission Confirmed'
-        });
-        
-        console.log('Zdarzenia Google zgłoszone po potwierdzeniu przez użytkownika');
-        
-        // 关闭模态框
-        closeModal(successModal);
-        
-        // 可选：自动跳转到WhatsApp（如果希望）
-        // window.open(whatsappLink, '_blank');
-      });
+      }
       
-      // 模态框关闭按钮
-      document.getElementById('modalCloseBtn').addEventListener('click', function() {
-        closeModal(successModal);
-      });
-      
-      // 年龄警告模态框
-      document.getElementById('ageWarningCloseBtn').addEventListener('click', function() {
-        closeModal(ageWarningModal);
-      });
-      
-      document.getElementById('ageWarningOkBtn').addEventListener('click', function() {
-        closeModal(ageWarningModal);
-      });
-      
-      // 打开表单按钮
+      // Open modal form when CTA buttons are clicked
       openFormBtns.forEach(btn => {
         btn.addEventListener('click', function(e) {
           e.preventDefault();
-          document.getElementById('applicationForm').scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-          });
+          openModal(modalFormContainer);
         });
       });
       
-      // 点击模态框背景关闭
-      successModal.addEventListener('click', function(e) {
-        if (e.target === successModal) {
-          closeModal(successModal);
+      // Close buttons
+      document.getElementById('modalFormCloseBtn')?.addEventListener('click', function() {
+        closeModal(modalFormContainer);
+      });
+      
+      document.getElementById('modalCloseBtn')?.addEventListener('click', function() {
+        closeModal(successModal);
+      });
+      
+      document.getElementById('ageWarningCloseBtn')?.addEventListener('click', function() {
+        closeModal(ageWarningModal);
+      });
+      
+      document.getElementById('ageWarningOkBtn')?.addEventListener('click', function() {
+        closeModal(ageWarningModal);
+      });
+      
+      // Close modals when clicking outside
+      [successModal, ageWarningModal, modalFormContainer].forEach(modal => {
+        if (modal) {
+          modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+              closeModal(modal);
+            }
+          });
         }
       });
       
-      ageWarningModal.addEventListener('click', function(e) {
-        if (e.target === ageWarningModal) {
-          closeModal(ageWarningModal);
-        }
-      });
+      // Initialize WhatsApp account on page load
+      assignRandomWhatsApp();
       
-      // 页面加载事件
+      // Set up WhatsApp button hover title
+      if (whatsappRedirectBtn) {
+        whatsappRedirectBtn.addEventListener('mouseenter', function() {
+          if (assignedWhatsAppAccount) {
+            const formattedNumber = `+48 ${assignedWhatsAppAccount.slice(2, 5)} ${assignedWhatsAppAccount.slice(5, 8)} ${assignedWhatsAppAccount.slice(8)}`;
+            this.title = `Kliknij, aby otworzyć WhatsApp z konsultantem (${formattedNumber})`;
+          }
+        });
+      }
+      
+      // Page view event
       gtag('event', 'page_view', {
         'page_title': 'VirtualCareer PL - Platforma Zadań Online',
         'page_location': window.location.href
-      });
-      
-      // 表单查看事件（可选）
-      const formObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            gtag('event', 'view_form', {
-              'event_category': 'engagement',
-              'event_label': 'Application Form Viewed'
-            });
-            formObserver.disconnect();
-          }
-        });
-      }, { threshold: 0.5 });
-      
-      if (form) {
-        formObserver.observe(form);
-      }
-      
-      // WhatsApp按钮悬停提示
-      whatsappRedirectBtn.addEventListener('mouseenter', function() {
-        if (assignedWhatsAppAccount) {
-          this.title = `Kliknij, aby otworzyć WhatsApp z numerem +48 ${assignedWhatsAppAccount.slice(2)}`;
-        }
       });
     });
   </script>
