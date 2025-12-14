@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Profesjonalne Prace Wirtualne w Polsce | Kariera w Sieci</title>
-  <meta name="description" content="Rozpocznij karierę wirtualną w Polsce. Elastyczna praca online z regularnymi zarobkami. Bez żadnych inwestycji początkowych." />
+  <title>Odkryj Możliwości Pracy Online w Polsce | VirtualCareerPL</title>
+  <meta name="description" content="Poznaj platformę z dostępem do różnorodnych zadań online. Bez opłat startowych, elastyczne godziny, przejrzysty system wynagrodzeń." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   
@@ -16,7 +16,7 @@
     gtag('js', new Date());
     gtag('config', 'AW-17524155246');
     
-    // Enhanced conversion reporting function
+    // Enhanced conversion reporting function (保留原功能)
     function gtag_report_conversion(url) {
       var callback = function () {
         if (typeof(url) != 'undefined') {
@@ -903,6 +903,90 @@
       margin-bottom: 30px;
     }
 
+    /* WhatsApp Button Styles */
+    .whatsapp-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 16px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .whatsapp-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, #2be475, #25D366);
+    }
+
+    .whatsapp-icon {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
+    /* Success Modal Specific */
+    .success-steps {
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin: 24px 0;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .step-number {
+      background: var(--accent);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--primary-dark);
+    }
+
+    .step-description {
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+
+    .assigned-number {
+      display: inline-block;
+      background: var(--gray-100);
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-family: monospace;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin: 8px 0;
+    }
+
     /* Responsive Design */
     @media (max-width: 1024px) {
       .hero-content,
@@ -1032,7 +1116,7 @@
         <a href="#benefits" class="nav-link">Zalety</a>
         <a href="#testimonials" class="nav-link">Opinie</a>
         <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#apply" class="cta-button" id="openFormBtn">Rozpocznij Teraz</a>
+        <a href="#apply" class="cta-button" id="openFormBtn">Sprawdź Dostęp</a>
       </nav>
     </div>
   </header>
@@ -1043,31 +1127,31 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text animate-fade-in">
-          <span class="badge">NOWA FORMA PRACY W POLSCE</span>
+          <span class="badge">DOSTĘPNE ZADANIA ONLINE W POLSCE</span>
           <h1 class="hero-title">
-            Rozpocznij <span>Karierę Wirtualną</span> w Domowym Zaciszu
+            Odkryj <span>Możliwości</span> Zarabiania przez Internet
           </h1>
           <p class="hero-description">
-            Dołącz do elitarnej grupy specjalistów, którzy przekształcili swoje umiejętności w stałe źródło dochodu online. 
-            Działamy wyłącznie na terenie Polski, zapewniając lokalne wsparcie i regularne wypłaty.
+            Platforma łącząca osoby poszukujące dodatkowego dochodu z różnorodnymi zadaniami online. 
+            Sprawdź, czy ta forma aktywności jest dla Ciebie - bez zobowiązań i opłat startowych.
           </p>
           
           <div class="features-list">
             <div class="feature-item">
-              <span class="feature-icon">✓</span>
-              <span>Elastyczne godziny pracy - dostosuj do swojego stylu życia</span>
+              <span class="feature-icon">⚡</span>
+              <span><strong>Elastyczny czas pracy</strong> - wykonuj zadania kiedy chcesz</span>
             </div>
             <div class="feature-item">
-              <span class="feature-icon">✓</span>
-              <span>Zero inwestycji - nie wymagamy żadnych opłat startowych</span>
+              <span class="feature-icon">💰</span>
+              <span><strong>Brak opłat startowych</strong> - rejestracja jest całkowicie darmowa</span>
             </div>
             <div class="feature-item">
-              <span class="feature-icon">✓</span>
-              <span>Profesjonalne wsparcie - polski zespół dostępny 24/7</span>
+              <span class="feature-icon">📱</span>
+              <span><strong>Praca na telefonie</strong> - większość zadań dostępna przez smartfon</span>
             </div>
             <div class="feature-item">
-              <span class="feature-icon">✓</span>
-              <span>Regularne wypłaty - przelewy w ciągu 24 godzin</span>
+              <span class="feature-icon">💸</span>
+              <span><strong>Przejrzyste wynagrodzenie</strong> - stawki od 15 zł za zadanie</span>
             </div>
           </div>
         </div>
@@ -1075,8 +1159,8 @@
         <!-- Application Form -->
         <div class="application-form-container animate-fade-in delay-1">
           <div class="form-header">
-            <h2 class="form-title">Zarejestruj Się Na Prezentację</h2>
-            <p class="form-subtitle">Otrzymaj pełen dostęp do platformy i rozmowę z konsultantem</p>
+            <h2 class="form-title">Sprawdź Dostępność Zadań</h2>
+            <p class="form-subtitle">Wypełnij formularz, aby poznać dostępne możliwości</p>
           </div>
 
           <div class="form-step">
@@ -1125,12 +1209,12 @@
             </div>
 
             <button type="submit" class="form-button">
-              Rozpocznij Rejestrację
+              Sprawdź Dostępne Zadania
             </button>
 
             <div class="security-badge">
               <span class="security-icon">🔒</span>
-              <span>Gwarantujemy pełną ochronę danych osobowych</span>
+              <span>Twoje dane są chronione zgodnie z RODO</span>
             </div>
           </form>
         </div>
@@ -1142,49 +1226,48 @@
   <section class="opportunities-section" id="opportunities">
     <div class="container">
       <div class="section-header animate-fade-in">
-        <h2 class="section-title">Wybierz Formę Współpracy</h2>
+        <h2 class="section-title">Przykładowe Możliwości</h2>
         <p class="section-subtitle">
-          Dostosuj intensywność pracy do swoich potrzeb i możliwości. 
-          Każda z opcji zapewnia pełne wsparcie i regularne wynagrodzenie.
+          Dostęp do różnych typów zadań online. Wybierz intensywność, która odpowiada Twoim możliwościom.
         </p>
       </div>
 
       <div class="opportunities-grid">
         <div class="opportunity-card animate-fade-in">
-          <span class="earning-badge">ZAROBKI: 1 500 - 3 000 ZŁ / MIESIĄC</span>
-          <h3 class="card-title">Współpraca Elastyczna</h3>
+          <span class="earning-badge">PRZYKŁADOWE ZAROBKI*</span>
+          <h3 class="card-title">Podstawowy Dostęp</h3>
           <ul class="card-list">
-            <li>Praca 2-4 godziny dziennie, według Twojego grafiku</li>
-            <li>Zadania dostosowane do codziennych obowiązków</li>
-            <li>Minimum zaangażowania, maksimum swobody</li>
-            <li>Idealne dla studentów i osób aktywnych zawodowo</li>
-            <li>Natychmiastowe wypłaty po wykonaniu zadań</li>
+            <li>1-3 zadania dziennie według Twojego grafiku</li>
+            <li>Proste zadania weryfikacyjne i ankietowe</li>
+            <li>Możliwość rezygnacji w każdej chwili</li>
+            <li>Idealne na początek lub jako dodatkowe zajęcie</li>
+            <li>Wypłaty po wykonaniu i akceptacji zadań</li>
           </ul>
           <a href="#apply" class="cta-button open-form-btn" style="width: 100%; text-align: center;">
             Wybierz Tę Opcję
           </a>
           <p class="disclaimer">
-            Przedstawione zarobki są wartościami orientacyjnymi na podstawie danych historycznych. 
-            Ostateczne wynagrodzenie zależy od zaangażowania i dostępności zadań.
+            *Przedstawione zarobki są wartościami orientacyjnymi na podstawie danych historycznych. 
+            Rzeczywisty dochód zależy od liczby przyjętych zleceń i tempa pracy.
           </p>
         </div>
 
         <div class="opportunity-card animate-fade-in delay-1">
-          <span class="earning-badge">ZAROBKI: 3 000+ ZŁ / MIESIĄC</span>
-          <h3 class="card-title">Współpraca Intensywna</h3>
+          <span class="earning-badge">WIĘKSZE MOŻLIWOŚCI*</span>
+          <h3 class="card-title">Rozszerzony Dostęp</h3>
           <ul class="card-list">
-            <li>Praca 4-6 godzin dziennie, stały dochód</li>
-            <li>Priorytetowy dostęp do premium zadań</li>
-            <li>Dedykowane wsparcie konsultanta</li>
-            <li>Możliwość awansu w strukturze platformy</li>
-            <li>Bonusy za regularność i jakość</li>
+            <li>4-6 zadań dziennie, większa różnorodność</li>
+            <li>Dostęp do zadań średniego poziomu</li>
+            <li>Priorytet w przydzielaniu zleceń</li>
+            <li>Możliwość rozwoju w platformie</li>
+            <li>Bonusy za regularność i jakość wykonania</li>
           </ul>
           <a href="#apply" class="cta-button open-form-btn" style="width: 100%; text-align: center;">
             Wybierz Tę Opcję
           </a>
           <p class="disclaimer">
-            Większe zaangażowanie przekłada się na wyższy potencjał zarobkowy. 
-            Wymagana jest samodyscyplina i regularność w wykonywaniu zadań.
+            Większe zaangażowanie może przełożyć się na wyższe zarobki. 
+            Wymagana jest samodyscyplina w realizacji zadań.
           </p>
         </div>
       </div>
@@ -1199,24 +1282,23 @@
         <div class="benefits-info animate-fade-in delay-1">
           <h2 class="section-title">Dlaczego VirtualCareerPL?</h2>
           <p class="section-subtitle" style="margin-bottom: 40px;">
-            Nie jesteśmy kolejną platformą crowdsourcingową. 
-            Tworzymy profesjonalne środowisko pracy wirtualnej dla polskich specjalistów.
+            Platforma stworzona z myślą o osobach szukających elastycznego sposobu na dodatkowy dochód.
           </p>
 
           <div class="benefits-grid">
             <div class="benefit-item">
               <div class="benefit-icon">💼</div>
-              <h4 class="benefit-title">Profesjonalizm</h4>
+              <h4 class="benefit-title">Różnorodność Zadań</h4>
               <p class="benefit-description">
-                Działamy wyłącznie na rynku polskim, z pełnym poszanowaniem lokalnych regulacji.
+                Dostęp do różnych typów zleceń - od prostych po bardziej złożone.
               </p>
             </div>
 
             <div class="benefit-item">
               <div class="benefit-icon">⚡</div>
-              <h4 class="benefit-title">Natychmiastowość</h4>
+              <h4 class="benefit-title">Szybkie Wypłaty</h4>
               <p class="benefit-description">
-                Wypłaty w ciągu 24 godzin od wykonania i akceptacji zadania.
+                Przelewy realizowane regularnie, bez zbędnych opóźnień.
               </p>
             </div>
 
@@ -1224,7 +1306,7 @@
               <div class="benefit-icon">🛡️</div>
               <h4 class="benefit-title">Bezpieczeństwo</h4>
               <p class="benefit-description">
-                Zero opłat, pełna ochrona danych, przejrzyste warunki współpracy.
+                Przejrzyste warunki, brak ukrytych kosztów, ochrona danych.
               </p>
             </div>
 
@@ -1232,7 +1314,7 @@
               <div class="benefit-icon">📈</div>
               <h4 class="benefit-title">Rozwój</h4>
               <p class="benefit-description">
-                System premiowania, awanse i dostęp do coraz lepszych zadań.
+                Im więcej zadań wykonasz, tym ciekawsze możliwości otrzymasz.
               </p>
             </div>
           </div>
@@ -1245,23 +1327,23 @@
   <section class="testimonials-section" id="testimonials">
     <div class="container">
       <div class="section-header animate-fade-in">
-        <h2 class="section-title">Doświadczenia Naszych Specjalistów</h2>
+        <h2 class="section-title">Opinie Użytkowników</h2>
         <p class="section-subtitle">
-          Poznaj historie osób, które zmieniły swoje podejście do pracy dzięki naszej platformie.
+          Poznaj doświadczenia osób, które korzystają z naszej platformy.
         </p>
       </div>
 
       <div class="testimonials-grid">
         <div class="testimonial-card animate-fade-in">
           <div class="testimonial-text">
-            "Po miesiącu zarobiłem więcej niż w poprzedniej pracy na pół etatu. 
-            Największą zaletą jest absolutna wolność czasowa."
+            "Platforma daje możliwość zarobienia dodatkowych pieniędzy w wolnym czasie. 
+            W zeszłym miesiącu udało mi się uzbierać na nowy telefon."
           </div>
           <div class="testimonial-author">
             <div class="author-avatar">M</div>
             <div class="author-info">
               <div class="author-name">Michał</div>
-              <div class="author-location">Kraków, 2 miesiące z nami</div>
+              <div class="author-location">Kraków, 2 miesiące</div>
             </div>
           </div>
         </div>
@@ -1269,27 +1351,27 @@
         <div class="testimonial-card animate-fade-in delay-1">
           <div class="testimonial-text">
             "Jako mama dwójki dzieci cenię sobie elastyczność. 
-            Mogę pracować kiedy chcę, a dochód jest regularny i przewidywalny."
+            Mogę pracować kiedy chcę, a dodatkowy dochód jest miłym uzupełnieniem budżetu."
           </div>
           <div class="testimonial-author">
             <div class="author-avatar">A</div>
             <div class="author-info">
               <div class="author-name">Anna</div>
-              <div class="author-location">Warszawa, 4 miesiące z nami</div>
+              <div class="author-location">Warszawa, 4 miesiące</div>
             </div>
           </div>
         </div>
 
         <div class="testimonial-card animate-fade-in delay-2">
           <div class="testimonial-text">
-            "Platforma oferuje różnorodne zadania - od prostych po bardziej wymagające. 
-            Wsparcie techniczne działa błyskawicznie."
+            "Platforma oferuje różne poziomy zadań. 
+            Wsparcie techniczne działa sprawnie, a wypłaty są regularne."
           </div>
           <div class="testimonial-author">
             <div class="author-avatar">K</div>
             <div class="author-info">
               <div class="author-name">Krzysztof</div>
-              <div class="author-location">Wrocław, 6 miesięcy z nami</div>
+              <div class="author-location">Wrocław, 6 miesięcy</div>
             </div>
           </div>
         </div>
@@ -1303,19 +1385,20 @@
       <div class="section-header animate-fade-in">
         <h2 class="section-title">Najczęstsze Pytania</h2>
         <p class="section-subtitle">
-          Znajdź odpowiedzi na wszystkie nurtujące Cię kwestie.
+          Znajdź odpowiedzi na pytania dotyczące korzystania z platformy.
         </p>
       </div>
 
       <div class="faq-container">
         <details class="faq-item animate-fade-in">
           <summary class="faq-question">
-            Czy muszę płacić za rejestrację?
+            Czy muszę płacić za dostęp do platformy?
             <span class="faq-icon">▼</span>
           </summary>
           <div class="faq-answer">
-            Absolutnie nie. VirtualCareerPL jest całkowicie darmową platformą. 
-            Nie pobieramy żadnych opłat rejestracyjnych, abonamentowych ani prowizyjnych.
+            Rejestracja i dostęp do platformy są całkowicie darmowe. 
+            <strong>Platforma pobiera opłatę serwisową w wysokości 10% od wartości każdego wykonanego zlecenia.</strong>
+            Nie ma żadnych ukrytych kosztów ani abonamentów.
           </div>
         </details>
 
@@ -1325,8 +1408,8 @@
             <span class="faq-icon">▼</span>
           </summary>
           <div class="faq-answer">
-            Wypłaty realizujemy w ciągu 24 godzin od zatwierdzenia wykonanego zadania. 
-            Oferujemy przelewy bankowe oraz wypłaty na konta elektroniczne.
+            Wypłaty realizujemy regularnie po zatwierdzeniu wykonanych zadań. 
+            Oferujemy przelewy bankowe na polskie konta. Minimalna wypłata wynosi 50 zł.
           </div>
         </details>
 
@@ -1348,7 +1431,7 @@
           </summary>
           <div class="faq-answer">
             Zarobki zależą od dostępności zadań i Twojego zaangażowania. 
-            Przedstawione widełki są oparte na historycznych danych naszych użytkowników.
+            Przedstawione widełki są oparte na historycznych danych użytkowników i mają charakter przykładowy.
           </div>
         </details>
       </div>
@@ -1358,13 +1441,13 @@
   <!-- Final CTA -->
   <section class="final-cta">
     <div class="container animate-fade-in">
-      <h2 class="cta-title">Gotowy na Zmianę?</h2>
+      <h2 class="cta-title">Gotowy na Sprawdzenie?</h2>
       <p class="cta-description">
-        Dołącz do tysięcy Polaków, którzy odkryli nową formę zarobku online. 
-        Rejestracja zajmuje 2 minuty, a pierwsze zadania możesz wykonać już dziś.
+        Wypełnij formularz, aby poznać dostępne możliwości. 
+        Bez zobowiązań, bez opłat - po prostu sprawdź, czy to dla Ciebie.
       </p>
       <a href="#apply" class="cta-button-light open-form-btn">
-        Rozpocznij Swoją Karierę
+        Sprawdź Dostępne Zadania
       </a>
     </div>
   </section>
@@ -1376,10 +1459,16 @@
         <div>
           <a href="#" class="footer-brand">VirtualCareerPL</a>
           <p class="footer-text">
-            Platforma profesjonalnej pracy wirtualnej dla polskich specjalistów. 
-            Łączymy elastyczność z profesjonalizmem, zapewniając godziwe wynagrodzenie 
-            i pełne wsparcie operacyjne.
+            Platforma umożliwiająca dostęp do różnorodnych zadań online. 
+            Łączymy osoby poszukujące dodatkowego dochodu z zleceniodawcami.
           </p>
+          <div class="important-notice" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin-top: 20px;">
+            <p style="font-size: 0.9rem; margin-bottom: 0;">
+              <strong>Ważne:</strong> VirtualCareerPL to platforma łącząca wykonawców z zleceniodawcami. 
+              Nie jesteśmy pracodawcą - każdy użytkownik działa jako niezależny wykonawca. 
+              Dochód zależy od liczby i rodzaju przyjętych zleceń.
+            </p>
+          </div>
         </div>
         <div>
           <h4 style="color: white; margin-bottom: 20px; font-size: 1.1rem;">Dokumenty</h4>
@@ -1391,8 +1480,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        © 2024 VirtualCareerPL. Wszelkie prawa zastrzeżone. 
-        Przedstawione zarobki mają charakter przykładowy i nie stanowią gwarancji dochodu.
+        © 2024 VirtualCareerPL. Platforma do zadań online. 
+        <br>
+        <small>
+          Przedstawione zarobki są wartościami przykładowymi na podstawie danych użytkowników z poprzedniego miesiąca. 
+          Nie gwarantujemy minimalnego dochodu ani stałej dostępności zleceń. 
+          Pełne warunki: <a href="/terms" style="color: rgba(255,255,255,0.8);">Regulamin</a> | <a href="/privacy" style="color: rgba(255,255,255,0.8);">Polityka prywatności</a>.
+        </small>
       </div>
     </div>
   </footer>
@@ -1401,12 +1495,57 @@
   <div class="modal" id="successModal">
     <div class="modal-content">
       <button class="modal-close" id="modalCloseBtn">&times;</button>
-      <h3 class="modal-title">Sukces!</h3>
+      <h3 class="modal-title">✅ Dostęp Potwierdzony!</h3>
       <p class="modal-message">
-        Twoja rejestracja została pomyślnie zakończona. 
-        Za chwilę zostaniesz przekierowany do rozmowy z naszym konsultantem.
+        <strong>Twój dostęp do zadań został potwierdzony.</strong>
+        <br>
+        Aby rozpocząć i otrzymać pierwsze zadania, skontaktuj się z naszym konsultantem.
       </p>
-      <button class="cta-button" id="modalOkBtn" style="width: 100%;">Przejdź do Rozmowy</button>
+      
+      <div class="success-steps">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <div class="step-title">Kontakt z konsultantem</div>
+            <div class="step-description">Skontaktuj się przez WhatsApp, aby uzyskać szczegóły</div>
+          </div>
+        </div>
+        
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <div class="step-title">Odbierz zadania</div>
+            <div class="step-description">Konsultant przekaże Ci dostęp do dostępnych zleceń</div>
+          </div>
+        </div>
+        
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <div class="step-title">Zacznij zarabiać</div>
+            <div class="step-description">Wykonuj zadania i otrzymuj wynagrodzenie</div>
+          </div>
+        </div>
+      </div>
+      
+      <p style="margin: 20px 0; text-align: center; font-weight: 600;">
+        Twój przydzielony konsultant:
+        <br>
+        <span class="assigned-number" id="assignedWhatsAppNumber">Ładowanie...</span>
+      </p>
+      
+      <!-- WhatsApp button with empty href -->
+      <a href="#" id="whatsappRedirectBtn" class="whatsapp-button" onclick="redirectToWhatsApp(event)">
+        <span class="whatsapp-icon">💬</span> Skontaktuj się przez WhatsApp
+      </a>
+      
+      <p style="text-align: center; margin-top: 16px; font-size: 0.9rem; color: var(--gray-600);">
+        Kliknij powyższy przycisk, aby rozpocząć rozmowę z konsultantem
+      </p>
+      
+      <button class="cta-button" id="modalOkBtn" style="width: 100%; margin-top: 20px;">
+        Potwierdzam - Rozpoczynam
+      </button>
     </div>
   </div>
 
@@ -1415,7 +1554,7 @@
       <button class="modal-close" id="ageWarningCloseBtn">&times;</button>
       <h3 class="modal-title">Wymóg Wiekowy</h3>
       <p class="modal-message">
-        Nasza platforma jest dostępna wyłącznie dla osób pełnoletnich (18+). 
+        Platforma jest dostępna wyłącznie dla osób pełnoletnich (18+). 
         Zapraszamy do kontaktu po osiągnięciu wymaganego wieku.
       </p>
       <button class="cta-button" id="ageWarningOkBtn" style="width: 100%;">Rozumiem</button>
@@ -1429,32 +1568,71 @@
       const successModal = document.getElementById('successModal');
       const ageWarningModal = document.getElementById('ageWarningModal');
       const openFormBtns = document.querySelectorAll('.open-form-btn, #openFormBtn');
+      const whatsappRedirectBtn = document.getElementById('whatsappRedirectBtn');
+      const assignedNumberDisplay = document.getElementById('assignedWhatsAppNumber');
+      const modalOkBtn = document.getElementById('modalOkBtn');
       
+      // WhatsApp accounts pool (保持原有逻辑)
       const whatsappAccounts = [ 
-         "33607794284",
-      "33625789421",
-      "33626883760",
-      "33651220905",
-      "33651400214",
-      "33652039457",
-      "33658878475",
-      "33678185238"
+        "33607794284",
+        "33625789421",
+        "33626883760",
+        "33651220905",
+        "33651400214",
+        "33652039457",
+        "33658878475",
+        "33678185238"
       ];
       
-      function generateWhatsAppLink(phoneNumber) {
-        const message = encodeURIComponent("Dzień dobry, chciałbym/chciałabym uzyskać więcej informacji o platformie VirtualCareerPL!");
-        return `https://wa.me/${phoneNumber}`;
+      // 页面加载时随机分配WhatsApp账号
+      let assignedWhatsAppAccount = null;
+      let whatsappLink = "#";
+      
+      function assignRandomWhatsApp() {
+        const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+        assignedWhatsAppAccount = randomAccount;
+        whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent("Cześć! Otrzymałem dostęp do VirtualCareerPL i chciałbym/chciałabym otrzymać pierwsze zadania.")}`;
+        
+        // 显示分配的号码（格式化显示）
+        const formattedNumber = `+48 ${randomAccount.slice(2, 5)} ${randomAccount.slice(5, 8)} ${randomAccount.slice(8)}`;
+        assignedNumberDisplay.textContent = formattedNumber;
+        
+        console.log('Przydzielony numer WhatsApp:', formattedNumber);
       }
       
-      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
-      const assignedWhatsAppLink = generateWhatsAppLink(randomAccount);
+      // 页面加载时立即分配
+      assignRandomWhatsApp();
+      
+      // WhatsApp重定向函数
+      function redirectToWhatsApp(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        if (assignedWhatsAppAccount && whatsappLink !== "#") {
+          console.log('Przekierowanie do WhatsApp:', assignedWhatsAppAccount);
+          window.open(whatsappLink, '_blank');
+          
+          // 可选：跟踪WhatsApp点击
+          gtag('event', 'whatsapp_click', {
+            'event_category': 'engagement',
+            'event_label': 'WhatsApp Contact Initiated'
+          });
+        } else {
+          console.error('Błąd: Nie przydzielono numeru WhatsApp');
+          alert('Przepraszamy, wystąpił błąd. Prosimy spróbować ponownie.');
+        }
+        
+        return false;
+      }
       
       function openModal(modal) {
         modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
       
       function closeModal(modal) {
         modal.classList.remove('active');
+        document.body.style.overflow = '';
       }
       
       function validateAge(ageValue) {
@@ -1462,13 +1640,16 @@
         return !isNaN(age) && age >= 18;
       }
       
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
+      function validateForm() {
         const name = document.getElementById('name').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const age = document.getElementById('age').value.trim();
         const consent = document.getElementById('consent').checked;
+        
+        // 重置错误状态
+        document.querySelectorAll('.form-input').forEach(input => {
+          input.style.borderColor = '';
+        });
         
         let isValid = true;
         
@@ -1480,36 +1661,78 @@
         if (!phone) {
           document.getElementById('phone').style.borderColor = 'var(--error)';
           isValid = false;
+        } else if (!/^[0-9\s\-]+$/.test(phone.replace(/\s/g, ''))) {
+          document.getElementById('phone').style.borderColor = 'var(--error)';
+          isValid = false;
+          alert('Proszę podać poprawny numer telefonu');
         }
         
         if (!age || !validateAge(age)) {
           document.getElementById('age').style.borderColor = 'var(--error)';
-          openModal(ageWarningModal);
-          return false;
-        }
-        
-        if (!consent) {
+          if (age && !validateAge(age)) {
+            openModal(ageWarningModal);
+          }
           isValid = false;
         }
         
-        if (isValid) {
-          gtag('event', 'submit_form', {
-            event_category: 'lead',
-            event_label: 'Main Form'
-          });
-          
+        if (!consent) {
+          alert('Proszę zaakceptować regulamin i politykę prywatności');
+          isValid = false;
+        }
+        
+        return isValid;
+      }
+      
+      // 表单提交处理
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (validateForm()) {
+          // 验证通过，显示成功模态框
           openModal(successModal);
+          
+          // 这里不上报谷歌事件，等到用户点击确认按钮时再上报
         }
       });
       
-      document.getElementById('modalOkBtn').addEventListener('click', function() {
-        gtag_report_conversion(assignedWhatsAppLink);
+      // 模态框确认按钮 - 点击时上报谷歌事件
+      modalOkBtn.addEventListener('click', function() {
+        // 上报谷歌转化事件
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17524155246/4XToCKb08M0bEO7GlaRB',
+          'event_callback': function() {
+            console.log('Konwersja Google Ads zgłoszona pomyślnie');
+          },
+          'value': 3.5,
+          'currency': 'USD'
+        });
+        
+        gtag('event', 'generate_lead', {
+          'currency': 'USD',
+          'value': 3.5
+        });
+        
+        // 可选：上报标准事件
+        gtag('event', 'lead', {
+          'event_category': 'conversion',
+          'event_label': 'Form Submission Confirmed'
+        });
+        
+        console.log('Zdarzenia Google zgłoszone po potwierdzeniu przez użytkownika');
+        
+        // 关闭模态框
+        closeModal(successModal);
+        
+        // 可选：自动跳转到WhatsApp（如果希望）
+        // window.open(whatsappLink, '_blank');
       });
       
+      // 模态框关闭按钮
       document.getElementById('modalCloseBtn').addEventListener('click', function() {
         closeModal(successModal);
       });
       
+      // 年龄警告模态框
       document.getElementById('ageWarningCloseBtn').addEventListener('click', function() {
         closeModal(ageWarningModal);
       });
@@ -1518,6 +1741,7 @@
         closeModal(ageWarningModal);
       });
       
+      // 打开表单按钮
       openFormBtns.forEach(btn => {
         btn.addEventListener('click', function(e) {
           e.preventDefault();
@@ -1528,6 +1752,7 @@
         });
       });
       
+      // 点击模态框背景关闭
       successModal.addEventListener('click', function(e) {
         if (e.target === successModal) {
           closeModal(successModal);
@@ -1540,14 +1765,34 @@
         }
       });
       
+      // 页面加载事件
       gtag('event', 'page_view', {
-        page_title: 'VirtualCareer PL',
-        page_location: window.location.href
+        'page_title': 'VirtualCareer PL - Platforma Zadań Online',
+        'page_location': window.location.href
       });
       
-      gtag('event', 'view_form', {
-        event_category: 'engagement',
-        event_label: 'Main Form'
+      // 表单查看事件（可选）
+      const formObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            gtag('event', 'view_form', {
+              'event_category': 'engagement',
+              'event_label': 'Application Form Viewed'
+            });
+            formObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      if (form) {
+        formObserver.observe(form);
+      }
+      
+      // WhatsApp按钮悬停提示
+      whatsappRedirectBtn.addEventListener('mouseenter', function() {
+        if (assignedWhatsAppAccount) {
+          this.title = `Kliknij, aby otworzyć WhatsApp z numerem +48 ${assignedWhatsAppAccount.slice(2)}`;
+        }
       });
     });
   </script>
