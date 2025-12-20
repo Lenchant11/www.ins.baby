@@ -22,8 +22,8 @@
       --primary-dark: #1a365d;
       --primary-main: #2d4a8c;
       --primary-light: #4a6bc5;
-      --accent: #006400;
-      --accent-light: #228B22;
+      --accent: #0088cc;
+      --accent-light: #26a5e4;
       --success: #27ae60;
       --warning: #f39c12;
       --error: #e74c3c;
@@ -192,7 +192,7 @@
       right: 0;
       width: 50%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(45, 74, 140, 0.05) 0%, rgba(0, 100, 0, 0.05) 100%);
+      background: linear-gradient(135deg, rgba(45, 74, 140, 0.05) 0%, rgba(0, 136, 204, 0.05) 100%);
       clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
     }
 
@@ -210,14 +210,14 @@
 
     .badge {
       display: inline-block;
-      background: rgba(0, 100, 0, 0.1);
+      background: rgba(0, 136, 204, 0.1);
       color: var(--accent);
       padding: 6px 14px;
       border-radius: 20px;
       font-size: 0.8rem;
       font-weight: 600;
       margin-bottom: 16px;
-      border: 1px solid rgba(0, 100, 0, 0.2);
+      border: 1px solid rgba(0, 136, 204, 0.2);
     }
 
     .hero-title {
@@ -238,7 +238,7 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: rgba(0, 100, 0, 0.2);
+      background: rgba(0, 136, 204, 0.2);
       z-index: -1;
     }
 
@@ -352,7 +352,7 @@
     .form-input:focus {
       outline: none;
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+      box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.1);
     }
 
     .phone-group {
@@ -656,7 +656,7 @@
       top: -8px;
       left: -8px;
       font-size: 2.5rem;
-      color: rgba(0, 100, 0, 0.1);
+      color: rgba(0, 136, 204, 0.1);
       font-family: serif;
     }
 
@@ -981,10 +981,10 @@
       letter-spacing: 1px;
     }
 
-    /* WhatsApp Button Styles */
-    .whatsapp-button {
+    /* Telegram Button Styles */
+    .telegram-button {
       display: block;
-      background: linear-gradient(135deg, #25D366, #128C7E);
+      background: linear-gradient(135deg, #0088cc, #006699);
       color: white;
       text-decoration: none;
       padding: 14px 20px;
@@ -1001,13 +1001,13 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    .whatsapp-button:hover {
+    .telegram-button:hover {
       transform: translateY(-2px);
       box-shadow: var(--shadow-lg);
-      background: linear-gradient(135deg, #2be475, #25D366);
+      background: linear-gradient(135deg, #26a5e4, #0088cc);
     }
 
-    .whatsapp-icon {
+    .telegram-icon {
       margin-right: 6px;
       font-size: 1.1rem;
     }
@@ -1173,7 +1173,7 @@
         width: 95%;
       }
       
-      .whatsapp-button {
+      .telegram-button {
         padding: 12px 16px;
         font-size: 0.95rem;
       }
@@ -1335,7 +1335,7 @@
 
             <div class="form-group">
               <label for="phone" class="form-label">
-                Номер WhatsApp <span class="required">*</span>
+                Телефон для Telegram <span class="required">*</span>
               </label>
               <div class="phone-group">
                 <div class="country-code">
@@ -1657,9 +1657,8 @@
         <div>
           <h4 style="color: white; margin-bottom: 16px; font-size: 1.05rem;">Документы</h4>
           <div class="footer-links">
-            <a href="privacy.html" class="footer-link" rel="nofollow">Политика Конфиденциальности</a>
-            <a href="terms.html" class="footer-link" rel="nofollow">Пользовательское Соглашение</a>
-            <a href="contact.html" class="footer-link" rel="nofollow">Контакты</a>
+            <a href="terms.html#privacy" class="footer-link" rel="nofollow">Политика Конфиденциальности</a>
+            <a href="terms.html#userterms" class="footer-link" rel="nofollow">Пользовательское Соглашение</a>
           </div>
         </div>
       </div>
@@ -1700,7 +1699,7 @@
 
         <div class="form-group">
           <label for="modalPhone" class="form-label">
-            Номер WhatsApp <span class="required">*</span>
+            Телефон для Telegram <span class="required">*</span>
           </label>
           <div class="phone-group">
             <div class="country-code">
@@ -1749,14 +1748,14 @@
       <div class="success-message">
         <strong>✅ Готово! Место в заданиях забронировано</strong>
         <br>
-        Нажмите кнопку WhatsApp ниже, чтобы получить задания и вознаграждение.
+        Нажмите кнопку Telegram ниже, чтобы получить задания и вознаграждение.
       </div>
       
       <div class="success-steps">
         <div class="step-item">
           <div class="step-number">1</div>
           <div class="step-content">
-            <div class="step-title">Свяжитесь через WhatsApp</div>
+            <div class="step-title">Свяжитесь через Telegram</div>
             <div class="step-description">Используйте кнопку ниже, чтобы начать разговор</div>
           </div>
         </div>
@@ -1779,14 +1778,14 @@
       </div>
       
       <p style="margin: 16px 0; text-align: center; font-weight: 600;">
-        Ваш назначенный WhatsApp-консультант:
+        Ваш назначенный Telegram-консультант:
         <br>
-        <span class="assigned-number" id="assignedWhatsAppNumber">Загрузка...</span>
+        <span class="assigned-number" id="assignedTelegramNumber">Загрузка...</span>
       </p>
       
-      <!-- WhatsApp button with onclick function -->
-      <button type="button" id="whatsappRedirectBtn" class="whatsapp-button" onclick="handleWhatsAppClick(event)">
-        <span class="whatsapp-icon">💬</span> Получить задания через WhatsApp
+      <!-- Telegram button with onclick function -->
+      <button type="button" id="telegramRedirectBtn" class="telegram-button" onclick="handleTelegramClick(event)">
+        <span class="telegram-icon">💬</span> Получить задания через Telegram
       </button>
       
       <p style="text-align: center; margin-top: 12px; font-size: 0.85rem; color: var(--gray-600);">
@@ -1811,21 +1810,21 @@
   <!-- JavaScript -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // WhatsApp accounts pool for Tajikistan
-    const whatsappAccounts = [ 
-      "992901234567",
-      "992931234567",
-      "992921234567",
-      "992501234567",
-      "992881234567",
-      "992771234567",
-      "992551234567",
-      "992441234567",
-      "992331234567"
+    // Telegram usernames pool for Tajikistan
+    const telegramUsernames = [ 
+      "virtualcareer_tj1",
+      "virtualcareer_tj2",
+      "virtualcareer_tj3",
+      "virtualcareer_tj4",
+      "virtualcareer_tj5",
+      "virtualcareer_tj6",
+      "virtualcareer_tj7",
+      "virtualcareer_tj8",
+      "virtualcareer_tj9"
     ];
     
     // Global variables
-    let assignedWhatsAppAccount = null;
+    let assignedTelegramUsername = null;
     
     // DOM Elements
     const form = document.getElementById('applicationForm');
@@ -1834,64 +1833,52 @@
     const ageWarningModal = document.getElementById('ageWarningModal');
     const modalFormContainer = document.getElementById('modalForm');
     const openFormBtns = document.querySelectorAll('.open-modal-form-btn');
-    const whatsappRedirectBtn = document.getElementById('whatsappRedirectBtn');
-    const assignedNumberDisplay = document.getElementById('assignedWhatsAppNumber');
+    const telegramRedirectBtn = document.getElementById('telegramRedirectBtn');
+    const assignedNumberDisplay = document.getElementById('assignedTelegramNumber');
     
-    // Function to assign random WhatsApp account
-    function assignRandomWhatsApp() {
-      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
-      assignedWhatsAppAccount = randomAccount;
+    // Function to assign random Telegram username
+    function assignRandomTelegram() {
+      const randomUsername = telegramUsernames[Math.floor(Math.random() * telegramUsernames.length)];
+      assignedTelegramUsername = randomUsername;
       
-      // Display assigned number (formatted)
+      // Display assigned username
       if (assignedNumberDisplay) {
-        // Format Tajik phone number
-        const formattedNumber = formatTajikPhone(randomAccount);
-        assignedNumberDisplay.textContent = formattedNumber;
+        assignedNumberDisplay.textContent = `@${randomUsername}`;
       }
       
-      console.log('Назначен номер WhatsApp:', randomAccount);
-      return randomAccount;
+      console.log('Назначен Telegram:', randomUsername);
+      return randomUsername;
     }
     
-    // Function to format Tajik phone number
-    function formatTajikPhone(number) {
-      const cleaned = number.replace(/\D/g, '');
-      if (cleaned.startsWith('992')) {
-        const rest = cleaned.substring(3);
-        return `+992 ${rest.substring(0, 2)} ${rest.substring(2, 5)} ${rest.substring(5)}`;
-      }
-      return number;
-    }
-    
-    // Function to handle WhatsApp button click
-    function handleWhatsAppClick(event) {
-      console.log('Кнопка WhatsApp нажата');
+    // Function to handle Telegram button click
+    function handleTelegramClick(event) {
+      console.log('Кнопка Telegram нажата');
       
-      // Ensure WhatsApp account is assigned
-      if (!assignedWhatsAppAccount) {
-        console.error('Ошибка: Номер WhatsApp не назначен');
+      // Ensure Telegram username is assigned
+      if (!assignedTelegramUsername) {
+        console.error('Ошибка: Telegram не назначен');
         alert('Извините, произошла ошибка. Пожалуйста, попробуйте снова.');
         return;
       }
       
-      // Build WhatsApp link
+      // Build Telegram link
       const message = "Здравствуйте! Я получил доступ к VirtualCareerTJ и хотел бы получить свои первые задания.";
       const encodedMessage = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/${assignedWhatsAppAccount}`;
+      const telegramUrl = `https://t.me/${assignedTelegramUsername}`;
       
-      console.log('Открытие WhatsApp ссылки:', whatsappUrl);
+      console.log('Открытие Telegram ссылки:', telegramUrl);
       
       // Report Google events
       try {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17694994857/z0rOCLrOm9EbEKnj0PVB',
-          'value': 2.5,
+          'send_to': 'AW-17694994857/TcGjCMv0wtQbEKnj0PVB',
+          'value': 1,
           'currency': 'USD'
         });
         
         gtag('event', 'generate_lead', {
           'currency': 'USD',
-          'value': 2.5
+          'value': 1
         });
         
         console.log('Google событие отправлено');
@@ -1899,10 +1886,10 @@
         console.log('Ошибка отправки в Google:', error);
       }
       
-      // Open WhatsApp link after 300ms
+      // Open Telegram link after 300ms
       setTimeout(function() {
-        console.log('Открытие WhatsApp после 300ms задержки');
-        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        console.log('Открытие Telegram после 300ms задержки');
+        window.open(telegramUrl, '_blank', 'noopener,noreferrer');
       }, 300);
     }
     
@@ -1978,8 +1965,8 @@
         e.preventDefault();
         
         if (validateForm(this)) {
-          // Assign WhatsApp account
-          assignRandomWhatsApp();
+          // Assign Telegram username
+          assignRandomTelegram();
           // Show success modal
           openModal(successModal);
         }
@@ -1992,8 +1979,8 @@
         e.preventDefault();
         
         if (validateForm(this)) {
-          // Assign WhatsApp account
-          assignRandomWhatsApp();
+          // Assign Telegram username
+          assignRandomTelegram();
           // Close modal form
           closeModal(modalFormContainer);
           // Show success modal
@@ -2038,22 +2025,21 @@
       }
     });
     
-    // Initialize WhatsApp account on page load
-    assignRandomWhatsApp();
+    // Initialize Telegram username on page load
+    assignRandomTelegram();
     
-    // Bind the simplified WhatsApp click handler
-    if (whatsappRedirectBtn) {
+    // Bind the simplified Telegram click handler
+    if (telegramRedirectBtn) {
       // Remove any existing onclick handler
-      whatsappRedirectBtn.onclick = null;
+      telegramRedirectBtn.onclick = null;
       
       // Add new event listener
-      whatsappRedirectBtn.addEventListener('click', handleWhatsAppClick);
+      telegramRedirectBtn.addEventListener('click', handleTelegramClick);
       
       // Set up hover title
-      whatsappRedirectBtn.addEventListener('mouseenter', function() {
-        if (assignedWhatsAppAccount) {
-          const formattedNumber = formatTajikPhone(assignedWhatsAppAccount);
-          this.title = `Нажмите, чтобы открыть WhatsApp с консультантом (${formattedNumber})`;
+      telegramRedirectBtn.addEventListener('mouseenter', function() {
+        if (assignedTelegramUsername) {
+          this.title = `Нажмите, чтобы открыть Telegram с консультантом (@${assignedTelegramUsername})`;
         }
       });
     }
