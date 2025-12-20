@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Integritetspolicy | VirtualCareerSE</title>
+  <meta name="description" content="Läs om hur VirtualCareerSE hanterar och skyddar dina personuppgifter i enlighet med GDPR." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-dark: #1a365d;
+      --primary-main: #2d4a8c;
+      --primary-light: #4a6bc5;
+      --accent: #00a8a8;
+      --accent-light: #4dd0d0;
+      --success: #27ae60;
+      --warning: #f39c12;
+      --error: #e74c3c;
+      --gray-900: #1a202c;
+      --gray-700: #4a5568;
+      --gray-500: #718096;
+      --gray-300: #cbd5e0;
+      --gray-100: #f7fafc;
+      --white: #ffffff;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--gray-900);
+      background: linear-gradient(135deg, #f8fafd 0%, #f0f7ff 100%);
+      line-height: 1.6;
+      font-size: 16px;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--primary-dark);
+    }
+
+    .container {
+      width: min(1200px, 94%);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Navigation */
+    .main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(45, 74, 140, 0.1);
+      box-shadow: var(--shadow-sm);
+      padding: 12px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--primary-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-icon {
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-main);
+    }
+
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--primary-main), var(--primary-dark));
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: var(--radius-md);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, var(--primary-light), var(--primary-main));
+    }
+
+    /* Privacy Content */
+    .privacy-hero {
+      padding: 140px 0 60px;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafd 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .privacy-hero-background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(45, 74, 140, 0.05) 0%, rgba(0, 168, 168, 0.05) 100%);
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .privacy-title {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .privacy-subtitle {
+      font-size: 1.2rem;
+      color: var(--gray-700);
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .last-updated {
+      color: var(--gray-500);
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+      padding: 8px 16px;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      display: inline-block;
+      border: 1px solid var(--gray-300);
+    }
+
+    /* Content Sections */
+    .privacy-content {
+      padding: 60px 0 80px;
+    }
+
+    .content-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-card {
+      background: white;
+      border: 1px solid rgba(45, 74, 140, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .section-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary-dark);
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .info-text {
+      color: var(--gray-700);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .info-text:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-box {
+      background: rgba(0, 168, 168, 0.05);
+      border-left: 4px solid var(--accent);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .highlight-text {
+      color: var(--gray-900);
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .data-table th {
+      background: var(--primary-main);
+      color: white;
+      text-align: left;
+      padding: 16px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .data-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--gray-300);
+      color: var(--gray-700);
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .data-table tr:hover {
+      background: rgba(45, 74, 140, 0.03);
+    }
+
+    .privacy-list {
+      list-style: none;
+      margin: 16px 0;
+    }
+
+    .privacy-list li {
+      padding: 8px 0;
+      padding-left: 28px;
+      position: relative;
+      color: var(--gray-700);
+    }
+
+    .privacy-list li:before {
+      content: '•';
+      position: absolute;
+      left: 12px;
+      color: var(--accent);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .contact-info {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-main));
+      color: white;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      margin: 32px 0;
+    }
+
+    .contact-title {
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .contact-item {
+      flex: 1;
+      min-width: 250px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .contact-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: 4px;
+    }
+
+    .contact-value {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .back-to-home {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--gray-300);
+    }
+
+    /* Footer */
+    .main-footer {
+      background: var(--primary-dark);
+      color: white;
+      padding: 48px 0 24px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+      margin-bottom: 32px;
+    }
+
+    .footer-brand {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .footer-text {
+      opacity: 0.8;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      max-width: 400px;
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-link {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+
+    .footer-link:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      text-align: center;
+      opacity: 0.7;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .privacy-title {
+        font-size: 2.4rem;
+      }
+      
+      .section-card {
+        padding: 28px;
+      }
+      
+      .privacy-hero-background {
+        width: 60%;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .privacy-title {
+        font-size: 2.2rem;
+      }
+      
+      .nav-menu {
+        display: none;
+      }
+      
+      .privacy-hero {
+        padding: 120px 0 40px;
+      }
+      
+      .privacy-content {
+        padding: 40px 0 60px;
+      }
+      
+      .section-card {
+        padding: 24px;
+      }
+      
+      .section-title {
+        font-size: 1.6rem;
+      }
+      
+      .contact-details {
+        flex-direction: column;
+      }
+      
+      .contact-item {
+        min-width: 100%;
+      }
+      
+      .data-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .privacy-title {
+        font-size: 1.9rem;
+      }
+      
+      .container {
+        padding: 0 16px;
+      }
+      
+      .section-card {
+        padding: 20px;
+      }
+      
+      .privacy-subtitle {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.15s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.45s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📱</span>
+        VirtualCareer<span style="color: var(--accent);">SE</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html#opportunities" class="nav-link">Erbjudanden</a>
+        <a href="index.html#benefits" class="nav-link">Fördelar</a>
+        <a href="index.html#testimonials" class="nav-link">Recensioner</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="index.html" class="cta-button">Tillbaka till startsidan</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="privacy-hero">
+    <div class="privacy-hero-background"></div>
+    <div class="container">
+      <div class="hero-content animate-fade-in">
+        <h1 class="privacy-title">Integritetspolicy</h1>
+        <p class="privacy-subtitle">Hur vi skyddar och hanterar dina personuppgifter</p>
+        <div class="last-updated">
+          <strong>Senast uppdaterad:</strong> 1 december 2024
+        </div>
+        <p class="info-text" style="max-width: 800px;">
+          Denna integritetspolicy beskriver hur VirtualCareerSE (härefter "vi", "oss", "vår") samlar in, 
+          använder och skyddar dina personuppgifter i enlighet med EU:s dataskyddsförordning (GDPR) 
+          och svensk lagstiftning.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy Content -->
+  <section class="privacy-content">
+    <div class="container">
+      <div class="content-container">
+        <!-- Section 1 -->
+        <div class="section-card animate-fade-in">
+          <h2 class="section-title">1. Personuppgiftsansvarig</h2>
+          <p class="info-text">
+            Personuppgiftsansvarig för behandlingen av dina personuppgifter är:
+          </p>
+          <div class="highlight-box">
+            <p class="highlight-text">
+              VirtualCareerSE<br>
+              Org.nr: 559123-4567<br>
+              E-post: dataskydd@virtualcareer.se<br>
+              Adress: Dataskyddsvägen 12, 111 22 Stockholm
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section-card animate-fade-in delay-1">
+          <h2 class="section-title">2. Vilka uppgifter samlar vi in?</h2>
+          <p class="info-text">
+            Vi samlar endast in de personuppgifter som är nödvändiga för att tillhandahålla våra tjänster:
+          </p>
+          
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Typ av uppgift</th>
+                <th>Exempel</th>
+                <th>Syfte</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Identifikationsuppgifter</strong></td>
+                <td>För- och efternamn</td>
+                <td>Verifiering och kommunikation</td>
+              </tr>
+              <tr>
+                <td><strong>Kontaktuppgifter</strong></td>
+                <td>WhatsApp-nummer, e-post</td>
+                <td>Uppdragstilldelning och support</td>
+              </tr>
+              <tr>
+                <td><strong>Demografiska uppgifter</strong></td>
+                <td>Ålder</td>
+                <td>Verifiera ålderskrav (18+)</td>
+              </tr>
+              <tr>
+                <td><strong>Transaktionsdata</strong></td>
+                <td>Uppdragsdata, ersättningsbelopp</td>
+                <td>Utbetalning och redovisning</td>
+              </tr>
+              <tr>
+                <td><strong>Tekniska data</strong></td>
+                <td>IP-adress, enhetsinformation</td>
+                <td>Säkerhet och analys</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section-card animate-fade-in delay-2">
+          <h2 class="section-title">3. Syfte med behandlingen</h2>
+          <p class="info-text">
+            Vi behandlar dina personuppgifter för följande ändamål:
+          </p>
+          <ul class="privacy-list">
+            <li>Hantera din registrering och användning av plattformen</li>
+            <li>Tilldela dig lämpliga onlineuppgifter</li>
+            <li>Utföra utbetalningar för genomförda uppdrag</li>
+            <li>Ge kundsupport och hantera förfrågningar</li>
+            <li>Följa lagliga förpliktelser (t.ex. bokföring)</li>
+            <li>Förbättra och utveckla våra tjänster</li>
+            <li>Förebygga missbruk och bedrägerier</li>
+          </ul>
+          
+          <div class="highlight-box">
+            <p class="highlight-text">
+              <strong>Juridisk grund:</strong> Behandlingen baseras på:
+              <br>• Avtal (genom godkännande av användarvillkoren)
+              <br>• Berättigat intresse (tjänsteleverans och förbättring)
+              <br>• Laglig skyldighet (bokföring enligt svensk lag)
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section-card animate-fade-in delay-3">
+          <h2 class="section-title">4. Datadelning med tredje part</h2>
+          <p class="info-text">
+            Vi delar endast dina uppgifter med:
+          </p>
+          
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Mottagare</th>
+                <th>Typ av data</th>
+                <th>Syfte</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Uppdragsgivare</strong></td>
+                <td>Nödvändiga arbetsdata</td>
+                <td>Uppdragstilldelning och kvalitetskontroll</td>
+              </tr>
+              <tr>
+                <td><strong>Betalningsleverantörer</strong></td>
+                <td>Namn och bankuppgifter</td>
+                <td>Utföra utbetalningar</td>
+              </tr>
+              <tr>
+                <td><strong>Tekniska leverantörer</strong></td>
+                <td>Tekniska data</td>
+                <td>Drift och underhåll av plattformen</td>
+              </tr>
+              <tr>
+                <td><strong>Myndigheter</strong></td>
+                <td>Enligt lagkrav</td>
+                <td>Uppfyllelse av lagliga förpliktelser</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p class="info-text" style="margin-top: 20px;">
+            <strong>Internationella överföringar:</strong> Vi överför inte dina uppgifter utanför EU/ESS 
+            om inte specifika skyddsåtgärder finns på plats.
+          </p>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section-card animate-fade-in">
+          <h2 class="section-title">5. Dataskyddsåtgärder</h2>
+          <p class="info-text">
+            Vi har implementerat robusta säkerhetsåtgärder för att skydda dina uppgifter:
+          </p>
+          <ul class="privacy-list">
+            <li><strong>Kryptering:</strong> All data överförs via säkra SSL/TLS-anslutningar</li>
+            <li><strong>Åtkomstkontroll:</strong> Strikt åtkomsthantering för personal</li>
+            <li><strong>Regelbundna säkerhetsgranskningar</strong></li>
+            <li><strong>Upplärning av personal</strong> i datasäkerhet</li>
+            <li><strong>Incidenthanteringsplan</strong> för datasäkerhetsincidenter</li>
+          </ul>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="section-card animate-fade-in delay-1">
+          <h2 class="section-title">6. Dina rättigheter</h2>
+          <p class="info-text">
+            Enligt GDPR har du följande rättigheter:
+          </p>
+          
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Rättighet</th>
+                <th>Beskrivning</th>
+                <th>Hur du utövar den</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Insyn</strong></td>
+                <td>Rätt att få information om hur vi behandlar dina uppgifter</td>
+                <td>Kontakta oss via e-post</td>
+              </tr>
+              <tr>
+                <td><strong>Rättelse</strong></td>
+                <td>Rätt att få felaktiga uppgifter rättade</td>
+                <td>Kontakta oss via e-post</td>
+              </tr>
+              <tr>
+                <td><strong>Radering</strong></td>
+                <td>Rätt att få uppgifter raderade ("right to be forgotten")</td>
+                <td>Skicka förfrågan via e-post</td>
+              </tr>
+              <tr>
+                <td><strong>Begränsning</strong></td>
+                <td>Rätt att begränsa behandlingen i vissa fall</td>
+                <td>Kontakta oss via e-post</td>
+              </tr>
+              <tr>
+                <td><strong>Dataportabilitet</strong></td>
+                <td>Rätt att få dina uppgifter i ett strukturerat format</td>
+                <td>Skicka förfrågan via e-post</td>
+              </tr>
+              <tr>
+                <td><strong>Invända</strong></td>
+                <td>Rätt att invända mot behandling baserad på berättigat intresse</td>
+                <td>Kontakta oss via e-post</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="highlight-box">
+            <p class="highlight-text">
+              <strong>Observera:</strong> Vissa rättigheter kan vara begränsade om vi har en laglig skyldighet 
+              att behålla vissa uppgifter (t.ex. bokföringsplikten som kräver arkivering i 7 år).
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="section-card animate-fade-in delay-2">
+          <h2 class="section-title">7. Lagringsperiod</h2>
+          <p class="info-text">
+            Vi sparar dina personuppgifter endast så länge som är nödvändigt:
+          </p>
+          <ul class="privacy-list">
+            <li><strong>Aktiva konton:</strong> Tills kontot tas bort</li>
+            <li><strong>Inaktiva konton:</strong> Upp till 24 månaders inaktivitet</li>
+            <li><strong>Transaktionsdata:</strong> 7 år (bokföringsplikt)</li>
+            <li><strong>Kommunikationsdata:</strong> 2 år för supportärenden</li>
+            <li><strong>Tekniska loggar:</strong> 12 månader för säkerhetsändamål</li>
+          </ul>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="section-card animate-fade-in delay-3">
+          <h2 class="section-title">8. Cookies och spårning</h2>
+          <p class="info-text">
+            Vi använder nödvändiga cookies för att plattformen ska fungera:
+          </p>
+          <ul class="privacy-list">
+            <li><strong>Sessionscookies:</strong> För att hålla dig inloggad</li>
+            <li><strong>Säkerhetscookies:</strong> För att skydda mot CSRF-attacker</li>
+            <li><strong>Preferenscookies:</strong> För att komma ihåg dina inställningar</li>
+          </ul>
+          <p class="info-text" style="margin-top: 16px;">
+            Vi använder även analysverktyg (Google Analytics) för att förbättra våra tjänster. 
+            Du kan hantera cookie-inställningar i din webbläsare.
+          </p>
+        </div>
+
+        <!-- Section 9 -->
+        <div class="section-card animate-fade-in">
+          <h2 class="section-title">9. Ändringar av policyn</h2>
+          <p class="info-text">
+            Vi kan uppdatera denna integritetspolicy vid behov. Signifikanta ändringar kommer att:
+          </p>
+          <ul class="privacy-list">
+            <li>Kommunikeras via e-post till registrerade användare</li>
+            <li>Markeras med ett tydligt meddelande på plattformen</li>
+            <li>Inkludera ett nytt "senast uppdaterad"-datum</li>
+          </ul>
+          <p class="info-text" style="margin-top: 16px;">
+            Fortsatt användning av våra tjänster efter ändringar innebär godkännande av den uppdaterade policyn.
+          </p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-info animate-fade-in delay-1">
+          <h2 class="contact-title">Kontakta vår dataskyddsombud</h2>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-label">E-post</div>
+              <div class="contact-value">dataskydd@virtualcareer.se</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Telefon</div>
+              <div class="contact-value">+46 8 123 45 67</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Postadress</div>
+              <div class="contact-value">Dataskyddsvägen 12<br>111 22 Stockholm</div>
+            </div>
+          </div>
+          <p style="margin-top: 16px; opacity: 0.9; font-size: 0.95rem;">
+            För att utöva dina rättigheter eller ställa frågor om vår behandling av personuppgifter, 
+            vänligen kontakta oss via någon av ovanstående kanaler.
+          </p>
+        </div>
+
+        <!-- Complaint Section -->
+        <div class="section-card animate-fade-in delay-2">
+          <h2 class="section-title">Klagomål till tillsynsmyndighet</h2>
+          <p class="info-text">
+            Om du anser att vår behandling av dina personuppgifter inte följer GDPR har du rätt att 
+            lämna klagomål till tillsynsmyndigheten:
+          </p>
+          <div class="highlight-box">
+            <p class="highlight-text">
+              <strong>Integritetsskyddsmyndigheten (IMY)</strong><br>
+              Box 8114<br>
+              104 20 Stockholm<br>
+              Telefon: 08-657 61 00<br>
+              E-post: imy@ins.baby<br>
+              Webb: <a href="https://www.ins.baby" style="color: var(--accent); text-decoration: none;">www.ins.baby</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Back to Home -->
+        <div class="back-to-home animate-fade-in delay-3">
+          <a href="index.html" class="cta-button" style="padding: 14px 32px; font-size: 1rem;">
+            ← Tillbaka till startsidan
+          </a>
+          <p style="margin-top: 16px; color: var(--gray-500); font-size: 0.95rem;">
+            Tack för att du läser vår integritetspolicy. Ditt förtroende är viktigt för oss.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="index.html" class="footer-brand">VirtualCareerSE</a>
+          <p class="footer-text">
+            Plattform som ger tillgång till olika onlineuppgifter. 
+            Vi förenar personer som söker extra inkomst med uppdragsgivare.
+          </p>
+          <div class="important-notice" style="background: rgba(255,255,255,0.1); padding: 12px; border-radius: 8px; margin-top: 16px;">
+            <p style="font-size: 0.85rem; margin-bottom: 0; line-height: 1.5;">
+              <strong>Viktigt:</strong> VirtualCareerSE är en plattform som förenar utförare med uppdragsgivare. 
+              Vi är inte arbetsgivare - varje användare agerar som självständig utförare. 
+              Inkomst beror på antal och typ av accepterade uppdrag.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h4 style="color: white; margin-bottom: 16px; font-size: 1.05rem;">Dokument</h4>
+          <div class="footer-links">
+            <a href="privacy.html" class="footer-link">Integritetspolicy</a>
+            <a href="userterms.html" class="footer-link">Användarvillkor</a>
+            <a href="contact.html" class="footer-link">Kontakt</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2024 VirtualCareerSE. Plattform för onlineuppgifter. 
+        <br>
+        <small>
+          Denna integritetspolicy är utformad i enlighet med GDPR och svensk lagstiftning. 
+          Läs våra <a href="terms.html" style="color: rgba(255,255,255,0.8);">Användarvillkor</a> för fullständiga detaljer.
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe all section cards
+      document.querySelectorAll('.section-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>
