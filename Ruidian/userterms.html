@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Användarvillkor | VirtualCareerSE</title>
+  <meta name="description" content="Läs användarvillkoren för VirtualCareerSE. Villkor för användning av vår onlineplattform för uppgifter." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-dark: #1a365d;
+      --primary-main: #2d4a8c;
+      --primary-light: #4a6bc5;
+      --accent: #00a8a8;
+      --accent-light: #4dd0d0;
+      --success: #27ae60;
+      --warning: #f39c12;
+      --error: #e74c3c;
+      --gray-900: #1a202c;
+      --gray-700: #4a5568;
+      --gray-500: #718096;
+      --gray-300: #cbd5e0;
+      --gray-100: #f7fafc;
+      --white: #ffffff;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--gray-900);
+      background: linear-gradient(135deg, #f8fafd 0%, #f0f7ff 100%);
+      line-height: 1.6;
+      font-size: 16px;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--primary-dark);
+    }
+
+    .container {
+      width: min(1200px, 94%);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Navigation */
+    .main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(45, 74, 140, 0.1);
+      box-shadow: var(--shadow-sm);
+      padding: 12px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--primary-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-icon {
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-main);
+    }
+
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--primary-main), var(--primary-dark));
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: var(--radius-md);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, var(--primary-light), var(--primary-main));
+    }
+
+    /* Terms Hero */
+    .terms-hero {
+      padding: 140px 0 60px;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafd 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .terms-hero-background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(45, 74, 140, 0.05) 0%, rgba(0, 168, 168, 0.05) 100%);
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .terms-title {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .terms-subtitle {
+      font-size: 1.2rem;
+      color: var(--gray-700);
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .important-note {
+      background: rgba(247, 39, 12, 0.1);
+      border: 2px solid var(--error);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin: 24px 0;
+      position: relative;
+    }
+
+    .important-note:before {
+      content: '⚠️';
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: white;
+      padding: 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .note-title {
+      color: var(--error);
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .note-text {
+      color: var(--gray-900);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .last-updated {
+      color: var(--gray-500);
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+      padding: 8px 16px;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      display: inline-block;
+      border: 1px solid var(--gray-300);
+    }
+
+    /* Content Sections */
+    .terms-content {
+      padding: 60px 0 80px;
+    }
+
+    .content-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-card {
+      background: white;
+      border: 1px solid rgba(45, 74, 140, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .section-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary-dark);
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .info-text {
+      color: var(--gray-700);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .info-text:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-box {
+      background: rgba(0, 168, 168, 0.05);
+      border-left: 4px solid var(--accent);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .highlight-text {
+      color: var(--gray-900);
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .terms-list {
+      list-style: none;
+      margin: 16px 0;
+    }
+
+    .terms-list li {
+      padding: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      color: var(--gray-700);
+      line-height: 1.5;
+    }
+
+    .terms-list li:before {
+      content: '•';
+      position: absolute;
+      left: 12px;
+      color: var(--accent);
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .sub-list {
+      list-style: none;
+      margin: 8px 0 8px 20px;
+    }
+
+    .sub-list li {
+      padding: 6px 0;
+      padding-left: 24px;
+      position: relative;
+      color: var(--gray-600);
+      font-size: 0.95rem;
+    }
+
+    .sub-list li:before {
+      content: '◦';
+      position: absolute;
+      left: 8px;
+      color: var(--primary-light);
+      font-size: 1.2rem;
+    }
+
+    .definition-box {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .definition-title {
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .definition-text {
+      color: var(--gray-700);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Table Styles */
+    .terms-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .terms-table th {
+      background: var(--primary-main);
+      color: white;
+      text-align: left;
+      padding: 16px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .terms-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--gray-300);
+      color: var(--gray-700);
+      vertical-align: top;
+    }
+
+    .terms-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .terms-table tr:hover {
+      background: rgba(45, 74, 140, 0.03);
+    }
+
+    /* Acceptance Section */
+    .acceptance-section {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-main));
+      color: white;
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .acceptance-title {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .acceptance-text {
+      opacity: 0.9;
+      margin-bottom: 24px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .main-footer {
+      background: var(--primary-dark);
+      color: white;
+      padding: 48px 0 24px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+      margin-bottom: 32px;
+    }
+
+    .footer-brand {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .footer-text {
+      opacity: 0.8;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      max-width: 400px;
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-link {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+
+    .footer-link:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      text-align: center;
+      opacity: 0.7;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    /* Back to Home */
+    .back-to-home {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--gray-300);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .terms-title {
+        font-size: 2.4rem;
+      }
+      
+      .section-card {
+        padding: 28px;
+      }
+      
+      .terms-hero-background {
+        width: 60%;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .terms-title {
+        font-size: 2.2rem;
+      }
+      
+      .nav-menu {
+        display: none;
+      }
+      
+      .terms-hero {
+        padding: 120px 0 40px;
+      }
+      
+      .terms-content {
+        padding: 40px 0 60px;
+      }
+      
+      .section-card {
+        padding: 24px;
+      }
+      
+      .section-title {
+        font-size: 1.6rem;
+      }
+      
+      .terms-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      .acceptance-section {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .terms-title {
+        font-size: 1.9rem;
+      }
+      
+      .container {
+        padding: 0 16px;
+      }
+      
+      .section-card {
+        padding: 20px;
+      }
+      
+      .terms-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .important-note {
+        padding: 16px;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.15s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.45s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📱</span>
+        VirtualCareer<span style="color: var(--accent);">SE</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html#opportunities" class="nav-link">Erbjudanden</a>
+        <a href="index.html#benefits" class="nav-link">Fördelar</a>
+        <a href="index.html#testimonials" class="nav-link">Recensioner</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="index.html" class="cta-button">Tillbaka till startsidan</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="terms-hero">
+    <div class="terms-hero-background"></div>
+    <div class="container">
+      <div class="hero-content animate-fade-in">
+        <h1 class="terms-title">Användarvillkor</h1>
+        <p class="terms-subtitle">Regler och villkor för användning av VirtualCareerSE</p>
+        <div class="last-updated">
+          <strong>Gäller från:</strong> 1 december 2024
+        </div>
+        
+        <div class="important-note">
+          <div class="note-title">VIKTIGT ATT LÄSA</div>
+          <p class="note-text">
+            Genom att registrera dig på VirtualCareerSE och använda våra tjänster godkänner du dessa 
+            användarvillkor i sin helhet. Det är din skyldighet att läsa och förstå alla villkor innan 
+            du accepterar dem. Om du inte godkänner någon del av dessa villkor, får du inte använda våra tjänster.
+          </p>
+        </div>
+        
+        <p class="info-text" style="max-width: 800px;">
+          Dessa användarvillkor reglerar förhållandet mellan dig som användare och VirtualCareerSE 
+          (org.nr 559123-4567) när du använder vår plattform för onlineuppgifter. Plattformen fungerar 
+          som en matchningstjänst mellan utförare och uppdragsgivare.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terms Content -->
+  <section class="terms-content">
+    <div class="container">
+      <div class="content-container">
+        <!-- Section 1: Definitions -->
+        <div class="section-card animate-fade-in">
+          <h2 class="section-title">1. Definitioner och tolkning</h2>
+          
+          <div class="definition-box">
+            <div class="definition-title">Plattformen</div>
+            <div class="definition-text">
+              VirtualCareerSEs webbplattform, mobilapplikationer och alla tillhörande tjänster.
+            </div>
+          </div>
+          
+          <div class="definition-box">
+            <div class="definition-title">Användare/Utförare</div>
+            <div class="definition-text">
+              Den fysiska person som är registrerad på plattformen för att utföra onlineuppgifter.
+            </div>
+          </div>
+          
+          <div class="definition-box">
+            <div class="definition-title">Uppdragsgivare</div>
+            <div class="definition-text">
+              Den part som publicerar uppgifter på plattformen för att bli utförda.
+            </div>
+          </div>
+          
+          <div class="definition-box">
+            <div class="definition-title">Uppgifter</div>
+            <div class="definition-text">
+              De arbetsuppgifter som publiceras på plattformen, inklusive men inte begränsat till 
+              datainmatning, enkäter, verifiering och andra digitala uppgifter.
+            </div>
+          </div>
+          
+          <div class="definition-box">
+            <div class="definition-title">Serviceavgift</div>
+            <div class="definition-text">
+              Den avgift på 10% som VirtualCareerSE tar ut av varje utfört uppdrag för att 
+              driva och underhålla plattformen.
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Eligibility -->
+        <div class="section-card animate-fade-in delay-1">
+          <h2 class="section-title">2. Behörighet och registrering</h2>
+          
+          <h3 style="color: var(--primary-dark); margin: 16px 0 8px;">2.1 Grundläggande krav</h3>
+          <p class="info-text">
+            För att registrera dig och använda VirtualCareerSE måste du:
+          </p>
+          <ul class="terms-list">
+            <li>Vara minst 18 år gammal</li>
+            <li>Ha ett giltigt svenskt personnummer eller vara bosatt i Sverige</li>
+            <li>Ha tillgång till en fungerande smartphone eller dator med internet</li>
+            <li>Ha ett svenskt bankkonto för utbetalningar</li>
+            <li>Ha ett WhatsApp-konto för kommunikation</li>
+          </ul>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">2.2 Registreringsprocess</h3>
+          <p class="info-text">
+            Under registreringen kommer du att behöva:
+          </p>
+          <ul class="terms-list">
+            <li>Ange korrekt och fullständig information</li>
+            <li>Verifiera ditt telefonnummer via WhatsApp</li>
+            <li>Godkänna dessa användarvillkor och integritetspolicyn</li>
+            <li>Vara beredd att verifiera din identitet vid behov</li>
+          </ul>
+          
+          <div class="highlight-box">
+            <p class="highlight-text">
+              <strong>Viktigt:</strong> Det är förbjudet att registrera flera konton. 
+              Varje fysisk person får endast ha ett aktivt konto. 
+              Missbruk kan leda till omedelbar avstängning och förlust av eventuella utestående betalningar.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 3: Nature of Relationship -->
+        <div class="section-card animate-fade-in delay-2">
+          <h2 class="section-title">3. Förhållandets natur</h2>
+          
+          <div class="important-note" style="background: rgba(243, 156, 18, 0.1); border-color: var(--warning);">
+            <div class="note-title">INGET ARBETSFÖRHÅLLANDE</div>
+            <p class="note-text">
+              VirtualCareerSE är INTE din arbetsgivare. Du agerar som en självständig utförare. 
+              Detta innebär att du inte är omfattad av kollektivavtal, semesterlön, 
+              sjuklön eller andra arbetsrättsliga förmåner.
+            </p>
+          </div>
+          
+          <p class="info-text">
+            VirtualCareerSE fungerar som en matchningstjänst mellan dig som utförare och olika 
+            uppdragsgivare. Plattformen tar ut en serviceavgift för att tillhandahålla denna matchning.
+          </p>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">3.1 Dina skyldigheter som utförare</h3>
+          <ul class="terms-list">
+            <li>Utföra uppgifter enligt angivna instruktioner och kvalitetskrav</li>
+            <li>Respektera deadlines och leveranstider</li>
+            <li>Följa alla tillämpliga lagar och regler</li>
+            <li>Hålla information om uppdrag konfidentiell</li>
+            <li>Inte vidarebefordra uppgifter till tredje part</li>
+          </ul>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">3.2 VirtualCareerSE:s roll</h3>
+          <ul class="terms-list">
+            <li>Tillhandahålla plattformen för matchning</li>
+            <li>Hantera betalningar mellan parter</li>
+            <li>Medla vid konflikter (vid behov)</li>
+            <li>Säkerställa plattformens funktionalitet</li>
+            <li>Upprätthålla kvalitetsstandarder</li>
+          </ul>
+        </div>
+
+        <!-- Section 4: Tasks and Payments -->
+        <div class="section-card animate-fade-in delay-3">
+          <h2 class="section-title">4. Uppgifter och ersättning</h2>
+          
+          <h3 style="color: var(--primary-dark); margin: 16px 0 8px;">4.1 Uppdragsprocess</h3>
+          <ul class="terms-list">
+            <li>Uppgifter tilldelas baserat på tillgänglighet och kvalifikationer</li>
+            <li>Du kan välja att acceptera eller avböja tilldelade uppgifter</li>
+            <li>Varje uppgift har specifika instruktioner och deadlines</li>
+            <li>Kvalitetskontroll genomförs efter leverans</li>
+            <li>Uppgifter kan avvisas om de inte uppfyller kvalitetskraven</li>
+          </ul>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">4.2 Ersättningsmodell</h3>
+          <table class="terms-table">
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th>Beskrivning</th>
+                <th>Exempel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Uppdragspris</strong></td>
+                <td>Ersättning per utförd uppgift</td>
+                <td>150-500 kr</td>
+              </tr>
+              <tr>
+                <td><strong>Serviceavgift</strong></td>
+                <td>VirtualCareerSE:s andel (10%)</td>
+                <td>15-50 kr</td>
+              </tr>
+              <tr>
+                <td><strong>Nettoersättning</strong></td>
+                <td>Din utbetalning efter avgift</td>
+                <td>135-450 kr</td>
+              </tr>
+              <tr>
+                <td><strong>Minsta utbetalning</strong></td>
+                <td>Lägsta belopp för uttag</td>
+                <td>500 kr</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="highlight-box">
+            <p class="highlight-text">
+              <strong>Inkomstgaranti:</strong> VirtualCareerSE garanterar INTE någon minimiinkomst. 
+              Din faktiska inkomst beror på tillgänglighet av uppgifter, din produktivitet och 
+              kvaliteten på ditt arbete. Alla angivna inkomstbelopp är endast exempel och 
+              inga garantier.
+            </p>
+          </div>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">4.3 Utbetalningar</h3>
+          <ul class="terms-list">
+            <li>Utbetalningar sker via banköverföring till svenskt konto</li>
+            <li>Betalningsperiod: 7-14 arbetsdagar efter godkännande</li>
+            <li>Minsta utbetalning: 500 SEK</li>
+            <li>Inga dolda avgifter för utbetalningar</li>
+            <li>Du är ansvarig för eventuella skatteförpliktelser</li>
+          </ul>
+        </div>
+
+        <!-- Section 5: Quality and Conduct -->
+        <div class="section-card animate-fade-in">
+          <h2 class="section-title">5. Kvalitet och uppförande</h2>
+          
+          <h3 style="color: var(--primary-dark); margin: 16px 0 8px;">5.1 Kvalitetskrav</h3>
+          <p class="info-text">
+            Alla uppgifter måste utföras:
+          </p>
+          <ul class="terms-list">
+            <li>Enligt specificerade instruktioner</li>
+            <li>Inom angiven tidsram</li>
+            <li>Med hög noggrannhet och kvalitet</li>
+            <li>Med professionellt bemötande</li>
+            <li>Utan användning av otillåtna hjälpmedel</li>
+          </ul>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">5.2 Förbjudet beteende</h3>
+          <p class="info-text">
+            Följande handlingar är strikt förbjudna och kan leda till omedelbar avstängning:
+          </p>
+          <ul class="terms-list">
+            <li>Fusk eller bedrägligt beteende</li>
+            <li>Användning av automatiserade verktyg eller botar</li>
+            <li>Delning av konfidentiell information</li>
+            <li>Skadlig eller oförskämd kommunikation</li>
+            <li>Missbruk av plattformen eller dess funktioner</li>
+            <li>Registrering av flera konton</li>
+            <li>Försök att kringgå betalningssystem</li>
+          </ul>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">5.3 Kvalitetsbedömning</h3>
+          <p class="info-text">
+            Din prestation utvärderas kontinuerligt baserat på:
+          </p>
+          <ul class="terms-list">
+            <li>Godkännande av uppgifter (minst 90% krav)</li>
+            <li>Tidpunkt för leverans</li>
+            <li>Feedback från uppdragsgivare</li>
+            <li>Kommunikationskvalitet</li>
+            <li>Överensstämmelse med instruktioner</li>
+          </ul>
+        </div>
+
+        <!-- Section 6: Termination -->
+        <div class="section-card animate-fade-in delay-1">
+          <h2 class="section-title">6. Uppsägning och konsekvenser</h2>
+          
+          <h3 style="color: var(--primary-dark); margin: 16px 0 8px;">6.1 Avslut av konto</h3>
+          <p class="info-text">
+            Du kan när som helst avsluta ditt konto genom att:
+          </p>
+          <ul class="terms-list">
+            <li>Skicka förfrågan via e-post till support@ins.baby</li>
+            <li>Tydligt ange önskan om kontoborttagning</li>
+            <li>Kontrollera att alla utestående betalningar är hanterade</li>
+          </ul>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">6.2 Avstängning av VirtualCareerSE</h3>
+          <p class="info-text">
+            Vi förbehåller oss rätten att avstänga eller ta bort konton utan föregående varning vid:
+          </p>
+          <ul class="terms-list">
+            <li>Brott mot dessa användarvillkor</li>
+            <li>Suspicerat bedrägligt beteende</li>
+            <li>Missbruk av plattformen</li>
+            <li>Långvarig inaktivitet (över 6 månader)</li>
+            <li>Otillåten användning av tjänsten</li>
+          </ul>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">6.3 Konsekvenser av avslut</h3>
+          <p class="info-text">
+            Vid avslut av ditt konto:
+          </p>
+          <ul class="terms-list">
+            <li>Du förlorar tillgång till alla pågående uppgifter</li>
+            <li>Alla utestående betalningar kommer att behandlas</li>
+            <li>Dina personuppgifter hanteras enligt vår integritetspolicy</li>
+            <li>Du kan inte återaktivera kontot utan vårt godkännande</li>
+          </ul>
+        </div>
+
+        <!-- Section 7: Liability and Disputes -->
+        <div class="section-card animate-fade-in delay-2">
+          <h2 class="section-title">7. Ansvar och tvister</h2>
+          
+          <div class="important-note">
+            <div class="note-title">ANSVARSBEGRÄNSNING</div>
+            <p class="note-text">
+              VirtualCareerSE ansvarar INTE för förluster, skador eller kostnader som uppstår 
+              i samband med användning av plattformen, utöver vad som följer av svensk lag.
+            </p>
+          </div>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">7.1 Ansvarsförhållanden</h3>
+          <ul class="terms-list">
+            <li><strong>Ditt ansvar:</strong> För kvaliteten på ditt arbete och följande av instruktioner</li>
+            <li><strong>Uppdragsgivarens ansvar:</strong> För att tillhandahålla korrekta instruktioner och data</li>
+            <li><strong>VirtualCareerSE:s ansvar:</strong> För att tillhandahålla en fungerande plattform</li>
+          </ul>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">7.2 Tvistelösning</h3>
+          <p class="info-text">
+            Vid tvister tillämpars följande process:
+          </p>
+          <ol class="terms-list" style="counter-reset: item;">
+            <li style="list-style: none; padding-left: 0; margin-bottom: 8px;">
+              <strong>Steg 1:</strong> Försök till förlikning mellan parterna
+            </li>
+            <li style="list-style: none; padding-left: 0; margin-bottom: 8px;">
+              <strong>Steg 2:</strong> VirtualCareerSE agerar medlare (om relevant)
+            </li>
+            <li style="list-style: none; padding-left: 0; margin-bottom: 8px;">
+              <strong>Steg 3:</strong> Formell tvistelösning enligt svensk lag
+            </li>
+          </ol>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">7.3 Tillämplig lag och domstol</h3>
+          <div class="highlight-box">
+            <p class="highlight-text">
+              Dessa villkor regleras av och tolkas i enlighet med svensk lag. 
+              Eventuella tvister ska avgöras av svensk domstol med Stockholms tingsrätt som första instans.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 8: Changes to Terms -->
+        <div class="section-card animate-fade-in delay-3">
+          <h2 class="section-title">8. Ändringar av villkoren</h2>
+          
+          <h3 style="color: var(--primary-dark); margin: 16px 0 8px;">8.1 Rätt att ändra</h3>
+          <p class="info-text">
+            VirtualCareerSE förbehåller sig rätten att ändra dessa användarvillkor när som helst. 
+            Betydande ändringar kommer att:
+          </p>
+          <ul class="terms-list">
+            <li>Kommunikeras till dig via e-post minst 30 dagar i förväg</li>
+            <li>Publiceras tydligt på plattformen</li>
+            <li>Inkludera ett nytt "gäller från"-datum</li>
+          </ul>
+          
+          <h3 style="color: var(--primary-dark); margin: 20px 0 8px;">8.2 Fortsatt användning</h3>
+          <div class="highlight-box">
+            <p class="highlight-text">
+              Din fortsatta användning av VirtualCareerSE efter att ändringar trätt i kraft 
+              innebär att du godkänner de nya villkoren. Om du inte godkänner ändringarna 
+              måste du omedelbart avsluta ditt konto och sluta använda tjänsten.
+            </p>
+          </div>
+        </div>
+
+        <!-- Acceptance Section -->
+        <div class="acceptance-section animate-fade-in">
+          <h2 class="acceptance-title">Godkännande av villkoren</h2>
+          <p class="acceptance-text">
+            Genom att registrera dig på VirtualCareerSE och klicka på "Godkänn" eller genom att fortsätta 
+            använda våra tjänster, bekräftar du att du:
+          </p>
+          <ul style="text-align: left; max-width: 600px; margin: 0 auto 24px; color: white; opacity: 0.9;">
+            <li style="margin-bottom: 8px;">Har läst och förstått dessa användarvillkor i sin helhet</li>
+            <li style="margin-bottom: 8px;">Är minst 18 år gammal och har rätt att ingå avtal</li>
+            <li style="margin-bottom: 8px;">Accepterar alla villkor och förpliktelser som beskrivs ovan</li>
+            <li>Förstår att VirtualCareerSE inte är din arbetsgivare</li>
+          </ul>
+          <p class="acceptance-text">
+            Om du har några frågor om dessa villkor, vänligen kontakta oss innan du godkänner.
+          </p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="section-card animate-fade-in">
+          <h2 class="section-title">Kontaktinformation</h2>
+          
+          <div class="definition-box">
+            <div class="definition-title">VirtualCareerSE</div>
+            <div class="definition-text">
+              Organisationsnummer: 559123-4567<br>
+              E-post: support@ins.baby<br>
+              För juridiska frågor: legal@ins.baby<br>
+              Adress: Villkorsgatan 15, 111 22 Stockholm
+            </div>
+          </div>
+          
+          <p class="info-text" style="margin-top: 20px;">
+            För support eller frågor om ditt konto, vänligen kontakta oss via WhatsApp eller e-post. 
+            För juridiska frågor eller klagomål, använd den angivna juridiska e-postadressen.
+          </p>
+        </div>
+
+        <!-- Back to Home -->
+        <div class="back-to-home animate-fade-in">
+          <a href="index.html" class="cta-button" style="padding: 14px 32px; font-size: 1rem;">
+            ← Tillbaka till startsidan
+          </a>
+          <p style="margin-top: 16px; color: var(--gray-500); font-size: 0.95rem;">
+            Du kan alltid återvända till dessa användarvillkor via länken i sidfoten.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="index.html" class="footer-brand">VirtualCareerSE</a>
+          <p class="footer-text">
+            Plattform som ger tillgång till olika onlineuppgifter. 
+            Vi förenar personer som söker extra inkomst med uppdragsgivare.
+          </p>
+          <div class="important-notice" style="background: rgba(255,255,255,0.1); padding: 12px; border-radius: 8px; margin-top: 16px;">
+            <p style="font-size: 0.85rem; margin-bottom: 0; line-height: 1.5;">
+              <strong>Viktigt:</strong> VirtualCareerSE är en plattform som förenar utförare med uppdragsgivare. 
+              Vi är inte arbetsgivare - varje användare agerar som självständig utförare. 
+              Inkomst beror på antal och typ av accepterade uppdrag.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h4 style="color: white; margin-bottom: 16px; font-size: 1.05rem;">Dokument</h4>
+          <div class="footer-links">
+            <a href="privacy.html" class="footer-link">Integritetspolicy</a>
+            <a href="userterms.html" class="footer-link">Användarvillkor</a>
+            <a href="contact.html" class="footer-link">Kontakt</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2024 VirtualCareerSE. Plattform för onlineuppgifter. 
+        <br>
+        <small>
+          Användning av VirtualCareerSE regleras av dessa användarvillkor. 
+          Läs vår <a href="privacy.html" style="color: rgba(255,255,255,0.8);">Integritetspolicy</a> för information om hantering av personuppgifter.
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe all section cards
+      document.querySelectorAll('.section-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>
