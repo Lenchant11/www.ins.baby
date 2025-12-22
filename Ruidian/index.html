@@ -1,0 +1,2917 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HemifrånJobb - Sveriges Pålitliga Distansarbetsplattform | Verifierade Hemmajobb</title>
+  <meta name="description" content="Verifierade distansarbetsmöjligheter i Sverige. Jobba hemifrån med pålitliga svenska företag. Kundservice, administrativa och databearbetningspositioner. Ansök nu!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 瑞典风格配色 - 蓝黄主题 -->
+  <style>
+    :root {
+      /* 瑞典国旗颜色 - 蓝色和黄色 */
+      --primary: #0058A3;
+      --secondary: #FECC00;
+      --accent: #004B87;
+      --light: #FFFFFF;
+      --dark: #1C2B3A;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-600: #64748B;
+      --gray-700: #475569;
+      --gray-800: #334155;
+      
+      /* 瑞典自然配色 */
+      --nature-green: #2E7D32;
+      --nature-blue: #1565C0;
+      
+      /* 字体 */
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* 间距 - 移动端优化 */
+      --space-xs: 0.25rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      
+      /* 圆角 */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      
+      /* 阴影 - 更柔和 */
+      --shadow-sm: 0 1px 3px rgba(0, 88, 163, 0.08);
+      --shadow-md: 0 3px 10px rgba(0, 88, 163, 0.12);
+      --shadow-lg: 0 5px 20px rgba(0, 88, 163, 0.15);
+      
+      /* 过渡效果 */
+      --transition-fast: 0.15s ease;
+      --transition-base: 0.25s ease;
+    }
+    
+    /* === 重置和基础样式 === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-800);
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--dark);
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    ul, ol {
+      list-style: none;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-sm);
+    }
+    
+    .section {
+      padding: var(--space-lg) 0;
+    }
+    
+    @media (max-width: 768px) {
+      .section {
+        padding: var(--space-md) 0;
+      }
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto var(--space-md);
+    }
+    
+    .section-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+      color: var(--primary);
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+    
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* === 按钮 === */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-family: var(--font-heading);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-base);
+      text-align: center;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, #004B87, #003A6B);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn-primary:hover::after {
+      left: 100%;
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--gray-100);
+    }
+    
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+    
+    .btn-block {
+      width: 100%;
+    }
+    
+    .btn-icon {
+      font-size: 1.1em;
+    }
+    
+    /* === 页头和导航 === */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      box-shadow: 0 2px 10px rgba(0, 88, 163, 0.1);
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    @media (max-width: 1024px) {
+      .nav {
+        flex-wrap: wrap;
+      }
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .nav-links {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .nav-cta {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-cta {
+        display: block;
+        margin-left: 0.5rem;
+      }
+    }
+    
+    .mobile-menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+    
+    /* === 紧急通知栏 === */
+    .urgency-bar {
+      background: linear-gradient(135deg, var(--primary), #004B87);
+      color: white;
+      padding: 0.75rem 0;
+      position: relative;
+      overflow: hidden;
+      margin-top: 60px;
+    }
+    
+    .urgency-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    
+    @media (min-width: 768px) {
+      .urgency-bar {
+        padding: 1rem 0;
+      }
+      
+      .urgency-container {
+        justify-content: flex-start;
+      }
+    }
+    
+    .urgency-scroll {
+      display: flex;
+      animation: scrollText 25s linear infinite;
+      white-space: nowrap;
+    }
+    
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    
+    @media (max-width: 767px) {
+      .urgency-scroll {
+        animation: scrollText 20s linear infinite;
+      }
+    }
+    
+    .urgency-content {
+      display: inline-flex;
+      gap: 2rem;
+      padding: 0 1rem;
+      align-items: center;
+    }
+    
+    .urgency-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .urgency-icon {
+      font-size: 1em;
+    }
+    
+    /* === 主图部分 === */
+    .hero {
+      padding: var(--space-md) 0;
+      background: linear-gradient(135deg, rgba(240, 248, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
+      position: relative;
+      overflow: hidden;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid var(--primary);
+    }
+    
+    @media (max-width: 768px) {
+      .hero {
+        min-height: auto;
+        padding: var(--space-lg) 0;
+      }
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        linear-gradient(90deg, rgba(240, 248, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.7) 100%),
+        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center right;
+      z-index: 1;
+    }
+    
+    @media (max-width: 1024px) {
+      .hero-bg {
+        background: 
+          linear-gradient(90deg, rgba(240, 248, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.7) 100%),
+          url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center right;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-bg {
+        background: 
+          linear-gradient(rgba(240, 248, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%),
+          url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      position: relative;
+      z-index: 2;
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--space-lg);
+      }
+    }
+    
+    .hero-content {
+      text-align: center;
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-content {
+        text-align: left;
+      }
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+      box-shadow: var(--shadow-sm);
+      font-size: 0.875rem;
+      border: 2px solid var(--primary);
+    }
+    
+    .hero-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+      line-height: 1.2;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--gray-600);
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .hero-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+    
+    .hero-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (max-width: 480px) {
+      .hero-features {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+    
+    .feature-text strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.125rem;
+    }
+    
+    .feature-text p {
+      color: var(--gray-600);
+      font-size: 0.85rem;
+    }
+    
+    /* === 申请表 === */
+    .form-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--primary);
+    }
+    
+    .form-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .form-subtitle {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.375rem;
+      font-weight: 600;
+      color: var(--gray-800);
+      font-size: 0.95rem;
+    }
+    
+    .form-label .required {
+      color: var(--primary);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.875rem;
+      border: 1.5px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      transition: var(--transition-fast);
+      background: white;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(0, 88, 163, 0.1);
+    }
+    
+    .phone-group {
+      display: flex;
+    }
+    
+    .country-code {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem;
+      background: var(--gray-100);
+      border: 1.5px solid var(--gray-300);
+      border-right: none;
+      border-radius: var(--radius-md) 0 0 var(--radius-md);
+      font-weight: 600;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    
+    .phone-input {
+      flex: 1;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .form-check-input {
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+    }
+    
+    .form-check-label {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      line-height: 1.4;
+    }
+    
+    .form-check-label a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    .form-check-label a:hover {
+      text-decoration: underline;
+    }
+    
+    .security-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem;
+      background: rgba(0, 88, 163, 0.08);
+      border: 1px solid rgba(0, 88, 163, 0.15);
+      border-radius: var(--radius-md);
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+    }
+    
+    .security-icon {
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    
+    /* 主表单 - 移动端显示 */
+    .hero-form {
+      display: block;
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-form {
+        display: block;
+      }
+    }
+    
+    /* === 工作列表部分 === */
+    .jobs-section {
+      background: white;
+    }
+    
+    .jobs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .jobs-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .jobs-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .job-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-base);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .job-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary);
+    }
+    
+    .job-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    
+    .job-badge {
+      display: inline-block;
+      padding: 0.375rem 1rem;
+      background: var(--primary);
+      color: white;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+    
+    .job-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .job-salary {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .job-features {
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    
+    .job-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+    
+    .job-feature i {
+      color: var(--primary);
+      width: 18px;
+      font-size: 1rem;
+    }
+    
+    .salary-details {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+    
+    .salary-note {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+    
+    /* === 统计数据部分 === */
+    .stats-section {
+      background: linear-gradient(135deg, var(--primary), #004B87);
+      color: white;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+    }
+    
+    .stat-item {
+      padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+      line-height: 1;
+    }
+    
+    @media (min-width: 768px) {
+      .stat-number {
+        font-size: 2.5rem;
+      }
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    @media (min-width: 768px) {
+      .stat-label {
+        font-size: 1rem;
+      }
+    }
+    
+    /* === 工作原理 === */
+    .how-it-works {
+      background: white;
+    }
+    
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .step-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-base);
+      height: 100%;
+    }
+    
+    .step-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin: 0 auto 1rem;
+    }
+    
+    .step-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .step-description {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    
+    /* === 用户评价 === */
+    .testimonials-section {
+      background: var(--gray-100);
+    }
+    
+    .testimonials-slider {
+      max-width: 800px;
+      margin: var(--space-md) auto 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 220px;
+    }
+    
+    .testimonials-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 500%;
+    }
+    
+    .testimonial-slide {
+      flex: 0 0 20%;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      height: 100%;
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      height: 100%;
+    }
+    
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      font-size: 3rem;
+      font-family: Georgia, serif;
+      color: var(--gray-300);
+      line-height: 1;
+    }
+    
+    .testimonial-content {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      font-style: italic;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .author-info h4 {
+      margin-bottom: 0.125rem;
+      font-size: 1.1rem;
+    }
+    
+    .author-info p {
+      color: var(--gray-600);
+      font-size: 0.85rem;
+    }
+    
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gray-300);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: var(--transition-fast);
+    }
+    
+    .slider-dot.active {
+      background: var(--primary);
+      transform: scale(1.2);
+    }
+    
+    /* === 常见问题 === */
+    .faq-section {
+      background: var(--gray-100);
+    }
+    
+    .faq-grid {
+      max-width: 800px;
+      margin: var(--space-md) auto 0;
+    }
+    
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-md);
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-base);
+    }
+    
+    .faq-item.active {
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    
+    .faq-question {
+      padding: 1.25rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      color: var(--dark);
+    }
+    
+    .faq-question:hover {
+      background: var(--gray-100);
+    }
+    
+    .faq-icon {
+      transition: var(--transition-base);
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+    
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+      font-size: 0.95rem;
+      display: none;
+    }
+    
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    
+    /* === CTA部分 === */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary), #004B87);
+      color: white;
+      text-align: center;
+    }
+    
+    .cta-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    @media (min-width: 768px) {
+      .cta-title {
+        font-size: 2rem;
+      }
+    }
+    
+    .cta-subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: var(--space-md);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (min-width: 768px) {
+      .cta-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+    
+    /* === 页脚 === */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: var(--space-lg) 0 var(--space-md);
+      border-top: 3px solid var(--primary);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .footer-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      color: white;
+    }
+    
+    .footer-description {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links h3 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .footer-links ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: var(--space-md);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.8rem;
+    }
+    
+    .compliance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+    
+    /* === 模态框 === */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-base);
+      padding: var(--space-sm);
+    }
+    
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal-content {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      animation: modalIn 0.3s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    
+    @keyframes modalIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--gray-600);
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-fast);
+      z-index: 2;
+    }
+    
+    .modal-close:hover {
+      background: var(--gray-100);
+      color: var(--dark);
+    }
+    
+    .modal-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      text-align: center;
+      color: var(--primary);
+    }
+    
+    .modal-message {
+      text-align: center;
+      color: var(--gray-600);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    /* === 动画 === */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.4s ease forwards;
+    }
+    
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+    
+    .delay-2 {
+      animation-delay: 0.2s;
+    }
+    
+    .delay-3 {
+      animation-delay: 0.3s;
+    }
+    
+    /* === 工具类 === */
+    .text-center {
+      text-align: center;
+    }
+    
+    .text-primary {
+      color: var(--primary);
+    }
+    
+    .text-gradient {
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 0.75rem; }
+    .mb-3 { margin-bottom: 1.25rem; }
+    .mb-4 { margin-bottom: 1.5rem; }
+    
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 0.75rem; }
+    .mt-3 { margin-top: 1.25rem; }
+    .mt-4 { margin-top: 1.5rem; }
+    
+    .d-none {
+      display: none;
+    }
+    
+    .d-block {
+      display: block;
+    }
+    
+    @media (min-width: 1024px) {
+      .d-lg-block {
+        display: block;
+      }
+      
+      .d-lg-none {
+        display: none;
+      }
+    }
+  
+    /* 合规徽章 */
+    .compliance-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+    
+    .compliance-badge-item {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+    
+    .compliance-badge-item i {
+      color: var(--primary);
+    }
+    
+    /* 透明度声明 */
+    .transparency-notice {
+      background: var(--gray-50);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.5rem;
+      margin: 2rem auto;
+      border-radius: 0 8px 8px 0;
+      max-width: 1200px;
+    }
+    
+    .transparency-notice h4 {
+      margin-bottom: 0.5rem;
+      color: var(--gray-800);
+    }
+    
+    .transparency-notice p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--gray-700);
+    }
+    
+    /* 就业免责声明 */
+    .employment-disclaimer {
+      background: #fff8e6;
+      border: 1px solid #ffd54f;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    
+    .employment-disclaimer strong {
+      color: #e65100;
+    }
+    
+    /* 平台说明 */
+    .platform-explanation {
+      background: var(--gray-50);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .platform-explanation h3 {
+      margin-bottom: 1rem;
+      color: var(--gray-800);
+    }
+    
+    /* 合规链接 */
+    .compliance-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .compliance-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    
+    .compliance-links a:hover {
+      text-decoration: underline;
+    }
+    
+    /* 公司信息 */
+    .company-info {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--gray-50);
+      border-radius: 8px;
+      margin: 2rem auto;
+      max-width: 1200px;
+    }
+    
+    .company-info p {
+      margin: 0.5rem 0;
+      color: var(--gray-700);
+    }
+    
+    /* 薪资透明度 */
+    .salary-transparency {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border: 1px solid var(--gray-200);
+    }
+    
+    .salary-transparency h4 {
+      color: var(--gray-800);
+      margin-bottom: 1rem;
+    }
+    
+    /* 申请后联系 */
+    .contact-options {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #f0f7ff;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+    
+    .contact-options h5 {
+      margin-bottom: 0.75rem;
+      color: var(--gray-800);
+    }
+    
+    /* 移动端优化 */
+    @media (max-width: 768px) {
+      .compliance-badges {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .compliance-badge-item {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .compliance-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .platform-explanation {
+        padding: 1.5rem 1rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .transparency-notice {
+        margin: 2rem 1rem;
+      }
+      
+      .company-info {
+        margin: 2rem 1rem;
+      }
+    }
+    
+    /* 瑞典风格图案 */
+    .swedish-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%230058A3' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: 200px;
+      opacity: 0.3;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    /* 自定义样式 */
+    small {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.8rem;
+      color: var(--gray-600);
+    }
+    
+    select.form-control {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236B7280' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 16px 12px;
+      padding-right: 2.5rem;
+    }
+    
+    /* 瑞典风格的简洁设计 */
+    .swedish-minimal {
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    
+    /* 高对比度文本 - 符合瑞典可访问性标准 */
+    .high-contrast {
+      color: var(--dark);
+      font-weight: 600;
+    }
+  </style>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17694994857"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17694994857');
+    
+    function gtag_report_conversion(url) {
+      const callback = function () {
+        if (typeof(url) != 'undefined') {
+          setTimeout(function() {
+            const newWindow = window.open(url, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+              window.location.href = url;
+            }
+          }, 300);
+        }
+      };
+      
+      let eventSent = false;
+      const maxAttempts = 2;
+      let attempts = 0;
+      
+      const sendEvent = () => {
+        try {
+          if (!eventSent) {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17694994857/Q-BpCOjhwtQbEKnj0PVB',
+              'event_callback': callback,
+              'value': 15,
+              'currency': 'USD'
+            });
+            
+            gtag('event', 'generate_lead', {
+              'currency': 'USD',
+              'value': 15
+            });
+            eventSent = true;
+          }
+        } catch (e) {
+          attempts++;
+          if (attempts < maxAttempts) {
+            setTimeout(sendEvent, 100);
+          } else {
+            callback();
+          }
+        }
+      };
+      
+      sendEvent();
+      
+      setTimeout(() => {
+        if (!eventSent) {
+          callback();
+        }
+      }, 1000);
+      
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <!-- 瑞典风格图案背景 -->
+  <div class="swedish-pattern"></div>
+  
+  <!-- 页头 -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <span class="logo-text">HemifrånJobb</span>
+        </a>
+        
+        <div class="nav-links">
+          <a href="#opportunities" class="nav-link">Verifierade Positioner</a>
+          <a href="#how" class="nav-link">Ansökningsprocess</a>
+          <a href="#about" class="nav-link">Om Plattformen</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#" class="btn btn-primary nav-cta open-modal-btn">
+            Ansök Nu
+          </a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 紧急通知栏 -->
+  <div class="urgency-bar">
+    <div class="container urgency-container">
+      <div class="urgency-scroll">
+        <div class="urgency-content">
+          <div class="urgency-item">
+            <i class="fas fa-bolt urgency-icon"></i>
+            <span>⚠️ SENASTE 5 PLATSER KVAR - Ansök nu!</span>
+          </div>
+          <div class="urgency-item">
+            <i class="fas fa-clock urgency-icon"></i>
+            <span>⏳ Begränsad tid: Prioritering till dagens ansökningar!</span>
+          </div>
+          <div class="urgency-item">
+            <i class="fas fa-users urgency-icon"></i>
+            <span>🔥 250+ Personer har ansökt idag - Reservera din plats!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 透明度声明 -->
+  <div class="transparency-notice">
+    <h4><i class="fas fa-info-circle"></i> Pålitlig Arbetsplattform</h4>
+    <p>HemifrånJobb är en registrerad arbetsplattform i Sverige. Vi tar inte ut några avgifter från arbetssökande.</p>
+  </div>
+
+  <!-- 主图部分 -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in">
+          <div class="hero-badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>Verifierad Arbetsplattform</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span>SVERIGES PÅLITLIGA</span> 
+            <span class="text-primary">DISTANSARBETE</span>
+            <br>
+            <span>MÖJLIGHETER HEMMAIFRÅN</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            Anslut till verifierade svenska företag som erbjuder pålitliga distansarbetspositioner. Alla möjligheter följer svenska arbetslagar.
+          </p>
+          
+          <!-- 平台说明 -->
+          <div class="platform-explanation fade-in">
+            <h3><i class="fas fa-building"></i> Hur vår plattform fungerar</h3>
+            <p>Vi är en arbetsmatchande plattform som kopplar kvalificerade svenska invånare med pålitliga distansarbetsmöjligheter från verifierade företag. Vi är inte direkt arbetsgivare utan underlättar legitima anställningskontakter.</p>
+          </div>
+          
+          <div class="hero-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-krone-sign"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Transparent Kompensation</strong>
+                <p>Tydliga betalningsvillkor för alla positioner</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Flexibel Schemaläggning</strong>
+                <p>Olika arbetstider tillgängliga baserat på position</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Distansarbete</strong>
+                <p>Arbeta från godkända platser i Sverige</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Verifierade Arbetsgivare</strong>
+                <p>Alla företag är korrekt registrerade</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 合规徽章 -->
+          <div class="compliance-badges">
+            <div class="compliance-badge-item">
+              <i class="fas fa-balance-scale"></i>
+              <span>Svensk Arbetsrättskompatibel</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-lock"></i>
+              <span>Säker Ansökningsprocess</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-handshake"></i>
+              <span>Inga Avgifter för Arbetssökande</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 主申请表 -->
+        <div class="hero-form form-card fade-in delay-1">
+          <div class="form-header">
+            <h2 class="form-title">Ansök till Verifierade Positioner</h2>
+            <p class="form-subtitle">
+              Skicka in din information för att övervägas för pålitliga distansarbetsmöjligheter med verifierade svenska företag.
+            </p>
+          </div>
+          
+          <!-- 就业免责声明 -->
+          <div class="employment-disclaimer">
+            <strong><i class="fas fa-exclamation-triangle"></i> Viktigt:</strong> Vi är en arbetsmatchande plattform. Slutliga anställningsvillkor fastställs av det anställande företaget efter framgångsrik ansökan.
+          </div>
+          
+          <form id="applicationForm">
+            <div class="form-group">
+              <label for="name" class="form-label">
+                <span>Fullt Lagligt Namn</span> <span class="required">*</span>
+              </label>
+              <input type="text" id="name" class="form-control" placeholder="Som visas på ID-kort" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">
+                <span>Telefonnummer</span> <span class="required">*</span>
+              </label>
+              <div class="phone-group">
+                <div class="country-code">
+                  <img src="https://flagcdn.com/w20/se.png" alt="Svensk Flagga" width="20" height="14">
+                  <span>+46</span>
+                </div>
+                <input type="tel" id="phone" class="form-control phone-input" placeholder="7x xxx xx xx" pattern="[0-9]{9,10}" required>
+              </div>
+              <small>Exempel: 70 123 45 67 (utan första 0)</small>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">
+                <span>E-postadress</span> <span class="required">*</span>
+              </label>
+              <input type="email" id="email" class="form-control" placeholder="ditt.namn@example.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="city" class="form-label">
+                <span>Stad</span> <span class="required">*</span>
+              </label>
+              <select id="city" class="form-control" required>
+                <option value="">Välj din stad</option>
+                <option value="stockholm">Stockholm</option>
+                <option value="goteborg">Göteborg</option>
+                <option value="malmo">Malmö</option>
+                <option value="uppsala">Uppsala</option>
+                <option value="vasteras">Västerås</option>
+                <option value="orebro">Örebro</option>
+                <option value="linkoping">Linköping</option>
+                <option value="helsingborg">Helsingborg</option>
+                <option value="jönköping">Jönköping</option>
+                <option value="norrkoping">Norrköping</option>
+                <option value="lund">Lund</option>
+                <option value="umea">Umeå</option>
+                <option value="gavle">Gävle</option>
+                <option value="boras">Borås</option>
+                <option value="sodertalje">Södertälje</option>
+                <option value="eskilstuna">Eskilstuna</option>
+                <option value="taby">Täby</option>
+                <option value="other">Annat</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="age" class="form-label">
+                <span>Ålder</span> <span class="required">*</span>
+              </label>
+              <input type="number" id="age" class="form-control" placeholder="25" min="18" max="70" required>
+            </div>
+            
+            <div class="form-check">
+              <input type="checkbox" id="consent" class="form-check-input" required checked>
+              <label for="consent" class="form-check-label">
+                <span>Jag bekräftar att jag har läst och accepterar</span> 
+                <a href="/privacy.html" target="_blank">Integritetspolicy</a> 
+                <span>och</span> 
+                <a href="/userterms.html" target="_blank">Användarvillkor</a>.
+              </label>
+            </div>
+            
+            <div class="form-check mb-3">
+              <input type="checkbox" id="eligibility" class="form-check-input" required>
+              <label for="eligibility" class="form-check-label">
+                <span>Jag bekräftar att jag är berättigad att arbeta i Sverige och bor i Sverige</span>
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane btn-icon"></i>
+              <span>Skicka Ansökan</span>
+            </button>
+            
+            <div class="security-badge">
+              <i class="fas fa-lock security-icon"></i>
+              <span>Din information är skyddad och används endast för legitima arbetsmatchningsändamål</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 公司信息 -->
+  <section class="section company-info" id="about">
+    <div class="container">
+      <h3 class="section-title">Om vår plattform</h3>
+      <p>HemifrånJobb är en legitim arbetsmatchande plattform registrerad och verksam i Sverige. Vi kopplar kvalificerade invånare med verifierade distansarbetsmöjligheter från etablerade svenska företag.</p>
+      <p>Alla annonserade positioner följer svenska arbetslagar och regler.</p>
+      
+      <div class="compliance-links">
+        <a href="/about.html"><i class="fas fa-info-circle"></i> Om oss</a>
+        <a href="/compliance.html"><i class="fas fa-balance-scale"></i> Efterlevnadsinformation</a>
+        <a href="/contact.html"><i class="fas fa-phone-alt"></i> Supportkontakt</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作列表部分 -->
+  <section class="section jobs-section" id="opportunities">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Verifierade Distanspositioner Tillgängliga i Sverige</h2>
+        <p class="section-subtitle">
+          Utforska pålitliga distansarbetsmöjligheter från verifierade svenska företag. Alla positioner kräver svenskt uppehållstillstånd och rätt att arbeta i Sverige.
+        </p>
+      </div>
+      
+      <!-- 薪资透明度说明 -->
+      <div class="salary-transparency fade-in">
+        <h4><i class="fas fa-krone-sign"></i> Kompensationsinformation</h4>
+        <p>Alla positioner erbjuder kompensation enligt svensk arbetslag. Specifika priser tillhandahålls under ansökningsprocessen och varierar baserat på position, erfarenhet och överenskomna timmar.</p>
+      </div>
+      
+      <div class="jobs-grid">
+        <!-- 工作 1 -->
+        <div class="job-card fade-in">
+          <div class="job-badge">Kundservice</div>
+          <h3 class="job-title">Kundsupportspecialist</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Från 145 kr/timme</span>
+          </div>
+          <span class="salary-details">Plus lagliga rättigheter</span>
+          <span class="salary-note">Betalas veckovis via banköverföring</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Olika skift tillgängliga</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-home"></i>
+              <span>Helt distansposition</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Utbildning tillhandahålls</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-user-tie"></i>
+              <span>Kundserviceerfarenhet föredras</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Ansök Nu
+          </button>
+        </div>
+        
+        <!-- 工作 2 -->
+        <div class="job-card fade-in delay-1">
+          <div class="job-badge">Administrativt</div>
+          <h3 class="job-title">Databehandlingsassistent</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Från 135 kr/timme</span>
+          </div>
+          <span class="salary-details">Eller projektbaserad ersättning</span>
+          <span class="salary-note">Regelbunden betalningsplan</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Flexibla arbetstider tillgängliga</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span>Dator och internet krävs</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-file-alt"></i>
+              <span>Administrativa uppgifter</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-star"></i>
+              <span>Lämplig för olika erfarenhetsnivåer</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Ansök Nu
+          </button>
+        </div>
+        
+        <!-- 工作 3 -->
+        <div class="job-card fade-in delay-2">
+          <div class="job-badge">Supportroll</div>
+          <h3 class="job-title">Onlinesupportrepresentant</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Från 155 kr/timme</span>
+          </div>
+          <span class="salary-details">Plus prestationsincitament</span>
+          <span class="salary-note">Efterlevnad med arbetslag</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-headset"></i>
+              <span>Digital plattformsupport</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Skiftschema tillgängligt</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-krone-sign"></i>
+              <span>Lagliga anställningsförmåner</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-gift"></i>
+              <span>Fullständig utbildning tillhandahålls</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Ansök Nu
+          </button>
+        </div>
+        
+        <!-- 工作 4 -->
+        <div class="job-card fade-in">
+          <div class="job-badge">Administrativt</div>
+          <h3 class="job-title">Administrativ Supportassistent</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Baserat på erfarenhet och roll</span>
+          </div>
+          <span class="salary-details">Minst 140 kr/timme</span>
+          <span class="salary-note">Korrekt anställningskontrakt</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-tasks"></i>
+              <span>Administrativa uppgifter</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span>Datordator utrustning krävs</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-chart-line"></i>
+              <span>Karriärutveckling möjlig</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Flexibla schemaalternativ</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Ansök Nu
+          </button>
+        </div>
+        
+        <!-- 工作 5 -->
+        <div class="job-card fade-in delay-1">
+          <div class="job-badge">Kvalitetskontroll</div>
+          <h3 class="job-title">Innehållsgranskningsassistent</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Från 135 kr/timme</span>
+          </div>
+          <span class="salary-details">Beroende på uppdrag</span>
+          <span class="salary-note">Regelbundna anställningsvillkor</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-eye"></i>
+              <span>Innehållsgranskningsuppgifter</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-home"></i>
+              <span>Helt distansarbete</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-trophy"></i>
+              <span>Kvalitetsfokuserad position</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-users"></i>
+              <span>Teamarbete</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Ansök Nu
+          </button>
+        </div>
+        
+        <!-- 工作 6 -->
+        <div class="job-card fade-in delay-2">
+          <div class="job-badge">Kvalitetssäkring</div>
+          <h3 class="job-title">Kvalitetssäkeringsassistent</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Projekt- eller timersättning</span>
+          </div>
+          <span class="salary-details">Minst 130 kr/timme</span>
+          <span class="salary-note">Efterlevnad med alla regler</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Deltidstimmar tillgängliga</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span>Dator krävs</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Fullständig utbildning tillhandahålls</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-calendar-check"></i>
+              <span>Flexibla startdatum</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Ansök Nu
+          </button>
+        </div>
+      </div>
+      
+      <!-- 就业法律声明 -->
+      <div class="employment-disclaimer mt-4">
+        <strong><i class="fas fa-balance-scale"></i> Arbetsrättslig Efterlevnad:</strong> Alla positioner som erbjuds genom vår plattform följer svensk arbetslagstiftning inklusive minimilönskrav, arbetstidsregler och anställningskontraktsförpliktelser.
+      </div>
+    </div>
+  </section>
+
+  <!-- 统计数据部分 -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number">1,250+</div>
+          <div class="stat-label">Framgångsrika Ansökningar</div>
+        </div>
+        <div class="stat-item fade-in delay-1">
+          <div class="stat-number">85+</div>
+          <div class="stat-label">Verifierade Företag</div>
+        </div>
+        <div class="stat-item fade-in delay-2">
+          <div class="stat-number">3.2M+ kr</div>
+          <div class="stat-label">Utbetalda Löner</div>
+        </div>
+        <div class="stat-item fade-in delay-3">
+          <div class="stat-number">4.8/5</div>
+          <div class="stat-label">Användarnöjdhet</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作原理 -->
+  <section class="section how-it-works" id="how">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Pålitlig Ansökningsprocess</h2>
+        <p class="section-subtitle">
+          Transparent process för att ansluta till verifierade arbetsgivare
+        </p>
+      </div>
+      
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Skicka in Din Ansökan</h3>
+          <p class="step-description">
+            Fyll i vårt säkra ansökningsformulär med din information och arbetspreferenser.
+          </p>
+        </div>
+        
+        <div class="step-card fade-in delay-1">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Arbetsgivarmatchning</h3>
+          <p class="step-description">
+            Vi matchar din profil med verifierade arbetsgivare som söker kvalificerade kandidater.
+          </p>
+        </div>
+        
+        <div class="step-card fade-in delay-2">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Direkt Arbetsgivarkontakt</h3>
+          <p class="step-description">
+            Godkända arbetsgivare kontaktar kvalificerade kandidater direkt för att diskutera möjligheter.
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg open-modal-btn">
+          <i class="fas fa-play-circle btn-icon"></i>
+          <span>Starta Ansökningsprocessen</span>
+        </button>
+        <p class="mt-2" style="color: var(--gray-600); font-size: 0.9rem;">
+          <i class="fas fa-check-circle text-primary"></i>
+          <span>Inga avgifter för arbetssökande - legitim arbetsplattform</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Vad våra deltagare säger</h2>
+        <p class="section-subtitle">
+          Erfarenheter från personer som använt vår plattform
+        </p>
+      </div>
+      
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <!-- 评价 1 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "Tack vare HemifrånJobb blev jag inte arbetslös under pandemin. Jag fick en distansarbetsmöjlighet med ett pålitligt företag. Processen var transparent och professionell."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">AE</div>
+                <div class="author-info">
+                  <h4>Anna E.</h4>
+                  <p>Kundrepresentant, Stockholm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 评价 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "Jag bor i Göteborg och arbetar hemifrån för ett företag i Stockholm. Plattformens tillförlitlighet och regelbundna betalningssystem är vad jag uppskattar mest."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">MJ</div>
+                <div class="author-info">
+                  <h4>Marcus J.</h4>
+                  <p>Datainmatningsspecialist, Göteborg</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 评价 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "Som föräldraledig var flexibla arbetstider viktigt för mig. Genom denna plattform kan jag både ta hand om min familj och ha regelbunden inkomst."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">LS</div>
+                <div class="author-info">
+                  <h4>Lisa S.</h4>
+                  <p>Online Supportspecialist, Malmö</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 评价 4 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "Jag är universitetsstudent och ville arbeta deltid. Med HemifrånJobb hittade jag ett jobb som passar mitt schema. Mina betalningar kommer regelbundet."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">EK</div>
+                <div class="author-info">
+                  <h4>Erik K.</h4>
+                  <p>Innehållsgranskare, Uppsala</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 评价 5 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "Efter pension ville jag ha extra inkomst. Genom denna plattform kan jag arbeta hemifrån och ha regelbunden extrainkomst varje månad. Mycket nöjd."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">HO</div>
+                <div class="author-info">
+                  <h4>Hans O.</h4>
+                  <p>Kvalitetskontrollspecialist, Västerås</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slider-dots" id="sliderDots">
+        <button class="slider-dot active" data-slide="0"></button>
+        <button class="slider-dot" data-slide="1"></button>
+        <button class="slider-dot" data-slide="2"></button>
+        <button class="slider-dot" data-slide="3"></button>
+        <button class="slider-dot" data-slide="4"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Vanliga Frågor</h2>
+        <p class="section-subtitle">
+          Information om vår pålitliga arbetsmatchningsplattform
+        </p>
+      </div>
+      
+      <div class="faq-grid">
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>Tar ni ut några avgifter för att använda er plattform?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p><strong>Nej, vår plattform är helt gratis för arbetssökande.</strong> Vi är en arbetsmatchningsservice som kopplar kvalificerade kandidater med verifierade arbetsgivare. Vi tar inte ut några ansöknings-, placerings- eller serviceavgifter från arbetssökande.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>Hur fungerar anställningsprocessen?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Vi är en matchningsplattform, inte en direkt arbetsgivare. När du ansöker delar vi kvalificerade profiler med verifierade svenska företag som söker distansarbetare. Arbetsgivare kontaktar lämpliga kandidater direkt för att diskutera specifika positioner, kompensation och anställningsvillkor.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>Vilken typ av företag använder er plattform?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Vi arbetar uteslutande med legitima, registrerade svenska företag som följer alla arbetsregler. Alla arbetsgivare verifieras innan de får publicera positioner på vår plattform.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>Är dessa riktiga anställningspositioner?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p><strong>Ja, alla positioner representerar legitima anställningsmöjligheter.</strong> Framgångsrika kandidater får korrekta anställningskontrakt som följer svensk lag, inklusive alla lagliga rättigheter och skydd.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg open-modal-btn">
+          <i class="fas fa-question-circle btn-icon"></i>
+          <span>Ansök till Verifierade Positioner</span>
+        </button>
+        <p class="mt-2" style="color: var(--gray-600); font-size: 0.85rem;">
+          <i class="fas fa-phone-alt text-primary"></i>
+          <span>Endast pålitliga anställningsmöjligheter</span>
+        </p>
+        
+        <!-- 合规链接 -->
+        <div class="compliance-links mt-3">
+          <a href="/privacy.html"><i class="fas fa-lock"></i> Integritetspolicy</a>
+          <a href="/userterms.html"><i class="fas fa-file-contract"></i> Användarvillkor</a>
+          <a href="/compliance.html"><i class="fas fa-balance-scale"></i> Efterlevnadsinformation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA部分 -->
+  <section class="section cta-section" id="apply">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="cta-title">Anslut till Verifierade Arbetsgivare</h2>
+        <p class="cta-subtitle">
+          Skicka in din ansökan för pålitliga distansarbetsmöjligheter i Sverige
+        </p>
+        
+        <div class="mt-4">
+          <button class="btn btn-primary btn-lg open-modal-btn" style="background: white; color: var(--primary); border: 3px solid white;">
+            <i class="fas fa-briefcase btn-icon"></i>
+            <span>Ansök till Verifierade Positioner</span>
+          </button>
+        </div>
+        
+        <div class="mt-3" style="color: rgba(255,255,255,0.9);">
+          <p><i class="fas fa-check-circle"></i> Gratis pålitlig arbetsmatchning</p>
+          <p><i class="fas fa-check-circle"></i> Endast verifierade svenska arbetsgivare</p>
+          <p><i class="fas fa-check-circle"></i> Efterlevnad med arbetslagstiftning</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="footer-logo">HemifrånJobb.se</a>
+          <p class="footer-description">
+            Pålitlig arbetsmatchningsplattform - kopplar svenska invånare med verifierade distansarbetsmöjligheter.
+          </p>
+          <div class="compliance-badge">
+            <i class="fas fa-balance-scale"></i>
+            <span>Efterlevnad med svenska arbetsregler</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>PLATTFORMSINFORMATION</h3>
+          <ul>
+            <li><a href="#opportunities">Verifierade Positioner</a></li>
+            <li><a href="#how">Ansökningsprocess</a></li>
+            <li><a href="#about">Om Plattformen</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>LEGAL & EFTERLEVNAD</h3>
+          <ul>
+            <li><a href="/privacy.html">Integritetspolicy</a></li>
+            <li><a href="/userterms.html">Användarvillkor</a></li>
+            <li><a href="/compliance.html">Efterlevnadsinformation</a></li>
+            <li><a href="/contact.html">Supportkontakt</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Ytterligare Sidor</h3>
+          <ul>
+            <li><a href="/about.html">Om oss</a></li>
+            <li><a href="/contact.html">Kontakta oss</a></li>
+            <li><a href="/userterms.html">Användaravtal</a></li>
+            <li><a href="/compliance.html">Legal Efterlevnad</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 HemifrånJobb Sverige | Pålitlig Arbetsmatchningsplattform</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+          <i class="fas fa-flag"></i> Tjänar endast kvalificerade personer bosatta i Sverige
+        </p>
+        
+        <!-- 法律声明 -->
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; opacity: 0.6;">
+          <p>HemifrånJobb är en arbetsmatchningsplattform. Vi är inte direkt arbetsgivare. Slutliga anställningsvillkor fastställs av arbetsgivarföretaget. Alla positioner kräver rätt att arbeta i Sverige och efterlevnad av svensk arbetslag.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 模态表单 -->
+  <div class="modal" id="modalForm">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      <div class="form-header">
+        <h2 class="form-title">Ansök till Verifierat Distansarbete</h2>
+        <p class="form-subtitle">
+          Skicka in din information för pålitliga distansarbetsmöjligheter med verifierade svenska arbetsgivare.
+        </p>
+      </div>
+      
+      <!-- 就业免责声明 -->
+      <div class="employment-disclaimer">
+        <strong><i class="fas fa-info-circle"></i> Plattformsanmärkning:</strong> Vi är en arbetsmatchningsservice. Arbetsgivare kontaktar kvalificerade kandidater direkt för att diskutera specifika möjligheter och anställningsvillkor.
+      </div>
+      
+      <form id="modalApplicationForm">
+        <div class="form-group">
+          <label for="modal-name" class="form-label">
+            <span>Fullt Lagligt Namn</span> <span class="required">*</span>
+          </label>
+          <input type="text" id="modal-name" class="form-control" placeholder="Som visas på ID-kort" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-phone" class="form-label">
+            <span>Telefonnummer</span> <span class="required">*</span>
+          </label>
+          <div class="phone-group">
+            <div class="country-code">
+              <img src="https://flagcdn.com/w20/se.png" alt="Svensk Flagga" width="20" height="14">
+              <span>+46</span>
+            </div>
+            <input type="tel" id="modal-phone" class="form-control phone-input" placeholder="7x xxx xx xx" pattern="[0-9]{9,10}" required>
+          </div>
+          <small>Exempel: 70 123 45 67 (utan första 0)</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-email" class="form-label">
+            <span>E-postadress</span> <span class="required">*</span>
+          </label>
+          <input type="email" id="modal-email" class="form-control" placeholder="ditt.namn@example.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-city" class="form-label">
+            <span>Stad</span> <span class="required">*</span>
+          </label>
+          <select id="modal-city" class="form-control" required>
+            <option value="">Välj din stad</option>
+            <option value="stockholm">Stockholm</option>
+            <option value="goteborg">Göteborg</option>
+            <option value="malmo">Malmö</option>
+            <option value="uppsala">Uppsala</option>
+            <option value="vasteras">Västerås</option>
+            <option value="orebro">Örebro</option>
+            <option value="linkoping">Linköping</option>
+            <option value="helsingborg">Helsingborg</option>
+            <option value="jönköping">Jönköping</option>
+            <option value="norrkoping">Norrköping</option>
+            <option value="lund">Lund</option>
+            <option value="umea">Umeå</option>
+            <option value="gavle">Gävle</option>
+            <option value="boras">Borås</option>
+            <option value="sodertalje">Södertälje</option>
+            <option value="eskilstuna">Eskilstuna</option>
+            <option value="taby">Täby</option>
+            <option value="other">Annat</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-age" class="form-label">
+            <span>Ålder</span> <span class="required">*</span>
+          </label>
+          <input type="number" id="modal-age" class="form-control" placeholder="25" min="18" max="70" required>
+        </div>
+        
+        <div class="form-check">
+          <input type="checkbox" id="modal-consent" class="form-check-input" required checked>
+          <label for="modal-consent" class="form-check-label">
+            <span>Jag bekräftar att jag har läst och accepterar</span> 
+            <a href="/privacy.html" target="_blank">Integritetspolicy</a> 
+            <span>och</span> 
+            <a href="/userterms.html" target="_blank">Användarvillkor</a>.
+          </label>
+        </div>
+        
+        <div class="form-check mb-3">
+          <input type="checkbox" id="modal-eligibility" class="form-check-input" required>
+          <label for="modal-eligibility" class="form-check-label">
+            <span>Jag bekräftar att jag är berättigad att arbeta i Sverige och bor i Sverige</span>
+          </label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fas fa-paper-plane btn-icon"></i>
+          <span>Skicka Ansökan</span>
+        </button>
+        
+        <div class="security-badge">
+          <i class="fas fa-lock security-icon"></i>
+          <span>Säker ansökan - endast för arbetsmatchningsändamål</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 成功模态框 -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <button class="modal-close" id="successCloseBtn">&times;</button>
+      <h3 class="modal-title">✅ <span>Ansökan Mottagen</span></h3>
+      <p class="modal-message">
+        <strong>Tack för din ansökan!</strong> Vi har mottagit din information och kommer att bearbeta den för matchning med verifierade arbetsgivare.
+      </p>
+      
+      <!-- 联系选项 -->
+      <div class="contact-options">
+        <h5><i class="fas fa-comments"></i> Nästa steg:</h5>
+        <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">Om din profil matchar arbetsgivarkrav kommer du att kontaktas direkt inom 5-7 arbetsdagar.</p>
+        <p style="font-size: 0.85rem; color: var(--gray-600);">För brådskande frågor, kontrollera att dina kontaktuppgifter är korrekta.</p>
+      </div>
+      
+      <button class="btn btn-primary btn-block" id="successOkBtn">
+        <i class="fas fa-check btn-icon"></i>
+        <span>Fortsätt till Webbplats</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 瑞典WhatsApp号码
+      const whatsappAccounts = [ 
+        "46701234567",
+        "46701234568", 
+        "46701234569",
+        "46701234570"
+      ];
+      
+      // 随机选择WhatsApp账户
+      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+      
+      // 元素
+      const applicationForm = document.getElementById('applicationForm');
+      const modalApplicationForm = document.getElementById('modalApplicationForm');
+      const modalForm = document.getElementById('modalForm');
+      const successModal = document.getElementById('successModal');
+      const openModalBtns = document.querySelectorAll('.open-modal-btn');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const successCloseBtn = document.getElementById('successCloseBtn');
+      const successOkBtn = document.getElementById('successOkBtn');
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navLinks = document.querySelector('.nav-links');
+      const faqItems = document.querySelectorAll('.faq-item');
+      const testimonialsTrack = document.getElementById('testimonialsTrack');
+      const sliderDots = document.getElementById('sliderDots');
+      const dots = sliderDots ? sliderDots.querySelectorAll('.slider-dot') : [];
+      
+      // 移动菜单切换
+      mobileMenuBtn.addEventListener('click', function() {
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none';
+        } else {
+          navLinks.style.display = 'flex';
+          navLinks.style.flexDirection = 'column';
+          navLinks.style.position = 'absolute';
+          navLinks.style.top = '100%';
+          navLinks.style.left = '0';
+          navLinks.style.right = '0';
+          navLinks.style.background = 'white';
+          navLinks.style.padding = '1rem';
+          navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+          navLinks.style.gap = '1rem';
+        }
+      });
+      
+      // 常见问题切换
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          item.classList.toggle('active');
+        });
+      });
+      
+      // 评价轮播
+      let currentSlide = 0;
+      const totalSlides = 5;
+      
+      function updateSlider() {
+        if (testimonialsTrack) {
+          testimonialsTrack.style.transform = `translateX(-${currentSlide * 20}%)`;
+          
+          // 更新激活的点
+          dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+      }
+      
+      // 轮播点点击
+      if (dots.length > 0) {
+        dots.forEach(dot => {
+          dot.addEventListener('click', function() {
+            currentSlide = parseInt(this.getAttribute('data-slide'));
+            updateSlider();
+          });
+        });
+      }
+      
+      // 自动轮播
+      let slideInterval;
+      function startSlider() {
+        if (testimonialsTrack) {
+          slideInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+          }, 5000);
+        }
+      }
+      
+      // 模态框打开按钮
+      openModalBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          modalForm.classList.add('active');
+        });
+      });
+      
+      // 模态框关闭按钮
+      modalCloseBtn.addEventListener('click', function() {
+        modalForm.classList.remove('active');
+      });
+      
+      successCloseBtn.addEventListener('click', function() {
+        successModal.classList.remove('active');
+      });
+      
+      // 成功模态框OK按钮 - 保留转化流程
+      successOkBtn.addEventListener('click', function() {
+        successModal.classList.remove('active');
+        // 发送转化事件并打开WhatsApp
+        const whatsappMessage = "Hej! Jag har ansökt om distansarbetsmöjligheter och vill få mer information.";
+        const whatsappLink = `https://wa.me/${randomAccount}`;
+        gtag_report_conversion(whatsappLink);
+      });
+      
+      // 点击背景关闭模态框
+      [modalForm, successModal].forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            this.classList.remove('active');
+          }
+        });
+      });
+      
+      // 表单验证函数
+      function validateForm(form) {
+        const name = form.querySelector('input[type="text"]').value.trim();
+        const phone = form.querySelector('input[type="tel"]').value.trim();
+        const email = form.querySelector('input[type="email"]').value.trim();
+        const city = form.querySelector('select').value;
+        const age = form.querySelector('input[type="number"]').value;
+        const consent = form.querySelector('#consent, #modal-consent').checked;
+        const eligibility = form.querySelector('#eligibility, #modal-eligibility').checked;
+        
+        // 重置样式
+        const inputs = form.querySelectorAll('input, select');
+        inputs.forEach(input => {
+          input.style.borderColor = '';
+        });
+        
+        // 验证姓名
+        if (!name) {
+          form.querySelector('input[type="text"]').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // 验证电话（瑞典：9-10位，以7开头）
+        const phoneRegex = /^7[0-9]{8,9}$/;
+        if (!phoneRegex.test(phone)) {
+          form.querySelector('input[type="tel"]').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // 验证邮箱
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          form.querySelector('input[type="email"]').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // 验证城市
+        if (!city) {
+          form.querySelector('select').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // 验证年龄
+        const ageNum = parseInt(age);
+        if (!age || ageNum < 18 || ageNum > 70) {
+          form.querySelector('input[type="number"]').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // 验证同意
+        if (!consent) {
+          return false;
+        }
+        
+        // 验证资格
+        if (!eligibility) {
+          return false;
+        }
+        
+        return true;
+      }
+      
+      // 表单提交处理 - 保留事件跟踪
+      function handleFormSubmit(form, isModalForm = false) {
+        if (validateForm(form)) {
+          // 发送Google Analytics事件
+          try {
+            gtag('event', 'submit_form', {
+              event_category: 'lead',
+              event_label: isModalForm ? 'Modal Form Submission' : 'Main Form Submission'
+            });
+            
+            // 发送转化事件
+            const whatsappMessage = "Hej! Jag har ansökt om distansarbetsmöjligheter och vill få mer information.";
+            const whatsappLink = `https://wa.me/${randomAccount}`;
+            gtag_report_conversion(whatsappLink);
+          } catch (error) {
+            console.log('Google Analytics error:', error);
+            // 备用
+            setTimeout(() => {
+              const whatsappMessage = "Hej! Jag har ansökt om distansarbetsmöjligheter och vill få mer information.";
+              const whatsappLink = `https://wa.me/${randomAccount}`;
+              window.open(whatsappLink, '_blank');
+            }, 300);
+          }
+          
+          // 显示成功模态框
+          successModal.classList.add('active');
+          
+          // 关闭模态表单
+          if (isModalForm) {
+            modalForm.classList.remove('active');
+          }
+          
+          return true;
+        }
+        return false;
+      }
+      
+      // 主表单提交
+      if (applicationForm) {
+        applicationForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          handleFormSubmit(this, false);
+        });
+      }
+      
+      // 模态表单提交
+      if (modalApplicationForm) {
+        modalApplicationForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          handleFormSubmit(this, true);
+        });
+      }
+      
+      // 输入限制
+      function setupInputRestrictions() {
+        // 电话输入
+        const phoneInputs = document.querySelectorAll('input[type="tel"]');
+        phoneInputs.forEach(input => {
+          input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 10) {
+              this.value = this.value.slice(0, 10);
+            }
+          });
+          
+          input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text');
+            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 10);
+            this.value = numbersOnly;
+          });
+        });
+        
+        // 年龄输入
+        const ageInputs = document.querySelectorAll('input[type="number"]');
+        ageInputs.forEach(input => {
+          input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 2) {
+              this.value = this.value.slice(0, 2);
+            }
+          });
+          
+          input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text');
+            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 2);
+            this.value = numbersOnly;
+          });
+        });
+      }
+      
+      // 淡入动画
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // 观察淡入元素
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // 初始化所有功能
+      function init() {
+        setupInputRestrictions();
+        startSlider();
+        
+        // 发送页面浏览事件
+        gtag('event', 'page_view', {
+          page_title: 'Sverige Distansarbetsmöjligheter - HemifrånJobb',
+          page_location: window.location.href
+        });
+        
+        // 发送表单浏览事件
+        setTimeout(() => {
+          gtag('event', 'view_form', {
+            event_category: 'engagement',
+            event_label: 'Modal Form View'
+          });
+        }, 1000);
+      }
+      
+      // 开始初始化
+      init();
+    });
+  </script>
+</body>
+</html>
