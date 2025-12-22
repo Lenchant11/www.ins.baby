@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | FlexWork.ie</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #169b62;
+            --primary-main: #2ecc71;
+            --primary-light: #4dd0d0;
+            --accent: #ff6b35;
+            --accent-light: #ff8e53;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --error: #e74c3c;
+            --gray-900: #2c3e50;
+            --gray-700: #34495e;
+            --gray-500: #7f8c8d;
+            --gray-300: #bdc3c7;
+            --gray-100: #ecf0f1;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--gray-900);
+            background: linear-gradient(135deg, #f8fafd 0%, #f0f7ff 100%);
+            line-height: 1.6;
+            font-size: 16px;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--primary-dark);
+        }
+
+        .container {
+            width: min(1200px, 94%);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(45, 74, 140, 0.1);
+            box-shadow: var(--shadow-sm);
+            padding: 12px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: var(--primary-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--accent);
+            font-size: 1.3rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-main);
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-main), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: var(--radius-md);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-main));
+        }
+
+        /* Main Content */
+        .privacy-header {
+            padding: 140px 0 40px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-main));
+            color: white;
+            text-align: center;
+        }
+
+        .privacy-header h1 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+
+        .last-updated {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .effective-date {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .privacy-content {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .section p {
+            margin-bottom: 16px;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        .section ul, .section ol {
+            margin: 16px 0 24px 32px;
+            color: var(--gray-700);
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .section li strong {
+            color: var(--primary-dark);
+        }
+
+        .highlight-box {
+            background: var(--gray-100);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-main));
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            margin-top: 40px;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .contact-icon {
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 48px 0 24px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 48px;
+            margin-bottom: 32px;
+        }
+
+        .footer-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .footer-text {
+            opacity: 0.8;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            max-width: 400px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .privacy-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .privacy-header {
+                padding: 120px 0 40px;
+            }
+
+            .privacy-content {
+                padding: 40px 0;
+            }
+
+            .section h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .privacy-header h1 {
+                font-size: 1.9rem;
+            }
+
+            .section {
+                margin-bottom: 32px;
+            }
+
+            .contact-info {
+                padding: 24px;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        /* Table Styles */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .data-table th {
+            background: var(--primary-main);
+            color: white;
+            text-align: left;
+            padding: 16px;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            padding: 16px;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tr:hover {
+            background: var(--gray-100);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 100;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-light);
+            transform: translateY(-3px);
+        }
+
+        /* Print Styles */
+        @media print {
+            .main-header, .main-footer, .back-to-top {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .privacy-header {
+                padding: 20px 0;
+                background: white;
+                color: var(--gray-900);
+            }
+
+            .privacy-header h1 {
+                color: var(--primary-dark);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💼</span>
+                FlexWork<span style="color: var(--accent);">.ie</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#opportunities" class="nav-link">Jobs</a>
+                <a href="index.html#testimonials" class="nav-link">Success Stories</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+                <a href="index.html" class="cta-button">Start Earning Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Privacy Policy Header -->
+    <section class="privacy-header animate-fade-in">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: 15th March 2024</p>
+            <div class="effective-date">Effective from: 15th March 2024</div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class="privacy-content">
+        <div class="container content-wrapper">
+            <div class="section animate-fade-in">
+                <h2>1. Introduction</h2>
+                <p>Welcome to FlexWork.ie ("we", "our", "us"). We are committed to protecting your personal data and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform to find flexible online work opportunities in Ireland.</p>
+                
+                <div class="highlight-box">
+                    <h3>💡 Important Notice for Irish Users</h3>
+                    <p>This Privacy Policy complies with the General Data Protection Regulation (GDPR), the Data Protection Act 2018, and other applicable Irish data protection laws. We are registered with the Data Protection Commission (DPC) in Ireland.</p>
+                </div>
+                
+                <p>By using FlexWork.ie, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not access the platform.</p>
+            </div>
+
+            <div class="section animate-fade-in" style="animation-delay: 0.1s;">
+                <h2>2. Who We Are</h2>
+                <p><strong>FlexWork.ie</strong> is operated by FlexWork Digital Solutions Ltd, a company registered in Ireland (Company Registration Number: 1234567H) with its registered office at:</p>
+                <ul>
+                    <li>Unit 12, Digital Hub</li>
+                    <li>Grand Canal Quay</li>
+                    <li>Dublin 2, D02 X435</li>
+                    <li>Ireland</li>
+                </ul>
+                <p>We act as a data controller for the personal information we process about you.</p>
+            </div>
+
+            <div class="section animate-fade-in" style="animation-delay: 0.2s;">
+                <h2>3. What Information We Collect</h2>
+                
+                <div class="highlight-box">
+                    <h3>📋 Personal Data We Collect Directly From You</h3>
+                    <p>When you register and use our services, we may collect:</p>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Type of Data</th>
+                            <th>Purpose</th>
+                            <th>Legal Basis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Identity Data</strong><br>Name, age, date of birth</td>
+                            <td>To verify your identity and age eligibility</td>
+                            <td>Contract performance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contact Data</strong><br>Phone number, WhatsApp details</td>
+                            <td>To communicate job opportunities and support</td>
+                            <td>Contract performance & Legitimate interests</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Location Data</strong><br>Country, city (for Irish opportunities)</td>
+                            <td>To match you with relevant local opportunities</td>
+                            <td>Legitimate interests</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Financial Data</strong><br>Payment preferences (Revolut/bank)</td>
+                            <td>To process your earnings payments</td>
+                            <td>Contract performance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Technical Data</strong><br>IP address, device type, browser</td>
+                            <td>To ensure platform security and functionality</td>
+                            <td>Legitimate interests</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section animate-fade-in" style="animation-delay: 0.3s;">
+                <h2>4. How We Use Your Information</h2>
+                <p>We use your personal data for the following purposes:</p>
+                <ul>
+                    <li><strong>To Provide Our Services:</strong> Match you with suitable online work opportunities in Ireland</li>
+                    <li><strong>To Communicate:</strong> Send you job alerts, platform updates, and important notices</li>
+                    <li><strong>To Process Payments:</strong> Facilitate daily/weekly payments to your Revolut or bank account</li>
+                    <li><strong>To Improve Our Platform:</strong> Analyze usage patterns to enhance user experience</li>
+                    <li><strong>To Comply with Legal Obligations:</strong> Meet our tax and regulatory requirements in Ireland</li>
+                    <li><strong>For Security:</strong> Protect our platform and users from fraud or misuse</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h3>⚖️ Our Legal Basis for Processing</h3>
+                    <p>Under Irish and EU data protection law, we process your data based on:</p>
+                    <ul>
+                        <li><strong>Contract:</strong> To provide the services you requested</li>
+                        <li><strong>Legitimate Interests:</strong> To improve our services and prevent fraud</li>
+                        <li><strong>Legal Obligation:</strong> To comply with Irish tax and employment laws</li>
+                        <li><strong>Consent:</strong> Where you have given us clear consent for specific purposes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section animate-fade-in" style="animation-delay: 0.4s;">
+                <h2>5. Data Sharing and Disclosure</h2>
+                <p>We may share your information with:</p>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Third Party</th>
+                            <th>Purpose</th>
+                            <th>Data Protection</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Irish Employers & Clients</strong></td>
+                            <td>To match you with work opportunities</td>
+                            <td>GDPR-compliant data processing agreements</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Payment Processors</strong><br>(Stripe, Revolut Business)</td>
+                            <td>To facilitate your earnings payments</td>
+                            <td>PCI-DSS compliant, EU-based</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Technical Service Providers</strong><br>(Hosting, analytics)</td>
+                            <td>To maintain and improve our platform</td>
+                            <td>EU servers, GDPR-compliant</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Legal & Regulatory Bodies</strong><br>(Revenue, DPC)</td>
+                            <td>When required by Irish law</td>
+                            <td>Minimum necessary data shared</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="highlight-box">
+                    <h3>🌍 International Data Transfers</h3>
+                    <p>Your data is primarily stored and processed within the European Economic Area (EEA). Any transfers outside the EEA are protected by:</p>
+                    <ul>
+                        <li>Adequacy decisions by the European Commission</li>
+                        <li>Standard Contractual Clauses (SCCs)</li>
+                        <li>Your explicit consent where required</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section animate-fade-in" style="animation-delay: 0.5s;">
+                <h2>6. Data Security</h2>
+                <p>We implement appropriate technical and organizational measures to protect your personal data, including:</p>
+                <ul>
+                    <li>Encryption of data in transit and at rest</li>
+                    <li>Regular security assessments and penetration testing</li>
+                    <li>Access controls and authentication mechanisms</li>
+                    <li>Regular staff training on data protection</li>
+                    <li>Secure backup procedures</li>
+                </ul>
+                
+                <p>While we strive to protect your personal data, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security but we work to implement and maintain reasonable security procedures.</p>
+            </div>
+
+            <div class="section animate-fade-in" style="animation-delay: 0.6s;">
+                <h2>7. Your Data Protection Rights</h2>
+                <p>Under Irish and EU data protection law, you have the following rights:</p>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Your Right</th>
+                            <th>What It Means</th>
+                            <th>How to Exercise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Right to Access</strong></td>
+                            <td>Request a copy of your personal data</td>
+                            <td>Email: privacy@ins.baby</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Right to Rectification</strong></td>
+                            <td>Correct inaccurate or incomplete data</td>
+                            <td>Update in your account or contact us</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Right to Erasure</strong></td>
+                            <td>Request deletion of your data ("right to be forgotten")</td>
+                            <td>Email: privacy@ins.baby</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Right to Restriction</strong></td>
+                            <td>Limit how we use your data</td>
+                            <td>Contact us with your request</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Right to Data Portability</strong></td>
+                            <td>Receive your data in a portable format</td>
+                            <td>Request via email or account settings</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Right to Object</strong></td>
+                            <td>Object to certain processing activities</td>
+                            <td>Opt-out in communications or contact us</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Right to Lodge a Complaint</strong></td>
+                            <td>Complain to the Data Protection Commission</td>
+                            <td>Visit: <a href="https://www.dataprotection.ie" style="color: var(--accent);">www.dataprotection.ie</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p>We will respond to your request within <strong>one month</strong> of receipt. This may be extended by two months for complex requests. We will inform you of any such extension within one month of receipt.</p>
+            </div>
+
+            <div class="section animate-fade-in" style="animation-delay: 0.7s;">
+                <h2>8. Data Retention</h2>
+                <p>We retain your personal data only for as long as necessary to fulfill the purposes for which it was collected, including:</p>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Type of Data</th>
+                            <th>Retention Period</th>
+                            <th>Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Active Account Data</strong></td>
+                            <td>Duration of account + 7 years</td>
+                            <td>Legal & tax requirements in Ireland</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Financial Records</strong></td>
+                            <td>7 years from transaction</td>
+                            <td>Revenue Commissioners requirements</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Inactive Account Data</strong></td>
+                            <td>2 years after last activity</td>
+                            <td>User reactivation possibility</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Marketing Consents</strong></td>
+                            <td>Until withdrawal of consent</td>
+                            <td>User preference management</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Technical Logs</strong></td>
+                            <td>12 months</td>
+                            <td>Security monitoring</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p>After the retention period ends, we will securely delete or anonymize your personal data.</p>
+            </div>
+
+            <div class="section animate-fade-in" style="animation-delay: 0.8s;">
+                <h2>9. Cookies and Tracking Technologies</h2>
+                <p>We use cookies and similar technologies to:</p>
+                <ul>
+                    <li>Remember your preferences and settings</li>
+                    <li>Analyze how our platform is used</li>
+                    <li>Prevent fraud and enhance security</li>
+                    <li>Personalize your experience</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h3>🍪 Cookie Categories</h3>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> Necessary for platform functionality</li>
+                        <li><strong>Analytics Cookies:</strong> Help us understand user behavior</li>
+                        <li><strong>Preference Cookies:</strong> Remember your settings</li>
+                        <li><strong>Marketing Cookies:</strong> Show relevant opportunities</li>
+                    </ul>
+                </div>
+                
+                <p>You can control cookies through your browser settings. However, disabling essential cookies may affect platform functionality.</p>
+                
+                <p><strong>Google Analytics:</strong> We use Google Analytics to understand how users interact with our platform. Data is anonymized and we have configured Google Analytics to respect "Do Not Track" signals.</p>
+            </div>
+
+            <div class="section animate-fade-in" style="animation-delay: 0.9s;">
+                <h2>10. Children's Privacy</h2>
+                <p>Our platform is not intended for individuals under 18 years of age. We do not knowingly collect personal data from children under 18. If you are a parent or guardian and believe your child has provided us with personal data, please contact us immediately at privacy@ins.baby.</p>
+                
+                <p>If we learn we have collected personal data from a child under 18 without verification of parental consent, we will delete that information promptly.</p>
+            </div>
+
+            <div class="section animate-fade-in" style="animation-delay: 1s;">
+                <h2>11. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. When we make changes, we will:</p>
+                <ul>
+                    <li>Update the "Last Updated" date at the top of this policy</li>
+                    <li>Notify you via email or platform notification for significant changes</li>
+                    <li>Post the updated policy on our platform</li>
+                </ul>
+                
+                <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.</p>
+                
+                <div class="highlight-box">
+                    <h3>📢 Notification of Changes</h3>
+                    <p>For material changes to this policy, we will provide at least <strong>30 days' notice</strong> before the changes take effect. Your continued use of the platform after such notice constitutes your acceptance of the updated Privacy Policy.</p>
+                </div>
+            </div>
+
+            <div class="contact-info animate-fade-in" style="animation-delay: 1.1s;">
+                <h3>Contact Us</h3>
+                <p>If you have questions about this Privacy Policy or our data practices, please contact us:</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong>Email:</strong> privacy@ins.baby<br>
+                            <small>For data protection inquiries</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Phone:</strong> +353 1 234 5678<br>
+                            <small>Monday-Friday, 9am-5pm IST</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Postal Address:</strong><br>
+                            Data Protection Officer<br>
+                            FlexWork Digital Solutions Ltd<br>
+                            Unit 12, Digital Hub<br>
+                            Grand Canal Quay, Dublin 2<br>
+                            D02 X435, Ireland
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">⚖️</span>
+                        <div>
+                            <strong>Data Protection Commission:</strong><br>
+                            21 Fitzwilliam Square South<br>
+                            Dublin 2, D02 RD28<br>
+                            Ireland<br>
+                            <a href="https://www.dataprotection.ie" style="color: white; text-decoration: underline;">www.dataprotection.ie</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="footer-brand">FlexWork.ie</a>
+                    <p class="footer-text">
+                        Ireland's leading platform for flexible online work. Connecting Irish earners with quality remote opportunities since 2020.
+                    </p>
+                    <div class="important-notice" style="background: rgba(255,255,255,0.1); padding: 12px; border-radius: 8px; margin-top: 16px;">
+                        <p style="font-size: 0.85rem; margin-bottom: 0; line-height: 1.5;">
+                            <strong>Important:</strong> FlexWork.ie is a platform connecting workers with opportunities. 
+                            You work as an independent contractor. Earnings depend on jobs completed. 
+                            We're registered in Dublin (Company No: 1234567H).
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 16px; font-size: 1.05rem;">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="index.html#opportunities" class="footer-link">Available Jobs</a>
+                        <a href="index.html#testimonials" class="footer-link">Success Stories</a>
+                        <a href="index.html#faq" class="footer-link">FAQ</a>
+                        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                        <a href="userterms.html" class="footer-link">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2024 FlexWork Digital Solutions Ltd. Registered in Ireland. 
+                <br>
+                <small>
+                    All earnings examples are based on actual member data from the previous month. 
+                    Individual results may vary. See full terms for details.
+                </small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Print button functionality
+            const printButton = document.createElement('button');
+            printButton.innerHTML = '🖨️ Print This Policy';
+            printButton.style.cssText = `
+                position: fixed;
+                bottom: 90px;
+                right: 30px;
+                background: var(--primary-main);
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 25px;
+                cursor: pointer;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                box-shadow: var(--shadow-md);
+                z-index: 100;
+                transition: all 0.3s ease;
+            `;
+            
+            printButton.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = 'var(--shadow-lg)';
+            });
+            
+            printButton.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'var(--shadow-md)';
+            });
+            
+            printButton.addEventListener('click', function() {
+                window.print();
+            });
+            
+            document.body.appendChild(printButton);
+            
+            // Automatic table of contents generation
+            const generateTOC = () => {
+                const headings = document.querySelectorAll('.section h2');
+                const tocContainer = document.querySelector('.privacy-header .container');
+                
+                if (headings.length > 0 && tocContainer) {
+                    const toc = document.createElement('div');
+                    toc.className = 'toc-container';
+                    toc.innerHTML = `
+                        <div style="
+                            background: rgba(255,255,255,0.1);
+                            padding: 20px;
+                            border-radius: var(--radius-md);
+                            margin-top: 20px;
+                            text-align: left;
+                            font-size: 0.9rem;
+                        ">
+                            <strong style="display: block; margin-bottom: 10px; font-size: 1rem;">📑 Quick Navigation:</strong>
+                            <div class="toc-links"></div>
+                        </div>
+                    `;
+                    
+                    tocContainer.appendChild(toc);
+                    
+                    const tocLinks = toc.querySelector('.toc-links');
+                    headings.forEach((heading, index) => {
+                        const id = `section-${index + 1}`;
+                        heading.id = id;
+                        
+                        const link = document.createElement('a');
+                        link.href = `#${id}`;
+                        link.textContent = heading.textContent;
+                        link.style.cssText = `
+                            display: block;
+                            color: white;
+                            text-decoration: none;
+                            padding: 5px 0;
+                            border-bottom: 1px solid rgba(255,255,255,0.1);
+                            transition: all 0.3s ease;
+                        `;
+                        
+                        link.addEventListener('mouseenter', function() {
+                            this.style.paddingLeft = '10px';
+                            this.style.color = 'var(--accent-light)';
+                        });
+                        
+                        link.addEventListener('mouseleave', function() {
+                            this.style.paddingLeft = '0';
+                            this.style.color = 'white';
+                        });
+                        
+                        tocLinks.appendChild(link);
+                    });
+                }
+            };
+            
+            // Generate TOC on larger screens only
+            if (window.innerWidth > 768) {
+                generateTOC();
+            }
+        });
+    </script>
+</body>
+</html>
