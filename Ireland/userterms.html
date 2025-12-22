@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | FlexWork.ie</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #169b62;
+            --primary-main: #2ecc71;
+            --primary-light: #4dd0d0;
+            --accent: #ff6b35;
+            --accent-light: #ff8e53;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --error: #e74c3c;
+            --gray-900: #2c3e50;
+            --gray-700: #34495e;
+            --gray-500: #7f8c8d;
+            --gray-300: #bdc3c7;
+            --gray-100: #ecf0f1;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--gray-900);
+            background: linear-gradient(135deg, #f8fafd 0%, #f0f7ff 100%);
+            line-height: 1.6;
+            font-size: 16px;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--primary-dark);
+        }
+
+        .container {
+            width: min(1200px, 94%);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(45, 74, 140, 0.1);
+            box-shadow: var(--shadow-sm);
+            padding: 12px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: var(--primary-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--accent);
+            font-size: 1.3rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-main);
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-main), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: var(--radius-md);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-main));
+        }
+
+        /* Main Content */
+        .terms-header {
+            padding: 140px 0 40px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-main));
+            color: white;
+            text-align: center;
+        }
+
+        .terms-header h1 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+
+        .last-updated {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .effective-date {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .important-notice-box {
+            background: rgba(231, 76, 60, 0.1);
+            border: 2px solid var(--error);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin: 30px auto;
+            max-width: 800px;
+        }
+
+        .important-notice-box h3 {
+            color: var(--error);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .terms-content {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 48px;
+            counter-increment: section;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-light);
+            position: relative;
+        }
+
+        .section h2:before {
+            content: counter(section) ". ";
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .section p {
+            margin-bottom: 16px;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        .section ul, .section ol {
+            margin: 16px 0 24px 32px;
+            color: var(--gray-700);
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .section li strong {
+            color: var(--primary-dark);
+        }
+
+        .highlight-box {
+            background: var(--gray-100);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .legal-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-main));
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            margin-top: 40px;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .contact-icon {
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        /* Definition Lists */
+        .definition-list {
+            margin: 20px 0;
+        }
+
+        .definition-term {
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .definition-description {
+            margin-left: 20px;
+            color: var(--gray-700);
+            margin-bottom: 10px;
+        }
+
+        /* Agreement Box */
+        .agreement-box {
+            background: var(--primary-light);
+            color: white;
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .agreement-box h3 {
+            color: white;
+            margin-bottom: 16px;
+            font-size: 1.4rem;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 48px 0 24px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 48px;
+            margin-bottom: 32px;
+        }
+
+        .footer-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .footer-text {
+            opacity: 0.8;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            max-width: 400px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .terms-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .terms-header {
+                padding: 120px 0 40px;
+            }
+
+            .terms-content {
+                padding: 40px 0;
+            }
+
+            .section h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .important-notice-box {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .agreement-box {
+                padding: 20px;
+                margin: 30px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .terms-header h1 {
+                font-size: 1.9rem;
+            }
+
+            .section {
+                margin-bottom: 32px;
+            }
+
+            .contact-info {
+                padding: 24px;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 100;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-light);
+            transform: translateY(-3px);
+        }
+
+        /* Print Styles */
+        @media print {
+            .main-header, .main-footer, .back-to-top {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .terms-header {
+                padding: 20px 0;
+                background: white;
+                color: var(--gray-900);
+            }
+
+            .terms-header h1 {
+                color: var(--primary-dark);
+            }
+
+            .agreement-box {
+                break-inside: avoid;
+            }
+        }
+
+        /* TOC Styles */
+        .toc-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .toc-title {
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-number {
+            background: var(--accent);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .toc-link {
+            color: var(--gray-700);
+            text-decoration: none;
+            transition: var(--transition);
+            flex: 1;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .toc-link:hover {
+            color: var(--primary-main);
+            padding-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💼</span>
+                FlexWork<span style="color: var(--accent);">.ie</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#opportunities" class="nav-link">Jobs</a>
+                <a href="index.html#testimonials" class="nav-link">Success Stories</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+                <a href="index.html" class="cta-button">Start Earning Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Terms Header -->
+    <section class="terms-header animate-fade-in">
+        <div class="container">
+            <h1>Terms & Conditions</h1>
+            <p class="last-updated">Last Updated: 15th March 2024</p>
+            <div class="effective-date">Effective from: 15th March 2024</div>
+            
+            <div class="important-notice-box animate-fade-in" style="animation-delay: 0.2s;">
+                <h3>⚠️ IMPORTANT LEGAL NOTICE</h3>
+                <p>By accessing or using FlexWork.ie, you agree to be bound by these Terms & Conditions. If you do not agree to all of these terms, you must not use our platform. These terms affect your legal rights and obligations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <div class="container">
+        <div class="toc-container animate-fade-in" style="animation-delay: 0.3s;">
+            <div class="toc-title">
+                <span>📑</span> Quick Navigation
+            </div>
+            <div class="toc-list">
+                <div class="toc-item">
+                    <span class="toc-number">1</span>
+                    <a href="#definitions" class="toc-link">Definitions & Interpretation</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">2</span>
+                    <a href="#eligibility" class="toc-link">Eligibility & Account</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">3</span>
+                    <a href="#services" class="toc-link">Services Description</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">4</span>
+                    <a href="#earnings" class="toc-link">Earnings & Payments</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">5</span>
+                    <a href="#fees" class="toc-link">Fees & Charges</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">6</span>
+                    <a href="#tax" class="toc-link">Tax Responsibilities</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">7</span>
+                    <a href="#conduct" class="toc-link">User Conduct</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">8</span>
+                    <a href="#termination" class="toc-link">Termination</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">9</span>
+                    <a href="#liability" class="toc-link">Liability & Disclaimer</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">10</span>
+                    <a href="#privacy" class="toc-link">Privacy & Data</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">11</span>
+                    <a href="#disputes" class="toc-link">Dispute Resolution</a>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">12</span>
+                    <a href="#changes" class="toc-link">Changes to Terms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Content -->
+    <section class="terms-content">
+        <div class="container content-wrapper">
+            <!-- Section 1: Definitions -->
+            <div class="section animate-fade-in" id="definitions">
+                <h2>Definitions & Interpretation</h2>
+                <p>In these Terms & Conditions, the following definitions apply:</p>
+                
+                <div class="definition-list">
+                    <div class="definition-term">"Platform"</div>
+                    <div class="definition-description">Refers to FlexWork.ie website, mobile applications, and associated services operated by FlexWork Digital Solutions Ltd.</div>
+                    
+                    <div class="definition-term">"User", "You", "Your"</div>
+                    <div class="definition-description">Any individual who accesses or uses the Platform, whether registered or not.</div>
+                    
+                    <div class="definition-term">"Worker", "Contractor"</div>
+                    <div class="definition-description">A registered user who performs online tasks through our Platform as an independent contractor.</div>
+                    
+                    <div class="definition-term">"Client", "Employer"</div>
+                    <div class="definition-description">Businesses or individuals who post tasks or jobs on the Platform.</div>
+                    
+                    <div class="definition-term">"Task", "Job"</div>
+                    <div class="definition-description">Discrete units of work available through the Platform for completion by Workers.</div>
+                    
+                    <div class="definition-term">"Earnings"</div>
+                    <div class="definition-description">Compensation paid to Workers for completed and approved tasks.</div>
+                    
+                    <div class="definition-term">"Service Fee"</div>
+                    <div class="definition-description">The commission retained by FlexWork.ie from task payments, currently 10%.</div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>📖 Interpretation Rules</h3>
+                    <ul>
+                        <li>References to "Ireland" mean the Republic of Ireland</li>
+                        <li>Currency amounts are in Euro (€) unless specified otherwise</li>
+                        <li>References to laws include Irish and EU legislation</li>
+                        <li>"Working days" means Monday to Friday, excluding Irish public holidays</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 2: Eligibility -->
+            <div class="section animate-fade-in" id="eligibility" style="animation-delay: 0.1s;">
+                <h2>Eligibility & Account Requirements</h2>
+                
+                <div class="legal-warning">
+                    <strong>⚠️ Age Restriction:</strong> You must be at least 18 years old to use our Platform. By registering, you confirm you meet this requirement.
+                </div>
+                
+                <p><strong>2.1 Eligibility Criteria</strong></p>
+                <ul>
+                    <li>Must be 18 years of age or older</li>
+                    <li>Must be resident in the Republic of Ireland</li>
+                    <li>Must have a valid Irish phone number</li>
+                    <li>Must have access to a smartphone or computer with internet</li>
+                    <li>Must have a Revolut account or Irish bank account for payments</li>
+                </ul>
+                
+                <p><strong>2.2 Account Registration</strong></p>
+                <p>To access most Platform features, you must register an account. You agree to:</p>
+                <ul>
+                    <li>Provide accurate, current, and complete information</li>
+                    <li>Maintain and promptly update your account information</li>
+                    <li>Keep your password secure and confidential</li>
+                    <li>Notify us immediately of any unauthorized account use</li>
+                    <li>Accept responsibility for all activities under your account</li>
+                </ul>
+                
+                <p><strong>2.3 Account Verification</strong></p>
+                <p>We may require additional verification, including but not limited to:</p>
+                <ul>
+                    <li>Proof of identity (passport, driver's license)</li>
+                    <li>Proof of Irish residency</li>
+                    <li>Phone number verification via SMS/WhatsApp</li>
+                    <li>Age verification documents</li>
+                </ul>
+            </div>
+
+            <!-- Section 3: Services -->
+            <div class="section animate-fade-in" id="services" style="animation-delay: 0.2s;">
+                <h2>Services Description</h2>
+                
+                <div class="highlight-box">
+                    <h3>💼 Important: Independent Contractor Status</h3>
+                    <p><strong>You are NOT an employee of FlexWork.ie.</strong> You are an independent contractor responsible for your own tax, insurance, and social welfare contributions. We do not provide employment rights, benefits, or protections.</p>
+                </div>
+                
+                <p><strong>3.1 Platform Nature</strong></p>
+                <p>FlexWork.ie is a technology platform that connects Workers with Clients seeking to outsource tasks. We are:</p>
+                <ul>
+                    <li><strong>NOT</strong> an employment agency</li>
+                    <li><strong>NOT</strong> your employer or agent</li>
+                    <li><strong>NOT</strong> responsible for the quality of work performed</li>
+                    <li><strong>NOT</strong> liable for any disputes between Workers and Clients</li>
+                </ul>
+                
+                <p><strong>3.2 Task Categories</strong></p>
+                <p>Tasks available on our Platform may include (but are not limited to):</p>
+                <ul>
+                    <li>Social media evaluation and moderation</li>
+                    <li>AI training and data annotation</li>
+                    <li>Online research and data analysis</li>
+                    <li>App and website testing</li>
+                    <li>Content review and moderation</li>
+                    <li>Survey completion and market research</li>
+                    <li>Data entry and categorization</li>
+                </ul>
+                
+                <p><strong>3.3 Task Availability</strong></p>
+                <p>We do not guarantee:</p>
+                <ul>
+                    <li>Constant availability of tasks</li>
+                    <li>Minimum earnings or income</li>
+                    <li>Specific types or quantities of tasks</li>
+                    <li>Continuation of any particular task category</li>
+                </ul>
+                
+                <p>Task availability depends on Client demand and may vary daily.</p>
+            </div>
+
+            <!-- Section 4: Earnings -->
+            <div class="section animate-fade-in" id="earnings" style="animation-delay: 0.3s;">
+                <h2>Earnings & Payment Terms</h2>
+                
+                <div class="legal-warning">
+                    <strong>💶 Payment Notice:</strong> All payments are processed in Euro (€). Payment times may vary based on your payment method and bank processing times.
+                </div>
+                
+                <p><strong>4.1 Earnings Structure</strong></p>
+                <ul>
+                    <li>Earnings are calculated per completed task</li>
+                    <li>Rates vary by task type, complexity, and urgency</li>
+                    <li>Rates are displayed before you accept a task</li>
+                    <li>We take a 10% Service Fee from task payments</li>
+                    <li>You receive 90% of the displayed task value</li>
+                </ul>
+                
+                <p><strong>4.2 Payment Schedule</strong></p>
+                <ul>
+                    <li><strong>Standard Payments:</strong> Processed within 24-48 hours of task approval</li>
+                    <li><strong>Minimum Payout:</strong> €20 balance required for withdrawal</li>
+                    <li><strong>Payment Methods:</strong> Revolut (preferred) or Irish bank transfer</li>
+                    <li><strong>Processing Time:</strong> 1-3 business days after request</li>
+                    <li><strong>Payment Cut-off:</strong> 5pm IST daily for same-day processing</li>
+                </ul>
+                
+                <p><strong>4.3 Task Approval & Disputes</strong></p>
+                <ul>
+                    <li>Clients have 48 hours to approve or reject submitted work</li>
+                    <li>Payment is only released upon Client approval</li>
+                    <li>Disputed tasks are reviewed by our moderation team</li>
+                    <li>Our decision on task disputes is final</li>
+                    <li>Fraudulent submissions result in account termination</li>
+                </ul>
+                
+                <p><strong>4.4 Example Earnings Calculation</strong></p>
+                <div class="highlight-box">
+                    <p><strong>Task Value:</strong> €50</p>
+                    <p><strong>Service Fee (10%):</strong> €5</p>
+                    <p><strong>Your Earnings:</strong> €45</p>
+                    <p><small>Net amount transferred to your Revolut/bank account</small></p>
+                </div>
+            </div>
+
+            <!-- Section 5: Fees -->
+            <div class="section animate-fade-in" id="fees" style="animation-delay: 0.4s;">
+                <h2>Fees & Charges</h2>
+                
+                <p><strong>5.1 Service Fee</strong></p>
+                <ul>
+                    <li>Current Service Fee: 10% of task value</li>
+                    <li>Fee is deducted before payment to you</li>
+                    <li>Fee covers platform maintenance, support, and payment processing</li>
+                    <li>Fees are subject to change with 30 days' notice</li>
+                </ul>
+                
+                <p><strong>5.2 No Hidden Charges</strong></p>
+                <p>We do NOT charge:</p>
+                <ul>
+                    <li>Registration or sign-up fees</li>
+                    <li>Monthly subscription fees</li>
+                    <li>Account maintenance fees</li>
+                    <li>Payment processing fees (for standard Irish bank transfers)</li>
+                    <li>Task submission fees</li>
+                </ul>
+                
+                <p><strong>5.3 Payment Processing</strong></p>
+                <p>Third-party payment processors may charge fees:</p>
+                <ul>
+                    <li><strong>Revolut:</strong> Usually free for Euro transfers within Ireland</li>
+                    <li><strong>Bank Transfers:</strong> Your bank may charge receiving fees</li>
+                    <li><strong>International Transfers:</strong> Not supported - must have Irish account</li>
+                </ul>
+                
+                <p><strong>5.4 Fee Changes</strong></p>
+                <p>We reserve the right to change our fee structure with 30 days' written notice. Continued use after changes constitutes acceptance.</p>
+            </div>
+
+            <!-- Section 6: Tax -->
+            <div class="section animate-fade-in" id="tax" style="animation-delay: 0.5s;">
+                <h2>Tax Responsibilities</h2>
+                
+                <div class="legal-warning">
+                    <strong>⚖️ TAX WARNING:</strong> As an independent contractor, YOU are solely responsible for declaring your earnings to Revenue Ireland and paying all applicable taxes. We do not deduct PAYE or PRSI from your payments.
+                </div>
+                
+                <p><strong>6.1 Your Tax Obligations</strong></p>
+                <ul>
+                    <li>Register as self-employed with Revenue Ireland if earning over €5,000/year</li>
+                    <li>File annual Form 11 (Self-Assessment) tax return</li>
+                    <li>Pay Income Tax, PRSI, and USC as applicable</li>
+                    <li>Keep accurate records of all earnings and expenses</li>
+                    <li>Pay Preliminary Tax if required</li>
+                </ul>
+                
+                <p><strong>6.2 Our Reporting Requirements</strong></p>
+                <p>We may be required to:</p>
+                <ul>
+                    <li>Report annual earnings to Revenue Ireland</li>
+                    <li>Provide transaction records if requested</li>
+                    <li>Comply with anti-money laundering regulations</li>
+                    <li>Verify your identity for tax purposes</li>
+                </ul>
+                
+                <p><strong>6.3 Tax Advice</strong></p>
+                <p>We recommend:</p>
+                <ul>
+                    <li>Consulting a qualified Irish tax advisor</li>
+                    <li>Visiting <a href="https://www.revenue.ie" style="color: var(--accent);">Revenue.ie</a> for official guidance</li>
+                    <li>Keeping 20-30% of earnings for tax payments</li>
+                    <li>Tracking deductible expenses (internet, phone, equipment)</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h3>📊 Casual Trading Allowance</h3>
+                    <p>If your annual earnings from casual trading are under €5,000, you may not need to register as self-employed. However, you must still declare this income on your tax return. Always consult Revenue Ireland or a tax professional.</p>
+                </div>
+            </div>
+
+            <!-- Section 7: Conduct -->
+            <div class="section animate-fade-in" id="conduct" style="animation-delay: 0.6s;">
+                <h2>User Conduct & Prohibited Activities</h2>
+                
+                <p><strong>7.1 Acceptable Use</strong></p>
+                <p>You agree to use the Platform:</p>
+                <ul>
+                    <li>In compliance with all Irish laws and regulations</li>
+                    <li>Only for lawful purposes</li>
+                    <li>Without attempting to circumvent security measures</li>
+                    <li>Without interfering with other users' experience</li>
+                    <li>Without using automated scripts or bots</li>
+                </ul>
+                
+                <p><strong>7.2 Prohibited Activities</strong></p>
+                <p>You must NOT:</p>
+                <ul>
+                    <li>Create multiple accounts</li>
+                    <li>Submit fraudulent or low-quality work</li>
+                    <li>Share account access with others</li>
+                    <li>Use VPNs to mask your Irish location</li>
+                    <li>Harass or threaten other users or staff</li>
+                    <li>Attempt to access others' accounts</li>
+                    <li>Share confidential task information</li>
+                    <li>Use the Platform for illegal activities</li>
+                    <li>Infringe intellectual property rights</li>
+                </ul>
+                
+                <p><strong>7.3 Quality Standards</strong></p>
+                <p>You agree to:</p>
+                <ul>
+                    <li>Complete tasks to the best of your ability</li>
+                    <li>Follow all task instructions carefully</li>
+                    <li>Meet quality standards set by Clients</li>
+                    <li>Submit work before deadlines</li>
+                    <li>Respond to feedback professionally</li>
+                </ul>
+                
+                <div class="legal-warning">
+                    <strong>🚫 Zero Tolerance:</strong> Violation of these conduct rules may result in immediate account suspension, forfeiture of earnings, and legal action where appropriate.
+                </div>
+            </div>
+
+            <!-- Section 8: Termination -->
+            <div class="section animate-fade-in" id="termination" style="animation-delay: 0.7s;">
+                <h2>Account Termination</h2>
+                
+                <p><strong>8.1 Your Right to Terminate</strong></p>
+                <p>You may close your account at any time by:</p>
+                <ul>
+                    <li>Emailing <strong>support@ins.baby</strong> with your request</li>
+                    <li>Withdrawing any remaining balance first</li>
+                    <li>Allowing 14 days for account closure processing</li>
+                </ul>
+                
+                <p><strong>8.2 Our Right to Terminate</strong></p>
+                <p>We may suspend or terminate your account if:</p>
+                <ul>
+                    <li>You violate these Terms & Conditions</li>
+                    <li>We suspect fraudulent activity</li>
+                    <li>You provide false information</li>
+                    <li>Your work quality is consistently poor</li>
+                    <li>Required by law or regulation</li>
+                    <li>For operational or security reasons</li>
+                </ul>
+                
+                <p><strong>8.3 Effects of Termination</strong></p>
+                <p>Upon termination:</p>
+                <ul>
+                    <li>Your right to use the Platform ends immediately</li>
+                    <li>We will pay any verified, approved earnings</li>
+                    <li>We may withhold disputed or fraudulent earnings</li>
+                    <li>We may retain your data as required by law</li>
+                    <li>You remain responsible for tax obligations</li>
+                </ul>
+                
+                <p><strong>8.4 Appeal Process</strong></p>
+                <p>If your account is terminated, you may appeal by:</p>
+                <ul>
+                    <li>Emailing <strong>appeals@ins.baby</strong> within 14 days</li>
+                    <li>Providing any relevant evidence or explanations</li>
+                    <li>Allowing 30 days for review and decision</li>
+                </ul>
+            </div>
+
+            <!-- Section 9: Liability -->
+            <div class="section animate-fade-in" id="liability" style="animation-delay: 0.8s;">
+                <h2>Liability & Disclaimers</h2>
+                
+                <div class="legal-warning">
+                    <strong>⚠️ IMPORTANT DISCLAIMER:</strong> FLEXWORK.IE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND. YOUR USE OF THE PLATFORM IS AT YOUR SOLE RISK.
+                </div>
+                
+                <p><strong>9.1 No Guarantees</strong></p>
+                <p>We do NOT guarantee:</p>
+                <ul>
+                    <li>Specific income levels or earnings</li>
+                    <li>Continuous Platform availability</li>
+                    <li>Error-free operation</li>
+                    <li>Job security or consistent task availability</li>
+                    <li>Quality or reliability of Clients</li>
+                </ul>
+                
+                <p><strong>9.2 Limitation of Liability</strong></p>
+                <p>To the maximum extent permitted by Irish law:</p>
+                <ul>
+                    <li>Our total liability is limited to €500</li>
+                    <li>We are not liable for indirect or consequential losses</li>
+                    <li>We are not liable for loss of data or profits</li>
+                    <li>We are not liable for Client non-payment (except as facilitator)</li>
+                    <li>We are not liable for tax issues or legal compliance</li>
+                </ul>
+                
+                <p><strong>9.3 Irish Consumer Law</strong></p>
+                <p>Nothing in these terms affects your statutory rights under:</p>
+                <ul>
+                    <li>Consumer Protection Act 2007</li>
+                    <li>Sale of Goods and Supply of Services Act 1980</li>
+                    <li>European Communities (Unfair Terms in Consumer Contracts) Regulations 1995</li>
+                </ul>
+                
+                <p><strong>9.4 Indemnification</strong></p>
+                <p>You agree to indemnify us against any claims arising from:</p>
+                <ul>
+                    <li>Your breach of these terms</li>
+                    <li>Your use of the Platform</li>
+                    <li>Your interactions with Clients</li>
+                    <li>Your violation of any laws</li>
+                </ul>
+            </div>
+
+            <!-- Section 10: Privacy -->
+            <div class="section animate-fade-in" id="privacy" style="animation-delay: 0.9s;">
+                <h2>Privacy & Data Protection</h2>
+                
+                <p><strong>10.1 Privacy Policy</strong></p>
+                <p>Our <a href="privacy.html" style="color: var(--accent);">Privacy Policy</a> explains how we collect, use, and protect your personal data. By using the Platform, you consent to our data practices as described in the Privacy Policy.</p>
+                
+                <p><strong>10.2 Data Usage</strong></p>
+                <p>We may use your data to:</p>
+                <ul>
+                    <li>Provide and improve our services</li>
+                    <li>Process payments and prevent fraud</li>
+                    <li>Comply with legal obligations</li>
+                    <li>Communicate with you about the Platform</li>
+                    <li>Personalize your experience</li>
+                </ul>
+                
+                <p><strong>10.3 GDPR Rights</strong></p>
+                <p>As an Irish resident, you have rights under GDPR including:</p>
+                <ul>
+                    <li>Right to access your data</li>
+                    <li>Right to rectification</li>
+                    <li>Right to erasure ("right to be forgotten")</li>
+                    <li>Right to data portability</li>
+                    <li>Right to object to processing</li>
+                </ul>
+                
+                <p>To exercise these rights, email: <strong>privacy@ins.baby</strong></p>
+                
+                <p><strong>10.4 Data Retention</strong></p>
+                <p>We retain your data:</p>
+                <ul>
+                    <li>For active accounts: Duration of account + 7 years</li>
+                    <li>For financial records: 7 years (Revenue requirement)</li>
+                    <li>For inactive accounts: 2 years after last activity</li>
+                </ul>
+            </div>
+
+            <!-- Section 11: Disputes -->
+            <div class="section animate-fade-in" id="disputes" style="animation-delay: 1s;">
+                <h2>Dispute Resolution</h2>
+                
+                <p><strong>11.1 Informal Resolution</strong></p>
+                <p>Before formal proceedings, we encourage:</p>
+                <ul>
+                    <li>Contacting <strong>support@ins.baby</strong> first</li>
+                    <li>Clearly describing the issue with evidence</li>
+                    <li>Allowing 14 days for investigation and response</li>
+                    <li>Participating in good faith discussions</li>
+                </ul>
+                
+                <p><strong>11.2 Formal Dispute Resolution</strong></p>
+                <p>If informal resolution fails:</p>
+                <ul>
+                    <li>You may submit to the Small Claims Court (if under €2,000)</li>
+                    <li>For larger claims, Irish courts have exclusive jurisdiction</li>
+                    <li>Proceedings must be in English</li>
+                    <li>Venue is Dublin, Ireland</li>
+                </ul>
+                
+                <p><strong>11.3 Mediation Option</strong></p>
+                <p>We offer voluntary mediation through:</p>
+                <ul>
+                    <li>Mediators' Institute of Ireland (MII)</li>
+                    <li>Costs shared equally unless otherwise agreed</li>
+                    <li>Non-binding unless settlement reached</li>
+                    <li>Confidential process</li>
+                </ul>
+                
+                <p><strong>11.4 Class Action Waiver</strong></p>
+                <p>You waive any right to participate in class actions. Claims must be brought individually, not as part of a class or representative proceeding.</p>
+                
+                <div class="highlight-box">
+                    <h3>⚖️ Governing Law</h3>
+                    <p>These Terms & Conditions are governed by Irish law. Any disputes will be resolved in Irish courts. The UN Convention on Contracts for the International Sale of Goods does not apply.</p>
+                </div>
+            </div>
+
+            <!-- Section 12: Changes -->
+            <div class="section animate-fade-in" id="changes" style="animation-delay: 1.1s;">
+                <h2>Changes to Terms</h2>
+                
+                <p><strong>12.1 Modification Right</strong></p>
+                <p>We reserve the right to modify these terms at any time. We will:</p>
+                <ul>
+                    <li>Post updated terms on the Platform</li>
+                    <li>Update the "Last Updated" date</li>
+                    <li>Notify you of significant changes via email</li>
+                    <li>Provide at least 30 days' notice for material changes</li>
+                </ul>
+                
+                <p><strong>12.2 Acceptance of Changes</strong></p>
+                <p>Your continued use after changes constitutes acceptance. If you disagree with changes:</p>
+                <ul>
+                    <li>You must stop using the Platform</li>
+                    <li>Close your account as described in Section 8</li>
+                    <li>The previous terms apply until account closure</li>
+                </ul>
+                
+                <p><strong>12.3 Historical Versions</strong></p>
+                <p>Previous versions of these terms are available upon request. Email: <strong>legal@ins.baby</strong></p>
+            </div>
+
+            <!-- Agreement Box -->
+            <div class="agreement-box animate-fade-in" style="animation-delay: 1.2s;">
+                <h3>✅ Your Agreement</h3>
+                <p>By using FlexWork.ie, you acknowledge that:</p>
+                <ul style="text-align: left; margin: 20px auto; max-width: 600px; color: white;">
+                    <li>You have read and understood these Terms & Conditions</li>
+                    <li>You agree to be legally bound by them</li>
+                    <li>You are at least 18 years old and resident in Ireland</li>
+                    <li>You accept independent contractor status and tax responsibilities</li>
+                </ul>
+                <p><strong>If you do not agree, you must not use our Platform.</strong></p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info animate-fade-in" style="animation-delay: 1.3s;">
+                <h3>Contact Information</h3>
+                <p>For questions about these Terms & Conditions:</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong>General Support:</strong> support@ins.baby<br>
+                            <small>For account and technical issues</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">⚖️</span>
+                        <div>
+                            <strong>Legal Inquiries:</strong> legal@ins.baby<br>
+                            <small>For legal questions about these terms</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">🔒</span>
+                        <div>
+                            <strong>Privacy Concerns:</strong> privacy@ins.baby<br>
+                            <small>For data protection and GDPR requests</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">💼</strong></span>
+                        <div>
+                            <strong>Business Address:</strong><br>
+                            FlexWork Digital Solutions Ltd<br>
+                            Unit 12, Digital Hub<br>
+                            Grand Canal Quay, Dublin 2<br>
+                            D02 X435, Ireland
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Phone Support:</strong> +353 1 234 5678<br>
+                            <small>Monday-Friday, 9am-5pm Irish Time</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="footer-brand">FlexWork.ie</a>
+                    <p class="footer-text">
+                        Ireland's leading platform for flexible online work. Connecting Irish earners with quality remote opportunities since 2020.
+                    </p>
+                    <div class="important-notice" style="background: rgba(255,255,255,0.1); padding: 12px; border-radius: 8px; margin-top: 16px;">
+                        <p style="font-size: 0.85rem; margin-bottom: 0; line-height: 1.5;">
+                            <strong>Legal Notice:</strong> By using FlexWork.ie, you agree to our Terms & Conditions and Privacy Policy. 
+                            You work as an independent contractor, not an employee. Always consult a tax professional about your obligations.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 16px; font-size: 1.05rem;">Legal Documents</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                        <a href="userterms.html" class="footer-link" style="color: var(--accent-light); font-weight: 600;">Terms & Conditions</a>
+                        <a href="#tax" class="footer-link">Tax Information</a>
+                        <a href="#contact" class="footer-link">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2024 FlexWork Digital Solutions Ltd. Registered in Ireland (Company No: 1234567H). 
+                <br>
+                <small>
+                    All earnings examples are based on actual member data. Individual results vary. 
+                    This document is available in accessible formats upon request.
+                </small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 120,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update URL without page jump
+                        history.pushState(null, null, targetId);
+                    }
+                });
+            });
+            
+            // Print button functionality
+            const printButton = document.createElement('button');
+            printButton.innerHTML = '🖨️ Print These Terms';
+            printButton.style.cssText = `
+                position: fixed;
+                bottom: 90px;
+                right: 30px;
+                background: var(--primary-main);
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 25px;
+                cursor: pointer;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                box-shadow: var(--shadow-md);
+                z-index: 100;
+                transition: all 0.3s ease;
+            `;
+            
+            printButton.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = 'var(--shadow-lg)';
+            });
+            
+            printButton.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'var(--shadow-md)';
+            });
+            
+            printButton.addEventListener('click', function() {
+                window.print();
+            });
+            
+            document.body.appendChild(printButton);
+            
+            // Highlight current section in TOC while scrolling
+            const sections = document.querySelectorAll('.section');
+            const tocLinks = document.querySelectorAll('.toc-link');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.3
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        tocLinks.forEach(link => {
+                            link.style.fontWeight = 'normal';
+                            link.style.color = 'var(--gray-700)';
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.style.fontWeight = '600';
+                                link.style.color = 'var(--primary-main)';
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Email link protection
+            document.querySelectorAll('a[href^="mailto:"]').forEach(emailLink => {
+                emailLink.addEventListener('click', function(e) {
+                    // Optional: Add analytics tracking for email clicks
+                    console.log('Email link clicked:', this.href);
+                });
+            });
+            
+            // Auto-update year in footer
+            const yearSpan = document.createElement('span');
+            yearSpan.textContent = new Date().getFullYear();
+            document.querySelector('.footer-bottom').innerHTML = 
+                document.querySelector('.footer-bottom').innerHTML.replace('2024', yearSpan.textContent);
+            
+            // Add section numbering
+            let sectionCount = 1;
+            document.querySelectorAll('.section h2').forEach(heading => {
+                heading.innerHTML = heading.innerHTML.replace(/^\d+\.\s*/, '');
+                heading.innerHTML = `${sectionCount}. ${heading.innerHTML}`;
+                sectionCount++;
+            });
+        });
+    </script>
+</body>
+</html>
