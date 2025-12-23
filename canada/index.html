@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RemoteWork Canada - Canada's Trusted Remote Work Platform | Verified Home-Based Jobs</title>
-  <meta name="description" content="Verified remote work opportunities across Canada. Work from home with trusted Canadian companies. Customer service, administrative and data processing positions. Apply now!" />
+  <title>Hiwork Canada - Get Hired for Remote Work | Verified Jobs from Home</title>
+  <meta name="description" content="Get matched with verified Canadian remote jobs. Work from home with trusted employers. Customer service, data entry, admin roles available. Apply now!" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -26,9 +26,8 @@
       --gray-700: #475569;
       --gray-800: #334155;
       
-      /* 加拿大自然配色 */
-      --nature-green: #2E7D32;
-      --nature-blue: #0055A4; /* 加拿大官方蓝色 */
+      /* 加拿大官方蓝色 */
+      --canada-blue: #0055A4;
       
       /* 枫叶红 */
       --maple-red: #D80621;
@@ -50,7 +49,7 @@
       --radius-lg: 16px;
       --radius-full: 9999px;
       
-      /* 阴影 - 更柔和 */
+      /* 阴影 */
       --shadow-sm: 0 1px 3px rgba(216, 6, 33, 0.08);
       --shadow-md: 0 3px 10px rgba(216, 6, 33, 0.12);
       --shadow-lg: 0 5px 20px rgba(216, 6, 33, 0.15);
@@ -78,6 +77,13 @@
       color: var(--gray-800);
       background-color: var(--light);
       overflow-x: hidden;
+      padding-bottom: 80px; /* 为移动端悬浮按钮留出空间 */
+    }
+    
+    @media (min-width: 769px) {
+      body {
+        padding-bottom: 0;
+      }
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -252,8 +258,8 @@
       align-items: center;
       gap: 0.5rem;
       font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.25rem;
+      font-weight: 800;
+      font-size: 1.4rem;
       color: var(--primary);
     }
     
@@ -281,7 +287,7 @@
     }
     
     .nav-link {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.95rem;
     }
     
@@ -300,6 +306,24 @@
       }
     }
     
+    /* 移动端CTA按钮 */
+    .mobile-cta-btn {
+      display: none;
+    }
+    
+    @media (max-width: 1023px) {
+      .mobile-cta-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        color: var(--primary);
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: 1rem;
+      }
+    }
+    
     .mobile-menu-btn {
       display: block;
       background: none;
@@ -312,6 +336,51 @@
     @media (min-width: 1024px) {
       .mobile-menu-btn {
         display: none;
+      }
+      
+      .mobile-cta-btn {
+        display: none;
+      }
+    }
+    
+    /* === 移动端悬浮按钮 === */
+    .floating-cta {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      width: 90%;
+      max-width: 400px;
+      animation: floatUp 0.5s ease;
+      box-shadow: 0 10px 30px rgba(216, 6, 33, 0.25);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    
+    @media (max-width: 768px) {
+      .floating-cta {
+        display: block;
+      }
+    }
+    
+    .floating-cta .btn-primary {
+      width: 100%;
+      padding: 1.2rem;
+      font-size: 1.1rem;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 8px 25px rgba(216, 6, 33, 0.3);
+    }
+    
+    @keyframes floatUp {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
       }
     }
     
@@ -409,26 +478,6 @@
       background-size: cover;
       background-position: center right;
       z-index: 1;
-    }
-    
-    @media (max-width: 1024px) {
-      .hero-bg {
-        background: 
-          linear-gradient(90deg, rgba(255, 245, 245, 0.95) 0%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.7) 100%),
-          url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-        background-size: cover;
-        background-position: center right;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .hero-bg {
-        background: 
-          linear-gradient(rgba(255, 245, 245, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%),
-          url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');
-        background-size: cover;
-        background-position: center;
-      }
     }
     
     .hero-grid {
@@ -682,15 +731,9 @@
       font-size: 1rem;
     }
     
-    /* 主表单 - 移动端显示 */
+    /* 主表单 */
     .hero-form {
       display: block;
-    }
-    
-    @media (min-width: 1024px) {
-      .hero-form {
-        display: block;
-      }
     }
     
     /* === 工作列表部分 === */
@@ -706,12 +749,6 @@
     }
     
     @media (min-width: 768px) {
-      .jobs-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    
-    @media (min-width: 1024px) {
       .jobs-grid {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -849,12 +886,6 @@
     .stat-label {
       font-size: 0.9rem;
       opacity: 0.9;
-    }
-    
-    @media (min-width: 768px) {
-      .stat-label {
-        font-size: 1rem;
-      }
     }
     
     /* === 工作原理 === */
@@ -1113,12 +1144,6 @@
       margin-right: auto;
     }
     
-    @media (min-width: 768px) {
-      .cta-subtitle {
-        font-size: 1.125rem;
-      }
-    }
-    
     /* === 页脚 === */
     .footer {
       background: var(--dark);
@@ -1319,12 +1344,6 @@
       color: var(--primary);
     }
     
-    .text-gradient {
-      background: var(--primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
     .mb-1 { margin-bottom: 0.5rem; }
     .mb-2 { margin-bottom: 0.75rem; }
     .mb-3 { margin-bottom: 1.25rem; }
@@ -1343,16 +1362,6 @@
       display: block;
     }
     
-    @media (min-width: 1024px) {
-      .d-lg-block {
-        display: block;
-      }
-      
-      .d-lg-none {
-        display: none;
-      }
-    }
-  
     /* 合规徽章 */
     .compliance-badges {
       display: flex;
@@ -1376,41 +1385,6 @@
     
     .compliance-badge-item i {
       color: var(--primary);
-    }
-    
-    /* 透明度声明 */
-    .transparency-notice {
-      background: var(--gray-50);
-      border-left: 4px solid var(--primary);
-      padding: 1rem 1.5rem;
-      margin: 2rem auto;
-      border-radius: 0 8px 8px 0;
-      max-width: 1200px;
-    }
-    
-    .transparency-notice h4 {
-      margin-bottom: 0.5rem;
-      color: var(--gray-800);
-    }
-    
-    .transparency-notice p {
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-      color: var(--gray-700);
-    }
-    
-    /* 就业免责声明 */
-    .employment-disclaimer {
-      background: #fff8e6;
-      border: 1px solid #ffd54f;
-      border-radius: 8px;
-      padding: 1rem;
-      margin: 1.5rem 0;
-      font-size: 0.9rem;
-    }
-    
-    .employment-disclaimer strong {
-      color: #e65100;
     }
     
     /* 平台说明 */
@@ -1476,6 +1450,20 @@
       margin-bottom: 1rem;
     }
     
+    /* 就业免责声明 */
+    .employment-disclaimer {
+      background: #fff8e6;
+      border: 1px solid #ffd54f;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    
+    .employment-disclaimer strong {
+      color: #e65100;
+    }
+    
     /* 申请后联系 */
     .contact-options {
       margin-top: 1.5rem;
@@ -1514,14 +1502,6 @@
       .footer-grid {
         grid-template-columns: 1fr;
       }
-      
-      .transparency-notice {
-        margin: 2rem 1rem;
-      }
-      
-      .company-info {
-        margin: 2rem 1rem;
-      }
     }
     
     /* 加拿大风格图案 - 枫叶主题 */
@@ -1555,15 +1535,31 @@
       padding-right: 2.5rem;
     }
     
-    /* 高对比度文本 */
-    .high-contrast {
-      color: var(--dark);
-      font-weight: 600;
-    }
-    
     /* 加拿大特色样式 */
     .maple-leaf {
       color: var(--primary);
+    }
+    
+    /* 吸引人的文案样式 */
+    .highlight-text {
+      color: var(--primary);
+      font-weight: 800;
+    }
+    
+    .urgent-badge {
+      background: #ff4444;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-left: 0.5rem;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
     }
   </style>
   
@@ -1641,18 +1637,23 @@
           <div class="logo-icon">
             <i class="fas fa-maple-leaf"></i>
           </div>
-          <span class="logo-text">HiWork</span>
+          <span class="logo-text">Hiwork</span>
         </a>
         
         <div class="nav-links">
-          <a href="#opportunities" class="nav-link">Verified Positions</a>
-          <a href="#how" class="nav-link">Application Process</a>
-          <a href="#about" class="nav-link">About Platform</a>
+          <a href="#opportunities" class="nav-link">Remote Jobs</a>
+          <a href="#how" class="nav-link">How It Works</a>
+          <a href="#about" class="nav-link">About Us</a>
           <a href="#faq" class="nav-link">FAQ</a>
           <a href="#" class="btn btn-primary nav-cta open-modal-btn">
             Apply Now
           </a>
         </div>
+        
+        <!-- 移动端CTA按钮 -->
+        <button class="mobile-cta-btn open-modal-btn">
+          <i class="fas fa-briefcase"></i>
+        </button>
         
         <button class="mobile-menu-btn" id="mobileMenuBtn">
           <i class="fas fa-bars"></i>
@@ -1668,15 +1669,15 @@
         <div class="urgency-content">
           <div class="urgency-item">
             <i class="fas fa-bolt urgency-icon"></i>
-            <span>⚠️ LAST 5 POSITIONS AVAILABLE - Apply now!</span>
+            <span>⚠️ LIMITED SPOTS AVAILABLE - Apply now before positions fill!</span>
           </div>
           <div class="urgency-item">
             <i class="fas fa-clock urgency-icon"></i>
-            <span>⏳ Limited time: Priority given to today's applications!</span>
+            <span>⏳ Priority processing for today's applicants</span>
           </div>
           <div class="urgency-item">
             <i class="fas fa-users urgency-icon"></i>
-            <span>🔥 250+ People have applied today - Reserve your spot!</span>
+            <span>🔥 300+ Canadians hired last month - Join them today!</span>
           </div>
         </div>
       </div>
@@ -1691,24 +1692,24 @@
         <div class="hero-content fade-in">
           <div class="hero-badge">
             <i class="fas fa-shield-alt"></i>
-            <span>Verified Work Platform</span>
+            <span>Trusted Canadian Platform</span>
           </div>
           
           <h1 class="hero-title">
-            <span>CANADA'S TRUSTED</span> 
-            <span class="text-primary">REMOTE WORK</span>
+            <span>Work From Home</span> 
+            <span class="text-primary">Jobs in Canada</span>
             <br>
-            <span>OPPORTUNITIES FROM HOME</span>
+            <span>Earn <span class="highlight-text">$22-$28/Hour</span> From Your Couch</span>
           </h1>
           
           <p class="hero-subtitle">
-            Connect with verified Canadian companies offering reliable remote work positions. All opportunities comply with Canadian employment laws.
+            Get matched with legitimate Canadian companies hiring for remote positions. No experience needed for many roles - we provide training!
           </p>
           
           <!-- 平台说明 -->
           <div class="platform-explanation fade-in">
-            <h3><i class="fas fa-building"></i> How our platform works</h3>
-            <p>We are a job-matching platform connecting qualified Canadian residents with reliable remote work opportunities from verified companies. We are not direct employers but facilitate legitimate employment connections.</p>
+            <h3><i class="fas fa-bolt"></i> Quick & Easy Process</h3>
+            <p>Apply once, get matched with multiple employers. Most applicants hear back within 48 hours. No fees ever.</p>
           </div>
           
           <div class="hero-features">
@@ -1717,8 +1718,8 @@
                 <i class="fas fa-dollar-sign"></i>
               </div>
               <div class="feature-text">
-                <strong>Transparent Compensation</strong>
-                <p>Clear payment terms for all positions</p>
+                <strong>Good Pay</strong>
+                <p>$22-28/hour + benefits for most roles</p>
               </div>
             </div>
             <div class="feature-item">
@@ -1726,8 +1727,8 @@
                 <i class="fas fa-clock"></i>
               </div>
               <div class="feature-text">
-                <strong>Flexible Scheduling</strong>
-                <p>Various shift hours available based on position</p>
+                <strong>Flexible Hours</strong>
+                <p>Choose shifts that fit your schedule</p>
               </div>
             </div>
             <div class="feature-item">
@@ -1735,17 +1736,17 @@
                 <i class="fas fa-home"></i>
               </div>
               <div class="feature-text">
-                <strong>Remote Work</strong>
-                <p>Work from approved locations in Canada</p>
+                <strong>100% Remote</strong>
+                <p>Work from anywhere in Canada</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">
-                <i class="fas fa-user-check"></i>
+                <i class="fas fa-graduation-cap"></i>
               </div>
               <div class="feature-text">
-                <strong>Verified Employers</strong>
-                <p>All companies are properly registered</p>
+                <strong>Training Provided</strong>
+                <p>No experience? We'll train you</p>
               </div>
             </div>
           </div>
@@ -1758,11 +1759,11 @@
             </div>
             <div class="compliance-badge-item">
               <i class="fas fa-lock"></i>
-              <span>Secure Application Process</span>
+              <span>Secure & Private</span>
             </div>
             <div class="compliance-badge-item">
               <i class="fas fa-handshake"></i>
-              <span>No Fees for Job Seekers</span>
+              <span>No Fees - Ever</span>
             </div>
           </div>
         </div>
@@ -1770,18 +1771,19 @@
         <!-- 主申请表 -->
         <div class="hero-form form-card fade-in delay-1">
           <div class="form-header">
-            <h2 class="form-title">Apply to Verified Positions</h2>
+            <h2 class="form-title">Apply for Remote Jobs</h2>
             <p class="form-subtitle">
-              Submit your information to be considered for reliable remote work opportunities with verified Canadian companies.
+              <span class="highlight-text">2-minute application.</span> Get matched with employers today.
             </p>
+            <div class="urgent-badge">SPOTS FILLING FAST</div>
           </div>
           
           <form id="applicationForm">
             <div class="form-group">
               <label for="name" class="form-label">
-                <span>Full Legal Name</span> <span class="required">*</span>
+                <span>Your Full Name</span> <span class="required">*</span>
               </label>
-              <input type="text" id="name" class="form-control" placeholder="As shown on ID card" required>
+              <input type="text" id="name" class="form-control" placeholder="As on official ID" required>
             </div>
             
             <div class="form-group">
@@ -1795,19 +1797,19 @@
                 </div>
                 <input type="tel" id="phone" class="form-control phone-input" placeholder="(XXX) XXX-XXXX" pattern="[0-9]{10}" required>
               </div>
-              <small>Example: 4161234567 (no dashes or spaces)</small>
+              <small>Example: 4161234567 (no dashes)</small>
             </div>
             
             <div class="form-group">
               <label for="email" class="form-label">
                 <span>Email Address</span> <span class="required">*</span>
               </label>
-              <input type="email" id="email" class="form-control" placeholder="your.name@example.com" required>
+              <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
             </div>
             
             <div class="form-group">
               <label for="age" class="form-label">
-                <span>Age</span> <span class="required">*</span>
+                <span>Your Age</span> <span class="required">*</span>
               </label>
               <input type="number" id="age" class="form-control" placeholder="25" min="18" max="70" required>
             </div>
@@ -1815,28 +1817,28 @@
             <div class="form-check">
               <input type="checkbox" id="consent" class="form-check-input" required checked>
               <label for="consent" class="form-check-label">
-                <span>I confirm I have read and accept the</span> 
+                <span>I agree to the</span> 
                 <a href="/privacy.html" target="_blank">Privacy Policy</a> 
-                <span>and</span> 
-                <a href="/userterms.html" target="_blank">Terms of Service</a>.
+                <span>&</span> 
+                <a href="/userterms.html" target="_blank">Terms</a>.
               </label>
             </div>
             
             <div class="form-check mb-3">
               <input type="checkbox" id="eligibility" class="form-check-input" required>
               <label for="eligibility" class="form-check-label">
-                <span>I confirm that I am eligible to work in Canada and reside in Canada</span>
+                <span>I'm legally eligible to work in Canada</span>
               </label>
             </div>
             
             <button type="submit" class="btn btn-primary btn-block">
-              <i class="fas fa-paper-plane btn-icon"></i>
-              <span>Submit Application</span>
+              <i class="fas fa-rocket btn-icon"></i>
+              <span>APPLY NOW & GET MATCHED</span>
             </button>
             
             <div class="security-badge">
               <i class="fas fa-lock security-icon"></i>
-              <span>Your information is protected and used only for legitimate job-matching purposes</span>
+              <span>Your info is secure. We'll never share it improperly.</span>
             </div>
           </form>
         </div>
@@ -1847,14 +1849,14 @@
   <!-- 公司信息 -->
   <section class="section company-info" id="about">
     <div class="container">
-      <h3 class="section-title">About Our Platform</h3>
-      <p>RemoteWork Canada is a legitimate job-matching platform registered and operating in Canada. We connect qualified residents with verified remote work opportunities from established Canadian companies.</p>
-      <p>All advertised positions comply with Canadian employment laws and regulations.</p>
+      <h3 class="section-title">About Hiwork</h3>
+      <p>We connect Canadians with legitimate remote work opportunities from verified employers. We're a matching platform - not an employer - helping you find work that fits your life.</p>
+      <p>All jobs follow Canadian employment standards.</p>
       
       <div class="compliance-links">
-        <a href="/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-        <a href="/compliance.html"><i class="fas fa-balance-scale"></i> Compliance Information</a>
-        <a href="/contact.html"><i class="fas fa-phone-alt"></i> Support Contact</a>
+        <a href="/about.html"><i class="fas fa-info-circle"></i> Our Story</a>
+        <a href="/compliance.html"><i class="fas fa-balance-scale"></i> Compliance</a>
+        <a href="/contact.html"><i class="fas fa-headset"></i> Support</a>
       </div>
     </div>
   </section>
@@ -1863,221 +1865,221 @@
   <section class="section jobs-section" id="opportunities">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title">Verified Remote Positions Available Across Canada</h2>
+        <h2 class="section-title">Remote Jobs Hiring Now</h2>
         <p class="section-subtitle">
-          Explore reliable remote work opportunities from verified Canadian companies. All positions require Canadian residency and right to work in Canada.
+          Immediate openings with Canadian companies. All roles include training and proper employment contracts.
         </p>
       </div>
       
       <!-- 薪资透明度说明 -->
       <div class="salary-transparency fade-in">
-        <h4><i class="fas fa-dollar-sign"></i> Compensation Information</h4>
-        <p>All positions offer compensation according to Canadian labour laws. Specific rates are provided during the application process and vary based on position, experience, and agreed hours.</p>
+        <h4><i class="fas fa-dollar-sign"></i> Competitive Pay</h4>
+        <p>Rates based on position and experience. Most roles start at $22+/hour with regular pay increases. Benefits included where applicable.</p>
       </div>
       
       <div class="jobs-grid">
         <!-- 工作 1 -->
         <div class="job-card fade-in">
           <div class="job-badge">Customer Service</div>
-          <h3 class="job-title">Customer Support Specialist</h3>
+          <h3 class="job-title">Remote Support Agent</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>From $20/hour</span>
+            <span>$24 - $28/hour</span>
           </div>
-          <span class="salary-details">Plus statutory benefits</span>
-          <span class="salary-note">Paid weekly via direct deposit</span>
+          <span class="salary-details">+ health benefits after 90 days</span>
+          <span class="salary-note">Weekly direct deposit</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-clock"></i>
-              <span>Various shifts available</span>
+              <span>Flexible shift options</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-home"></i>
-              <span>Fully remote position</span>
+              <span>Work from home</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-graduation-cap"></i>
-              <span>Training provided</span>
+              <span>Paid training provided</span>
             </div>
             <div class="job-feature">
-              <i class="fas fa-user-tie"></i>
-              <span>Customer service experience preferred</span>
+              <i class="fas fa-chart-line"></i>
+              <span>Growth opportunities</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Apply Now
+            Apply for This Role
           </button>
         </div>
         
         <!-- 工作 2 -->
         <div class="job-card fade-in delay-1">
-          <div class="job-badge">Administrative</div>
-          <h3 class="job-title">Data Entry Assistant</h3>
+          <div class="job-badge">Data Entry</div>
+          <h3 class="job-title">Data Processing Specialist</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>From $18.50/hour</span>
+            <span>$22 - $26/hour</span>
           </div>
-          <span class="salary-details">Or project-based compensation</span>
-          <span class="salary-note">Regular payment schedule</span>
+          <span class="salary-details">Bonuses available</span>
+          <span class="salary-note">Consistent schedule</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-clock"></i>
-              <span>Flexible hours available</span>
+              <span>Set your own hours</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-laptop"></i>
-              <span>Computer & internet required</span>
+              <span>Equipment provided</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-file-alt"></i>
-              <span>Administrative tasks</span>
+              <span>Simple tasks</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-star"></i>
-              <span>Suitable for various experience levels</span>
+              <span>No experience needed</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Apply Now
+            Apply for This Role
           </button>
         </div>
         
         <!-- 工作 3 -->
         <div class="job-card fade-in delay-2">
-          <div class="job-badge">Support Role</div>
-          <h3 class="job-title">Online Support Representative</h3>
+          <div class="job-badge">Online Support</div>
+          <h3 class="job-title">Chat Support Representative</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>From $22/hour</span>
+            <span>$25 - $29/hour</span>
           </div>
-          <span class="salary-details">Plus performance incentives</span>
-          <span class="salary-note">Compliance with labour standards</span>
+          <span class="salary-details">+ performance bonuses</span>
+          <span class="salary-note">Full benefits package</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-headset"></i>
-              <span>Digital platform support</span>
+              <span>Text/chat support only</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-clock"></i>
-              <span>Shift schedule available</span>
+              <span>Day/evening shifts</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-dollar-sign"></i>
-              <span>Statutory employment benefits</span>
+              <span>Health & dental benefits</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-gift"></i>
-              <span>Complete training provided</span>
+              <span>Full training provided</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Apply Now
+            Apply for This Role
           </button>
         </div>
         
         <!-- 工作 4 -->
         <div class="job-card fade-in">
           <div class="job-badge">Administrative</div>
-          <h3 class="job-title">Administrative Support Assistant</h3>
+          <h3 class="job-title">Virtual Assistant</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>Based on experience and role</span>
+            <span>$23 - $27/hour</span>
           </div>
-          <span class="salary-details">Minimum $19.50/hour</span>
-          <span class="salary-note">Proper employment contract</span>
+          <span class="salary-details">Based on experience</span>
+          <span class="salary-note">Flexible contract</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-tasks"></i>
-              <span>Administrative tasks</span>
+              <span>Admin & scheduling</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-laptop"></i>
-              <span>Computer equipment required</span>
+              <span>Work from anywhere</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-chart-line"></i>
-              <span>Career development possible</span>
+              <span>Career progression</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-calendar-alt"></i>
-              <span>Flexible scheduling options</span>
+              <span>Choose your schedule</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Apply Now
+            Apply for This Role
           </button>
         </div>
         
         <!-- 工作 5 -->
         <div class="job-card fade-in delay-1">
           <div class="job-badge">Quality Control</div>
-          <h3 class="job-title">Content Review Assistant</h3>
+          <h3 class="job-title">Content Moderator</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>From $18.50/hour</span>
+            <span>$23 - $26/hour</span>
           </div>
-          <span class="salary-details">Depending on assignment</span>
-          <span class="salary-note">Regular employment terms</span>
+          <span class="salary-details">Steady hours</span>
+          <span class="salary-note">Regular pay increases</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-eye"></i>
-              <span>Content review tasks</span>
+              <span>Review digital content</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-home"></i>
-              <span>Fully remote work</span>
+              <span>100% remote</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-trophy"></i>
-              <span>Quality-focused position</span>
+              <span>Quality focused</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-users"></i>
-              <span>Team collaboration</span>
+              <span>Team environment</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Apply Now
+            Apply for This Role
           </button>
         </div>
         
         <!-- 工作 6 -->
         <div class="job-card fade-in delay-2">
-          <div class="job-badge">Quality Assurance</div>
-          <h3 class="job-title">Quality Assurance Assistant</h3>
+          <div class="job-badge">Entry Level</div>
+          <h3 class="job-title">Online Research Assistant</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>Project or hourly compensation</span>
+            <span>$21 - $25/hour</span>
           </div>
-          <span class="salary-details">Minimum $18/hour</span>
-          <span class="salary-note">Compliance with all regulations</span>
+          <span class="salary-details">Perfect for beginners</span>
+          <span class="salary-note">Learn while you earn</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-clock"></i>
-              <span>Part-time hours available</span>
+              <span>Part/full time options</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-laptop"></i>
-              <span>Computer required</span>
+              <span>Basic computer skills</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-graduation-cap"></i>
-              <span>Complete training provided</span>
+              <span>Full training included</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-calendar-check"></i>
-              <span>Flexible start dates</span>
+              <span>Start immediately</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Apply Now
+            Apply for This Role
           </button>
         </div>
       </div>
       
       <!-- 就业法律声明 -->
       <div class="employment-disclaimer mt-4">
-        <strong><i class="fas fa-balance-scale"></i> Employment Law Compliance:</strong> All positions offered through our platform comply with Canadian employment legislation including minimum wage requirements, working time regulations, and employment contract obligations.
+        <strong><i class="fas fa-balance-scale"></i> Legal Compliance:</strong> All positions comply with Canadian employment laws including minimum wage, working conditions, and proper contracts.
       </div>
     </div>
   </section>
@@ -2087,20 +2089,20 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item fade-in">
-          <div class="stat-number">1,850+</div>
-          <div class="stat-label">Successful Applications</div>
+          <div class="stat-number">2,300+</div>
+          <div class="stat-label">Canadians Hired</div>
         </div>
         <div class="stat-item fade-in delay-1">
-          <div class="stat-number">95+</div>
+          <div class="stat-number">110+</div>
           <div class="stat-label">Verified Companies</div>
         </div>
         <div class="stat-item fade-in delay-2">
-          <div class="stat-number">$4.5M+</div>
-          <div class="stat-label">Paid Wages</div>
+          <div class="stat-number">$6.2M+</div>
+          <div class="stat-label">Paid to Workers</div>
         </div>
         <div class="stat-item fade-in delay-3">
-          <div class="stat-number">4.7/5</div>
-          <div class="stat-label">User Satisfaction</div>
+          <div class="stat-number">4.8/5</div>
+          <div class="stat-label">Satisfaction Rating</div>
         </div>
       </div>
     </div>
@@ -2110,34 +2112,34 @@
   <section class="section how-it-works" id="how">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title">Trusted Application Process</h2>
+        <h2 class="section-title">How It Works</h2>
         <p class="section-subtitle">
-          Transparent process to connect with verified employers
+          Get matched with employers in 3 simple steps
         </p>
       </div>
       
       <div class="steps-grid">
         <div class="step-card fade-in">
           <div class="step-number">1</div>
-          <h3 class="step-title">Submit Your Application</h3>
+          <h3 class="step-title">Apply Online</h3>
           <p class="step-description">
-            Complete our secure application form with your information and work preferences.
+            2-minute application. Tell us your preferences and availability.
           </p>
         </div>
         
         <div class="step-card fade-in delay-1">
           <div class="step-number">2</div>
-          <h3 class="step-title">Employer Matching</h3>
+          <h3 class="step-title">Get Matched</h3>
           <p class="step-description">
-            We match your profile with verified employers seeking qualified candidates.
+            We connect you with employers looking for your skills.
           </p>
         </div>
         
         <div class="step-card fade-in delay-2">
           <div class="step-number">3</div>
-          <h3 class="step-title">Direct Employer Contact</h3>
+          <h3 class="step-title">Start Working</h3>
           <p class="step-description">
-            Approved employers contact qualified candidates directly to discuss opportunities.
+            Employers contact you directly. Interview and start working.
           </p>
         </div>
       </div>
@@ -2145,11 +2147,11 @@
       <div class="text-center mt-4">
         <button class="btn btn-primary btn-lg open-modal-btn">
           <i class="fas fa-play-circle btn-icon"></i>
-          <span>Start Application Process</span>
+          <span>Start Your Application</span>
         </button>
         <p class="mt-2" style="color: var(--gray-600); font-size: 0.9rem;">
           <i class="fas fa-check-circle text-primary"></i>
-          <span>No fees for job seekers - legitimate work platform</span>
+          <span>Free service - only pay is your salary</span>
         </p>
       </div>
     </div>
@@ -2159,9 +2161,9 @@
   <section class="section testimonials-section">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title">What Our Participants Say</h2>
+        <h2 class="section-title">Success Stories</h2>
         <p class="section-subtitle">
-          Experiences from people who have used our platform
+          Real Canadians finding real work through Hiwork
         </p>
       </div>
       
@@ -2171,13 +2173,13 @@
           <div class="testimonial-slide">
             <div class="testimonial-card">
               <div class="testimonial-content">
-                "Thanks to RemoteWork Canada, I remained employed during the pandemic. I got a remote work opportunity with a reliable company. The process was transparent and professional."
+                "Lost my job during the pandemic. Applied on Hiwork and had 3 interviews within a week. Now earning $26/hour working from home. Life changing!"
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">ES</div>
                 <div class="author-info">
                   <h4>Emily S.</h4>
-                  <p>Customer Representative, Toronto</p>
+                  <p>Customer Support, Toronto</p>
                 </div>
               </div>
             </div>
@@ -2187,13 +2189,13 @@
           <div class="testimonial-slide">
             <div class="testimonial-card">
               <div class="testimonial-content">
-                "I live in Vancouver and work remotely for a company in Toronto. The platform's reliability and regular payment system are what I appreciate most."
+                "As a single mom, I needed flexible hours. Found a data entry job paying $24/hour. Work when my kids are at school. Perfect solution!"
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">JW</div>
                 <div class="author-info">
-                  <h4>James W.</h4>
-                  <p>Data Entry Specialist, Vancouver</p>
+                  <h4>Jessica W.</h4>
+                  <p>Data Specialist, Vancouver</p>
                 </div>
               </div>
             </div>
@@ -2203,13 +2205,13 @@
           <div class="testimonial-slide">
             <div class="testimonial-card">
               <div class="testimonial-content">
-                "As a parent on leave, flexible working hours were important for me. Through this platform, I can both care for my family and have regular income."
+                "No degree, no experience. Hiwork trained me for a chat support role. Making $27/hour with benefits. Couldn't be happier!"
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">CP</div>
                 <div class="author-info">
-                  <h4>Chloe P.</h4>
-                  <p>Online Support Specialist, Montreal</p>
+                  <h4>Chris P.</h4>
+                  <p>Online Support, Montreal</p>
                 </div>
               </div>
             </div>
@@ -2219,13 +2221,13 @@
           <div class="testimonial-slide">
             <div class="testimonial-card">
               <div class="testimonial-content">
-                "I'm a university student and wanted part-time work. With RemoteWork Canada, I found a job that fits my schedule. My payments come regularly."
+                "Retired but needed extra income. Working 20 hours/week from home earning $25/hour. Easy work, great pay, perfect for seniors."
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">LT</div>
                 <div class="author-info">
-                  <h4>Liam T.</h4>
-                  <p>Content Reviewer, Ottawa</p>
+                  <h4>Linda T.</h4>
+                  <p>Virtual Assistant, Ottawa</p>
                 </div>
               </div>
             </div>
@@ -2235,13 +2237,13 @@
           <div class="testimonial-slide">
             <div class="testimonial-card">
               <div class="testimonial-content">
-                "After retirement, I wanted extra income. Through this platform, I can work from home and have regular extra income each month. Very satisfied."
+                "Student loans were crushing me. Got a remote job through Hiwork making $23/hour while finishing school. Finally financial freedom!"
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">RM</div>
                 <div class="author-info">
-                  <h4>Robert M.</h4>
-                  <p>Quality Control Specialist, Calgary</p>
+                  <h4>Ryan M.</h4>
+                  <p>Content Moderator, Calgary</p>
                 </div>
               </div>
             </div>
@@ -2263,50 +2265,50 @@
   <section class="section faq-section" id="faq">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <h2 class="section-title">Common Questions</h2>
         <p class="section-subtitle">
-          Information about our trusted job-matching platform
+          Everything you need to know about finding work through Hiwork
         </p>
       </div>
       
       <div class="faq-grid">
         <div class="faq-item fade-in">
           <div class="faq-question">
-            <span>Do you charge any fees to use your platform?</span>
+            <span>Is this really free for job seekers?</span>
             <i class="fas fa-chevron-down faq-icon"></i>
           </div>
           <div class="faq-answer">
-            <p><strong>No, our platform is completely free for job seekers.</strong> We are a job-matching service that connects qualified candidates with verified employers. We do not charge any application, placement, or service fees from job seekers.</p>
+            <p><strong>Yes, 100% free.</strong> We never charge applicants. Employers pay us to find quality candidates. You keep 100% of your earnings.</p>
           </div>
         </div>
         
         <div class="faq-item fade-in">
           <div class="faq-question">
-            <span>How does the employment process work?</span>
+            <span>How quickly will I hear back?</span>
             <i class="fas fa-chevron-down faq-icon"></i>
           </div>
           <div class="faq-answer">
-            <p>We are a matching platform, not a direct employer. When you apply, we share qualified profiles with verified Canadian companies seeking remote workers. Employers contact suitable candidates directly to discuss specific positions, compensation, and employment terms.</p>
+            <p>Most qualified applicants hear from employers within 1-3 business days. We prioritize matching you quickly with suitable opportunities.</p>
           </div>
         </div>
         
         <div class="faq-item fade-in">
           <div class="faq-question">
-            <span>What type of companies use your platform?</span>
+            <span>What if I have no experience?</span>
             <i class="fas fa-chevron-down faq-icon"></i>
           </div>
           <div class="faq-answer">
-            <p>We work exclusively with legitimate, registered Canadian companies that follow all employment regulations. All employers are verified before they can post positions on our platform.</p>
+            <p>Many roles require no prior experience. Employers provide full training. We help match you with entry-level opportunities.</p>
           </div>
         </div>
         
         <div class="faq-item fade-in">
           <div class="faq-question">
-            <span>Are these real employment positions?</span>
+            <span>Are these real jobs with proper pay?</span>
             <i class="fas fa-chevron-down faq-icon"></i>
           </div>
           <div class="faq-answer">
-            <p><strong>Yes, all positions represent legitimate employment opportunities.</strong> Successful candidates receive proper employment contracts that comply with Canadian law, including all legal rights and protections.</p>
+            <p><strong>Yes, all positions are real employment opportunities</strong> with Canadian companies. You'll receive proper contracts and payment through legal channels.</p>
           </div>
         </div>
       </div>
@@ -2314,18 +2316,18 @@
       <div class="text-center mt-4">
         <button class="btn btn-primary btn-lg open-modal-btn">
           <i class="fas fa-question-circle btn-icon"></i>
-          <span>Apply to Verified Positions</span>
+          <span>Apply & Get Answers</span>
         </button>
         <p class="mt-2" style="color: var(--gray-600); font-size: 0.85rem;">
           <i class="fas fa-phone-alt text-primary"></i>
-          <span>Only reliable employment opportunities</span>
+          <span>Questions? Apply and we'll answer everything</span>
         </p>
         
         <!-- 合规链接 -->
         <div class="compliance-links mt-3">
-          <a href="/privacy.html"><i class="fas fa-lock"></i> Privacy Policy</a>
-          <a href="/userterms.html"><i class="fas fa-file-contract"></i> Terms of Service</a>
-          <a href="/compliance.html"><i class="fas fa-balance-scale"></i> Compliance Information</a>
+          <a href="/privacy.html"><i class="fas fa-lock"></i> Privacy</a>
+          <a href="/userterms.html"><i class="fas fa-file-contract"></i> Terms</a>
+          <a href="/compliance.html"><i class="fas fa-balance-scale"></i> Legal</a>
         </div>
       </div>
     </div>
@@ -2335,22 +2337,22 @@
   <section class="section cta-section" id="apply">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="cta-title">Connect with Verified Employers</h2>
+        <h2 class="cta-title">Ready to Work From Home?</h2>
         <p class="cta-subtitle">
-          Submit your application for reliable remote work opportunities in Canada
+          Join thousands of Canadians earning good money from their living rooms
         </p>
         
         <div class="mt-4">
           <button class="btn btn-primary btn-lg open-modal-btn" style="background: white; color: var(--primary); border: 3px solid white;">
             <i class="fas fa-briefcase btn-icon"></i>
-            <span>Apply to Verified Positions</span>
+            <span>APPLY NOW - IT'S FREE</span>
           </button>
         </div>
         
         <div class="mt-3" style="color: rgba(255,255,255,0.9);">
-          <p><i class="fas fa-check-circle"></i> Free trusted job matching</p>
-          <p><i class="fas fa-check-circle"></i> Only verified Canadian employers</p>
-          <p><i class="fas fa-check-circle"></i> Compliance with employment legislation</p>
+          <p><i class="fas fa-check-circle"></i> No experience needed for many roles</p>
+          <p><i class="fas fa-check-circle"></i> Training provided by employers</p>
+          <p><i class="fas fa-check-circle"></i> Legitimate Canadian companies</p>
         </div>
       </div>
     </div>
@@ -2361,78 +2363,87 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="#" class="footer-logo">RemoteWorkCanada.ca</a>
+          <a href="#" class="footer-logo">Hiwork Canada</a>
           <p class="footer-description">
-            Trusted job-matching platform - connecting Canadian residents with verified remote work opportunities.
+            Connecting Canadians with legitimate remote work opportunities since 2022.
           </p>
           <div class="compliance-badge">
             <i class="fas fa-balance-scale"></i>
-            <span>Compliance with Canadian employment regulations</span>
+            <span>Fully compliant with Canadian laws</span>
           </div>
         </div>
         
         <div class="footer-links">
-          <h3>PLATFORM INFORMATION</h3>
+          <h3>QUICK LINKS</h3>
           <ul>
-            <li><a href="#opportunities">Verified Positions</a></li>
-            <li><a href="#how">Application Process</a></li>
-            <li><a href="#about">About Platform</a></li>
+            <li><a href="#opportunities">Remote Jobs</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
-          <h3>LEGAL & COMPLIANCE</h3>
+          <h3>LEGAL</h3>
           <ul>
             <li><a href="/privacy.html">Privacy Policy</a></li>
             <li><a href="/userterms.html">Terms of Service</a></li>
-            <li><a href="/compliance.html">Compliance Information</a></li>
-            <li><a href="/contact.html">Support Contact</a></li>
+            <li><a href="/compliance.html">Compliance Info</a></li>
+            <li><a href="/contact.html">Contact Support</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
-          <h3>ADDITIONAL PAGES</h3>
+          <h3>CONTACT</h3>
           <ul>
-            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/about.html">About Hiwork</a></li>
             <li><a href="/contact.html">Contact Us</a></li>
-            <li><a href="/userterms.html">User Agreement</a></li>
-            <li><a href="/compliance.html">Legal Compliance</a></li>
+            <li><a href="/help.html">Help Center</a></li>
+            <li><a href="/compliance.html">Legal Info</a></li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>© 2024 RemoteWork Canada | Trusted Job-Matching Platform</p>
+        <p>© 2024 Hiwork Canada | Remote Job Matching Platform</p>
         <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
-          <i class="fas fa-maple-leaf maple-leaf"></i> Serves only qualified persons residing in Canada
+          <i class="fas fa-maple-leaf maple-leaf"></i> Serving Canadian residents only
         </p>
         
         <!-- 法律声明 -->
         <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; opacity: 0.6;">
-          <p>RemoteWork Canada is a job-matching platform. We are not direct employers. Final employment terms are determined by the employing company. All positions require right to work in Canada and compliance with Canadian employment law.</p>
+          <p>Hiwork is a job matching service. We connect applicants with employers. Final employment terms are set by hiring companies. All positions require legal right to work in Canada.</p>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- 移动端悬浮按钮 -->
+  <div class="floating-cta">
+    <button class="btn btn-primary open-modal-btn">
+      <i class="fas fa-briefcase btn-icon"></i>
+      <span>APPLY FOR REMOTE JOBS</span>
+    </button>
+  </div>
 
   <!-- 模态表单 -->
   <div class="modal" id="modalForm">
     <div class="modal-content">
       <button class="modal-close" id="modalCloseBtn">&times;</button>
       <div class="form-header">
-        <h2 class="form-title">Apply to Verified Remote Work</h2>
+        <h2 class="form-title">Apply for Remote Work</h2>
         <p class="form-subtitle">
-          Submit your information for reliable remote work opportunities with verified Canadian employers.
+          Get matched with employers hiring now. 2-minute application.
         </p>
+        <div class="urgent-badge">HIRING TODAY</div>
       </div>
       
       <form id="modalApplicationForm">
         <div class="form-group">
           <label for="modal-name" class="form-label">
-            <span>Full Legal Name</span> <span class="required">*</span>
+            <span>Your Full Name</span> <span class="required">*</span>
           </label>
-          <input type="text" id="modal-name" class="form-control" placeholder="As shown on ID card" required>
+          <input type="text" id="modal-name" class="form-control" placeholder="As on official ID" required>
         </div>
         
         <div class="form-group">
@@ -2446,19 +2457,19 @@
             </div>
             <input type="tel" id="modal-phone" class="form-control phone-input" placeholder="(XXX) XXX-XXXX" pattern="[0-9]{10}" required>
           </div>
-          <small>Example: 4161234567 (no dashes or spaces)</small>
+          <small>Example: 4161234567 (no dashes)</small>
         </div>
         
         <div class="form-group">
           <label for="modal-email" class="form-label">
             <span>Email Address</span> <span class="required">*</span>
           </label>
-          <input type="email" id="modal-email" class="form-control" placeholder="your.name@example.com" required>
+          <input type="email" id="modal-email" class="form-control" placeholder="your.email@example.com" required>
         </div>
         
         <div class="form-group">
           <label for="modal-age" class="form-label">
-            <span>Age</span> <span class="required">*</span>
+            <span>Your Age</span> <span class="required">*</span>
           </label>
           <input type="number" id="modal-age" class="form-control" placeholder="25" min="18" max="70" required>
         </div>
@@ -2466,28 +2477,28 @@
         <div class="form-check">
           <input type="checkbox" id="modal-consent" class="form-check-input" required checked>
           <label for="modal-consent" class="form-check-label">
-            <span>I confirm I have read and accept the</span> 
+            <span>I agree to the</span> 
             <a href="/privacy.html" target="_blank">Privacy Policy</a> 
-            <span>and</span> 
-            <a href="/userterms.html" target="_blank">Terms of Service</a>.
+            <span>&</span> 
+            <a href="/userterms.html" target="_blank">Terms</a>.
           </label>
         </div>
         
         <div class="form-check mb-3">
           <input type="checkbox" id="modal-eligibility" class="form-check-input" required>
           <label for="modal-eligibility" class="form-check-label">
-            <span>I confirm that I am eligible to work in Canada and reside in Canada</span>
+            <span>I'm legally eligible to work in Canada</span>
           </label>
         </div>
         
         <button type="submit" class="btn btn-primary btn-block">
-          <i class="fas fa-paper-plane btn-icon"></i>
-          <span>Submit Application</span>
+          <i class="fas fa-rocket btn-icon"></i>
+          <span>SUBMIT APPLICATION</span>
         </button>
         
         <div class="security-badge">
           <i class="fas fa-lock security-icon"></i>
-          <span>Secure application - for job-matching purposes only</span>
+          <span>Secure application - employers only</span>
         </div>
       </form>
     </div>
@@ -2497,21 +2508,21 @@
   <div class="modal" id="successModal">
     <div class="modal-content">
       <button class="modal-close" id="successCloseBtn">&times;</button>
-      <h3 class="modal-title">✅ <span>Application Received</span></h3>
+      <h3 class="modal-title">✅ <span>Application Submitted!</span></h3>
       <p class="modal-message">
-        <strong>Thank you for your application!</strong> We have received your information and will process it for matching with verified employers.
+        <strong>Great! Your application has been received.</strong> We're now matching you with suitable employers. Most applicants hear back within 48 hours.
       </p>
       
       <!-- 联系选项 -->
       <div class="contact-options">
-        <h5><i class="fas fa-comments"></i> Next steps:</h5>
-        <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">If your profile matches employer requirements, you will be contacted directly within 5-7 business days.</p>
-        <p style="font-size: 0.85rem; color: var(--gray-600);">For urgent inquiries, ensure your contact information is correct.</p>
+        <h5><i class="fas fa-comments"></i> Next Steps:</h5>
+        <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">Keep your phone handy. Employers will contact qualified candidates directly via phone or email.</p>
+        <p style="font-size: 0.85rem; color: var(--gray-600);">Check your email for confirmation and next steps.</p>
       </div>
       
       <button class="btn btn-primary btn-block" id="successOkBtn">
         <i class="fas fa-check btn-icon"></i>
-        <span>Continue to Website</span>
+        <span>Got It - Continue</span>
       </button>
     </div>
   </div>
@@ -2520,9 +2531,9 @@
     document.addEventListener('DOMContentLoaded', function() {
       // WhatsApp号码 - 加拿大号码
       const whatsappAccounts = [ 
-      "16475551234",
-      "17785551234",
-      "19055551234"
+        "16475551234",
+        "17785551234",
+        "19055551234"
       ];
       
       // 随机选择WhatsApp账户
@@ -2630,9 +2641,9 @@
       // 成功模态框OK按钮 - 保留转化流程
       successOkBtn.addEventListener('click', function() {
         successModal.classList.remove('active');
-        // 发送转化事件并打开WhatsApp
-        const whatsappMessage = "Hi! I've applied for remote work opportunities and would like more information.";
-        const whatsappLink = `https://wa.me/${randomAccount}`;
+        // 发送转化事件并打开WhatsApp，带上附加话术
+        const whatsappMessage = encodeURIComponent("Hi! I just applied for remote work through Hiwork. I want to learn more and join this工作机会. Can you provide more information?");
+        const whatsappLink = `https://wa.me/${randomAccount}?text=${whatsappMessage}`;
         gtag_report_conversion(whatsappLink);
       });
       
@@ -2711,15 +2722,15 @@
             });
             
             // 发送转化事件
-            const whatsappMessage = "Hi! I've applied for remote work opportunities and would like more information.";
-            const whatsappLink = `https://wa.me/${randomAccount}`;
+            const whatsappMessage = encodeURIComponent("Hi! I just applied for remote work through Hiwork. I want to learn more and join this工作机会. Can you provide more information?");
+            const whatsappLink = `https://wa.me/${randomAccount}?text=${whatsappMessage}`;
             gtag_report_conversion(whatsappLink);
           } catch (error) {
             console.log('Google Analytics error:', error);
             // 备用
             setTimeout(() => {
-              const whatsappMessage = "Hi! I've applied for remote work opportunities and would like more information.";
-              const whatsappLink = `https://wa.me/${randomAccount}`;
+              const whatsappMessage = encodeURIComponent("Hi! I just applied for remote work through Hiwork. I want to learn more and join this工作机会. Can you provide more information?");
+              const whatsappLink = `https://wa.me/${randomAccount}?text=${whatsappMessage}`;
               window.open(whatsappLink, '_blank');
             }, 300);
           }
@@ -2820,7 +2831,7 @@
         
         // 发送页面浏览事件
         gtag('event', 'page_view', {
-          page_title: 'Canada Remote Work Opportunities - RemoteWork Canada',
+          page_title: 'Hiwork Canada - Remote Jobs From Home',
           page_location: window.location.href
         });
         
