@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad - SWJOB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #006847;
+      --secondary: #FFFFFF;
+      --accent: #CE1126;
+      --dark: #1A202C;
+      --gray-100: #F8F9FA;
+      --gray-200: #E9ECEF;
+      --gray-300: #DEE2E6;
+      --gray-600: #6C757D;
+      --gray-800: #343A40;
+      
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Source Sans Pro', sans-serif;
+      
+      --space-sm: 0.75rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      
+      --shadow-sm: 0 1px 3px rgba(0, 104, 71, 0.1);
+      --shadow-md: 0 3px 10px rgba(0, 104, 71, 0.12);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-800);
+      background-color: var(--gray-100);
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+    
+    /* Header */
+    .header {
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .back-btn:hover {
+      background: #005035;
+      transform: translateY(-2px);
+    }
+    
+    /* Main Content */
+    .main-content {
+      padding: var(--space-xl) 0;
+    }
+    
+    .privacy-container {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .privacy-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+      padding-bottom: var(--space-lg);
+      border-bottom: 2px solid var(--gray-200);
+    }
+    
+    .privacy-title {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .last-updated {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+    
+    /* Content Sections */
+    .content-section {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: var(--space-md);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .section-content {
+      color: var(--gray-800);
+      line-height: 1.7;
+    }
+    
+    .section-content p {
+      margin-bottom: 1rem;
+    }
+    
+    .section-content ul, .section-content ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .section-content li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .highlight-box {
+      background: rgba(0, 104, 71, 0.05);
+      border-left: 4px solid var(--primary);
+      padding: var(--space-md);
+      margin: var(--space-md) 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    
+    .contact-info {
+      background: linear-gradient(135deg, var(--primary), #005035);
+      color: white;
+      padding: var(--space-lg);
+      border-radius: var(--radius-lg);
+      margin-top: var(--space-xl);
+    }
+    
+    .contact-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: var(--space-md);
+    }
+    
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: var(--space-lg) 0;
+      margin-top: var(--space-xl);
+    }
+    
+    .footer-content {
+      text-align: center;
+    }
+    
+    .footer-logo {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: var(--space-md);
+      display: inline-block;
+    }
+    
+    .footer-text {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+      flex-wrap: wrap;
+    }
+    
+    .footer-link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-link:hover {
+      color: white;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .privacy-container {
+        padding: var(--space-lg);
+      }
+      
+      .privacy-title {
+        font-size: 1.75rem;
+      }
+      
+      .section-title {
+        font-size: 1.25rem;
+      }
+      
+      .contact-info {
+        padding: var(--space-md);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .privacy-container {
+        padding: var(--space-md);
+      }
+      
+      .privacy-title {
+        font-size: 1.5rem;
+      }
+      
+      .nav {
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <span>SWJOB</span>
+        </a>
+        <a href="index.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i>
+          Volver al Inicio
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <div class="privacy-container">
+        <div class="privacy-header">
+          <h1 class="privacy-title">Política de Privacidad</h1>
+          <p class="last-updated">Última actualización: Enero 2024</p>
+        </div>
+        
+        <div class="content-section">
+          <h2 class="section-title">1. Introducción</h2>
+          <div class="section-content">
+            <p>En <strong>SWJOB</strong>, nos tomamos muy en serio la privacidad de nuestros usuarios. Esta Política de Privacidad describe cómo recopilamos, utilizamos, almacenamos y protegemos su información personal cuando utiliza nuestro sitio web y servicios.</p>
+            
+            <div class="highlight-box">
+              <p><strong>Información importante:</strong> Al utilizar nuestros servicios, usted acepta las prácticas descritas en esta política de privacidad. Si no está de acuerdo con estos términos, le recomendamos que no utilice nuestro sitio web.</p>
+            </div>
+            
+            <p>Esta política cumple con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares de México y otras regulaciones aplicables.</p>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2 class="section-title">2. Información que Recopilamos</h2>
+          <div class="section-content">
+            <p>Recopilamos la siguiente información cuando usted utiliza nuestros servicios:</p>
+            
+            <h3>2.1 Información proporcionada directamente</h3>
+            <ul>
+              <li><strong>Información de contacto:</strong> Nombre completo, número de teléfono, dirección de correo electrónico.</li>
+              <li><strong>Información demográfica:</strong> Edad, ubicación (ciudad/estado).</li>
+              <li><strong>Información profesional:</strong> Experiencia laboral, habilidades, educación.</li>
+              <li><strong>Preferencias laborales:</strong> Tipo de trabajo buscado, disponibilidad horaria.</li>
+            </ul>
+            
+            <h3>2.2 Información recopilada automáticamente</h3>
+            <ul>
+              <li><strong>Información del dispositivo:</strong> Tipo de dispositivo, sistema operativo, navegador web.</li>
+              <li><strong>Información de uso:</strong> Páginas visitadas, tiempo en el sitio, acciones realizadas.</li>
+              <li><strong>Información de ubicación:</strong> País, ciudad (derivada de la dirección IP).</li>
+              <li><strong>Cookies y tecnologías similares:</strong> Para mejorar su experiencia en el sitio.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2 class="section-title">3. Uso de la Información</h2>
+          <div class="section-content">
+            <p>Utilizamos su información personal para los siguientes propósitos:</p>
+            
+            <ol>
+              <li><strong>Proveer servicios:</strong> Conectarlo con oportunidades de trabajo remoto que coincidan con su perfil.</li>
+              <li><strong>Comunicación:</strong> Enviarle información sobre oportunidades laborales, actualizaciones del servicio y respuestas a sus consultas.</li>
+              <li><strong>Mejora de servicios:</strong> Analizar el uso de nuestro sitio para mejorar la experiencia del usuario.</li>
+              <li><strong>Cumplimiento legal:</strong> Cumplir con leyes y regulaciones aplicables.</li>
+              <li><strong>Seguridad:</strong> Proteger nuestros servicios y usuarios contra actividades fraudulentas.</li>
+            </ol>
+            
+            <p><strong>No vendemos ni alquilamos su información personal a terceros.</strong></p>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2 class="section-title">4. Compartir Información con Terceros</h2>
+          <div class="section-content">
+            <p>Podemos compartir su información en las siguientes circunstancias:</p>
+            
+            <ul>
+              <li><strong>Con empresas socias:</strong> Para conectarle con oportunidades de trabajo remoto relevante.</li>
+              <li><strong>Proveedores de servicios:</strong> Con empresas que nos ayudan a operar nuestro negocio (alojamiento web, análisis, marketing).</li>
+              <li><strong>Cumplimiento legal:</strong> Cuando sea requerido por ley o para proteger nuestros derechos.</li>
+              <li><strong>Con su consentimiento:</strong> Cuando nos dé su permiso explícito.</li>
+            </ul>
+            
+            <div class="highlight-box">
+              <p><strong>Transparencia:</strong> Solo compartimos la información necesaria para el propósito específico y exigimos que terceros mantengan la confidencialidad de su información.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2 class="section-title">5. Seguridad de la Información</h2>
+          <div class="section-content">
+            <p>Implementamos medidas de seguridad técnicas y organizativas para proteger su información personal contra:</p>
+            
+            <ul>
+              <li>Acceso no autorizado</li>
+              <li>Alteración, divulgación o destrucción</li>
+              <li>Uso indebido de cualquier tipo</li>
+            </ul>
+            
+            <p>Entre las medidas de seguridad que implementamos se incluyen:</p>
+            
+            <ul>
+              <li>Cifrado de datos sensibles</li>
+              <li>Firewalls y sistemas de detección de intrusiones</li>
+              <li>Acceso restringido a información personal</li>
+              <li>Capacitación en seguridad para nuestro personal</li>
+              <li>Revisión regular de prácticas de seguridad</li>
+            </ul>
+            
+            <p>A pesar de estas medidas, ninguna transmisión por Internet o sistema de almacenamiento electrónico es 100% seguro.</p>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2 class="section-title">6. Sus Derechos ARCO</h2>
+          <div class="section-content">
+            <p>De acuerdo con la legislación mexicana, usted tiene los siguientes derechos sobre sus datos personales:</p>
+            
+            <ul>
+              <li><strong>Acceso:</strong> Solicitar información sobre qué datos tenemos de usted.</li>
+              <li><strong>Rectificación:</strong> Corregir información inexacta o incompleta.</li>
+              <li><strong>Cancelación:</strong> Solicitar la eliminación de sus datos personales.</li>
+              <li><strong>Oposición:</strong> Oponerse al tratamiento de sus datos para fines específicos.</li>
+            </ul>
+            
+            <p>Para ejercer estos derechos, puede contactarnos a través de los medios proporcionados en la sección de contacto de esta política.</p>
+            
+            <div class="highlight-box">
+              <p><strong>Proceso de solicitud:</strong> Tendremos un plazo de 20 días hábiles para responder a su solicitud ARCO. Es posible que solicitemos información adicional para verificar su identidad.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2 class="section-title">7. Retención de Datos</h2>
+          <div class="section-content">
+            <p>Conservamos su información personal solo durante el tiempo necesario para:</p>
+            
+            <ul>
+              <li>Cumplir con los propósitos descritos en esta política</li>
+              <li>Satisfacer nuestras necesidades comerciales legítimas</li>
+              <li>Cumplir con requisitos legales, regulatorios, fiscales o contables</li>
+              <li>Resolver disputas y hacer cumplir nuestros acuerdos</li>
+            </ul>
+            
+            <p>Cuando ya no necesitemos su información personal, la eliminaremos de manera segura o la haremos anónima.</p>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2 class="section-title">8. Cookies y Tecnologías Similares</h2>
+          <div class="section-content">
+            <p>Utilizamos cookies y tecnologías similares para:</p>
+            
+            <ul>
+              <li>Recordar sus preferencias</li>
+              <li>Analizar el uso del sitio</li>
+              <li>Personalizar su experiencia</li>
+              <li>Proporcionar funciones de redes sociales</li>
+            </ul>
+            
+            <p>Puede controlar el uso de cookies a través de la configuración de su navegador. Sin embargo, deshabilitar cookies puede afectar la funcionalidad de nuestro sitio.</p>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2 class="section-title">9. Menores de Edad</h2>
+          <div class="section-content">
+            <p>Nuestros servicios están dirigidos a personas mayores de 18 años. No recopilamos intencionalmente información personal de menores de edad.</p>
+            
+            <p>Si es padre/madre o tutor y cree que su hijo nos ha proporcionado información personal, contáctenos inmediatamente para que podamos eliminar dicha información.</p>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <h2 class="section-title">10. Cambios a esta Política</h2>
+          <div class="section-content">
+            <p>Podemos actualizar esta Política de Privacidad periódicamente. Le notificaremos sobre cambios significativos:</p>
+            
+            <ul>
+              <li>Publicando la nueva política en nuestro sitio web</li>
+              <li>Enviando una notificación por correo electrónico (si tenemos su dirección)</li>
+              <li>Mostrando un aviso destacado en nuestro sitio</li>
+            </ul>
+            
+            <p>Le recomendamos que revise esta política regularmente para mantenerse informado sobre cómo protegemos su información.</p>
+          </div>
+        </div>
+        
+        <div class="contact-info">
+          <h3 class="contact-title">Contacto para Asuntos de Privacidad</h3>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <strong>Correo Electrónico:</strong><br>
+                privacidad@ins.baby
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <strong>Teléfono:</strong><br>
+                +52 55 1234 5678
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <strong>Dirección:</strong><br>
+                Av. Paseo de la Reforma 505,<br>
+                Cuauhtémoc, 06500 Ciudad de México, CDMX
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <strong>Horario de Atención:</strong><br>
+                Lunes a Viernes: 9:00 AM - 6:00 PM
+              </div>
+            </div>
+          </div>
+          
+          <div style="margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px solid rgba(255, 255, 255, 0.2);">
+            <p style="font-size: 0.9rem; opacity: 0.9;">
+              <strong>Responsable del tratamiento de datos:</strong> SWJOB S.A. de C.V.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="footer-logo">SWJOB</a>
+        <p class="footer-text">Conectando profesionales mexicanos con oportunidades de trabajo remoto</p>
+        <p class="footer-text">© 2024 SWJOB. Todos los derechos reservados.</p>
+        
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="privacy.html" class="footer-link">Política de Privacidad</a>
+          <a href="userterms.html" class="footer-link">Términos de Servicio</a>
+          <a href="index.html#faq" class="footer-link">Preguntas Frecuentes</a>
+          <a href="index.html#contact" class="footer-link">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Add last updated date dynamically
+      const lastUpdated = document.querySelector('.last-updated');
+      if (lastUpdated) {
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        lastUpdated.textContent = `Última actualización: ${today.toLocaleDateString('es-MX', options)}`;
+      }
+    });
+  </script>
+</body>
+</html>
