@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos de Servicio - SWJOB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #006847;
+      --secondary: #FFFFFF;
+      --accent: #CE1126;
+      --dark: #1A202C;
+      --gray-100: #F8F9FA;
+      --gray-200: #E9ECEF;
+      --gray-300: #DEE2E6;
+      --gray-600: #6C757D;
+      --gray-800: #343A40;
+      
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Source Sans Pro', sans-serif;
+      
+      --space-sm: 0.75rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      
+      --shadow-sm: 0 1px 3px rgba(0, 104, 71, 0.1);
+      --shadow-md: 0 3px 10px rgba(0, 104, 71, 0.12);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-800);
+      background-color: var(--gray-100);
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+    
+    /* Header */
+    .header {
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .back-btn:hover {
+      background: #005035;
+      transform: translateY(-2px);
+    }
+    
+    /* Main Content */
+    .main-content {
+      padding: var(--space-xl) 0;
+    }
+    
+    .terms-container {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .terms-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+      padding-bottom: var(--space-lg);
+      border-bottom: 2px solid var(--gray-200);
+    }
+    
+    .terms-title {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .last-updated {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+    
+    /* Content Sections */
+    .content-section {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: var(--space-md);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .section-subtitle {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--dark);
+      margin: var(--space-md) 0 var(--space-sm);
+    }
+    
+    .section-content {
+      color: var(--gray-800);
+      line-height: 1.7;
+    }
+    
+    .section-content p {
+      margin-bottom: 1rem;
+    }
+    
+    .section-content ul, .section-content ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .section-content li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .highlight-box {
+      background: rgba(206, 17, 38, 0.05);
+      border-left: 4px solid var(--accent);
+      padding: var(--space-md);
+      margin: var(--space-md) 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    
+    .info-box {
+      background: rgba(0, 104, 71, 0.05);
+      border: 1px solid var(--gray-200);
+      padding: var(--space-md);
+      margin: var(--space-md) 0;
+      border-radius: var(--radius-md);
+    }
+    
+    .definition-list {
+      margin: var(--space-md) 0;
+    }
+    
+    .definition-term {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+    
+    .definition-description {
+      margin-bottom: var(--space-sm);
+      padding-left: 1rem;
+    }
+    
+    /* TOC - Table of Contents */
+    .toc-container {
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: var(--space-lg) 0;
+      border: 1px solid var(--gray-200);
+    }
+    
+    .toc-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: var(--space-md);
+    }
+    
+    .toc-list {
+      list-style: none;
+      margin-left: 0;
+    }
+    
+    .toc-item {
+      margin-bottom: 0.75rem;
+    }
+    
+    .toc-link {
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s ease;
+    }
+    
+    .toc-link:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    
+    .toc-number {
+      font-weight: 600;
+      color: var(--accent);
+      min-width: 1.5rem;
+    }
+    
+    /* Important Notice */
+    .important-notice {
+      background: linear-gradient(135deg, var(--accent), #A00D1F);
+      color: white;
+      padding: var(--space-lg);
+      border-radius: var(--radius-lg);
+      margin: var(--space-xl) 0;
+    }
+    
+    .notice-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .notice-icon {
+      font-size: 1.5rem;
+    }
+    
+    /* Acceptance Section */
+    .acceptance-box {
+      background: linear-gradient(135deg, var(--primary), #005035);
+      color: white;
+      padding: var(--space-lg);
+      border-radius: var(--radius-lg);
+      margin-top: var(--space-xl);
+      text-align: center;
+    }
+    
+    .acceptance-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: var(--space-md);
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: var(--space-lg) 0;
+      margin-top: var(--space-xl);
+    }
+    
+    .footer-content {
+      text-align: center;
+    }
+    
+    .footer-logo {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: var(--space-md);
+      display: inline-block;
+    }
+    
+    .footer-text {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+      flex-wrap: wrap;
+    }
+    
+    .footer-link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-link:hover {
+      color: white;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .terms-container {
+        padding: var(--space-lg);
+      }
+      
+      .terms-title {
+        font-size: 1.75rem;
+      }
+      
+      .section-title {
+        font-size: 1.25rem;
+      }
+      
+      .section-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .toc-container {
+        padding: var(--space-md);
+      }
+      
+      .important-notice,
+      .acceptance-box {
+        padding: var(--space-md);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .terms-container {
+        padding: var(--space-md);
+      }
+      
+      .terms-title {
+        font-size: 1.5rem;
+      }
+      
+      .nav {
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <span>SWJOB</span>
+        </a>
+        <a href="index.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i>
+          Volver al Inicio
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <div class="terms-container">
+        <div class="terms-header">
+          <h1 class="terms-title">Términos y Condiciones de Servicio</h1>
+          <p class="last-updated">Última actualización: Enero 2024</p>
+          <p class="section-content" style="text-align: center; margin-top: var(--space-md);">
+            Lea atentamente estos términos antes de utilizar nuestros servicios
+          </p>
+        </div>
+        
+        <!-- Table of Contents -->
+        <div class="toc-container">
+          <h3 class="toc-title">Contenido</h3>
+          <ol class="toc-list">
+            <li class="toc-item">
+              <a href="#section1" class="toc-link">
+                <span class="toc-number">1.</span>
+                <span>Aceptación de los Términos</span>
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#section2" class="toc-link">
+                <span class="toc-number">2.</span>
+                <span>Descripción del Servicio</span>
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#section3" class="toc-link">
+                <span class="toc-number">3.</span>
+                <span>Elegibilidad</span>
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#section4" class="toc-link">
+                <span class="toc-number">4.</span>
+                <span>Registro y Cuenta</span>
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#section5" class="toc-link">
+                <span class="toc-number">5.</span>
+                <span>Responsabilidades del Usuario</span>
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#section6" class="toc-link">
+                <span class="toc-number">6.</span>
+                <span>Propiedad Intelectual</span>
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#section7" class="toc-link">
+                <span class="toc-number">7.</span>
+                <span>Limitación de Responsabilidad</span>
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#section8" class="toc-link">
+                <span class="toc-number">8.</span>
+                <span>Modificaciones del Servicio</span>
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#section9" class="toc-link">
+                <span class="toc-number">9.</span>
+                <span>Terminación</span>
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#section10" class="toc-link">
+                <span class="toc-number">10.</span>
+                <span>Ley Aplicable y Jurisdicción</span>
+              </a>
+            </li>
+          </ol>
+        </div>
+        
+        <!-- Important Notice -->
+        <div class="important-notice">
+          <h3 class="notice-title">
+            <i class="fas fa-exclamation-triangle notice-icon"></i>
+            Aviso Importante
+          </h3>
+          <p>Al utilizar los servicios de SWJOB, usted acepta estar legalmente vinculado por estos Términos y Condiciones. Si no está de acuerdo con cualquiera de estos términos, no utilice nuestros servicios.</p>
+        </div>
+        
+        <!-- Section 1 -->
+        <div class="content-section" id="section1">
+          <h2 class="section-title">1. Aceptación de los Términos</h2>
+          <div class="section-content">
+            <p>Al acceder y utilizar los servicios proporcionados por <strong>SWJOB</strong> (en adelante, "la Plataforma", "nosotros", "nuestro"), usted (en adelante, "el Usuario", "usted") acepta estar legalmente vinculado por estos Términos y Condiciones de Servicio (en adelante, "los Términos").</p>
+            
+            <div class="info-box">
+              <p><strong>Definiciones importantes:</strong></p>
+              <div class="definition-list">
+                <div class="definition-term">Servicios</div>
+                <div class="definition-description">La plataforma digital que conecta a profesionales con oportunidades de trabajo remoto.</div>
+                
+                <div class="definition-term">Usuario</div>
+                <div class="definition-description">Cualquier persona que accede o utiliza nuestros servicios.</div>
+                
+                <div class="definition-term">Empresas Socias</div>
+                <div class="definition-description">Empresas que publican oportunidades de trabajo remoto en nuestra plataforma.</div>
+              </div>
+            </div>
+            
+            <p>Estos Términos constituyen un acuerdo legalmente vinculante entre usted y SWJOB. Le recomendamos que imprima o guarde una copia de estos Términos para sus registros.</p>
+          </div>
+        </div>
+        
+        <!-- Section 2 -->
+        <div class="content-section" id="section2">
+          <h2 class="section-title">2. Descripción del Servicio</h2>
+          <div class="section-content">
+            <p>SWJOB es una plataforma digital que conecta a profesionales mexicanos con oportunidades de trabajo remoto ofrecidas por empresas socias. Nuestros servicios incluyen, pero no se limitan a:</p>
+            
+            <ul>
+              <li>Publicación de oportunidades de trabajo remoto</li>
+              <li>Procesamiento de aplicaciones de empleo</li>
+              <li>Facilitar la comunicación entre usuarios y empresas socias</li>
+              <li>Proporcionar recursos y orientación sobre trabajo remoto</li>
+            </ul>
+            
+            <div class="highlight-box">
+              <p><strong>Nota importante:</strong> SWJOB actúa únicamente como intermediario entre los usuarios y las empresas socias. No somos empleadores directos ni asumimos responsabilidad por las decisiones de contratación de las empresas socias.</p>
+            </div>
+            
+            <h3 class="section-subtitle">2.1 Alcance del Servicio</h3>
+            <p>Nuestros servicios se limitan a facilitar la conexión entre profesionales y oportunidades laborales. No garantizamos:</p>
+            
+            <ul>
+              <li>La obtención de empleo</li>
+              <li>La calidad o legitimidad de todas las oportunidades publicadas</li>
+              <li>El pago de salarios o beneficios</li>
+              <li>La resolución de disputas laborales</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Section 3 -->
+        <div class="content-section" id="section3">
+          <h2 class="section-title">3. Elegibilidad</h2>
+          <div class="section-content">
+            <p>Para utilizar nuestros servicios, debe cumplir con los siguientes requisitos:</p>
+            
+            <ol>
+              <li><strong>Edad mínima:</strong> Debe tener al menos 18 años de edad.</li>
+              <li><strong>Capacidad legal:</strong> Tener capacidad legal para celebrar contratos.</li>
+              <li><strong>Residencia:</strong> Ser residente de la República Mexicana.</li>
+              <li><strong>Información veraz:</strong> Proporcionar información verdadera y actualizada.</li>
+              <li><strong>Cumplimiento legal:</strong> No estar inhabilitado por ley para trabajar.</li>
+            </ol>
+            
+            <div class="info-box">
+              <p><strong>Verificación:</strong> Nos reservamos el derecho de verificar la información proporcionada y de rechazar o cancelar el registro de cualquier usuario que no cumpla con estos requisitos.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Section 4 -->
+        <div class="content-section" id="section4">
+          <h2 class="section-title">4. Registro y Cuenta</h2>
+          <div class="section-content">
+            <h3 class="section-subtitle">4.1 Creación de Cuenta</h3>
+            <p>Para acceder a ciertas funciones de la plataforma, deberá crear una cuenta proporcionando información precisa y completa, incluyendo:</p>
+            
+            <ul>
+              <li>Nombre completo</li>
+              <li>Información de contacto válida</li>
+              <li>Información profesional relevante</li>
+            </ul>
+            
+            <h3 class="section-subtitle">4.2 Responsabilidad de la Cuenta</h3>
+            <p>Usted es responsable de:</p>
+            
+            <ul>
+              <li>Mantener la confidencialidad de sus credenciales de acceso</li>
+              <li>Todas las actividades que ocurran bajo su cuenta</li>
+              <li>Notificarnos inmediatamente sobre cualquier uso no autorizado</li>
+              <li>Mantener su información actualizada</li>
+            </ul>
+            
+            <div class="highlight-box">
+              <p><strong>Advertencia de seguridad:</strong> No comparta sus credenciales de acceso con terceros. SWJOB no será responsable por pérdidas o daños resultantes del incumplimiento de esta obligación.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Section 5 -->
+        <div class="content-section" id="section5">
+          <h2 class="section-title">5. Responsabilidades del Usuario</h2>
+          <div class="section-content">
+            <p>Al utilizar nuestros servicios, usted se compromete a:</p>
+            
+            <h3 class="section-subtitle">5.1 Conducta Apropiada</h3>
+            <ul>
+              <li>No utilizar la plataforma para actividades ilegales o fraudulentas</li>
+              <li>No publicar contenido ofensivo, difamatorio o inapropiado</li>
+              <li>No interferir con el funcionamiento de la plataforma</li>
+              <li>No intentar acceder a cuentas de otros usuarios</li>
+              <li>No utilizar bots, scripts o métodos automatizados</li>
+            </ul>
+            
+            <h3 class="section-subtitle">5.2 Información Veraz</h3>
+            <p>Usted garantiza que toda la información proporcionada es:</p>
+            
+            <ul>
+              <li>Veraz, precisa y completa</li>
+              <li>Actualizada regularmente</li>
+              <li>No engañosa ni falsa</li>
+              <li>Propia y no infringiendo derechos de terceros</li>
+            </ul>
+            
+            <h3 class="section-subtitle">5.3 Comunicación con Empresas Socias</h3>
+            <p>Cuando interactúe con empresas socias, usted se compromete a:</p>
+            
+            <ul>
+              <li>Mantener un comportamiento profesional</li>
+              <li>Cumplir con los procesos de selección establecidos</li>
+              <li>Asistir a entrevistas programadas</li>
+              <li>Proporcionar información relevante solicitada</li>
+            </ul>
+            
+            <div class="info-box">
+              <p><strong>Consecuencias del incumplimiento:</strong> La violación de estas responsabilidades puede resultar en la suspensión o terminación inmediata de su cuenta, sin derecho a reembolso o compensación.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Section 6 -->
+        <div class="content-section" id="section6">
+          <h2 class="section-title">6. Propiedad Intelectual</h2>
+          <div class="section-content">
+            <h3 class="section-subtitle">6.1 Derechos de SWJOB</h3>
+            <p>Todos los derechos de propiedad intelectual relacionados con la plataforma, incluyendo pero no limitándose a:</p>
+            
+            <ul>
+              <li>Software, código fuente y algoritmos</li>
+              <li>Diseño, logotipos y elementos gráficos</li>
+              <li>Contenido, textos y materiales educativos</li>
+              <li>Marcas registradas y nombres comerciales</li>
+            </ul>
+            
+            <p>Son propiedad exclusiva de SWJOB o de sus licenciantes. Se otorga una licencia limitada, no exclusiva, intransferible y revocable para utilizar la plataforma según lo permitido por estos Términos.</p>
+            
+            <h3 class="section-subtitle">6.2 Contenido del Usuario</h3>
+            <p>Al proporcionar contenido a través de nuestra plataforma, usted:</p>
+            
+            <ul>
+              <li>Garantiza que tiene derecho a compartir dicho contenido</li>
+              <li>Otorga una licencia no exclusiva para usar, reproducir y mostrar el contenido</li>
+              <li>Autoriza el procesamiento necesario para proporcionar los servicios</li>
+            </ul>
+            
+            <div class="highlight-box">
+              <p><strong>Prohibiciones:</strong> Está prohibido copiar, modificar, distribuir, vender o alquilar cualquier parte de nuestros servicios o software, ni realizar ingeniería inversa ni intentar extraer el código fuente.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Section 7 -->
+        <div class="content-section" id="section7">
+          <h2 class="section-title">7. Limitación de Responsabilidad</h2>
+          <div class="section-content">
+            <h3 class="section-subtitle">7.1 Alcance de la Responsabilidad</h3>
+            <p>En la medida máxima permitida por la ley aplicable, SWJOB no será responsable por:</p>
+            
+            <ul>
+              <li>Daños indirectos, incidentales o consecuentes</li>
+              <li>Pérdida de datos, ingresos o oportunidades</li>
+              <li>Daños por interrupción del servicio</li>
+              <li>Acciones o omisiones de empresas socias</li>
+              <li>Contenido proporcionado por usuarios o terceros</li>
+            </ul>
+            
+            <h3 class="section-subtitle">7.2 Garantías</h3>
+            <p>Nuestros servicios se proporcionan "tal cual" y "según disponibilidad", sin garantías de ningún tipo, ya sean expresas o implícitas, incluyendo pero no limitándose a:</p>
+            
+            <ul>
+              <li>Garantías de comerciabilidad</li>
+              <li>Idoneidad para un propósito particular</li>
+              <li>No infracción de derechos</li>
+              <li>Resultados específicos de empleo</li>
+            </ul>
+            
+            <div class="info-box">
+              <p><strong>Excepción legal:</strong> Nada en estos Términos pretende excluir o limitar la responsabilidad por muerte o daños personales causados por negligencia, fraude o cualquier otra responsabilidad que no pueda ser excluida o limitada por la ley mexicana.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Section 8 -->
+        <div class="content-section" id="section8">
+          <h2 class="section-title">8. Modificaciones del Servicio</h2>
+          <div class="section-content">
+            <h3 class="section-subtitle">8.1 Cambios en los Términos</h3>
+            <p>Nos reservamos el derecho de modificar estos Términos en cualquier momento. Las modificaciones entrarán en vigor:</p>
+            
+            <ul>
+              <li>Al publicar los términos revisados en nuestra plataforma</li>
+              <li>Al enviar una notificación por correo electrónico (si tenemos su dirección)</li>
+              <li>Después de un período de 30 días desde la publicación</li>
+            </ul>
+            
+            <p>El uso continuado de nuestros servicios después de dichas modificaciones constituye la aceptación de los nuevos términos.</p>
+            
+            <h3 class="section-subtitle">8.2 Cambios en el Servicio</h3>
+            <p>Podemos, a nuestra discreción:</p>
+            
+            <ul>
+              <li>Modificar, suspender o descontinuar cualquier aspecto del servicio</li>
+              <li>Cambiar características, funcionalidades o interfaces</li>
+              <li>Limitar el acceso a ciertas funciones</li>
+              <li>Actualizar o cambiar requisitos técnicos</li>
+            </ul>
+            
+            <div class="highlight-box">
+              <p><strong>Notificación de cambios importantes:</strong> Para cambios significativos que afecten sustancialmente su uso de los servicios, haremos esfuerzos razonables para notificarle con anticipación.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Section 9 -->
+        <div class="content-section" id="section9">
+          <h2 class="section-title">9. Terminación</h2>
+          <div class="section-content">
+            <h3 class="section-subtitle">9.1 Terminación por el Usuario</h3>
+            <p>Usted puede terminar su cuenta en cualquier momento:</p>
+            
+            <ul>
+              <li>Mediante la función de eliminación de cuenta en la plataforma</li>
+              <li>Solicitando la terminación por escrito</li>
+              <li>Dejando de utilizar nuestros servicios</li>
+            </ul>
+            
+            <h3 class="section-subtitle">9.2 Terminación por SWJOB</h3>
+            <p>Podemos suspender o terminar su acceso a los servicios inmediatamente, sin previo aviso, si:</p>
+            
+            <ul>
+              <li>Incumple estos Términos</li>
+              <li>Participa en actividades fraudulentas o ilegales</li>
+              <li>Proporciona información falsa o engañosa</li>
+              <li>Interfiere con otros usuarios o con el servicio</li>
+              <li>Por requisitos legales o regulatorios</li>
+            </ul>
+            
+            <h3 class="section-subtitle">9.3 Efectos de la Terminación</h3>
+            <p>Al terminar su cuenta:</p>
+            
+            <ul>
+              <li>Perderá acceso a su cuenta y datos</li>
+              <li>Se pueden conservar ciertos datos según nuestra Política de Privacidad</li>
+              <li>Las disposiciones que por su naturaleza deban sobrevivir permanecerán vigentes</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Section 10 -->
+        <div class="content-section" id="section10">
+          <h2 class="section-title">10. Ley Aplicable y Jurisdicción</h2>
+          <div class="section-content">
+            <h3 class="section-subtitle">10.1 Ley Aplicable</h3>
+            <p>Estos Términos se regirán e interpretarán de acuerdo con las leyes de los Estados Unidos Mexicanos, sin considerar sus principios de conflicto de leyes.</p>
+            
+            <h3 class="section-subtitle">10.2 Jurisdicción</h3>
+            <p>Cualquier disputa que surja de o en relación con estos Términos será sometida a la jurisdicción exclusiva de los tribunales competentes de la Ciudad de México, renunciando expresamente a cualquier otro fuero que pudiera corresponderles.</p>
+            
+            <h3 class="section-subtitle">10.3 Resolución de Disputas</h3>
+            <p>Antes de iniciar cualquier acción legal, las partes se comprometen a:</p>
+            
+            <ul>
+              <li>Intentar resolver la disputa mediante negociación directa</li>
+              <li>Considerar métodos alternativos de resolución de disputas</li>
+              <li>Mediación como paso previo a procedimientos judiciales</li>
+            </ul>
+            
+            <h3 class="section-subtitle">10.4 Disposiciones Generales</h3>
+            <ul>
+              <li><strong>Integridad del Acuerdo:</strong> Estos Términos constituyen el acuerdo completo entre las partes.</li>
+              <li><strong>Divisibilidad:</strong> Si alguna disposición es inválida, las restantes permanecerán vigentes.</li>
+              <li><strong>No Renuncia:</strong> El hecho de no hacer cumplir un derecho no constituye renuncia al mismo.</li>
+              <li><strong>Cesiones:</strong> Usted no puede ceder sus derechos sin nuestro consentimiento por escrito.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Acceptance Box -->
+        <div class="acceptance-box">
+          <h3 class="acceptance-title">Aceptación de los Términos</h3>
+          <p>Al utilizar nuestros servicios, usted reconoce que ha leído, entendido y aceptado estar legalmente vinculado por estos Términos y Condiciones, así como por nuestra Política de Privacidad.</p>
+          
+          <div style="margin-top: var(--space-md); display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;">
+            <a href="privacidad.html" class="back-btn" style="background: white; color: var(--primary);">
+              <i class="fas fa-shield-alt"></i>
+              Política de Privacidad
+            </a>
+            <a href="index.html" class="back-btn" style="background: var(--accent);">
+              <i class="fas fa-home"></i>
+              Volver al Inicio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="footer-logo">SWJOB</a>
+        <p class="footer-text">Conectando profesionales mexicanos con oportunidades de trabajo remoto</p>
+        <p class="footer-text">© 2024 SWJOB. Todos los derechos reservados.</p>
+        
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="privacy.html" class="footer-link">Política de Privacidad</a>
+          <a href="userterms.html" class="footer-link">Términos de Servicio</a>
+          <a href="index.html#faq" class="footer-link">Preguntas Frecuentes</a>
+          <a href="index.html#contact" class="footer-link">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Add last updated date dynamically
+      const lastUpdated = document.querySelector('.last-updated');
+      if (lastUpdated) {
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        lastUpdated.textContent = `Última actualización: ${today.toLocaleDateString('es-MX', options)}`;
+      }
+      
+      // Add active state to TOC links
+      const sections = document.querySelectorAll('.content-section');
+      const tocLinks = document.querySelectorAll('.toc-link');
+      
+      function updateActiveTOC() {
+        let currentSection = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= (sectionTop - 150)) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+        
+        tocLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+            link.style.color = 'var(--accent)';
+            link.style.fontWeight = '600';
+          }
+        });
+      }
+      
+      // Initial call
+      updateActiveTOC();
+      
+      // Update on scroll
+      window.addEventListener('scroll', updateActiveTOC);
+      
+      // Print functionality
+      const printBtn = document.createElement('button');
+      printBtn.innerHTML = '<i class="fas fa-print"></i> Imprimir Términos';
+      printBtn.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        box-shadow: var(--shadow-md);
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+      `;
+      
+      printBtn.addEventListener('mouseenter', () => {
+        printBtn.style.transform = 'translateY(-2px)';
+        printBtn.style.boxShadow = 'var(--shadow-lg)';
+      });
+      
+      printBtn.addEventListener('mouseleave', () => {
+        printBtn.style.transform = 'translateY(0)';
+        printBtn.style.boxShadow = 'var(--shadow-md)';
+      });
+      
+      printBtn.addEventListener('click', () => {
+        window.print();
+      });
+      
+      document.body.appendChild(printBtn);
+    });
+  </script>
+</body>
+</html>
