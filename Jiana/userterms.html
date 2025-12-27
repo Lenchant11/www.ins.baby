@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en-GH">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Terms of Use - WorkFromGhana Ghana's Most Trusted Remote Work Platform</title>
+  <meta name="description" content="WorkFromGhana Terms of Use - Read our terms and conditions for using our work-matching platform. Understand your rights and responsibilities when applying for remote work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 加纳风格配色 - 红黄绿主题 -->
+  <style>
+    :root {
+      /* 加纳国旗颜色 - 红黄绿黑 */
+      --primary: #006B3F; /* 加纳绿 */
+      --secondary: #FCD116; /* 加纳黄 */
+      --accent: #CE1126; /* 加纳红 */
+      --dark-accent: #000000; /* 黑色星星 */
+      --light: #FFFFFF;
+      --dark: #1C2B3A;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-600: #64748B;
+      --gray-700: #475569;
+      --gray-800: #334155;
+      
+      /* 加纳自然配色 */
+      --nature-green: #2E7D32;
+      --nature-gold: #D4AF37;
+      
+      /* 字体 */
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* 间距 - 移动端优化 */
+      --space-xs: 0.25rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      
+      /* 圆角 */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      
+      /* 阴影 - 更柔和 */
+      --shadow-sm: 0 1px 3px rgba(0, 107, 63, 0.08);
+      --shadow-md: 0 3px 10px rgba(0, 107, 63, 0.12);
+      --shadow-lg: 0 5px 20px rgba(0, 107, 63, 0.15);
+      
+      /* 过渡效果 */
+      --transition-fast: 0.15s ease;
+      --transition-base: 0.25s ease;
+    }
+    
+    /* === 重置和基础样式 === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-800);
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--dark);
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    ul, ol {
+      list-style: none;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-sm);
+    }
+    
+    .section {
+      padding: var(--space-lg) 0;
+    }
+    
+    @media (max-width: 768px) {
+      .section {
+        padding: var(--space-md) 0;
+      }
+    }
+    
+    /* === 按钮 === */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-family: var(--font-heading);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-base);
+      text-align: center;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, #005a35, #b30f21);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--gray-100);
+    }
+    
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+    
+    .btn-block {
+      width: 100%;
+    }
+    
+    .btn-icon {
+      font-size: 1.1em;
+    }
+    
+    /* === 页头和导航 === */
+    .header {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      box-shadow: 0 2px 10px rgba(0, 107, 63, 0.1);
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    @media (max-width: 1024px) {
+      .nav {
+        flex-wrap: wrap;
+      }
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .nav-links {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .nav-cta {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-cta {
+        display: block;
+        margin-left: 0.5rem;
+      }
+    }
+    
+    .mobile-menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+    
+    /* === 主图部分 === */
+    .hero {
+      padding: var(--space-xl) 0 var(--space-lg);
+      background: linear-gradient(135deg, rgba(0, 107, 63, 0.95) 0%, rgba(0, 107, 63, 0.85) 100%);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm5713c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23FFFFFF' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: 200px;
+      opacity: 0.3;
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-sm);
+      line-height: 1.2;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 1.75rem;
+      }
+    }
+    
+    .hero-subtitle {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto var(--space-md);
+    }
+    
+    @media (max-width: 768px) {
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+    }
+    
+    /* === 内容区域 === */
+    .content-section {
+      padding: var(--space-xl) 0;
+      background: var(--light);
+    }
+    
+    .content-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .content-header {
+      margin-bottom: var(--space-lg);
+      text-align: center;
+    }
+    
+    .content-title {
+      font-size: 2rem;
+      margin-bottom: var(--space-sm);
+      color: var(--primary);
+    }
+    
+    @media (max-width: 768px) {
+      .content-title {
+        font-size: 1.5rem;
+      }
+    }
+    
+    .last-updated {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      background: var(--gray-100);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      display: inline-block;
+      margin-top: var(--space-sm);
+    }
+    
+    /* === 条款内容 === */
+    .terms-content {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+      margin: var(--space-lg) 0 var(--space-md);
+      color: var(--primary);
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    
+    .section-title:first-child {
+      margin-top: 0;
+    }
+    
+    .terms-text {
+      color: var(--gray-700);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    
+    .terms-list {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .terms-list li {
+      margin-bottom: 0.75rem;
+      color: var(--gray-700);
+      line-height: 1.6;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .terms-list li:before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, var(--secondary), #f9e076);
+      border-left: 4px solid var(--primary);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      margin: 2rem 0;
+    }
+    
+    .highlight-box h4 {
+      color: var(--dark);
+      margin-bottom: 0.75rem;
+    }
+    
+    .highlight-box p {
+      color: var(--gray-800);
+      margin-bottom: 0.5rem;
+    }
+    
+    .warning-box {
+      background: #fff8e6;
+      border: 2px solid #ffd54f;
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .warning-box h4 {
+      color: #e65100;
+      margin-bottom: 0.75rem;
+    }
+    
+    .warning-box p {
+      color: var(--gray-800);
+      margin-bottom: 0.5rem;
+    }
+    
+    .info-box {
+      background: #f0f7ff;
+      border: 1px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .info-box h4 {
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    
+    .info-box p {
+      color: var(--gray-800);
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-info {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .contact-info h4 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    
+    .contact-info p {
+      margin-bottom: 0.5rem;
+      color: var(--gray-700);
+    }
+    
+    /* === 合规徽章 === */
+    .compliance-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+    
+    .compliance-badge-item {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+    
+    .compliance-badge-item i {
+      color: var(--primary);
+    }
+    
+    /* === CTA部分 === */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary), #005a35);
+      color: white;
+      text-align: center;
+      padding: var(--space-lg) 0;
+    }
+    
+    .cta-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    @media (min-width: 768px) {
+      .cta-title {
+        font-size: 2rem;
+      }
+    }
+    
+    .cta-subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: var(--space-md);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (min-width: 768px) {
+      .cta-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+    
+    /* === 页脚 === */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: var(--space-lg) 0 var(--space-md);
+      border-top: 3px solid var(--primary);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .footer-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      color: white;
+    }
+    
+    .footer-description {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links h3 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .footer-links ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: var(--space-md);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.8rem;
+    }
+    
+    .compliance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+    
+    /* === 动画 === */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.4s ease forwards;
+    }
+    
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+    
+    .delay-2 {
+      animation-delay: 0.2s;
+    }
+    
+    /* === 工具类 === */
+    .text-center {
+      text-align: center;
+    }
+    
+    .text-primary {
+      color: var(--primary);
+    }
+    
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 0.75rem; }
+    .mb-3 { margin-bottom: 1.25rem; }
+    .mb-4 { margin-bottom: 1.5rem; }
+    
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 0.75rem; }
+    .mt-3 { margin-top: 1.25rem; }
+    .mt-4 { margin-top: 1.5rem; }
+    
+    /* 移动端优化 */
+    @media (max-width: 768px) {
+      .compliance-badges {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .compliance-badge-item {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .terms-content {
+        padding: var(--space-md);
+      }
+      
+      .hero {
+        padding: var(--space-lg) 0 var(--space-md);
+      }
+    }
+    
+    /* 链接样式 */
+    a.text-link {
+      color: var(--primary);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    
+    a.text-link:hover {
+      text-decoration: none;
+    }
+    
+    /* 编号列表 */
+    .numbered-list {
+      counter-reset: item;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .numbered-list li {
+      margin-bottom: 0.75rem;
+      color: var(--gray-700);
+      line-height: 1.6;
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .numbered-list li:before {
+      counter-increment: item;
+      content: counter(item) ".";
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- 页头 -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <span class="logo-text">WorkFromGhana</span>
+        </a>
+        
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html#opportunities" class="nav-link">Job Opportunities</a>
+          <a href="index.html#about" class="nav-link">About Us</a>
+          <a href="index.html#faq" class="nav-link">FAQ</a>
+          <a href="index.html#apply" class="btn btn-primary nav-cta">
+            Apply Now
+          </a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 主图部分 -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1 class="hero-title">Terms of Use</h1>
+        <p class="hero-subtitle">
+          Please read these Terms of Use carefully before using our platform. By accessing or using WorkFromGhana, you agree to be bound by these terms.
+        </p>
+        <div class="last-updated fade-in delay-1">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Last Updated: January 15, 2024</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容区域 -->
+  <section class="content-section">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="content-header fade-in">
+          <h2 class="content-title">User Agreement & Terms</h2>
+          <p class="terms-text text-center">This agreement governs your use of the WorkFromGhana platform and services.</p>
+        </div>
+        
+        <!-- 重要警告框 -->
+        <div class="warning-box fade-in delay-1">
+          <h4><i class="fas fa-exclamation-triangle"></i> Important Legal Notice</h4>
+          <p><strong>By using our platform, you acknowledge and agree to these Terms of Use.</strong> If you do not agree with any part of these terms, you must not use our services or submit any applications.</p>
+          <p>These terms constitute a legally binding agreement between you and WorkFromGhana.</p>
+        </div>
+        
+        <div class="terms-content fade-in delay-2">
+          <!-- 1. 接受条款 -->
+          <h3 class="section-title">1. Acceptance of Terms</h3>
+          <p class="terms-text">By accessing, browsing, or using the WorkFromGhana website and services, you acknowledge that:</p>
+          <ul class="terms-list">
+            <li>You have read, understood, and agree to be bound by these Terms of Use</li>
+            <li>You are at least 18 years of age and legally competent to enter into agreements</li>
+            <li>You are eligible to work in Ghana and currently reside in Ghana</li>
+            <li>You will comply with all applicable laws and regulations</li>
+          </ul>
+          
+          <!-- 2. 平台性质 -->
+          <h3 class="section-title">2. Platform Nature & Service Description</h3>
+          <div class="info-box">
+            <h4><i class="fas fa-info-circle"></i> Important Clarification</h4>
+            <p><strong>WorkFromGhana is a work-matching platform, NOT a direct employer.</strong> We connect qualified Ghanaians with verified international companies seeking remote workers.</p>
+            <p>Final employment terms, conditions, and contracts are determined solely by the hiring company.</p>
+          </div>
+          
+          <p class="terms-text">Our services include:</p>
+          <ul class="terms-list">
+            <li><strong>Work Matching:</strong> Connecting applicants with suitable remote work opportunities</li>
+            <li><strong>Verification:</strong> Screening and verifying partner companies</li>
+            <li><strong>Communication:</strong> Facilitating communication between applicants and companies</li>
+            <li><strong>Support:</strong> Providing general guidance and support throughout the application process</li>
+          </ul>
+          
+          <!-- 3. 用户资格 -->
+          <h3 class="section-title">3. User Eligibility</h3>
+          <p class="terms-text">To use our platform, you must meet the following criteria:</p>
+          <ul class="terms-list">
+            <li>Be at least 18 years of age</li>
+            <li>Be legally eligible to work in Ghana</li>
+            <li>Currently reside in Ghana</li>
+            <li>Have a valid WhatsApp number for communication</li>
+            <li>Provide accurate and truthful information in your application</li>
+            <li>Not have been previously banned from our platform for violations</li>
+          </ul>
+          
+          <!-- 4. 用户义务 -->
+          <h3 class="section-title">4. User Responsibilities</h3>
+          <p class="terms-text">As a user of our platform, you agree to:</p>
+          <ul class="terms-list">
+            <li>Provide accurate, current, and complete information</li>
+            <li>Maintain the confidentiality of your account information</li>
+            <li>Notify us immediately of any unauthorized use of your information</li>
+            <li>Use the platform only for lawful purposes</li>
+            <li>Not engage in fraudulent, deceptive, or illegal activities</li>
+            <li>Not submit multiple applications using different identities</li>
+            <li>Not attempt to interfere with or disrupt platform operations</li>
+          </ul>
+          
+          <!-- 5. 申请流程 -->
+          <h3 class="section-title">5. Application Process & Fees</h3>
+          <div class="highlight-box">
+            <h4><i class="fas fa-money-bill-wave"></i> Fee Structure</h4>
+            <p><strong>WorkFromGhana is completely FREE for job seekers.</strong> We do not charge any fees for:</p>
+            <ul class="terms-list">
+              <li>Platform registration or account creation</li>
+              <li>Submitting job applications</li>
+              <li>Job matching services</li>
+              <li>Platform access or usage</li>
+            </ul>
+          </div>
+          
+          <p class="terms-text">Our application process involves:</p>
+          <ol class="numbered-list">
+            <li><strong>Submission:</strong> Complete our online application form with accurate information</li>
+            <li><strong>Screening:</strong> Initial review and matching with suitable opportunities</li>
+            <li><strong>Communication:</strong> Contact via WhatsApp for further steps (if selected)</li>
+            <li><strong>Matching:</strong> Introduction to verified partner companies</li>
+            <li><strong>Employment:</strong> Direct engagement with the hiring company</li>
+          </ol>
+          
+          <!-- 6. 知识产权 -->
+          <h3 class="section-title">6. Intellectual Property Rights</h3>
+          <p class="terms-text">All intellectual property rights in the WorkFromGhana platform are owned by or licensed to us:</p>
+          <ul class="terms-list">
+            <li><strong>Platform Content:</strong> All text, graphics, logos, and software are protected</li>
+            <li><strong>Trademarks:</strong> "WorkFromGhana" and associated logos are registered trademarks</li>
+            <li><strong>User Content:</strong> You retain rights to content you submit, but grant us license to use it for platform purposes</li>
+            <li><strong>Restrictions:</strong> You may not copy, modify, distribute, or create derivative works without permission</li>
+          </ul>
+          
+          <!-- 7. 隐私和数据 -->
+          <h3 class="section-title">7. Privacy & Data Protection</h3>
+          <p class="terms-text">Your privacy is important to us. Our data practices are governed by:</p>
+          <ul class="terms-list">
+            <li><a href="privacy.html" class="text-link">Privacy Policy</a> - Detailed information on data collection and use</li>
+            <li>Ghana Data Protection Act, 2012 (Act 843)</li>
+            <li>General Data Protection Regulation (GDPR) principles</li>
+            <li>Industry-standard security practices</li>
+          </ul>
+          
+          <p class="terms-text">By using our platform, you consent to:</p>
+          <ul class="terms-list">
+            <li>Collection and processing of your personal information for work-matching purposes</li>
+            <li>Sharing your information with verified partner companies for legitimate opportunities</li>
+            <li>Receiving communications via WhatsApp, email, or other channels</li>
+          </ul>
+          
+          <!-- 8. 免责声明 -->
+          <h3 class="section-title">8. Disclaimer of Warranties</h3>
+          <div class="warning-box">
+            <h4><i class="fas fa-shield-alt"></i> Important Limitations</h4>
+            <p><strong>WorkFromGhana provides its services "as is" and "as available."</strong> We do not guarantee:</p>
+            <ul class="terms-list">
+              <li>That you will receive job offers or employment</li>
+              <li>The accuracy or completeness of job listings</li>
+              <li>The quality or terms of employment with partner companies</li>
+              <li>Continuous, uninterrupted, or secure access to our platform</li>
+            </ul>
+          </div>
+          
+          <p class="terms-text">We are not responsible for:</p>
+          <ul class="terms-list">
+            <li>Employment terms, conditions, or disputes with partner companies</li>
+            <li>Payment issues between you and the hiring company</li>
+            <li>Technical issues or interruptions in service</li>
+            <li>Loss of data or information submitted through our platform</li>
+          </ul>
+          
+          <!-- 9. 责任限制 -->
+          <h3 class="section-title">9. Limitation of Liability</h3>
+          <p class="terms-text">To the maximum extent permitted by law, WorkFromGhana shall not be liable for:</p>
+          <ul class="terms-list">
+            <li>Any direct, indirect, incidental, or consequential damages</li>
+            <li>Loss of income, profits, or business opportunities</li>
+            <li>Employment-related disputes or issues</li>
+            <li>Actions or omissions of partner companies</li>
+            <li>Technical failures or service interruptions</li>
+            <li>Unauthorized access to or alteration of your transmissions or data</li>
+          </ul>
+          
+          <!-- 10. 用户行为 -->
+          <h3 class="section-title">10. Prohibited User Conduct</h3>
+          <p class="terms-text">You agree not to engage in the following prohibited activities:</p>
+          <ul class="terms-list">
+            <li>Submitting false, misleading, or inaccurate information</li>
+            <li>Impersonating any person or entity</li>
+            <li>Attempting to gain unauthorized access to our systems</li>
+            <li>Interfering with the proper working of the platform</li>
+            <li>Using automated systems or bots to submit applications</li>
+            <li>Harassing, threatening, or intimidating other users or our staff</li>
+            <li>Violating any applicable laws or regulations</li>
+          </ul>
+          
+          <!-- 11. 终止 -->
+          <h3 class="section-title">11. Termination & Suspension</h3>
+          <p class="terms-text">We reserve the right to:</p>
+          <ul class="terms-list">
+            <li>Terminate or suspend your access to our platform at our sole discretion</li>
+            <li>Remove or reject any application for any reason</li>
+            <li>Investigate and take appropriate action against violations of these terms</li>
+            <li>Modify or discontinue our services at any time</li>
+          </ul>
+          
+          <p class="terms-text">Grounds for termination may include:</p>
+          <ul class="terms-list">
+            <li>Violation of these Terms of Use</li>
+            <li>Provision of false or misleading information</li>
+            <li>Engagement in fraudulent or illegal activities</li>
+            <li>Abusive or inappropriate behavior towards staff or partner companies</li>
+          </ul>
+          
+          <!-- 12. 条款变更 -->
+          <h3 class="section-title">12. Modifications to Terms</h3>
+          <p class="terms-text">We may modify these Terms of Use at any time:</p>
+          <ul class="terms-list">
+            <li>Changes will be effective upon posting on our website</li>
+            <li>We will update the "Last Updated" date to reflect changes</li>
+            <li>Your continued use of the platform constitutes acceptance of modified terms</li>
+            <li>Material changes may be communicated via email or WhatsApp</li>
+          </ul>
+          
+          <!-- 13. 管辖法律 -->
+          <h3 class="section-title">13. Governing Law & Dispute Resolution</h3>
+          <p class="terms-text">These Terms of Use are governed by:</p>
+          <ul class="terms-list">
+            <li><strong>Governing Law:</strong> Laws of the Republic of Ghana</li>
+            <li><strong>Jurisdiction:</strong> Courts in Accra, Ghana shall have exclusive jurisdiction</li>
+            <li><strong>Dispute Resolution:</strong> Parties agree to attempt amicable resolution before legal action</li>
+            <li><strong>Arbitration:</strong> Any disputes shall be resolved through binding arbitration in Ghana</li>
+          </ul>
+          
+          <!-- 14. 联系方式 -->
+          <h3 class="section-title">14. Contact Information</h3>
+          <div class="contact-info">
+            <h4><i class="fas fa-headset"></i> Platform Support</h4>
+            <p><strong>WorkFromGhana Support Team</strong></p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Accra, Ghana</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> support@workfromghana.gh</p>
+            <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +233 24 712 3456</p>
+            <p class="mt-2"><i class="fas fa-clock"></i> <strong>Support Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM GMT</p>
+          </div>
+          
+          <!-- 15. 杂项规定 -->
+          <h3 class="section-title">15. Miscellaneous Provisions</h3>
+          <p class="terms-text">Additional important provisions:</p>
+          <ul class="terms-list">
+            <li><strong>Entire Agreement:</strong> These terms constitute the entire agreement between you and WorkFromGhana</li>
+            <li><strong>Severability:</strong> If any provision is found invalid, the remaining provisions remain in effect</li>
+            <li><strong>Waiver:</strong> Failure to enforce any right or provision does not constitute a waiver</li>
+            <li><strong>Assignment:</strong> You may not assign your rights under these terms without our written consent</li>
+            <li><strong>Force Majeure:</strong> We are not liable for delays or failures due to circumstances beyond our control</li>
+          </ul>
+          
+          <!-- 合规徽章 -->
+          <div class="compliance-badges">
+            <div class="compliance-badge-item">
+              <i class="fas fa-balance-scale"></i>
+              <span>Ghana Labor Law Compliant</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-gavel"></i>
+              <span>Legal Terms & Conditions</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-user-shield"></i>
+              <span>User Protection Standards</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-handshake"></i>
+              <span>Fair Use Agreement</span>
+            </div>
+          </div>
+          
+          <!-- 最终接受框 -->
+          <div class="warning-box">
+            <h4><i class="fas fa-file-signature"></i> Acceptance Acknowledgement</h4>
+            <p><strong>By using the WorkFromGhana platform, you acknowledge that:</strong></p>
+            <ul class="terms-list">
+              <li>You have read, understood, and agree to be bound by these Terms of Use</li>
+              <li>You consent to our <a href="privacy.html" class="text-link">Privacy Policy</a></li>
+              <li>You understand the nature of our work-matching services</li>
+              <li>You agree to receive communications via the provided contact methods</li>
+            </ul>
+            <p class="mt-2"><strong>If you do not agree to these terms, please do not use our platform.</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA部分 -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="cta-title">Ready to Start Your Remote Work Journey?</h2>
+        <p class="cta-subtitle">
+          Join thousands of Ghanaians who trust WorkFromGhana for legitimate remote work opportunities.
+        </p>
+        <div class="mt-4">
+          <a href="index.html#apply" class="btn btn-primary btn-lg" style="background: white; color: var(--primary); border: 3px solid white; font-size: 1.2rem;">
+            <i class="fab fa-whatsapp btn-icon"></i>
+            <span>Apply Now for Verified Positions</span>
+          </a>
+        </div>
+        <div class="mt-3" style="color: rgba(255,255,255,0.9);">
+          <p><i class="fas fa-check-circle"></i> 100% Free legitimate work matching</p>
+          <p><i class="fas fa-check-circle"></i> Clear and transparent terms</p>
+          <p><i class="fas fa-check-circle"></i> Protection of your rights as a user</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">WorkFromGhana.gh</a>
+          <p class="footer-description">
+            Ghana's most trusted remote work platform - connecting talented Ghanaians with verified international work opportunities.
+          </p>
+          <div class="compliance-badge">
+            <i class="fas fa-balance-scale"></i>
+            <span>Compliant with Ghanaian regulations</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>QUICK LINKS</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#opportunities">Job Opportunities</a></li>
+            <li><a href="index.html#how">How It Works</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>LEGAL DOCUMENTS</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="userterms.html" class="text-link">Terms of Use</a></li>
+            <li><a href="compliance.html">Compliance Information</a></li>
+            <li><a href="contact.html">Support Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>COMPANY</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="compliance.html">Legal Compliance</a></li>
+            <li><a href="index.html#apply">Apply Now</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 WorkFromGhana Ghana | Legitimate Work Matching Platform</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+          <i class="fas fa-flag"></i> Serving qualified individuals residing in Ghana only
+        </p>
+        
+        <!-- 法律声明 -->
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; opacity: 0.6;">
+          <p>WorkFromGhana is a work-matching platform. We are not direct employers. Final employment terms are determined by the hiring company. All positions require right to work in Ghana and compliance with Ghanaian labor laws.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 元素
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navLinks = document.querySelector('.nav-links');
+      
+      // 移动菜单切换
+      mobileMenuBtn.addEventListener('click', function() {
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none';
+        } else {
+          navLinks.style.display = 'flex';
+          navLinks.style.flexDirection = 'column';
+          navLinks.style.position = 'absolute';
+          navLinks.style.top = '100%';
+          navLinks.style.left = '0';
+          navLinks.style.right = '0';
+          navLinks.style.background = 'white';
+          navLinks.style.padding = '1rem';
+          navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+          navLinks.style.gap = '1rem';
+        }
+      });
+      
+      // 淡入动画
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // 观察淡入元素
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // 更新年份
+      const yearElement = document.querySelector('.footer-bottom p');
+      if (yearElement) {
+        const currentYear = new Date().getFullYear();
+        yearElement.innerHTML = yearElement.innerHTML.replace('2024', currentYear);
+      }
+      
+      // 添加页面加载事件
+      window.addEventListener('load', function() {
+        // 发送页面浏览事件（如果有Google Analytics）
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'page_view', {
+            page_title: 'Terms of Use - WorkFromGhana',
+            page_location: window.location.href
+          });
+        }
+        
+        // 滚动到锚点
+        if (window.location.hash) {
+          setTimeout(() => {
+            const element = document.querySelector(window.location.hash);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 300);
+        }
+      });
+      
+      // 添加打印友好功能
+      const printButton = document.createElement('button');
+      printButton.innerHTML = '<i class="fas fa-print"></i> Print Terms';
+      printButton.className = 'btn btn-secondary';
+      printButton.style.position = 'fixed';
+      printButton.style.bottom = '20px';
+      printButton.style.right = '20px';
+      printButton.style.zIndex = '1000';
+      printButton.addEventListener('click', function() {
+        window.print();
+      });
+      document.body.appendChild(printButton);
+      
+      // 添加返回顶部按钮
+      const backToTopButton = document.createElement('button');
+      backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+      backToTopButton.className = 'btn btn-primary';
+      backToTopButton.style.position = 'fixed';
+      backToTopButton.style.bottom = '70px';
+      backToTopButton.style.right = '20px';
+      backToTopButton.style.zIndex = '1000';
+      backToTopButton.style.width = '50px';
+      backToTopButton.style.height = '50px';
+      backToTopButton.style.borderRadius = '50%';
+      backToTopButton.style.display = 'none';
+      
+      backToTopButton.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      
+      document.body.appendChild(backToTopButton);
+      
+      // 显示/隐藏返回顶部按钮
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          backToTopButton.style.display = 'flex';
+          backToTopButton.style.alignItems = 'center';
+          backToTopButton.style.justifyContent = 'center';
+        } else {
+          backToTopButton.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
