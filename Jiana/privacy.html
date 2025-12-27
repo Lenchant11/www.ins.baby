@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en-GH">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy - WorkFromGhana Ghana's Most Trusted Remote Work Platform</title>
+  <meta name="description" content="WorkFromGhana Privacy Policy - Learn how we collect, use, and protect your personal information when you use our work-matching platform." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 加纳风格配色 - 红黄绿主题 -->
+  <style>
+    :root {
+      /* 加纳国旗颜色 - 红黄绿黑 */
+      --primary: #006B3F; /* 加纳绿 */
+      --secondary: #FCD116; /* 加纳黄 */
+      --accent: #CE1126; /* 加纳红 */
+      --dark-accent: #000000; /* 黑色星星 */
+      --light: #FFFFFF;
+      --dark: #1C2B3A;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-600: #64748B;
+      --gray-700: #475569;
+      --gray-800: #334155;
+      
+      /* 加纳自然配色 */
+      --nature-green: #2E7D32;
+      --nature-gold: #D4AF37;
+      
+      /* 字体 */
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* 间距 - 移动端优化 */
+      --space-xs: 0.25rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      
+      /* 圆角 */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      
+      /* 阴影 - 更柔和 */
+      --shadow-sm: 0 1px 3px rgba(0, 107, 63, 0.08);
+      --shadow-md: 0 3px 10px rgba(0, 107, 63, 0.12);
+      --shadow-lg: 0 5px 20px rgba(0, 107, 63, 0.15);
+      
+      /* 过渡效果 */
+      --transition-fast: 0.15s ease;
+      --transition-base: 0.25s ease;
+    }
+    
+    /* === 重置和基础样式 === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-800);
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--dark);
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    ul, ol {
+      list-style: none;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-sm);
+    }
+    
+    .section {
+      padding: var(--space-lg) 0;
+    }
+    
+    @media (max-width: 768px) {
+      .section {
+        padding: var(--space-md) 0;
+      }
+    }
+    
+    /* === 按钮 === */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-family: var(--font-heading);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-base);
+      text-align: center;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, #005a35, #b30f21);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--gray-100);
+    }
+    
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+    
+    .btn-block {
+      width: 100%;
+    }
+    
+    .btn-icon {
+      font-size: 1.1em;
+    }
+    
+    /* === 页头和导航 === */
+    .header {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      box-shadow: 0 2px 10px rgba(0, 107, 63, 0.1);
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    @media (max-width: 1024px) {
+      .nav {
+        flex-wrap: wrap;
+      }
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .nav-links {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .nav-cta {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-cta {
+        display: block;
+        margin-left: 0.5rem;
+      }
+    }
+    
+    .mobile-menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+    
+    /* === 主图部分 === */
+    .hero {
+      padding: var(--space-xl) 0 var(--space-lg);
+      background: linear-gradient(135deg, rgba(0, 107, 63, 0.95) 0%, rgba(0, 107, 63, 0.85) 100%);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm5713c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23FFFFFF' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: 200px;
+      opacity: 0.3;
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-sm);
+      line-height: 1.2;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 1.75rem;
+      }
+    }
+    
+    .hero-subtitle {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto var(--space-md);
+    }
+    
+    @media (max-width: 768px) {
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+    }
+    
+    /* === 内容区域 === */
+    .content-section {
+      padding: var(--space-xl) 0;
+      background: var(--light);
+    }
+    
+    .content-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .content-header {
+      margin-bottom: var(--space-lg);
+      text-align: center;
+    }
+    
+    .content-title {
+      font-size: 2rem;
+      margin-bottom: var(--space-sm);
+      color: var(--primary);
+    }
+    
+    @media (max-width: 768px) {
+      .content-title {
+        font-size: 1.5rem;
+      }
+    }
+    
+    .last-updated {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      background: var(--gray-100);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      display: inline-block;
+      margin-top: var(--space-sm);
+    }
+    
+    /* === 隐私政策内容 === */
+    .privacy-content {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+      margin: var(--space-lg) 0 var(--space-md);
+      color: var(--primary);
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    
+    .section-title:first-child {
+      margin-top: 0;
+    }
+    
+    .privacy-text {
+      color: var(--gray-700);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    
+    .privacy-list {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .privacy-list li {
+      margin-bottom: 0.75rem;
+      color: var(--gray-700);
+      line-height: 1.6;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .privacy-list li:before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, var(--secondary), #f9e076);
+      border-left: 4px solid var(--primary);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      margin: 2rem 0;
+    }
+    
+    .highlight-box h4 {
+      color: var(--dark);
+      margin-bottom: 0.75rem;
+    }
+    
+    .highlight-box p {
+      color: var(--gray-800);
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-info {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .contact-info h4 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    
+    .contact-info p {
+      margin-bottom: 0.5rem;
+      color: var(--gray-700);
+    }
+    
+    .important-note {
+      background: #fff8e6;
+      border: 1px solid #ffd54f;
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .important-note h4 {
+      color: #e65100;
+      margin-bottom: 0.75rem;
+    }
+    
+    /* === 合规徽章 === */
+    .compliance-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+    
+    .compliance-badge-item {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+    
+    .compliance-badge-item i {
+      color: var(--primary);
+    }
+    
+    /* === CTA部分 === */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary), #005a35);
+      color: white;
+      text-align: center;
+      padding: var(--space-lg) 0;
+    }
+    
+    .cta-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    @media (min-width: 768px) {
+      .cta-title {
+        font-size: 2rem;
+      }
+    }
+    
+    .cta-subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: var(--space-md);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (min-width: 768px) {
+      .cta-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+    
+    /* === 页脚 === */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: var(--space-lg) 0 var(--space-md);
+      border-top: 3px solid var(--primary);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .footer-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      color: white;
+    }
+    
+    .footer-description {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links h3 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .footer-links ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: var(--space-md);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.8rem;
+    }
+    
+    .compliance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+    
+    /* === 动画 === */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.4s ease forwards;
+    }
+    
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+    
+    .delay-2 {
+      animation-delay: 0.2s;
+    }
+    
+    /* === 工具类 === */
+    .text-center {
+      text-align: center;
+    }
+    
+    .text-primary {
+      color: var(--primary);
+    }
+    
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 0.75rem; }
+    .mb-3 { margin-bottom: 1.25rem; }
+    .mb-4 { margin-bottom: 1.5rem; }
+    
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 0.75rem; }
+    .mt-3 { margin-top: 1.25rem; }
+    .mt-4 { margin-top: 1.5rem; }
+    
+    /* 移动端优化 */
+    @media (max-width: 768px) {
+      .compliance-badges {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .compliance-badge-item {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .privacy-content {
+        padding: var(--space-md);
+      }
+      
+      .hero {
+        padding: var(--space-lg) 0 var(--space-md);
+      }
+    }
+    
+    /* 链接样式 */
+    a.text-link {
+      color: var(--primary);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    
+    a.text-link:hover {
+      text-decoration: none;
+    }
+    
+    /* 表格样式 */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: white;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .data-table th {
+      background: var(--primary);
+      color: white;
+      text-align: left;
+      padding: 1rem;
+      font-weight: 600;
+    }
+    
+    .data-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--gray-200);
+      color: var(--gray-700);
+    }
+    
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .data-table tr:hover {
+      background: var(--gray-50);
+    }
+  </style>
+</head>
+<body>
+  <!-- 页头 -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <span class="logo-text">WorkFromGhana</span>
+        </a>
+        
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html#opportunities" class="nav-link">Job Opportunities</a>
+          <a href="index.html#about" class="nav-link">About Us</a>
+          <a href="index.html#faq" class="nav-link">FAQ</a>
+          <a href="index.html#apply" class="btn btn-primary nav-cta">
+            Apply Now
+          </a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 主图部分 -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1 class="hero-title">Privacy Policy</h1>
+        <p class="hero-subtitle">
+          Your privacy is our priority. This policy explains how WorkFromGhana collects, uses, and protects your personal information.
+        </p>
+        <div class="last-updated fade-in delay-1">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Last Updated: January 15, 2024</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容区域 -->
+  <section class="content-section">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="content-header fade-in">
+          <h2 class="content-title">Our Commitment to Your Privacy</h2>
+          <p class="privacy-text text-center">WorkFromGhana is committed to protecting your privacy and ensuring the security of your personal information.</p>
+        </div>
+        
+        <div class="privacy-content fade-in delay-1">
+          <!-- 重要通知 -->
+          <div class="important-note">
+            <h4><i class="fas fa-exclamation-circle"></i> Important Information</h4>
+            <p>By using our platform and submitting your application, you consent to the collection and use of your information as described in this Privacy Policy.</p>
+            <p>We collect information solely for legitimate work-matching purposes and comply with all applicable data protection laws in Ghana.</p>
+          </div>
+          
+          <!-- 1. 信息收集 -->
+          <h3 class="section-title">1. Information We Collect</h3>
+          <p class="privacy-text">We collect information that you provide directly to us when you:</p>
+          <ul class="privacy-list">
+            <li><strong>Submit an application</strong> through our website forms</li>
+            <li><strong>Contact us</strong> via email, WhatsApp, or other communication channels</li>
+            <li><strong>Participate</strong> in surveys or provide feedback</li>
+          </ul>
+          
+          <div class="highlight-box">
+            <h4><i class="fas fa-info-circle"></i> Personal Information Collected:</h4>
+            <ul class="privacy-list">
+              <li><strong>Name:</strong> Your full legal name as it appears on official documents</li>
+              <li><strong>Contact Information:</strong> WhatsApp number and other contact details</li>
+              <li><strong>Demographic Information:</strong> Age, location, and other relevant details</li>
+              <li><strong>Application Information:</strong> Information provided in your job application</li>
+              <li><strong>Communication Records:</strong> Records of our communications with you</li>
+            </ul>
+          </div>
+          
+          <!-- 2. 信息使用 -->
+          <h3 class="section-title">2. How We Use Your Information</h3>
+          <p class="privacy-text">We use the information we collect for the following purposes:</p>
+          <ul class="privacy-list">
+            <li><strong>Work Matching:</strong> To match you with suitable remote work opportunities</li>
+            <li><strong>Communication:</strong> To contact you about job opportunities and platform updates</li>
+            <li><strong>Platform Improvement:</strong> To improve our services and user experience</li>
+            <li><strong>Compliance:</strong> To comply with legal obligations and regulations</li>
+            <li><strong>Security:</strong> To protect against fraud and unauthorized access</li>
+          </ul>
+          
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Purpose</th>
+                <th>Information Used</th>
+                <th>Legal Basis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Job Matching</td>
+                <td>Name, Contact Info, Demographic Data</td>
+                <td>Consent & Legitimate Interest</td>
+              </tr>
+              <tr>
+                <td>Communication</td>
+                <td>Contact Information, Application Details</td>
+                <td>Consent & Contractual Necessity</td>
+              </tr>
+              <tr>
+                <td>Platform Security</td>
+                <td>Technical Information, Usage Data</td>
+                <td>Legitimate Interest</td>
+              </tr>
+              <tr>
+                <td>Legal Compliance</td>
+                <td>All Relevant Information</td>
+                <td>Legal Obligation</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <!-- 3. 信息共享 -->
+          <h3 class="section-title">3. Information Sharing and Disclosure</h3>
+          <p class="privacy-text">We may share your information in the following circumstances:</p>
+          <ul class="privacy-list">
+            <li><strong>With Partner Companies:</strong> To facilitate job matching with verified employers</li>
+            <li><strong>Service Providers:</strong> With trusted third parties who assist in our operations</li>
+            <li><strong>Legal Requirements:</strong> When required by law or to protect our legal rights</li>
+            <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
+          </ul>
+          
+          <div class="important-note">
+            <h4><i class="fas fa-shield-alt"></i> Important Restriction</h4>
+            <p><strong>We do NOT sell your personal information</strong> to third parties for marketing purposes. Your information is only shared with verified partner companies for legitimate work-matching purposes.</p>
+          </div>
+          
+          <!-- 4. 数据安全 -->
+          <h3 class="section-title">4. Data Security</h3>
+          <p class="privacy-text">We implement appropriate technical and organizational measures to protect your personal information:</p>
+          <ul class="privacy-list">
+            <li><strong>Encryption:</strong> Secure transmission of sensitive information</li>
+            <li><strong>Access Controls:</strong> Limited access to authorized personnel only</li>
+            <li><strong>Regular Audits:</strong> Periodic security assessments and updates</li>
+            <li><strong>Training:</strong> Staff training on data protection best practices</li>
+          </ul>
+          
+          <!-- 5. 数据保留 -->
+          <h3 class="section-title">5. Data Retention</h3>
+          <p class="privacy-text">We retain your personal information only for as long as necessary:</p>
+          <ul class="privacy-list">
+            <li><strong>Active Applications:</strong> Retained for 6 months from submission</li>
+            <li><strong>Successful Placements:</strong> Retained for 3 years for employment records</li>
+            <li><strong>Inactive Accounts:</strong> Archived after 12 months of inactivity</li>
+            <li><strong>Legal Requirements:</strong> Retained as required by applicable laws</li>
+          </ul>
+          
+          <!-- 6. 您的权利 -->
+          <h3 class="section-title">6. Your Rights and Choices</h3>
+          <p class="privacy-text">You have the following rights regarding your personal information:</p>
+          <ul class="privacy-list">
+            <li><strong>Access:</strong> Request access to your personal information</li>
+            <li><strong>Correction:</strong> Request correction of inaccurate information</li>
+            <li><strong>Deletion:</strong> Request deletion of your personal information</li>
+            <li><strong>Restriction:</strong> Request restriction of processing</li>
+            <li><strong>Objection:</strong> Object to processing of your information</li>
+            <li><strong>Portability:</strong> Request transfer of your information</li>
+          </ul>
+          
+          <div class="highlight-box">
+            <h4><i class="fas fa-user-check"></i> How to Exercise Your Rights</h4>
+            <p>To exercise any of these rights, please contact us using the information provided below. We will respond to your request within 30 days.</p>
+          </div>
+          
+          <!-- 7. Cookies和跟踪 -->
+          <h3 class="section-title">7. Cookies and Tracking Technologies</h3>
+          <p class="privacy-text">We use cookies and similar technologies to:</p>
+          <ul class="privacy-list">
+            <li><strong>Essential Cookies:</strong> Required for basic website functionality</li>
+            <li><strong>Analytics Cookies:</strong> Help us understand how users interact with our platform</li>
+            <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
+          </ul>
+          
+          <!-- 8. 儿童隐私 -->
+          <h3 class="section-title">8. Children's Privacy</h3>
+          <p class="privacy-text">Our platform is not intended for individuals under 18 years of age. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.</p>
+          
+          <!-- 9. 政策变更 -->
+          <h3 class="section-title">9. Changes to This Privacy Policy</h3>
+          <p class="privacy-text">We may update this Privacy Policy from time to time. We will notify you of any significant changes by:</p>
+          <ul class="privacy-list">
+            <li>Posting the updated policy on our website</li>
+            <li>Updating the "Last Updated" date</li>
+            <li>Where appropriate, notifying you via email or WhatsApp</li>
+          </ul>
+          
+          <!-- 10. 联系我们 -->
+          <h3 class="section-title">10. Contact Information</h3>
+          <div class="contact-info">
+            <h4><i class="fas fa-envelope"></i> Data Protection Officer</h4>
+            <p><strong>WorkFromGhana Data Protection Team</strong></p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Accra, Ghana</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> privacy@workfromghana.gh</p>
+            <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +233 24 712 3456</p>
+            <p class="mt-2"><i class="fas fa-clock"></i> <strong>Response Time:</strong> We aim to respond to privacy inquiries within 5 business days.</p>
+          </div>
+          
+          <!-- 合规徽章 -->
+          <div class="compliance-badges">
+            <div class="compliance-badge-item">
+              <i class="fas fa-balance-scale"></i>
+              <span>GDPR Compliant</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-gavel"></i>
+              <span>Ghana Data Protection Act 2012</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Data Security Certified</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-user-lock"></i>
+              <span>Privacy by Design</span>
+            </div>
+          </div>
+          
+          <!-- 最终条款 -->
+          <div class="important-note">
+            <h4><i class="fas fa-file-contract"></i> Acceptance of Terms</h4>
+            <p>By using our platform, you acknowledge that you have read and understood this Privacy Policy and agree to the collection and use of your information as described herein.</p>
+            <p>If you do not agree with any part of this policy, please do not use our platform or submit your information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA部分 -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="cta-title">Ready to Start Your Remote Work Journey?</h2>
+        <p class="cta-subtitle">
+          Join thousands of Ghanaians who trust WorkFromGhana for legitimate remote work opportunities.
+        </p>
+        <div class="mt-4">
+          <a href="index.html#apply" class="btn btn-primary btn-lg" style="background: white; color: var(--primary); border: 3px solid white; font-size: 1.2rem;">
+            <i class="fab fa-whatsapp btn-icon"></i>
+            <span>Apply Now for Verified Positions</span>
+          </a>
+        </div>
+        <div class="mt-3" style="color: rgba(255,255,255,0.9);">
+          <p><i class="fas fa-check-circle"></i> 100% Free legitimate work matching</p>
+          <p><i class="fas fa-check-circle"></i> Strict privacy protection standards</p>
+          <p><i class="fas fa-check-circle"></i> Compliance with Ghanaian data laws</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">WorkFromGhana.gh</a>
+          <p class="footer-description">
+            Ghana's most trusted remote work platform - connecting talented Ghanaians with verified international work opportunities.
+          </p>
+          <div class="compliance-badge">
+            <i class="fas fa-balance-scale"></i>
+            <span>Compliant with Ghanaian data protection regulations</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>QUICK LINKS</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#opportunities">Job Opportunities</a></li>
+            <li><a href="index.html#how">How It Works</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>LEGAL DOCUMENTS</h3>
+          <ul>
+            <li><a href="privacy.html" class="text-link">Privacy Policy</a></li>
+            <li><a href="userterms.html">Terms of Use</a></li>
+            <li><a href="compliance.html">Compliance Information</a></li>
+            <li><a href="contact.html">Support Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>COMPANY</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="compliance.html">Legal Compliance</a></li>
+            <li><a href="index.html#apply">Apply Now</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 WorkFromGhana Ghana | Legitimate Work Matching Platform</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+          <i class="fas fa-flag"></i> Serving qualified individuals residing in Ghana only
+        </p>
+        
+        <!-- 法律声明 -->
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; opacity: 0.6;">
+          <p>WorkFromGhana is a work-matching platform. We are not direct employers. Final employment terms are determined by the hiring company. All positions require right to work in Ghana and compliance with Ghanaian labor laws.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 元素
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navLinks = document.querySelector('.nav-links');
+      
+      // 移动菜单切换
+      mobileMenuBtn.addEventListener('click', function() {
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none';
+        } else {
+          navLinks.style.display = 'flex';
+          navLinks.style.flexDirection = 'column';
+          navLinks.style.position = 'absolute';
+          navLinks.style.top = '100%';
+          navLinks.style.left = '0';
+          navLinks.style.right = '0';
+          navLinks.style.background = 'white';
+          navLinks.style.padding = '1rem';
+          navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+          navLinks.style.gap = '1rem';
+        }
+      });
+      
+      // 淡入动画
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // 观察淡入元素
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // 更新年份
+      const yearElement = document.querySelector('.footer-bottom p');
+      if (yearElement) {
+        const currentYear = new Date().getFullYear();
+        yearElement.innerHTML = yearElement.innerHTML.replace('2024', currentYear);
+      }
+      
+      // 添加页面加载事件
+      window.addEventListener('load', function() {
+        // 发送页面浏览事件（如果有Google Analytics）
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'page_view', {
+            page_title: 'Privacy Policy - WorkFromGhana',
+            page_location: window.location.href
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
