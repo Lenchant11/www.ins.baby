@@ -1,0 +1,3031 @@
+<!DOCTYPE html>
+<html lang="en-GH">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WorkFromGhana - Ghana's Most Trusted Remote Work Platform | Verified Online Jobs</title>
+  <meta name="description" content="Get legit remote jobs with trusted Ghanaian & international companies. Work from home in Ghana with verified opportunities. Customer service, data entry & admin jobs. Apply today!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 加纳风格配色 - 红黄绿主题 -->
+  <style>
+    :root {
+      /* 加纳国旗颜色 - 红黄绿黑 */
+      --primary: #006B3F; /* 加纳绿 */
+      --secondary: #FCD116; /* 加纳黄 */
+      --accent: #CE1126; /* 加纳红 */
+      --dark-accent: #000000; /* 黑色星星 */
+      --light: #FFFFFF;
+      --dark: #1C2B3A;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-600: #64748B;
+      --gray-700: #475569;
+      --gray-800: #334155;
+      
+      /* 加纳自然配色 */
+      --nature-green: #2E7D32;
+      --nature-gold: #D4AF37;
+      
+      /* 字体 */
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* 间距 - 移动端优化 */
+      --space-xs: 0.25rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      
+      /* 圆角 */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      
+      /* 阴影 - 更柔和 */
+      --shadow-sm: 0 1px 3px rgba(0, 107, 63, 0.08);
+      --shadow-md: 0 3px 10px rgba(0, 107, 63, 0.12);
+      --shadow-lg: 0 5px 20px rgba(0, 107, 63, 0.15);
+      
+      /* 过渡效果 */
+      --transition-fast: 0.15s ease;
+      --transition-base: 0.25s ease;
+    }
+    
+    /* === 重置和基础样式 === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-800);
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--dark);
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    ul, ol {
+      list-style: none;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-sm);
+    }
+    
+    .section {
+      padding: var(--space-lg) 0;
+    }
+    
+    @media (max-width: 768px) {
+      .section {
+        padding: var(--space-md) 0;
+      }
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto var(--space-md);
+    }
+    
+    .section-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+      color: var(--primary);
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+    
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* === 按钮 === */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-family: var(--font-heading);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-base);
+      text-align: center;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, #005a35, #b30f21);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn-primary:hover::after {
+      left: 100%;
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--gray-100);
+    }
+    
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+    
+    .btn-block {
+      width: 100%;
+    }
+    
+    .btn-icon {
+      font-size: 1.1em;
+    }
+    
+    /* === 页头和导航 === */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      box-shadow: 0 2px 10px rgba(0, 107, 63, 0.1);
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    @media (max-width: 1024px) {
+      .nav {
+        flex-wrap: wrap;
+      }
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .nav-links {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .nav-cta {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-cta {
+        display: block;
+        margin-left: 0.5rem;
+      }
+    }
+    
+    .mobile-menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+    
+    /* === 紧急通知栏 === */
+    .urgency-bar {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 0.75rem 0;
+      position: relative;
+      overflow: hidden;
+      margin-top: 60px;
+    }
+    
+    .urgency-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    
+    @media (min-width: 768px) {
+      .urgency-bar {
+        padding: 1rem 0;
+      }
+      
+      .urgency-container {
+        justify-content: flex-start;
+      }
+    }
+    
+    .urgency-scroll {
+      display: flex;
+      animation: scrollText 25s linear infinite;
+      white-space: nowrap;
+    }
+    
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    
+    @media (max-width: 767px) {
+      .urgency-scroll {
+        animation: scrollText 20s linear infinite;
+      }
+    }
+    
+    .urgency-content {
+      display: inline-flex;
+      gap: 2rem;
+      padding: 0 1rem;
+      align-items: center;
+    }
+    
+    .urgency-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .urgency-icon {
+      font-size: 1em;
+    }
+    
+    /* === 主图部分 === */
+    .hero {
+      padding: var(--space-md) 0;
+      background: linear-gradient(135deg, rgba(240, 248, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
+      position: relative;
+      overflow: hidden;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid var(--primary);
+    }
+    
+    @media (max-width: 768px) {
+      .hero {
+        min-height: auto;
+        padding: var(--space-lg) 0;
+      }
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        linear-gradient(90deg, rgba(240, 248, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.7) 100%),
+        url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center right;
+      z-index: 1;
+    }
+    
+    @media (max-width: 1024px) {
+      .hero-bg {
+        background: 
+          linear-gradient(90deg, rgba(240, 248, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.7) 100%),
+          url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center right;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-bg {
+        background: 
+          linear-gradient(rgba(240, 248, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%),
+          url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      position: relative;
+      z-index: 2;
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--space-lg);
+      }
+    }
+    
+    .hero-content {
+      text-align: center;
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-content {
+        text-align: left;
+      }
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+      box-shadow: var(--shadow-sm);
+      font-size: 0.875rem;
+      border: 2px solid var(--primary);
+    }
+    
+    .hero-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+      line-height: 1.2;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--gray-600);
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .hero-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+    
+    .hero-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (max-width: 480px) {
+      .hero-features {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+    
+    .feature-text strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.125rem;
+    }
+    
+    .feature-text p {
+      color: var(--gray-600);
+      font-size: 0.85rem;
+    }
+    
+    /* === 申请表 === */
+    .form-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--primary);
+    }
+    
+    .form-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .form-subtitle {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.375rem;
+      font-weight: 600;
+      color: var(--gray-800);
+      font-size: 0.95rem;
+    }
+    
+    .form-label .required {
+      color: var(--accent);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.875rem;
+      border: 1.5px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      transition: var(--transition-fast);
+      background: white;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(0, 107, 63, 0.1);
+    }
+    
+    .phone-group {
+      display: flex;
+    }
+    
+    .country-code {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem;
+      background: var(--gray-100);
+      border: 1.5px solid var(--gray-300);
+      border-right: none;
+      border-radius: var(--radius-md) 0 0 var(--radius-md);
+      font-weight: 600;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    
+    .phone-input {
+      flex: 1;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .form-check-input {
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+    
+    .form-check-label {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      line-height: 1.4;
+      cursor: pointer;
+    }
+    
+    .form-check-label a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    .form-check-label a:hover {
+      text-decoration: underline;
+    }
+    
+    .security-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem;
+      background: rgba(0, 107, 63, 0.08);
+      border: 1px solid rgba(0, 107, 63, 0.15);
+      border-radius: var(--radius-md);
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+    }
+    
+    .security-icon {
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    
+    /* 蜜罐邮箱字段 - 增强隐藏 */
+    .honeypot-field {
+      display: none !important;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      pointer-events: none;
+    }
+    
+    /* 时间戳蜜罐 */
+    .timestamp-field {
+      display: none !important;
+    }
+    
+    /* 主表单 - 移动端显示 */
+    .hero-form {
+      display: block;
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-form {
+        display: block;
+      }
+    }
+    
+    /* === 工作列表部分 === */
+    .jobs-section {
+      background: white;
+    }
+    
+    .jobs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .jobs-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .jobs-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .job-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-base);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .job-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary);
+    }
+    
+    .job-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    
+    .job-badge {
+      display: inline-block;
+      padding: 0.375rem 1rem;
+      background: var(--primary);
+      color: white;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+    
+    .job-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .job-salary {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .job-features {
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    
+    .job-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+    
+    .job-feature i {
+      color: var(--primary);
+      width: 18px;
+      font-size: 1rem;
+    }
+    
+    .salary-details {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+    
+    .salary-note {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+    
+    /* === 统计数据部分 === */
+    .stats-section {
+      background: linear-gradient(135deg, var(--primary), #005a35);
+      color: white;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+    }
+    
+    .stat-item {
+      padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+      line-height: 1;
+    }
+    
+    @media (min-width: 768px) {
+      .stat-number {
+        font-size: 2.5rem;
+      }
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    @media (min-width: 768px) {
+      .stat-label {
+        font-size: 1rem;
+      }
+    }
+    
+    /* === 工作原理 === */
+    .how-it-works {
+      background: white;
+    }
+    
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .step-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-base);
+      height: 100%;
+    }
+    
+    .step-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin: 0 auto 1rem;
+    }
+    
+    .step-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .step-description {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    
+    /* === 用户评价 === */
+    .testimonials-section {
+      background: var(--gray-100);
+    }
+    
+    .testimonials-slider {
+      max-width: 800px;
+      margin: var(--space-md) auto 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 220px;
+    }
+    
+    .testimonials-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 500%;
+    }
+    
+    .testimonial-slide {
+      flex: 0 0 20%;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      height: 100%;
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      height: 100%;
+    }
+    
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      font-size: 3rem;
+      font-family: Georgia, serif;
+      color: var(--gray-300);
+      line-height: 1;
+    }
+    
+    .testimonial-content {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      font-style: italic;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .author-info h4 {
+      margin-bottom: 0.125rem;
+      font-size: 1.1rem;
+    }
+    
+    .author-info p {
+      color: var(--gray-600);
+      font-size: 0.85rem;
+    }
+    
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gray-300);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: var(--transition-fast);
+    }
+    
+    .slider-dot.active {
+      background: var(--primary);
+      transform: scale(1.2);
+    }
+    
+    /* === 常见问题 === */
+    .faq-section {
+      background: var(--gray-100);
+    }
+    
+    .faq-grid {
+      max-width: 800px;
+      margin: var(--space-md) auto 0;
+    }
+    
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-md);
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-base);
+    }
+    
+    .faq-item.active {
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    
+    .faq-question {
+      padding: 1.25rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      color: var(--dark);
+    }
+    
+    .faq-question:hover {
+      background: var(--gray-100);
+    }
+    
+    .faq-icon {
+      transition: var(--transition-base);
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+    
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+      font-size: 0.95rem;
+      display: none;
+    }
+    
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    
+    /* === CTA部分 === */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary), #005a35);
+      color: white;
+      text-align: center;
+    }
+    
+    .cta-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    @media (min-width: 768px) {
+      .cta-title {
+        font-size: 2rem;
+      }
+    }
+    
+    .cta-subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: var(--space-md);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (min-width: 768px) {
+      .cta-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+    
+    /* === 页脚 === */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: var(--space-lg) 0 var(--space-md);
+      border-top: 3px solid var(--primary);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .footer-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      color: white;
+    }
+    
+    .footer-description {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links h3 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .footer-links ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: var(--space-md);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.8rem;
+    }
+    
+    .compliance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+    
+    /* === 模态框 === */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-base);
+      padding: var(--space-sm);
+    }
+    
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal-content {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      animation: modalIn 0.3s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    
+    @keyframes modalIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--gray-600);
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-fast);
+      z-index: 2;
+    }
+    
+    .modal-close:hover {
+      background: var(--gray-100);
+      color: var(--dark);
+    }
+    
+    .modal-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      text-align: center;
+      color: var(--primary);
+    }
+    
+    .modal-message {
+      text-align: center;
+      color: var(--gray-600);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    /* === 动画 === */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.4s ease forwards;
+    }
+    
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+    
+    .delay-2 {
+      animation-delay: 0.2s;
+    }
+    
+    .delay-3 {
+      animation-delay: 0.3s;
+    }
+    
+    /* === 工具类 === */
+    .text-center {
+      text-align: center;
+    }
+    
+    .text-primary {
+      color: var(--primary);
+    }
+    
+    .text-gradient {
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 0.75rem; }
+    .mb-3 { margin-bottom: 1.25rem; }
+    .mb-4 { margin-bottom: 1.5rem; }
+    
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 0.75rem; }
+    .mt-3 { margin-top: 1.25rem; }
+    .mt-4 { margin-top: 1.5rem; }
+    
+    .d-none {
+      display: none;
+    }
+    
+    .d-block {
+      display: block;
+    }
+    
+    @media (min-width: 1024px) {
+      .d-lg-block {
+        display: block;
+      }
+      
+      .d-lg-none {
+        display: none;
+      }
+    }
+  
+    /* 合规徽章 */
+    .compliance-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+    
+    .compliance-badge-item {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+    
+    .compliance-badge-item i {
+      color: var(--primary);
+    }
+    
+    /* 透明度声明 */
+    .transparency-notice {
+      background: var(--gray-50);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.5rem;
+      margin: 2rem auto;
+      border-radius: 0 8px 8px 0;
+      max-width: 1200px;
+    }
+    
+    .transparency-notice h4 {
+      margin-bottom: 0.5rem;
+      color: var(--gray-800);
+    }
+    
+    .transparency-notice p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--gray-700);
+    }
+    
+    /* 就业免责声明 */
+    .employment-disclaimer {
+      background: #fff8e6;
+      border: 1px solid #ffd54f;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    
+    .employment-disclaimer strong {
+      color: #e65100;
+    }
+    
+    /* 平台说明 */
+    .platform-explanation {
+      background: var(--gray-50);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .platform-explanation h3 {
+      margin-bottom: 1rem;
+      color: var(--gray-800);
+    }
+    
+    /* 合规链接 */
+    .compliance-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .compliance-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    
+    .compliance-links a:hover {
+      text-decoration: underline;
+    }
+    
+    /* 公司信息 */
+    .company-info {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--gray-50);
+      border-radius: 8px;
+      margin: 2rem auto;
+      max-width: 1200px;
+    }
+    
+    .company-info p {
+      margin: 0.5rem 0;
+      color: var(--gray-700);
+    }
+    
+    /* 薪资透明度 */
+    .salary-transparency {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border: 1px solid var(--gray-200);
+    }
+    
+    .salary-transparency h4 {
+      color: var(--gray-800);
+      margin-bottom: 1rem;
+    }
+    
+    /* 申请后联系 */
+    .contact-options {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #f0f7ff;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+    
+    .contact-options h5 {
+      margin-bottom: 0.75rem;
+      color: var(--gray-800);
+    }
+    
+    /* 移动端优化 */
+    @media (max-width: 768px) {
+      .compliance-badges {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .compliance-badge-item {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .compliance-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .platform-explanation {
+        padding: 1.5rem 1rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .transparency-notice {
+        margin: 2rem 1rem;
+      }
+      
+      .company-info {
+        margin: 2rem 1rem;
+      }
+    }
+    
+    /* 加纳风格图案 */
+    .ghana-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23006B3F' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: 200px;
+      opacity: 0.3;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    /* 自定义样式 */
+    small {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.8rem;
+      color: var(--gray-600);
+    }
+    
+    select.form-control {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236B7280' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 16px 12px;
+      padding-right: 2.5rem;
+    }
+    
+    /* 加纳风格的简洁设计 */
+    .ghana-minimal {
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    
+    /* 高对比度文本 */
+    .high-contrast {
+      color: var(--dark);
+      font-weight: 600;
+    }
+    
+    /* 转化优化样式 */
+    .urgency-highlight {
+      background: var(--accent);
+      color: white;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: bold;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.8; }
+      100% { opacity: 1; }
+    }
+    
+    .benefit-list {
+      background: linear-gradient(135deg, var(--secondary), #f9e076);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+    }
+    
+    .benefit-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      color: var(--dark);
+    }
+    
+    .benefit-list i {
+      color: var(--primary);
+    }
+    
+    .guarantee-badge {
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
+    
+    /* WhatsApp按钮样式 */
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+    }
+    
+    .whatsapp-btn:hover {
+      background: #128C7E;
+    }
+  </style>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17694994857"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17694994857');
+    
+    function gtag_report_conversion(url) {
+      const callback = function () {
+        if (typeof(url) != 'undefined') {
+          setTimeout(function() {
+            const newWindow = window.open(url, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+              window.location.href = url;
+            }
+          }, 300);
+        }
+      };
+      
+      let eventSent = false;
+      const maxAttempts = 2;
+      let attempts = 0;
+      
+      const sendEvent = () => {
+        try {
+          if (!eventSent) {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17694994857/Q-BpCOjhwtQbEKnj0PVB',
+              'event_callback': callback,
+              'value': 15,
+              'currency': 'USD'
+            });
+            
+            gtag('event', 'generate_lead', {
+              'currency': 'USD',
+              'value': 15
+            });
+            eventSent = true;
+          }
+        } catch (e) {
+          attempts++;
+          if (attempts < maxAttempts) {
+            setTimeout(sendEvent, 100);
+          } else {
+            callback();
+          }
+        }
+      };
+      
+      sendEvent();
+      
+      setTimeout(() => {
+        if (!eventSent) {
+          callback();
+        }
+      }, 1000);
+      
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <!-- 加纳风格图案背景 -->
+  <div class="ghana-pattern"></div>
+  
+  <!-- 页头 -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <span class="logo-text">WorkFromGhana</span>
+        </a>
+        
+        <div class="nav-links">
+          <a href="#opportunities" class="nav-link">Verified Positions</a>
+          <a href="#how" class="nav-link">Application Process</a>
+          <a href="#about" class="nav-link">About Platform</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#" class="btn btn-primary nav-cta open-modal-btn">
+            Apply Now
+          </a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 紧急通知栏 -->
+  <div class="urgency-bar">
+    <div class="container urgency-container">
+      <div class="urgency-scroll">
+        <div class="urgency-content">
+          <div class="urgency-item">
+            <i class="fas fa-bolt urgency-icon"></i>
+            <span>⚠️ LAST <span class="urgency-highlight">5 POSITIONS</span> LEFT - Apply now before they're gone!</span>
+          </div>
+          <div class="urgency-item">
+            <i class="fas fa-clock urgency-icon"></i>
+            <span>⏳ Limited time: Priority given to TODAY'S applicants!</span>
+          </div>
+          <div class="urgency-item">
+            <i class="fas fa-users urgency-icon"></i>
+            <span>🔥 <span class="urgency-highlight">300+ Ghanaians</span> have applied today - Secure your spot!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主图部分 -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in">
+          <div class="hero-badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>100% Verified Platform</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span>GET LEGIT ONLINE JOBS</span> 
+            <span class="text-primary">FROM TRUSTED COMPANIES</span>
+            <br>
+            <span>WORK FROM ANYWHERE IN GHANA</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            <strong>Stop searching, start earning!</strong> Join thousands of Ghanaians who now work remotely with international companies. No experience needed for some positions!
+          </p>
+          
+          <!-- 转化优化内容 -->
+          <div class="benefit-list fade-in">
+            <h3><i class="fas fa-gift"></i> Why Choose WorkFromGhana?</h3>
+            <ul>
+              <li><i class="fas fa-check-circle text-primary"></i> <strong>Earn in USD or Cedis</strong> - Better rates than local jobs</li>
+              <li><i class="fas fa-check-circle text-primary"></i> <strong>Flexible hours</strong> - Work when it suits you</li>
+              <li><i class="fas fa-check-circle text-primary"></i> <strong>Zero application fees</strong> - Completely FREE to join</li>
+              <li><i class="fas fa-check-circle text-primary"></i> <strong>Weekly payments</strong> - Get paid faster than traditional jobs</li>
+              <li><i class="fas fa-check-circle text-primary"></i> <strong>Training provided</strong> - We teach you everything you need</li>
+            </ul>
+            
+            <div class="guarantee-badge">
+              <i class="fas fa-medal"></i> 30-Day Money Back Guarantee
+            </div>
+          </div>
+          
+          <!-- 平台说明 -->
+          <div class="platform-explanation fade-in">
+            <h3><i class="fas fa-building"></i> How Our Platform Works</h3>
+            <p>We connect talented Ghanaians with verified international companies looking for remote workers. We're NOT employers - we're your bridge to legitimate online work opportunities.</p>
+            <p><strong>Simple process:</strong> Apply once → Get matched → Start working → Get paid weekly!</p>
+          </div>
+          
+          <div class="hero-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-money-bill-wave"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Earn $300-$800 Monthly</strong>
+                <p>Competitive rates in USD or Cedis</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Flexible Schedule</strong>
+                <p>Work 4-8 hours daily, choose your time</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="feature-text">
+                <strong>100% Remote</strong>
+                <p>Work from Accra, Kumasi, or anywhere</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Verified Companies</strong>
+                <p>Partnered with trusted international brands</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 合规徽章 -->
+          <div class="compliance-badges">
+            <div class="compliance-badge-item">
+              <i class="fas fa-balance-scale"></i>
+              <span>Ghana Labor Law Compliant</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-lock"></i>
+              <span>Secure Application Process</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-handshake"></i>
+              <span>No Fees for Job Seekers</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 主申请表 -->
+        <div class="hero-form form-card fade-in delay-1">
+          <div class="form-header">
+            <h2 class="form-title">Apply for Verified Remote Jobs</h2>
+            <p class="form-subtitle">
+              <strong>Limited spots available!</strong> Complete this form to get matched with top companies hiring Ghanaians for remote work.
+            </p>
+          </div>
+          
+          <form id="applicationForm">
+            <!-- 增强蜜罐字段 -->
+            <div class="honeypot-field">
+              <label for="email_hp">Leave this field blank if you are human</label>
+              <input type="email" id="email_hp" name="email_hp" placeholder="Your email" autocomplete="off">
+            </div>
+            
+            <!-- 时间戳蜜罐 - 人类填写需要时间 -->
+            <div class="timestamp-field">
+              <label for="timestamp">Timestamp</label>
+              <input type="hidden" id="timestamp" name="timestamp" value="">
+            </div>
+            
+            <div class="form-group">
+              <label for="name" class="form-label">
+                <span>Full Legal Name</span> <span class="required">*</span>
+              </label>
+              <input type="text" id="name" class="form-control" placeholder="As on your ID card" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">
+                <span>WhatsApp Number</span> <span class="required">*</span>
+              </label>
+              <div class="phone-group">
+                <div class="country-code">
+                  <img src="https://flagcdn.com/w20/gh.png" alt="Ghana Flag" width="20" height="14">
+                  <span>+233</span>
+                </div>
+                <input type="tel" id="phone" class="form-control phone-input" placeholder="24 xxx xxxx" pattern="[0-9]{9}" required>
+              </div>
+              <small>Example: 24 123 4567 (without first 0)</small>
+            </div>
+            
+            <div class="form-group">
+              <label for="age" class="form-label">
+                <span>Age</span> <span class="required">*</span>
+              </label>
+              <input type="number" id="age" class="form-control" placeholder="25" min="18" max="65" required>
+            </div>
+            
+            <div class="form-check">
+              <input type="checkbox" id="consent" class="form-check-input" required checked>
+              <label for="consent" class="form-check-label">
+                <span>I confirm that I have read and accept the</span> 
+                <a href="/privacy.html" target="_blank">Privacy Policy</a> 
+                <span>and</span> 
+                <a href="/userterms.html" target="_blank">Terms of Use</a>.
+              </label>
+            </div>
+            
+            <div class="form-check mb-3">
+              <input type="checkbox" id="whatsapp_consent" class="form-check-input" required checked>
+              <label for="whatsapp_consent" class="form-check-label">
+                <span>I agree to receive job opportunities via WhatsApp (this is how we contact successful applicants)</span>
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fab fa-whatsapp btn-icon"></i>
+              <span>Apply Now & Get WhatsApp Link</span>
+            </button>
+            
+            <div class="security-badge">
+              <i class="fas fa-lock security-icon"></i>
+              <span>Your information is protected and only used for legitimate job matching</span>
+            </div>
+            
+            <div class="text-center mt-2">
+              <small><i class="fas fa-user-clock"></i> Average response time: 2-4 hours</small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 公司信息 -->
+  <section class="section company-info" id="about">
+    <div class="container">
+      <h3 class="section-title">Trusted by Top Companies</h3>
+      <p>WorkFromGhana partners with leading international companies that trust Ghanaian talent for remote positions. We're your gateway to working with brands like:</p>
+      
+      <div class="compliance-badges mt-3">
+        <div class="compliance-badge-item">
+          <i class="fas fa-globe"></i>
+          <span>Amazon Remote</span>
+        </div>
+        <div class="compliance-badge-item">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Jumia Support</span>
+        </div>
+        <div class="compliance-badge-item">
+          <i class="fas fa-headset"></i>
+          <span>Teleperformance</span>
+        </div>
+        <div class="compliance-badge-item">
+          <i class="fas fa-mobile-alt"></i>
+          <span>MTN Digital</span>
+        </div>
+      </div>
+      
+      <div class="compliance-links mt-3">
+        <a href="/about.html"><i class="fas fa-info-circle"></i> About us</a>
+        <a href="/compliance.html"><i class="fas fa-balance-scale"></i> Compliance Info</a>
+        <a href="/contact.html"><i class="fas fa-phone-alt"></i> Support Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作列表部分 -->
+  <section class="section jobs-section" id="opportunities">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Hot Remote Jobs Available Right Now!</h2>
+        <p class="section-subtitle">
+          These positions are actively hiring Ghanaians for immediate start. Apply now before they're filled!
+        </p>
+      </div>
+      
+      <!-- 薪资透明度说明 -->
+      <div class="salary-transparency fade-in">
+        <h4><i class="fas fa-money-bill-wave"></i> Realistic Earnings Information</h4>
+        <p><strong>Weekly payments</strong> via Mobile Money or Bank Transfer. Earnings shown are realistic averages for Ghanaian remote workers. All positions follow Ghana labor regulations.</p>
+        <p><i class="fas fa-info-circle text-primary"></i> <strong>Note:</strong> Some positions offer performance bonuses up to 30% extra!</p>
+      </div>
+      
+      <div class="jobs-grid">
+        <!-- 工作 1 -->
+        <div class="job-card fade-in">
+          <div class="job-badge">Amazon Partner</div>
+          <h3 class="job-title">Customer Support Agent</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>₵1,800 - ₵2,500 weekly</span>
+          </div>
+          <span class="salary-details">+ Performance bonuses</span>
+          <span class="salary-note">Paid every Friday via Mobile Money</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Flexible 6-8 hour shifts</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-home"></i>
+              <span>100% work from home</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Full training provided</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-wifi"></i>
+              <span>Stable internet required</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Apply for This Position
+          </button>
+        </div>
+        
+        <!-- 工作 2 -->
+        <div class="job-card fade-in delay-1">
+          <div class="job-badge">Jumia Support</div>
+          <h3 class="job-title">E-commerce Data Entry Specialist</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>₵1,500 - ₵2,200 weekly</span>
+          </div>
+          <span class="salary-details">+ Productivity incentives</span>
+          <span class="salary-note">Mobile Money payments</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Choose your own hours</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span>Basic computer skills needed</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-file-alt"></i>
+              <span>Product listing & updates</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-star"></i>
+              <span>No experience required</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Apply for This Position
+          </button>
+        </div>
+        
+        <!-- 工作 3 -->
+        <div class="job-card fade-in delay-2">
+          <div class="job-badge">Teleperformance</div>
+          <h3 class="job-title">Online Chat Support Representative</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>₵2,000 - ₵3,000 weekly</span>
+          </div>
+          <span class="salary-details">+ Customer satisfaction bonus</span>
+          <span class="salary-note">Compliant with labor laws</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-headset"></i>
+              <span>Text/chat support only</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Morning/evening shifts available</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-krone-sign"></i>
+              <span>Weekly performance bonuses</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-gift"></i>
+              <span>Complete training provided</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Apply for This Position
+          </button>
+        </div>
+        
+        <!-- 工作 4 -->
+        <div class="job-card fade-in">
+          <div class="job-badge">MTN Digital</div>
+          <h3 class="job-title">Social Media Moderator</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>₵1,600 - ₵2,400 weekly</span>
+          </div>
+          <span class="salary-details">Based on experience</span>
+          <span class="salary-note">Proper employment contract</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-tasks"></i>
+              <span>Content moderation tasks</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span>Smartphone or computer okay</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-chart-line"></i>
+              <span>Career growth possible</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Flexible scheduling options</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Apply for This Position
+          </button>
+        </div>
+        
+        <!-- 工作 5 -->
+        <div class="job-card fade-in delay-1">
+          <div class="job-badge">Google Partner</div>
+          <h3 class="job-title">Search Quality Rater</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>₵1,400 - ₵2,000 weekly</span>
+          </div>
+          <span class="salary-details">Task-based payment</span>
+          <span class="salary-note">Regular employment terms</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-eye"></i>
+              <span>Website quality evaluation</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-home"></i>
+              <span>100% remote work</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-trophy"></i>
+              <span>Quality-focused position</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-users"></i>
+              <span>Work independently</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Apply for This Position
+          </button>
+        </div>
+        
+        <!-- 工作 6 -->
+        <div class="job-card fade-in delay-2">
+          <div class="job-badge">Startup Partner</div>
+          <h3 class="job-title">Virtual Assistant</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>₵1,200 - ₵1,800 weekly</span>
+          </div>
+          <span class="salary-details">Part-time hours available</span>
+          <span class="salary-note">Compliance with all regulations</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Part-time hours available</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span>Basic computer required</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Complete training provided</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-calendar-check"></i>
+              <span>Flexible start dates</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Apply for This Position
+          </button>
+        </div>
+      </div>
+      
+      <!-- 就业法律声明 -->
+      <div class="employment-disclaimer mt-4">
+        <strong><i class="fas fa-balance-scale"></i> Labor Law Compliance:</strong> All positions offered through our platform follow Ghanaian labor legislation including fair wage requirements, working time rules, and proper employment contracts.
+      </div>
+    </div>
+  </section>
+
+  <!-- 统计数据部分 -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number">3,500+</div>
+          <div class="stat-label">Ghanaians Hired</div>
+        </div>
+        <div class="stat-item fade-in delay-1">
+          <div class="stat-number">45+</div>
+          <div class="stat-label">Verified Companies</div>
+        </div>
+        <div class="stat-item fade-in delay-2">
+          <div class="stat-number">₵8.5M+</div>
+          <div class="stat-label">Paid to Workers</div>
+        </div>
+        <div class="stat-item fade-in delay-3">
+          <div class="stat-number">4.9/5</div>
+          <div class="stat-label">User Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作原理 -->
+  <section class="section how-it-works" id="how">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Simple 3-Step Process to Start Earning</h2>
+        <p class="section-subtitle">
+          Get from application to paycheck in as little as 7 days
+        </p>
+      </div>
+      
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Quick Application</h3>
+          <p class="step-description">
+            Fill our 2-minute form. <strong>No CV needed!</strong> We just need basic info to match you with companies.
+          </p>
+        </div>
+        
+        <div class="step-card fade-in delay-1">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Instant Matching</h3>
+          <p class="step-description">
+            Our system matches you with companies hiring NOW. Get contacted on WhatsApp within hours (not days!).
+          </p>
+        </div>
+        
+        <div class="step-card fade-in delay-2">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Start Earning</h3>
+          <p class="step-description">
+            Complete simple training (1-2 days). Start working immediately. Get your first payment within a week!
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg open-modal-btn">
+          <i class="fab fa-whatsapp btn-icon"></i>
+          <span>Start Your Application Now</span>
+        </button>
+        <p class="mt-2" style="color: var(--gray-600); font-size: 0.9rem;">
+          <i class="fas fa-check-circle text-primary"></i>
+          <span>100% FREE for job seekers - Legitimate work platform</span>
+        </p>
+        <p class="mt-1" style="color: var(--accent); font-size: 0.85rem; font-weight: bold;">
+          <i class="fas fa-bolt"></i>
+          <span>Average time to first paycheck: 7-10 days</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">What Our Ghanaian Workers Say</h2>
+        <p class="section-subtitle">
+          Real stories from people who changed their lives with remote work
+        </p>
+      </div>
+      
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <!-- 评价 1 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "I was skeptical at first, but after applying, I got a WhatsApp message the same day! Now I work for an American company from my home in Accra. I earn ₵2,800 weekly - more than my previous office job!"
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">AK</div>
+                <div class="author-info">
+                  <h4>Ama K.</h4>
+                  <p>Customer Support Agent, Accra</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 评价 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "As a university student in Kumasi, I needed flexible work. WorkFromGhana connected me with a data entry job. I work 4 hours daily and earn enough for my fees and upkeep. Payments come every Friday like clockwork!"
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">KO</div>
+                <div class="author-info">
+                  <h4>Kwame O.</h4>
+                  <p>Data Entry Specialist, Kumasi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 评价 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "After my maternity leave, I couldn't return to my 9-5 job. This platform saved me! I now work as a chat support agent while my baby naps. I earn ₵3,200 weekly - sometimes more with bonuses!"
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">EA</div>
+                <div class="author-info">
+                  <h4>Esi A.</h4>
+                  <p>Online Support, Takoradi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 评价 4 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "I lost my job during COVID. A friend sent me this link. I applied, got trained in 2 days, and started working immediately. The Mobile Money payments every week have changed my life completely!"
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">YA</div>
+                <div class="author-info">
+                  <h4>Yaw A.</h4>
+                  <p>Content Moderator, Tamale</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 评价 5 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "At 52, I thought remote work was for young people. I was wrong! I now work as a quality rater 5 hours daily. I earn ₵2,000 weekly - perfect for my retirement supplement. Don't let age stop you!"
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">KA</div>
+                <div class="author-info">
+                  <h4>Kofi A.</h4>
+                  <p>Quality Rater, Cape Coast</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slider-dots" id="sliderDots">
+        <button class="slider-dot active" data-slide="0"></button>
+        <button class="slider-dot" data-slide="1"></button>
+        <button class="slider-dot" data-slide="2"></button>
+        <button class="slider-dot" data-slide="3"></button>
+        <button class="slider-dot" data-slide="4"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Get answers about our legitimate work-matching platform
+        </p>
+      </div>
+      
+      <div class="faq-grid">
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>Is this really FREE? No hidden charges?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p><strong>100% FREE for job seekers!</strong> We are a work-matching service. Companies pay us to find qualified Ghanaians. You pay absolutely nothing - no application fees, no placement fees, no monthly fees.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>How long until I get my first paycheck?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Most workers receive their first payment within 7-10 days of starting work. Companies pay weekly via Mobile Money or bank transfer. Some positions offer daily payments for completed tasks!</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>I have no experience. Can I still apply?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p><strong>YES!</strong> Many positions require no previous experience. We provide complete training for all roles. If you can use a smartphone or computer and understand basic English, you can qualify for several positions.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>What equipment do I need?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Most positions require: 1) A smartphone OR computer, 2) Stable internet connection (even mobile data works), 3) A quiet place to work. Some companies may provide equipment for top performers.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg open-modal-btn">
+          <i class="fab fa-whatsapp btn-icon"></i>
+          <span>Apply to Verified Positions</span>
+        </button>
+        <p class="mt-2" style="color: var(--gray-600); font-size: 0.85rem;">
+          <i class="fas fa-phone-alt text-primary"></i>
+          <span>Only legitimate employment opportunities</span>
+        </p>
+        
+        <!-- 合规链接 -->
+        <div class="compliance-links mt-3">
+          <a href="/privacy.html"><i class="fas fa-lock"></i> Privacy Policy</a>
+          <a href="/userterms.html"><i class="fas fa-file-contract"></i> Terms of Use</a>
+          <a href="/compliance.html"><i class="fas fa-balance-scale"></i> Compliance Info</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA部分 -->
+  <section class="section cta-section" id="apply">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="cta-title">Stop Dreaming, Start Earning!</h2>
+        <p class="cta-subtitle">
+          <strong>Limited positions available this week.</strong> Don't miss your chance to work with top international companies from the comfort of your home.
+        </p>
+        
+        <div class="benefit-list mt-4">
+          <h4><i class="fas fa-crown"></i> Why Apply Today?</h4>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Priority placement</strong> for today's applicants</li>
+            <li><i class="fas fa-check"></i> <strong>Faster approval process</strong> (2-4 hours response time)</li>
+            <li><i class="fas fa-check"></i> <strong>Higher chance</strong> of getting your preferred position</li>
+            <li><i class="fas fa-check"></i> <strong>Bonus opportunity</strong> for early applicants</li>
+          </ul>
+        </div>
+        
+        <div class="mt-4">
+          <button class="btn btn-primary btn-lg open-modal-btn" style="background: white; color: var(--primary); border: 3px solid white; font-size: 1.2rem;">
+            <i class="fab fa-whatsapp btn-icon"></i>
+            <span>CLICK HERE TO APPLY NOW</span>
+          </button>
+        </div>
+        
+        <div class="mt-3" style="color: rgba(255,255,255,0.9);">
+          <p><i class="fas fa-check-circle"></i> 100% Free legitimate work matching</p>
+          <p><i class="fas fa-check-circle"></i> Only verified international companies</p>
+          <p><i class="fas fa-check-circle"></i> Weekly Mobile Money payments guaranteed</p>
+          <p><i class="fas fa-check-circle"></i> Complete training provided for all roles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="footer-logo">WorkFromGhana.gh</a>
+          <p class="footer-description">
+            Ghana's most trusted remote work platform - connecting talented Ghanaians with verified international work opportunities.
+          </p>
+          <div class="compliance-badge">
+            <i class="fas fa-balance-scale"></i>
+            <span>Compliant with Ghanaian labor regulations</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>PLATFORM INFO</h3>
+          <ul>
+            <li><a href="#opportunities">Verified Positions</a></li>
+            <li><a href="#how">Application Process</a></li>
+            <li><a href="#about">About Platform</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>LEGAL & COMPLIANCE</h3>
+          <ul>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/userterms.html">Terms of Use</a></li>
+            <li><a href="/compliance.html">Compliance Information</a></li>
+            <li><a href="/contact.html">Support Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>ADDITIONAL PAGES</h3>
+          <ul>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/contact.html">Contact us</a></li>
+            <li><a href="/userterms.html">User Agreement</a></li>
+            <li><a href="/compliance.html">Legal Compliance</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 WorkFromGhana Ghana | Legitimate Work Matching Platform</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+          <i class="fas fa-flag"></i> Serving qualified individuals residing in Ghana only
+        </p>
+        
+        <!-- 法律声明 -->
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; opacity: 0.6;">
+          <p>WorkFromGhana is a work-matching platform. We are not direct employers. Final employment terms are determined by the hiring company. All positions require right to work in Ghana and compliance with Ghanaian labor laws.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 模态表单 -->
+  <div class="modal" id="modalForm">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      <div class="form-header">
+        <h2 class="form-title">Last Step Before We Match You!</h2>
+        <p class="form-subtitle">
+          Complete this quick form to get instant access to verified remote work opportunities.
+        </p>
+      </div>
+      
+      <form id="modalApplicationForm">
+        <!-- 增强蜜罐字段 -->
+        <div class="honeypot-field">
+          <label for="modal-email_hp">Leave this field blank if you are human</label>
+          <input type="email" id="modal-email_hp" name="email_hp" placeholder="Your email" autocomplete="off">
+        </div>
+        
+        <!-- 时间戳蜜罐 -->
+        <div class="timestamp-field">
+          <label for="modal-timestamp">Timestamp</label>
+          <input type="hidden" id="modal-timestamp" name="timestamp" value="">
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-name" class="form-label">
+            <span>Full Legal Name</span> <span class="required">*</span>
+          </label>
+          <input type="text" id="modal-name" class="form-control" placeholder="As on your ID card" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-phone" class="form-label">
+            <span>WhatsApp Number</span> <span class="required">*</span>
+          </label>
+          <div class="phone-group">
+            <div class="country-code">
+              <img src="https://flagcdn.com/w20/gh.png" alt="Ghana Flag" width="20" height="14">
+              <span>+233</span>
+            </div>
+            <input type="tel" id="modal-phone" class="form-control phone-input" placeholder="24 xxx xxxx" pattern="[0-9]{9}" required>
+          </div>
+          <small>Example: 24 123 4567 (without first 0)</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-age" class="form-label">
+            <span>Age</span> <span class="required">*</span>
+          </label>
+          <input type="number" id="modal-age" class="form-control" placeholder="25" min="18" max="65" required>
+        </div>
+        
+        <div class="form-check">
+          <input type="checkbox" id="modal-consent" class="form-check-input" required checked>
+          <label for="modal-consent" class="form-check-label">
+            <span>I confirm that I have read and accept the</span> 
+            <a href="/privacy.html" target="_blank">Privacy Policy</a> 
+            <span>and</span> 
+            <a href="/userterms.html" target="_blank">Terms of Use</a>.
+          </label>
+        </div>
+        
+        <div class="form-check mb-3">
+          <input type="checkbox" id="modal-whatsapp_consent" class="form-check-input" required checked>
+          <label for="modal-whatsapp_consent" class="form-check-label">
+            <span>I agree to receive job opportunities via WhatsApp (this is how we contact successful applicants)</span>
+          </label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fab fa-whatsapp btn-icon"></i>
+          <span>Complete Application & Get WhatsApp Link</span>
+        </button>
+        
+        <div class="security-badge">
+          <i class="fas fa-lock security-icon"></i>
+          <span>Secure application - for work matching purposes only</span>
+        </div>
+        
+        <div class="text-center mt-2">
+          <small><i class="fas fa-bolt"></i> <strong>Fast response:</strong> Most applicants get contacted within 2-4 hours</small>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 成功模态框 -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <button class="modal-close" id="successCloseBtn">&times;</button>
+      <h3 class="modal-title">✅ <span>Application Received Successfully!</span></h3>
+      <p class="modal-message">
+        <strong>Congratulations!</strong> Your application has been received and is being processed for immediate matching with hiring companies.
+      </p>
+      
+      <!-- 联系选项 -->
+      <div class="contact-options">
+        <h5><i class="fab fa-whatsapp"></i> What happens next:</h5>
+        <p style="font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>Check your WhatsApp!</strong> If your profile matches company requirements, you will receive a WhatsApp message from our team within 2-4 hours with next steps.</p>
+        <p style="font-size: 0.85rem; color: var(--gray-600);">Make sure your WhatsApp number is correct and you have data to receive messages.</p>
+      </div>
+      
+      <button class="btn btn-primary btn-block" id="successOkBtn">
+        <i class="fas fa-check btn-icon"></i>
+        <span>Continue to Website</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 加纳WhatsApp号码
+      const whatsappAccounts = [ 
+      "233247123456",
+      "233543987654",
+      "233208765432"
+      ];
+      
+      // 随机选择WhatsApp账户
+      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+      
+      // 元素
+      const applicationForm = document.getElementById('applicationForm');
+      const modalApplicationForm = document.getElementById('modalApplicationForm');
+      const modalForm = document.getElementById('modalForm');
+      const successModal = document.getElementById('successModal');
+      const openModalBtns = document.querySelectorAll('.open-modal-btn');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const successCloseBtn = document.getElementById('successCloseBtn');
+      const successOkBtn = document.getElementById('successOkBtn');
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navLinks = document.querySelector('.nav-links');
+      const faqItems = document.querySelectorAll('.faq-item');
+      const testimonialsTrack = document.getElementById('testimonialsTrack');
+      const sliderDots = document.getElementById('sliderDots');
+      const dots = sliderDots ? sliderDots.querySelectorAll('.slider-dot') : [];
+      
+      // 表单提交时间戳
+      let formSubmitStartTime = null;
+      
+      // 移动菜单切换
+      mobileMenuBtn.addEventListener('click', function() {
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none';
+        } else {
+          navLinks.style.display = 'flex';
+          navLinks.style.flexDirection = 'column';
+          navLinks.style.position = 'absolute';
+          navLinks.style.top = '100%';
+          navLinks.style.left = '0';
+          navLinks.style.right = '0';
+          navLinks.style.background = 'white';
+          navLinks.style.padding = '1rem';
+          navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+          navLinks.style.gap = '1rem';
+        }
+      });
+      
+      // 常见问题切换
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          item.classList.toggle('active');
+        });
+      });
+      
+      // 评价轮播
+      let currentSlide = 0;
+      const totalSlides = 5;
+      
+      function updateSlider() {
+        if (testimonialsTrack) {
+          testimonialsTrack.style.transform = `translateX(-${currentSlide * 20}%)`;
+          
+          // 更新激活的点
+          dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+      }
+      
+      // 轮播点点击
+      if (dots.length > 0) {
+        dots.forEach(dot => {
+          dot.addEventListener('click', function() {
+            currentSlide = parseInt(this.getAttribute('data-slide'));
+            updateSlider();
+          });
+        });
+      }
+      
+      // 自动轮播
+      let slideInterval;
+      function startSlider() {
+        if (testimonialsTrack) {
+          slideInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+          }, 5000);
+        }
+      }
+      
+      // 模态框打开按钮
+      openModalBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          modalForm.classList.add('active');
+        });
+      });
+      
+      // 模态框关闭按钮
+      modalCloseBtn.addEventListener('click', function() {
+        modalForm.classList.remove('active');
+      });
+      
+      successCloseBtn.addEventListener('click', function() {
+        successModal.classList.remove('active');
+      });
+      
+      // 成功模态框OK按钮
+      successOkBtn.addEventListener('click', function() {
+        successModal.classList.remove('active');
+        // 仅限真实用户：发送转化事件并打开WhatsApp
+        const whatsappMessage = "Hello! I have applied for remote work opportunities and want to get more information.";
+        const whatsappLink = `https://wa.me/${randomAccount}`;
+        gtag_report_conversion(whatsappLink);
+      });
+      
+      // 点击背景关闭模态框
+      [modalForm, successModal].forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            this.classList.remove('active');
+          }
+        });
+      });
+      
+      // 增强机器人检测函数
+      function isBotSubmission(form) {
+        // 1. 蜜罐检测
+        const honeypot = form.querySelector('.honeypot-field input');
+        if (honeypot && honeypot.value.trim() !== '') {
+          console.log('Bot detected: honeypot filled');
+          return true;
+        }
+        
+        // 2. 提交时间检测（机器人通常提交太快）
+        if (formSubmitStartTime) {
+          const submitTime = Date.now() - formSubmitStartTime;
+          if (submitTime < 2000) { // 少于2秒的提交很可能是机器人
+            console.log('Bot detected: too fast submission', submitTime + 'ms');
+            return true;
+          }
+        }
+        
+        // 3. 表单字段模式检测
+        const name = form.querySelector('input[type="text"]').value.trim();
+        const phone = form.querySelector('input[type="tel"]').value.trim();
+        
+        // 检测明显是测试数据的提交
+        if (name.toLowerCase().includes('test') || 
+            name.toLowerCase().includes('demo') ||
+            phone === '123456789' ||
+            phone === '999999999') {
+          console.log('Bot detected: test data pattern');
+          return true;
+        }
+        
+        return false;
+      }
+      
+      // 表单验证函数（已删除城市字段验证）
+      function validateForm(form) {
+        const name = form.querySelector('input[type="text"]').value.trim();
+        const phone = form.querySelector('input[type="tel"]').value.trim();
+        const age = form.querySelector('input[type="number"]').value;
+        const consent = form.querySelector('#consent, #modal-consent').checked;
+        const whatsappConsent = form.querySelector('#whatsapp_consent, #modal-whatsapp_consent').checked;
+        
+        // 重置样式
+        const inputs = form.querySelectorAll('input');
+        inputs.forEach(input => {
+          input.style.borderColor = '';
+        });
+        
+        // 验证姓名
+        if (!name) {
+          form.querySelector('input[type="text"]').style.borderColor = 'var(--accent)';
+          return false;
+        }
+        
+        // 验证电话（加纳：9位，以24/20/54/55/59开头）
+        const phoneRegex = /^(20|24|26|27|28|54|55|56|57|59)[0-9]{7}$/;
+        if (!phoneRegex.test(phone)) {
+          form.querySelector('input[type="tel"]').style.borderColor = 'var(--accent)';
+          return false;
+        }
+        
+        // 验证年龄
+        const ageNum = parseInt(age);
+        if (!age || ageNum < 18 || ageNum > 65) {
+          form.querySelector('input[type="number"]').style.borderColor = 'var(--accent)';
+          return false;
+        }
+        
+        // 验证同意
+        if (!consent || !whatsappConsent) {
+          return false;
+        }
+        
+        return true;
+      }
+      
+      // 表单提交处理 - 机器人静默处理
+      function handleFormSubmit(form, isModalForm = false) {
+        // 记录表单开始填写时间
+        if (!formSubmitStartTime) {
+          formSubmitStartTime = Date.now();
+        }
+        
+        // 机器人检测
+        if (isBotSubmission(form)) {
+          console.log('Silently rejecting bot submission');
+          // 静默失败 - 不显示任何消息，不发送事件
+          return false;
+        }
+        
+        // 真实用户验证
+        if (validateForm(form)) {
+          // 发送Google Analytics事件（仅真实用户）
+          try {
+            gtag('event', 'submit_form', {
+              event_category: 'lead',
+              event_label: isModalForm ? 'Modal Form Submission' : 'Main Form Submission'
+            });
+            
+            // 发送转化事件
+            const whatsappMessage = "Hello! I have applied for remote work opportunities and want to get more information.";
+            const whatsappLink = `https://wa.me/${randomAccount}`;
+            gtag_report_conversion(whatsappLink);
+          } catch (error) {
+            console.log('Google Analytics error:', error);
+            // 备用
+            setTimeout(() => {
+              const whatsappMessage = "Hello! I have applied for remote work opportunities and want to get more information.";
+              const whatsappLink = `https://wa.me/${randomAccount}`;
+              window.open(whatsappLink, '_blank');
+            }, 300);
+          }
+          
+          // 显示成功模态框
+          successModal.classList.add('active');
+          
+          // 关闭模态表单
+          if (isModalForm) {
+            modalForm.classList.remove('active');
+          }
+          
+          return true;
+        }
+        return false;
+      }
+      
+      // 主表单提交
+      if (applicationForm) {
+        applicationForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          handleFormSubmit(this, false);
+        });
+      }
+      
+      // 模态表单提交
+      if (modalApplicationForm) {
+        modalApplicationForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          handleFormSubmit(this, true);
+        });
+      }
+      
+      // 输入限制
+      function setupInputRestrictions() {
+        // 电话输入
+        const phoneInputs = document.querySelectorAll('input[type="tel"]');
+        phoneInputs.forEach(input => {
+          input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 9) {
+              this.value = this.value.slice(0, 9);
+            }
+          });
+          
+          input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text');
+            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 9);
+            this.value = numbersOnly;
+          });
+        });
+        
+        // 年龄输入
+        const ageInputs = document.querySelectorAll('input[type="number"]');
+        ageInputs.forEach(input => {
+          input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 2) {
+              this.value = this.value.slice(0, 2);
+            }
+          });
+          
+          input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text');
+            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 2);
+            this.value = numbersOnly;
+          });
+        });
+      }
+      
+      // 淡入动画
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // 观察淡入元素
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // 初始化所有功能
+      function init() {
+        setupInputRestrictions();
+        startSlider();
+        
+        // 发送页面浏览事件
+        gtag('event', 'page_view', {
+          page_title: 'Ghana Remote Work Opportunities - WorkFromGhana',
+          page_location: window.location.href
+        });
+        
+        // 发送表单浏览事件
+        setTimeout(() => {
+          gtag('event', 'view_form', {
+            event_category: 'engagement',
+            event_label: 'Modal Form View'
+          });
+        }, 1000);
+        
+        // 设置表单开始时间
+        const forms = [applicationForm, modalApplicationForm];
+        forms.forEach(form => {
+          if (form) {
+            form.addEventListener('focus', function() {
+              formSubmitStartTime = Date.now();
+            }, true);
+          }
+        });
+      }
+      
+      // 开始初始化
+      init();
+    });
+  </script>
+</body>
+</html>
