@@ -1669,15 +1669,15 @@
         try {
           if (!eventSent) {
             gtag('event', 'conversion', {
-              'send_to': 'AW-17694994857/Q-BpCOjhwtQbEKnj0PVB',
+              'send_to': 'AW-17694994857/ZVKoCIGgkNgbEKnj0PVB',
               'event_callback': callback,
-              'value': 15,
+              'value': 2,
               'currency': 'USD'
             });
             
             gtag('event', 'generate_lead', {
               'currency': 'USD',
-              'value': 15
+              'value': 2
             });
             eventSent = true;
           }
@@ -2654,373 +2654,361 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // 加纳WhatsApp号码
-      const whatsappAccounts = [ 
-      "233247123456",
-      "233543987654",
-      "233208765432"
-      ];
-      
-      // 随机选择WhatsApp账户
-      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
-      
-      // 元素
-      const applicationForm = document.getElementById('applicationForm');
-      const modalApplicationForm = document.getElementById('modalApplicationForm');
-      const modalForm = document.getElementById('modalForm');
-      const successModal = document.getElementById('successModal');
-      const openModalBtns = document.querySelectorAll('.open-modal-btn');
-      const modalCloseBtn = document.getElementById('modalCloseBtn');
-      const successCloseBtn = document.getElementById('successCloseBtn');
-      const successOkBtn = document.getElementById('successOkBtn');
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const navLinks = document.querySelector('.nav-links');
-      const faqItems = document.querySelectorAll('.faq-item');
-      const testimonialsTrack = document.getElementById('testimonialsTrack');
-      const sliderDots = document.getElementById('sliderDots');
-      const dots = sliderDots ? sliderDots.querySelectorAll('.slider-dot') : [];
-      
-      // 表单提交时间戳
-      let formSubmitStartTime = null;
-      
-      // 移动菜单切换
-      mobileMenuBtn.addEventListener('click', function() {
-        if (navLinks.style.display === 'flex') {
-          navLinks.style.display = 'none';
-        } else {
-          navLinks.style.display = 'flex';
-          navLinks.style.flexDirection = 'column';
-          navLinks.style.position = 'absolute';
-          navLinks.style.top = '100%';
-          navLinks.style.left = '0';
-          navLinks.style.right = '0';
-          navLinks.style.background = 'white';
-          navLinks.style.padding = '1rem';
-          navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-          navLinks.style.gap = '1rem';
-        }
-      });
-      
-      // 常见问题切换
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-          item.classList.toggle('active');
-        });
-      });
-      
-      // 评价轮播
-      let currentSlide = 0;
-      const totalSlides = 5;
-      
-      function updateSlider() {
-        if (testimonialsTrack) {
-          testimonialsTrack.style.transform = `translateX(-${currentSlide * 20}%)`;
-          
-          // 更新激活的点
-          dots.forEach((dot, index) => {
-            if (index === currentSlide) {
-              dot.classList.add('active');
-            } else {
-              dot.classList.remove('active');
-            }
-          });
-        }
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 加纳WhatsApp号码
+    const whatsappAccounts = [ 
+    "233247123456",
+    "233543987654",
+    "233208765432"
+    ];
+    
+    // 随机选择WhatsApp账户
+    const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+    
+    // 元素
+    const applicationForm = document.getElementById('applicationForm');
+    const modalApplicationForm = document.getElementById('modalApplicationForm');
+    const modalForm = document.getElementById('modalForm');
+    const successModal = document.getElementById('successModal');
+    const openModalBtns = document.querySelectorAll('.open-modal-btn');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const successCloseBtn = document.getElementById('successCloseBtn');
+    const successOkBtn = document.getElementById('successOkBtn');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.querySelector('.nav-links');
+    const faqItems = document.querySelectorAll('.faq-item');
+    const testimonialsTrack = document.getElementById('testimonialsTrack');
+    const sliderDots = document.getElementById('sliderDots');
+    const dots = sliderDots ? sliderDots.querySelectorAll('.slider-dot') : [];
+    
+    // 移动菜单切换
+    mobileMenuBtn.addEventListener('click', function() {
+      if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+      } else {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '100%';
+        navLinks.style.left = '0';
+        navLinks.style.right = '0';
+        navLinks.style.background = 'white';
+        navLinks.style.padding = '1rem';
+        navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+        navLinks.style.gap = '1rem';
       }
-      
-      // 轮播点点击
-      if (dots.length > 0) {
-        dots.forEach(dot => {
-          dot.addEventListener('click', function() {
-            currentSlide = parseInt(this.getAttribute('data-slide'));
-            updateSlider();
-          });
-        });
-      }
-      
-      // 自动轮播
-      let slideInterval;
-      function startSlider() {
-        if (testimonialsTrack) {
-          slideInterval = setInterval(() => {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlider();
-          }, 5000);
-        }
-      }
-      
-      // 模态框打开按钮
-      openModalBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          modalForm.classList.add('active');
-        });
+    });
+    
+    // 常见问题切换
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
       });
-      
-      // 模态框关闭按钮
-      modalCloseBtn.addEventListener('click', function() {
-        modalForm.classList.remove('active');
-      });
-      
-      successCloseBtn.addEventListener('click', function() {
-        successModal.classList.remove('active');
-      });
-      
-      // 成功模态框OK按钮
-      successOkBtn.addEventListener('click', function() {
-        successModal.classList.remove('active');
-        // 仅限真实用户：发送转化事件并打开WhatsApp
-        const whatsappMessage = "Hello! I have applied for remote work opportunities and want to get more information.";
-        const whatsappLink = `https://wa.me/${randomAccount}`;
-        gtag_report_conversion(whatsappLink);
-      });
-      
-      // 点击背景关闭模态框
-      [modalForm, successModal].forEach(modal => {
-        modal.addEventListener('click', function(e) {
-          if (e.target === this) {
-            this.classList.remove('active');
+    });
+    
+    // 评价轮播
+    let currentSlide = 0;
+    const totalSlides = 5;
+    
+    function updateSlider() {
+      if (testimonialsTrack) {
+        testimonialsTrack.style.transform = `translateX(-${currentSlide * 20}%)`;
+        
+        // 更新激活的点
+        dots.forEach((dot, index) => {
+          if (index === currentSlide) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
           }
         });
-      });
-      
-      // 增强机器人检测函数
-      function isBotSubmission(form) {
-        // 1. 蜜罐检测
-        const honeypot = form.querySelector('.honeypot-field input');
-        if (honeypot && honeypot.value.trim() !== '') {
-          console.log('Bot detected: honeypot filled');
-          return true;
-        }
-        
-        // 2. 提交时间检测（机器人通常提交太快）
-        if (formSubmitStartTime) {
-          const submitTime = Date.now() - formSubmitStartTime;
-          if (submitTime < 2000) { // 少于2秒的提交很可能是机器人
-            console.log('Bot detected: too fast submission', submitTime + 'ms');
-            return true;
-          }
-        }
-        
-        // 3. 表单字段模式检测
-        const name = form.querySelector('input[type="text"]').value.trim();
-        const phone = form.querySelector('input[type="tel"]').value.trim();
-        
-        // 检测明显是测试数据的提交
-        if (name.toLowerCase().includes('test') || 
-            name.toLowerCase().includes('demo') ||
-            phone === '123456789' ||
-            phone === '999999999') {
-          console.log('Bot detected: test data pattern');
-          return true;
-        }
-        
-        return false;
       }
-      
-      // 表单验证函数（已删除城市字段验证）
-      function validateForm(form) {
-        const name = form.querySelector('input[type="text"]').value.trim();
-        const phone = form.querySelector('input[type="tel"]').value.trim();
-        const age = form.querySelector('input[type="number"]').value;
-        const consent = form.querySelector('#consent, #modal-consent').checked;
-        const whatsappConsent = form.querySelector('#whatsapp_consent, #modal-whatsapp_consent').checked;
-        
-        // 重置样式
-        const inputs = form.querySelectorAll('input');
-        inputs.forEach(input => {
-          input.style.borderColor = '';
+    }
+    
+    // 轮播点点击
+    if (dots.length > 0) {
+      dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+          currentSlide = parseInt(this.getAttribute('data-slide'));
+          updateSlider();
         });
-        
-        // 验证姓名
-        if (!name) {
-          form.querySelector('input[type="text"]').style.borderColor = 'var(--accent)';
-          return false;
+      });
+    }
+    
+    // 自动轮播
+    let slideInterval;
+    function startSlider() {
+      if (testimonialsTrack) {
+        slideInterval = setInterval(() => {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateSlider();
+        }, 5000);
+      }
+    }
+    
+    // 模态框打开按钮
+    openModalBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalForm.classList.add('active');
+      });
+    });
+    
+    // 模态框关闭按钮
+    modalCloseBtn.addEventListener('click', function() {
+      modalForm.classList.remove('active');
+    });
+    
+    successCloseBtn.addEventListener('click', function() {
+      successModal.classList.remove('active');
+    });
+    
+    // 成功模态框OK按钮
+    successOkBtn.addEventListener('click', function() {
+      successModal.classList.remove('active');
+      // 仅限真实用户：发送转化事件并打开WhatsApp
+      const whatsappMessage = "Hello! I have applied for remote work opportunities and want to get more information.";
+      const whatsappLink = `https://wa.me/${randomAccount}`;
+      gtag_report_conversion(whatsappLink);
+    });
+    
+    // 点击背景关闭模态框
+    [modalForm, successModal].forEach(modal => {
+      modal.addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.classList.remove('active');
         }
-        
-        // 验证电话（加纳：9位，以24/20/54/55/59开头）
-        const phoneRegex = /^(20|24|26|27|28|54|55|56|57|59)[0-9]{7}$/;
-        if (!phoneRegex.test(phone)) {
-          form.querySelector('input[type="tel"]').style.borderColor = 'var(--accent)';
-          return false;
-        }
-        
-        // 验证年龄
-        const ageNum = parseInt(age);
-        if (!age || ageNum < 18 || ageNum > 65) {
-          form.querySelector('input[type="number"]').style.borderColor = 'var(--accent)';
-          return false;
-        }
-        
-        // 验证同意
-        if (!consent || !whatsappConsent) {
-          return false;
-        }
-        
+      });
+    });
+    
+    // 简化验证：只保留蜜罐检测
+    function isBotSubmission(form) {
+      // 1. 蜜罐检测
+      const honeypot = form.querySelector('.honeypot-field input');
+      if (honeypot && honeypot.value.trim() !== '') {
+        console.log('Bot detected: honeypot filled');
         return true;
       }
       
-      // 表单提交处理 - 机器人静默处理
-      function handleFormSubmit(form, isModalForm = false) {
-        // 记录表单开始填写时间
-        if (!formSubmitStartTime) {
-          formSubmitStartTime = Date.now();
-        }
-        
-        // 机器人检测
-        if (isBotSubmission(form)) {
-          console.log('Silently rejecting bot submission');
-          // 静默失败 - 不显示任何消息，不发送事件
-          return false;
-        }
-        
-        // 真实用户验证
-        if (validateForm(form)) {
-          // 发送Google Analytics事件（仅真实用户）
-          try {
-            gtag('event', 'submit_form', {
-              event_category: 'lead',
-              event_label: isModalForm ? 'Modal Form Submission' : 'Main Form Submission'
-            });
-            
-            // 发送转化事件
-            const whatsappMessage = "Hello! I have applied for remote work opportunities and want to get more information.";
-            const whatsappLink = `https://wa.me/${randomAccount}`;
-            gtag_report_conversion(whatsappLink);
-          } catch (error) {
-            console.log('Google Analytics error:', error);
-            // 备用
-            setTimeout(() => {
-              const whatsappMessage = "Hello! I have applied for remote work opportunities and want to get more information.";
-              const whatsappLink = `https://wa.me/${randomAccount}`;
-              window.open(whatsappLink, '_blank');
-            }, 300);
-          }
-          
-          // 显示成功模态框
-          successModal.classList.add('active');
-          
-          // 关闭模态表单
-          if (isModalForm) {
-            modalForm.classList.remove('active');
-          }
-          
-          return true;
-        }
+      return false;
+    }
+    
+    // 简化表单验证逻辑
+    function validateForm(form) {
+      const name = form.querySelector('input[type="text"]').value.trim();
+      const phone = form.querySelector('input[type="tel"]').value.trim();
+      const age = form.querySelector('input[type="number"]').value;
+      const consent = form.querySelector('#consent, #modal-consent').checked;
+      const whatsappConsent = form.querySelector('#whatsapp_consent, #modal-whatsapp_consent').checked;
+      
+      // 重置样式
+      const inputs = form.querySelectorAll('input');
+      inputs.forEach(input => {
+        input.style.borderColor = '';
+      });
+      
+      let isValid = true;
+      
+      // 验证姓名 - 非空
+      if (!name) {
+        form.querySelector('input[type="text"]').style.borderColor = 'var(--accent)';
+        isValid = false;
+      }
+      
+      // 验证电话 - 非空且第一个数字不为0
+      if (!phone || phone.length === 0 || phone.charAt(0) === '0') {
+        form.querySelector('input[type="tel"]').style.borderColor = 'var(--accent)';
+        isValid = false;
+      }
+      
+      // 验证年龄 - 18-65岁
+      const ageNum = parseInt(age);
+      if (!age || isNaN(ageNum) || ageNum < 18 || ageNum > 65) {
+        form.querySelector('input[type="number"]').style.borderColor = 'var(--accent)';
+        isValid = false;
+      }
+      
+      // 验证同意
+      if (!consent || !whatsappConsent) {
+        // 不改变边框颜色，直接返回false
+        isValid = false;
+      }
+      
+      return isValid;
+    }
+    
+    // 表单提交处理
+    function handleFormSubmit(form, isModalForm = false) {
+      // 1. 蜜罐检测（机器人静默处理）
+      if (isBotSubmission(form)) {
+        console.log('Silently rejecting bot submission');
+        // 静默失败 - 不显示任何消息
         return false;
       }
       
-      // 主表单提交
-      if (applicationForm) {
-        applicationForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          handleFormSubmit(this, false);
-        });
+      // 2. 基本验证
+      if (!validateForm(form)) {
+        // 验证失败，不提交
+        return false;
       }
       
-      // 模态表单提交
-      if (modalApplicationForm) {
-        modalApplicationForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          handleFormSubmit(this, true);
-        });
-      }
-      
-      // 输入限制
-      function setupInputRestrictions() {
-        // 电话输入
-        const phoneInputs = document.querySelectorAll('input[type="tel"]');
-        phoneInputs.forEach(input => {
-          input.addEventListener('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-            if (this.value.length > 9) {
-              this.value = this.value.slice(0, 9);
-            }
-          });
-          
-          input.addEventListener('paste', function(e) {
-            e.preventDefault();
-            const pasteData = e.clipboardData.getData('text');
-            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 9);
-            this.value = numbersOnly;
-          });
+      // 3. 真实用户：发送事件并跳转
+      try {
+        // 发送Google Analytics事件
+        gtag('event', 'submit_form', {
+          event_category: 'lead',
+          event_label: isModalForm ? 'Modal Form Submission' : 'Main Form Submission'
         });
         
-        // 年龄输入
-        const ageInputs = document.querySelectorAll('input[type="number"]');
-        ageInputs.forEach(input => {
-          input.addEventListener('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-            if (this.value.length > 2) {
-              this.value = this.value.slice(0, 2);
-            }
-          });
-          
-          input.addEventListener('paste', function(e) {
-            e.preventDefault();
-            const pasteData = e.clipboardData.getData('text');
-            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 2);
-            this.value = numbersOnly;
-          });
-        });
+        // 发送转化事件
+        const whatsappLink = `https://wa.me/${randomAccount}`;
+        gtag_report_conversion(whatsappLink);
+      } catch (error) {
+        console.log('Google Analytics error:', error);
+        // 备用：直接跳转
+        setTimeout(() => {
+          const whatsappLink = `https://wa.me/${randomAccount}`;
+          window.open(whatsappLink, '_blank');
+        }, 300);
       }
       
-      // 淡入动画
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      };
+      // 4. 显示成功模态框
+      successModal.classList.add('active');
       
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
+      // 5. 关闭模态表单
+      if (isModalForm) {
+        modalForm.classList.remove('active');
+      }
       
-      // 观察淡入元素
-      document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
+      // 6. 重置表单（可选）
+      setTimeout(() => {
+        form.reset();
+      }, 500);
+      
+      return true;
+    }
+    
+    // 主表单提交
+    if (applicationForm) {
+      applicationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        console.log('Main form submit attempt');
+        handleFormSubmit(this, false);
       });
       
-      // 初始化所有功能
-      function init() {
-        setupInputRestrictions();
-        startSlider();
-        
-        // 发送页面浏览事件
-        gtag('event', 'page_view', {
-          page_title: 'Ghana Remote Work Opportunities - WorkFromGhana',
-          page_location: window.location.href
-        });
-        
-        // 发送表单浏览事件
-        setTimeout(() => {
-          gtag('event', 'view_form', {
-            event_category: 'engagement',
-            event_label: 'Modal Form View'
-          });
-        }, 1000);
-        
-        // 设置表单开始时间
-        const forms = [applicationForm, modalApplicationForm];
-        forms.forEach(form => {
-          if (form) {
-            form.addEventListener('focus', function() {
-              formSubmitStartTime = Date.now();
-            }, true);
-          }
+      // 添加表单提交按钮的点击监听（备用）
+      const mainSubmitBtn = applicationForm.querySelector('button[type="submit"]');
+      if (mainSubmitBtn) {
+        mainSubmitBtn.addEventListener('click', function(e) {
+          console.log('Main form button clicked');
         });
       }
+    }
+    
+    // 模态表单提交
+    if (modalApplicationForm) {
+      modalApplicationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        console.log('Modal form submit attempt');
+        handleFormSubmit(this, true);
+      });
       
-      // 开始初始化
-      init();
+      // 添加模态表单提交按钮的点击监听（备用）
+      const modalSubmitBtn = modalApplicationForm.querySelector('button[type="submit"]');
+      if (modalSubmitBtn) {
+        modalSubmitBtn.addEventListener('click', function(e) {
+          console.log('Modal form button clicked');
+        });
+      }
+    }
+    
+    // 输入限制
+    function setupInputRestrictions() {
+      // 电话输入 - 只允许数字
+      const phoneInputs = document.querySelectorAll('input[type="tel"]');
+      phoneInputs.forEach(input => {
+        input.addEventListener('input', function() {
+          this.value = this.value.replace(/[^0-9]/g, '');
+        });
+        
+        input.addEventListener('paste', function(e) {
+          e.preventDefault();
+          const pasteData = e.clipboardData.getData('text');
+          const numbersOnly = pasteData.replace(/[^0-9]/g, '');
+          this.value = numbersOnly;
+        });
+      });
+      
+      // 年龄输入
+      const ageInputs = document.querySelectorAll('input[type="number"]');
+      ageInputs.forEach(input => {
+        input.addEventListener('input', function() {
+          this.value = this.value.replace(/[^0-9]/g, '');
+          if (this.value.length > 2) {
+            this.value = this.value.slice(0, 2);
+          }
+        });
+        
+        input.addEventListener('paste', function(e) {
+          e.preventDefault();
+          const pasteData = e.clipboardData.getData('text');
+          const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 2);
+          this.value = numbersOnly;
+        });
+      });
+    }
+    
+    // 淡入动画
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    // 观察淡入元素
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
     });
-  </script>
+    
+    // 初始化所有功能
+    function init() {
+      setupInputRestrictions();
+      startSlider();
+      
+      // 发送页面浏览事件
+      gtag('event', 'page_view', {
+        page_title: 'Ghana Remote Work Opportunities - WorkFromGhana',
+        page_location: window.location.href
+      });
+      
+      // 发送表单浏览事件
+      setTimeout(() => {
+        gtag('event', 'view_form', {
+          event_category: 'engagement',
+          event_label: 'Modal Form View'
+        });
+      }, 1000);
+      
+      // 调试：输出表单状态
+      console.log('Form initialization complete');
+      console.log('Application form exists:', !!applicationForm);
+      console.log('Modal form exists:', !!modalApplicationForm);
+    }
+    
+    // 开始初始化
+    init();
+  });
+</script>
 </body>
 </html>
