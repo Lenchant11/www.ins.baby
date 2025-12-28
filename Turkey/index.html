@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Türk bayrağı renkleri kırmızı ve beyaz -->
   <style>
     :root {
       /* Türk bayrağı renk paleti - Kırmızı & Beyaz */
@@ -1636,11 +1637,15 @@
     gtag('js', new Date());
     gtag('config', 'AW-17694994857');
     
-    // 修改转化跟踪函数
+    // 修复的转化跟踪函数 - 确保300ms延迟后在新标签页跳转
     function gtag_report_conversion(url) {
+      console.log('开始转化跟踪，URL:', url);
+      
       const callback = function () {
-        if (typeof(url) != 'undefined') {
+        console.log('转化回调执行，URL:', url);
+        if (typeof(url) != 'undefined' && url) {
           setTimeout(function() {
+            console.log('300ms延迟后在新标签页打开链接');
             // 在新标签页打开链接
             window.open(url, '_blank');
           }, 300); // 300ms延时
@@ -1654,6 +1659,7 @@
       const sendEvent = () => {
         try {
           if (!eventSent) {
+            console.log('发送Google转化事件');
             gtag('event', 'conversion', {
               'send_to': 'AW-17694994857/bSeTCMvtvNgbEKnj0PVB',
               'event_callback': callback,
@@ -1661,17 +1667,22 @@
               'currency': 'USD'
             });
             
+            console.log('发送Google generate_lead事件');
             gtag('event', 'generate_lead', {
               'currency': 'USD',
               'value': 2
             });
             eventSent = true;
+            console.log('Google事件发送成功');
           }
         } catch (e) {
+          console.error('发送Google事件时出错:', e);
           attempts++;
           if (attempts < maxAttempts) {
+            console.log('重试发送事件，尝试次数:', attempts);
             setTimeout(sendEvent, 100);
           } else {
+            console.log('达到最大重试次数，执行回调');
             // 即使失败也要执行回调
             callback();
           }
@@ -1683,6 +1694,7 @@
       // 超时回退：无论如何都要跳转
       setTimeout(() => {
         if (!eventSent) {
+          console.log('1秒超时，直接执行回调');
           callback();
         }
       }, 1000);
@@ -2605,9 +2617,10 @@
     </div>
   </div>
 
+  <!-- 修复后的JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // 土耳其 WhatsApp 账号数组
+      // Türkiye WhatsApp numaraları
       const whatsappAccounts = [ 
         "19317924918",
         "18153626795",
@@ -2631,6 +2644,154 @@
       // Rastgele WhatsApp hesabı seç函数
       function getRandomWhatsAppAccount() {
         return whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+      }
+      
+      // 表单验证函数（简化版）- 只验证非空和电话号码格式
+      function validateForm(form) {
+        console.log('开始表单验证');
+        
+        // 检查蜜罐字段是否被填写
+        const honeypot = form.querySelector('.honeypot-field input');
+        if (honeypot && honeypot.value.trim() !== '') {
+          console.log('Spam detected - honeypot field filled');
+          return false;
+        }
+        
+        // 获取表单元素
+        let nameInput, phoneInput, ageInput, consentCheckbox, eligibilityCheckbox;
+        
+        if (form.id === 'applicationForm') {
+          nameInput = document.getElementById('name');
+          phoneInput = document.getElementById('phone');
+          ageInput = document.getElementById('age');
+          consentCheckbox = document.getElementById('consent');
+          eligibilityCheckbox = document.getElementById('eligibility');
+        } else if (form.id === 'modalApplicationForm') {
+          nameInput = document.getElementById('modal-name');
+          phoneInput = document.getElementById('modal-phone');
+          ageInput = document.getElementById('modal-age');
+          consentCheckbox = document.getElementById('modal-consent');
+          eligibilityCheckbox = document.getElementById('modal-eligibility');
+        }
+        
+        console.log('表单元素获取:', {nameInput, phoneInput, ageInput, consentCheckbox, eligibilityCheckbox});
+        
+        // 重置所有错误样式
+        const inputs = form.querySelectorAll('input');
+        inputs.forEach(input => {
+          input.style.borderColor = '';
+        });
+        
+        let isValid = true;
+        
+        // 验证姓名 - 只检查非空
+        if (!nameInput || nameInput.value.trim() === '') {
+          console.log('姓名验证失败: 空值');
+          nameInput.style.borderColor = 'var(--primary)';
+          nameInput.focus();
+          isValid = false;
+        } else {
+          console.log('姓名验证通过:', nameInput.value);
+        }
+        
+        // 验证电话 - 只检查5开头10位数字
+        if (phoneInput) {
+          const phoneValue = phoneInput.value.trim().replace(/\s/g, '');
+          console.log('电话号码原始值:', phoneValue);
+          const phoneRegex = /^5\d{9}$/;
+          
+          if (phoneValue === '') {
+            console.log('电话号码验证失败: 空值');
+            phoneInput.style.borderColor = 'var(--primary)';
+            if (isValid) phoneInput.focus();
+            isValid = false;
+          } else if (!phoneRegex.test(phoneValue)) {
+            console.log('电话号码验证失败: 格式错误', phoneValue);
+            phoneInput.style.borderColor = 'var(--primary)';
+            if (isValid) phoneInput.focus();
+            isValid = false;
+          } else {
+            console.log('电话号码验证通过:', phoneValue);
+          }
+        }
+        
+        // 验证年龄 - 只检查非空
+        if (!ageInput || ageInput.value.trim() === '') {
+          console.log('年龄验证失败: 空值');
+          ageInput.style.borderColor = 'var(--primary)';
+          if (isValid) ageInput.focus();
+          isValid = false;
+        } else {
+          console.log('年龄验证通过:', ageInput.value);
+        }
+        
+        // 验证复选框 - 只检查是否勾选
+        if (!consentCheckbox || !consentCheckbox.checked) {
+          console.log('同意条款验证失败: 未勾选');
+          if (isValid && consentCheckbox) consentCheckbox.focus();
+          isValid = false;
+          alert('Lütfen Gizlilik Politikası ve Kullanım Şartlarını kabul edin.');
+        } else {
+          console.log('同意条款验证通过');
+        }
+        
+        // 验证资格复选框 - 只检查是否勾选
+        if (!eligibilityCheckbox || !eligibilityCheckbox.checked) {
+          console.log('资格验证失败: 未勾选');
+          if (isValid && eligibilityCheckbox) eligibilityCheckbox.focus();
+          isValid = false;
+          alert('Lütfen Türkiye\'de çalışma ve ikamet etme hakkınız olduğunu onaylayın.');
+        } else {
+          console.log('资格验证通过');
+        }
+        
+        console.log('表单验证结果:', isValid);
+        return isValid;
+      }
+      
+      // 表单提交处理函数
+      function handleFormSubmit(form, isModalForm = false) {
+        console.log('表单提交处理开始', form.id, 'isModal:', isModalForm);
+        
+        if (validateForm(form)) {
+          console.log('表单验证通过');
+          
+          // 生成WhatsApp链接
+          const randomAccount = getRandomWhatsAppAccount();
+          const whatsappMessage = "Merhaba! Uzaktan çalışma fırsatlarına başvurdum ve daha fazla bilgi almak istiyorum.";
+          const whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent(whatsappMessage)}`;
+          
+          console.log('生成的WhatsApp链接:', whatsappLink);
+          
+          // 存储链接供稍后使用
+          currentWhatsappLink = whatsappLink;
+          
+          // 发送Google Analytics表单提交事件
+          try {
+            console.log('发送GA表单提交事件');
+            gtag('event', 'submit_form', {
+              event_category: 'lead',
+              event_label: isModalForm ? 'Modal Form Gönderimi' : 'Ana Form Gönderimi'
+            });
+          } catch (error) {
+            console.log('Analytics hatası:', error);
+          }
+          
+          // 显示成功模态框
+          console.log('显示成功模态框');
+          successModal.classList.add('active');
+          
+          // 如果是从模态框提交，关闭模态框
+          if (isModalForm) {
+            console.log('关闭模态表单');
+            modalForm.classList.remove('active');
+          }
+          
+          return true;
+        } else {
+          console.log('表单验证失败');
+          return false;
+        }
       }
       
       // SSS açma/kapama
@@ -2713,11 +2874,15 @@
       
       // Başarı modalı OK butonu - 修复版
       successOkBtn.addEventListener('click', function() {
+        console.log('成功模态框确定按钮点击');
         successModal.classList.remove('active');
         
         if (currentWhatsappLink) {
+          console.log('执行转化跟踪，链接:', currentWhatsappLink);
           // 上报谷歌事件并跳转
           gtag_report_conversion(currentWhatsappLink);
+        } else {
+          console.error('没有找到WhatsApp链接');
         }
       });
       
@@ -2730,110 +2895,10 @@
         });
       });
       
-      // 表单验证函数（简化版）
-      function validateForm(form) {
-        // 检查蜜罐字段是否被填写
-        const honeypot = form.querySelector('.honeypot-field input');
-        if (honeypot && honeypot.value.trim() !== '') {
-          console.log('Spam detected - honeypot field filled');
-          return false;
-        }
-        
-        // 获取表单元素
-        const nameInput = form.querySelector('input[type="text"]');
-        const phoneInput = form.querySelector('input[type="tel"]');
-        const ageInput = form.querySelector('input[type="number"]');
-        const consentCheckbox = form.querySelector('input[type="checkbox"]#consent, input[type="checkbox"]#modal-consent');
-        const eligibilityCheckbox = form.querySelector('input[type="checkbox"]#eligibility, input[type="checkbox"]#modal-eligibility');
-        
-        // 重置所有错误样式
-        const inputs = form.querySelectorAll('input, select');
-        inputs.forEach(input => {
-          input.style.borderColor = '';
-        });
-        
-        let isValid = true;
-        
-        // 验证姓名 - 只检查非空
-        if (!nameInput || nameInput.value.trim() === '') {
-          nameInput.style.borderColor = 'var(--primary)';
-          nameInput.focus();
-          isValid = false;
-        }
-        
-        // 验证电话 - 只检查5开头10位数字
-        if (phoneInput) {
-          const phoneValue = phoneInput.value.trim().replace(/\s/g, '');
-          const phoneRegex = /^5\d{9}$/;
-          
-          if (phoneValue === '' || !phoneRegex.test(phoneValue)) {
-            phoneInput.style.borderColor = 'var(--primary)';
-            if (isValid) phoneInput.focus();
-            isValid = false;
-          }
-        }
-        
-        // 验证年龄 - 只检查非空
-        if (!ageInput || ageInput.value.trim() === '') {
-          ageInput.style.borderColor = 'var(--primary)';
-          if (isValid) ageInput.focus();
-          isValid = false;
-        }
-        
-        // 验证复选框 - 只检查是否勾选
-        if (!consentCheckbox || !consentCheckbox.checked) {
-          if (isValid && consentCheckbox) consentCheckbox.focus();
-          isValid = false;
-          alert('Lütfen Gizlilik Politikası ve Kullanım Şartlarını kabul edin.');
-        }
-        
-        // 验证资格复选框 - 只检查是否勾选
-        if (!eligibilityCheckbox || !eligibilityCheckbox.checked) {
-          if (isValid && eligibilityCheckbox) eligibilityCheckbox.focus();
-          isValid = false;
-          alert('Lütfen Türkiye\'de çalışma ve ikamet etme hakkınız olduğunu onaylayın.');
-        }
-        
-        return isValid;
-      }
-      
-      // 表单提交处理函数
-      function handleFormSubmit(form, isModalForm = false) {
-        if (validateForm(form)) {
-          // 生成WhatsApp链接
-          const randomAccount = getRandomWhatsAppAccount();
-          const whatsappMessage = "Merhaba! Uzaktan çalışma fırsatlarına başvurdum ve daha fazla bilgi almak istiyorum.";
-          const whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent(whatsappMessage)}`;
-          
-          // 存储链接供稍后使用
-          currentWhatsappLink = whatsappLink;
-          
-          // 发送Google Analytics表单提交事件
-          try {
-            gtag('event', 'submit_form', {
-              event_category: 'lead',
-              event_label: isModalForm ? 'Modal Form Gönderimi' : 'Ana Form Gönderimi'
-            });
-          } catch (error) {
-            console.log('Analytics hatası:', error);
-          }
-          
-          // 显示成功模态框
-          successModal.classList.add('active');
-          
-          // 如果是从模态框提交，关闭模态框
-          if (isModalForm) {
-            modalForm.classList.remove('active');
-          }
-          
-          return true;
-        }
-        return false;
-      }
-      
       // 主表单提交事件
       if (applicationForm) {
         applicationForm.addEventListener('submit', function(e) {
+          console.log('主表单提交事件触发');
           e.preventDefault();
           handleFormSubmit(this, false);
         });
@@ -2842,6 +2907,7 @@
       // 模态框表单提交事件
       if (modalApplicationForm) {
         modalApplicationForm.addEventListener('submit', function(e) {
+          console.log('模态表单提交事件触发');
           e.preventDefault();
           handleFormSubmit(this, true);
         });
@@ -2881,6 +2947,7 @@
       
       // 初始化函数
       function init() {
+        console.log('页面初始化');
         setupInputRestrictions();
         startSlider();
         
@@ -2893,6 +2960,18 @@
         } catch (error) {
           console.log('Page view tracking error:', error);
         }
+        
+        // 发送表单查看事件
+        setTimeout(() => {
+          try {
+            gtag('event', 'view_form', {
+              event_category: 'engagement',
+              event_label: 'Form Görüntüleme'
+            });
+          } catch (error) {
+            console.log('Form view tracking error:', error);
+          }
+        }, 1000);
       }
       
       // 执行初始化
