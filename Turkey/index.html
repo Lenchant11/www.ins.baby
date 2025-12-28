@@ -1,0 +1,2897 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Evinizdeİş - Türkiye'nin Güvenilir Uzaktan Çalışma Platformu | Onaylı Evden İş Fırsatları</title>
+  <meta name="description" content="Türkiye'de onaylı uzaktan çalışma fırsatları. Evinizden çalışarak güvenilir Türk şirketleri ile çalışın. Müşteri hizmetleri, idari işler ve veri işleme pozisyonları. Hemen başvurun!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Türk bayrağı renkleri kırmızı ve beyaz -->
+  <style>
+    :root {
+      /* Türk bayrağı renk paleti - Kırmızı & Beyaz */
+      --primary: #E30A17;
+      --secondary: #FFFFFF;
+      --accent: #C40000;
+      --light: #FFFFFF;
+      --dark: #1A202C;
+      --gray-50: #F9FAFB;
+      --gray-100: #F8F9FA;
+      --gray-200: #E9ECEF;
+      --gray-300: #DEE2E6;
+      --gray-600: #6C757D;
+      --gray-700: #495057;
+      --gray-800: #343A40;
+      
+      /* Türk sembolü ek renkler */
+      --turquoise: #1CA3A6;
+      --gold: #FFB300;
+      
+      /* Tipografi */
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* Boşluklar - Mobil için optimize */
+      --space-xs: 0.25rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      
+      /* Kenar yuvarlaklığı */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      
+      /* Gölgeler */
+      --shadow-sm: 0 1px 3px rgba(227, 10, 23, 0.1);
+      --shadow-md: 0 3px 10px rgba(227, 10, 23, 0.12);
+      --shadow-lg: 0 5px 20px rgba(227, 10, 23, 0.15);
+      
+      /* Geçişler */
+      --transition-fast: 0.15s ease;
+      --transition-base: 0.25s ease;
+    }
+    
+    /* === SIFIRLAMA & TEMEL STİLLER === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--gray-800);
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--dark);
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    ul, ol {
+      list-style: none;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-sm);
+    }
+    
+    .section {
+      padding: var(--space-lg) 0;
+    }
+    
+    @media (max-width: 768px) {
+      .section {
+        padding: var(--space-md) 0;
+      }
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto var(--space-md);
+    }
+    
+    .section-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+      color: var(--primary);
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+    
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* === DÜĞMELER === */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-family: var(--font-heading);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-base);
+      text-align: center;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, #C40000, #A30000);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn-primary:hover::after {
+      left: 100%;
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--gray-100);
+    }
+    
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+    
+    .btn-block {
+      width: 100%;
+    }
+    
+    .btn-icon {
+      font-size: 1.1em;
+    }
+    
+    /* === BAŞLIK & NAVİGASYON === */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      box-shadow: 0 2px 10px rgba(227, 10, 23, 0.1);
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    @media (max-width: 1024px) {
+      .nav {
+        flex-wrap: wrap;
+      }
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .nav-links {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .nav-cta {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-cta {
+        display: block;
+        margin-left: 0.5rem;
+      }
+    }
+    
+    .mobile-menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+    
+    /* === ACİL DURUM ÇUBUĞU === */
+    .urgency-bar {
+      background: linear-gradient(135deg, var(--primary), #C40000);
+      color: white;
+      padding: 0.75rem 0;
+      position: relative;
+      overflow: hidden;
+      margin-top: 60px;
+    }
+    
+    .urgency-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    
+    @media (min-width: 768px) {
+      .urgency-bar {
+        padding: 1rem 0;
+      }
+      
+      .urgency-container {
+        justify-content: flex-start;
+      }
+    }
+    
+    .urgency-scroll {
+      display: flex;
+      animation: scrollText 25s linear infinite;
+      white-space: nowrap;
+    }
+    
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    
+    @media (max-width: 767px) {
+      .urgency-scroll {
+        animation: scrollText 20s linear infinite;
+      }
+    }
+    
+    .urgency-content {
+      display: inline-flex;
+      gap: 2rem;
+      padding: 0 1rem;
+      align-items: center;
+    }
+    
+    .urgency-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .urgency-icon {
+      font-size: 1em;
+    }
+    
+    /* === ANA BÖLÜM === */
+    .hero {
+      padding: var(--space-md) 0;
+      background: linear-gradient(135deg, rgba(255, 245, 245, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
+      position: relative;
+      overflow: hidden;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid var(--primary);
+    }
+    
+    @media (max-width: 768px) {
+      .hero {
+        min-height: auto;
+        padding: var(--space-lg) 0;
+      }
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        linear-gradient(90deg, rgba(255, 245, 245, 0.95) 0%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.7) 100%),
+        url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center right;
+      z-index: 1;
+    }
+    
+    @media (max-width: 1024px) {
+      .hero-bg {
+        background: 
+          linear-gradient(90deg, rgba(255, 245, 245, 0.95) 0%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.7) 100%),
+          url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center right;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-bg {
+        background: 
+          linear-gradient(rgba(255, 245, 245, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%),
+          url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      position: relative;
+      z-index: 2;
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--space-lg);
+      }
+    }
+    
+    .hero-content {
+      text-align: center;
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-content {
+        text-align: left;
+      }
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+      box-shadow: var(--shadow-sm);
+      font-size: 0.875rem;
+      border: 2px solid var(--primary);
+    }
+    
+    .hero-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+      line-height: 1.2;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--gray-600);
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .hero-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+    
+    .hero-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (max-width: 480px) {
+      .hero-features {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+    
+    .feature-text strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.125rem;
+    }
+    
+    .feature-text p {
+      color: var(--gray-600);
+      font-size: 0.85rem;
+    }
+    
+    /* === BAŞVURU FORMU === */
+    .form-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--primary);
+    }
+    
+    .form-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .form-subtitle {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.375rem;
+      font-weight: 600;
+      color: var(--gray-800);
+      font-size: 0.95rem;
+    }
+    
+    .form-label .required {
+      color: var(--primary);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.875rem;
+      border: 1.5px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      transition: var(--transition-fast);
+      background: white;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(227, 10, 23, 0.1);
+    }
+    
+    .phone-group {
+      display: flex;
+    }
+    
+    .country-code {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem;
+      background: var(--gray-100);
+      border: 1.5px solid var(--gray-300);
+      border-right: none;
+      border-radius: var(--radius-md) 0 0 var(--radius-md);
+      font-weight: 600;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    
+    .phone-input {
+      flex: 1;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .form-check-input {
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+    }
+    
+    .form-check-label {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      line-height: 1.4;
+    }
+    
+    .form-check-label a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    .form-check-label a:hover {
+      text-decoration: underline;
+    }
+    
+    .security-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem;
+      background: rgba(227, 10, 23, 0.08);
+      border: 1px solid rgba(227, 10, 23, 0.15);
+      border-radius: var(--radius-md);
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+    }
+    
+    .security-icon {
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    
+    /* Ana form - mobilde göster */
+    .hero-form {
+      display: block;
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-form {
+        display: block;
+      }
+    }
+    
+    /* === İŞ İLANLARI BÖLÜMÜ === */
+    .jobs-section {
+      background: white;
+    }
+    
+    .jobs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .jobs-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .jobs-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .job-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-base);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .job-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary);
+    }
+    
+    .job-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    
+    .job-badge {
+      display: inline-block;
+      padding: 0.375rem 1rem;
+      background: var(--primary);
+      color: white;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+    
+    .job-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .job-salary {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .job-features {
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    
+    .job-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+    
+    .job-feature i {
+      color: var(--primary);
+      width: 18px;
+      font-size: 1rem;
+    }
+    
+    .salary-details {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+    
+    .salary-note {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+    
+    /* === İSTATİSTİKLER BÖLÜMÜ === */
+    .stats-section {
+      background: linear-gradient(135deg, var(--primary), #C40000);
+      color: white;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+    }
+    
+    .stat-item {
+      padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+      line-height: 1;
+    }
+    
+    @media (min-width: 768px) {
+      .stat-number {
+        font-size: 2.5rem;
+      }
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    @media (min-width: 768px) {
+      .stat-label {
+        font-size: 1rem;
+      }
+    }
+    
+    /* === NASIL ÇALIŞIR === */
+    .how-it-works {
+      background: white;
+    }
+    
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .step-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-base);
+      height: 100%;
+    }
+    
+    .step-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin: 0 auto 1rem;
+    }
+    
+    .step-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .step-description {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    
+    /* === KULLANICI YORUMLARI === */
+    .testimonials-section {
+      background: var(--gray-100);
+    }
+    
+    .testimonials-slider {
+      max-width: 800px;
+      margin: var(--space-md) auto 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 220px;
+    }
+    
+    .testimonials-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 500%;
+    }
+    
+    .testimonial-slide {
+      flex: 0 0 20%;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      height: 100%;
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      height: 100%;
+    }
+    
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      font-size: 3rem;
+      font-family: Georgia, serif;
+      color: var(--gray-300);
+      line-height: 1;
+    }
+    
+    .testimonial-content {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      font-style: italic;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .author-info h4 {
+      margin-bottom: 0.125rem;
+      font-size: 1.1rem;
+    }
+    
+    .author-info p {
+      color: var(--gray-600);
+      font-size: 0.85rem;
+    }
+    
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gray-300);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: var(--transition-fast);
+    }
+    
+    .slider-dot.active {
+      background: var(--primary);
+      transform: scale(1.2);
+    }
+    
+    /* === SSS === */
+    .faq-section {
+      background: var(--gray-100);
+    }
+    
+    .faq-grid {
+      max-width: 800px;
+      margin: var(--space-md) auto 0;
+    }
+    
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-md);
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-base);
+    }
+    
+    .faq-item.active {
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    
+    .faq-question {
+      padding: 1.25rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      color: var(--dark);
+    }
+    
+    .faq-question:hover {
+      background: var(--gray-100);
+    }
+    
+    .faq-icon {
+      transition: var(--transition-base);
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+    
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+      font-size: 0.95rem;
+      display: none;
+    }
+    
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    
+    /* === CTA BÖLÜMÜ === */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary), #C40000);
+      color: white;
+      text-align: center;
+    }
+    
+    .cta-title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    @media (min-width: 768px) {
+      .cta-title {
+        font-size: 2rem;
+      }
+    }
+    
+    .cta-subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: var(--space-md);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (min-width: 768px) {
+      .cta-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+    
+    /* === ALT BİLGİ === */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: var(--space-lg) 0 var(--space-md);
+      border-top: 3px solid var(--primary);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .footer-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      color: white;
+    }
+    
+    .footer-description {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links h3 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .footer-links ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: var(--space-md);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.8rem;
+    }
+    
+    .compliance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+    
+    /* === MODAL === */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-base);
+      padding: var(--space-sm);
+    }
+    
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal-content {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      animation: modalIn 0.3s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    
+    @keyframes modalIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--gray-600);
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-fast);
+      z-index: 2;
+    }
+    
+    .modal-close:hover {
+      background: var(--gray-100);
+      color: var(--dark);
+    }
+    
+    .modal-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      text-align: center;
+      color: var(--primary);
+    }
+    
+    .modal-message {
+      text-align: center;
+      color: var(--gray-600);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    /* === ANİMASYONLAR === */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.4s ease forwards;
+    }
+    
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+    
+    .delay-2 {
+      animation-delay: 0.2s;
+    }
+    
+    .delay-3 {
+      animation-delay: 0.3s;
+    }
+    
+    /* === YARDIMCI SINIFLAR === */
+    .text-center {
+      text-align: center;
+    }
+    
+    .text-primary {
+      color: var(--primary);
+    }
+    
+    .text-gradient {
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 0.75rem; }
+    .mb-3 { margin-bottom: 1.25rem; }
+    .mb-4 { margin-bottom: 1.5rem; }
+    
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 0.75rem; }
+    .mt-3 { margin-top: 1.25rem; }
+    .mt-4 { margin-top: 1.5rem; }
+    
+    .d-none {
+      display: none;
+    }
+    
+    .d-block {
+      display: block;
+    }
+    
+    @media (min-width: 1024px) {
+      .d-lg-block {
+        display: block;
+      }
+      
+      .d-lg-none {
+        display: none;
+      }
+    }
+  
+    /* Uyumluluk rozetleri */
+    .compliance-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+    
+    .compliance-badge-item {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+    
+    .compliance-badge-item i {
+      color: var(--primary);
+    }
+    
+    /* Şeffaflık bildirimi */
+    .transparency-notice {
+      background: var(--gray-50);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.5rem;
+      margin: 2rem auto;
+      border-radius: 0 8px 8px 0;
+      max-width: 1200px;
+    }
+    
+    .transparency-notice h4 {
+      margin-bottom: 0.5rem;
+      color: var(--gray-800);
+    }
+    
+    .transparency-notice p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--gray-700);
+    }
+    
+    /* İstihdam sorumluluk reddi */
+    .employment-disclaimer {
+      background: #fff8e6;
+      border: 1px solid #ffd54f;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    
+    .employment-disclaimer strong {
+      color: #e65100;
+    }
+    
+    /* Platform açıklaması */
+    .platform-explanation {
+      background: var(--gray-50);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .platform-explanation h3 {
+      margin-bottom: 1rem;
+      color: var(--gray-800);
+    }
+    
+    /* Uyumluluk bağlantıları */
+    .compliance-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .compliance-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    
+    .compliance-links a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Şirket bilgileri */
+    .company-info {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--gray-50);
+      border-radius: 8px;
+      margin: 2rem auto;
+      max-width: 1200px;
+    }
+    
+    .company-info p {
+      margin: 0.5rem 0;
+      color: var(--gray-700);
+    }
+    
+    /* Maaş şeffaflığı */
+    .salary-transparency {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border: 1px solid var(--gray-200);
+    }
+    
+    .salary-transparency h4 {
+      color: var(--gray-800);
+      margin-bottom: 1rem;
+    }
+    
+    /* Başvuru sonrası iletişim */
+    .contact-options {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #f0f7ff;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+    
+    .contact-options h5 {
+      margin-bottom: 0.75rem;
+      color: var(--gray-800);
+    }
+    
+    /* Mobil optimizasyon */
+    @media (max-width: 768px) {
+      .compliance-badges {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .compliance-badge-item {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .compliance-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .platform-explanation {
+        padding: 1.5rem 1rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .transparency-notice {
+        margin: 2rem 1rem;
+      }
+      
+      .company-info {
+        margin: 2rem 1rem;
+      }
+    }
+    
+    /* Türkçe font optimizasyonu */
+    body {
+      font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Türk kültürel elementleri - DÜZELTİLDİ: class adı düzeltildi */
+    .turkish-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e30a17' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: 200px;
+      opacity: 0.3;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    /* Özel stiller */
+    small {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.8rem;
+      color: var(--gray-600);
+    }
+    
+    select.form-control {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236B7280' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 16px 12px;
+      padding-right: 2.5rem;
+    }
+  </style>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17581844996"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17581844996');
+    
+    function gtag_report_conversion(url) {
+      const callback = function () {
+        if (typeof(url) != 'undefined') {
+          setTimeout(function() {
+            const newWindow = window.open(url, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+              window.location.href = url;
+            }
+          }, 300);
+        }
+      };
+      
+      let eventSent = false;
+      const maxAttempts = 2;
+      let attempts = 0;
+      
+      const sendEvent = () => {
+        try {
+          if (!eventSent) {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17581844996/_tVECOauzdUbEITU1r9B',
+              'event_callback': callback,
+              'value': 17,
+              'currency': 'USD'
+            });
+            
+            gtag('event', 'generate_lead', {
+              'currency': 'USD',
+              'value': 17
+            });
+            eventSent = true;
+          }
+        } catch (e) {
+          attempts++;
+          if (attempts < maxAttempts) {
+            setTimeout(sendEvent, 100);
+          } else {
+            callback();
+          }
+        }
+      };
+      
+      sendEvent();
+      
+      setTimeout(() => {
+        if (!eventSent) {
+          callback();
+        }
+      }, 1000);
+      
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <!-- Türk deseni arka plan -->
+  <div class="turkish-pattern"></div>
+  
+  <!-- Başlık -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <span class="logo-text">Evinizdeİş</span>
+        </a>
+        
+        <div class="nav-links">
+          <a href="#opportunities" class="nav-link">Onaylı Pozisyonlar</a>
+          <a href="#how" class="nav-link">Başvuru Süreci</a>
+          <a href="#about" class="nav-link">Platform Hakkında</a>
+          <a href="#faq" class="nav-link">SSS</a>
+          <a href="#" class="btn btn-primary nav-cta open-modal-btn">
+            Hemen Başvur
+          </a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Acil durum çubuğu -->
+  <div class="urgency-bar">
+    <div class="container urgency-container">
+      <div class="urgency-scroll">
+        <div class="urgency-content">
+          <div class="urgency-item">
+            <i class="fas fa-bolt urgency-icon"></i>
+            <span>⚠️ SON 5 KONTENJAN KALDI - Hemen Başvurun!</span>
+          </div>
+          <div class="urgency-item">
+            <i class="fas fa-clock urgency-icon"></i>
+            <span>⏳ Sınırlı Süre: Bugün Başvuranlara Öncelik!</span>
+          </div>
+          <div class="urgency-item">
+            <i class="fas fa-users urgency-icon"></i>
+            <span>🔥 250+ Kişi Bugün Başvurdu - Yerinizi Ayırtın!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Şeffaflık bildirimi -->
+  <div class="transparency-notice">
+    <h4><i class="fas fa-info-circle"></i> Güvenilir İstihdam Platformu</h4>
+    <p>Evinizdeİş, Türkiye'de kayıtlı bir istihdam platformudur. İş arayanlardan hiçbir ücret talep etmiyoruz.</p>
+  </div>
+
+  <!-- Ana Bölüm -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in">
+          <div class="hero-badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>Onaylı İstihdam Platformu</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span>TÜRKİYE'NİN GÜVENİLİR</span> 
+            <span class="text-primary">UZAKTAN ÇALIŞMA</span>
+            <br>
+            <span>FIRSATLARI EVİNİZDE</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            Onaylı Türk şirketleri ile güvenli uzaktan çalışma fırsatlarına bağlanın. Tüm pozisyonlar Türk iş mevzuatına uygundur.
+          </p>
+          
+          <!-- Platform açıklaması -->
+          <div class="platform-explanation fade-in">
+            <h3><i class="fas fa-building"></i> Platformumuz Nasıl Çalışır?</h3>
+            <p>Biz nitelikli Türkiye sakinlerini onaylı şirketlerle buluşturan bir istihdam eşleştirme platformuyuz. Doğrudan işveren değiliz, güvenilir istihdam bağlantıları sağlıyoruz.</p>
+          </div>
+          
+          <div class="hero-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-try"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Şeffaf Ücretlendirme</strong>
+                <p>Tüm pozisyonlarda net ödeme şartları</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Esnek Çalışma Saatleri</strong>
+                <p>Pozisyona göre değişen çalışma saatleri</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Uzaktan Çalışma</strong>
+                <p>Türkiye'deki onaylı konumlardan çalışın</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <div class="feature-text">
+                <strong>Onaylı İşverenler</strong>
+                <p>Tüm şirketler kayıtlı ve denetlenmiş</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Uyumluluk rozetleri -->
+          <div class="compliance-badges">
+            <div class="compliance-badge-item">
+              <i class="fas fa-balance-scale"></i>
+              <span>Türk İş Kanunu Uyumlu</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-lock"></i>
+              <span>Güvenli Başvuru Süreci</span>
+            </div>
+            <div class="compliance-badge-item">
+              <i class="fas fa-handshake"></i>
+              <span>İş Arayanlardan Ücret Yok</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Ana Form -->
+        <div class="hero-form form-card fade-in delay-1">
+          <div class="form-header">
+            <h2 class="form-title">Onaylı Pozisyonlara Başvurun</h2>
+            <p class="form-subtitle">
+              Onaylı Türk şirketlerinin uzaktan çalışma fırsatları için bilgilerinizi gönderin.
+            </p>
+          </div>
+          
+          <!-- İstihdam sorumluluk reddi -->
+          <div class="employment-disclaimer">
+            <strong><i class="fas fa-exclamation-triangle"></i> Önemli:</strong> Biz bir istihdam eşleştirme platformuyuz. Nihai istihdam şartları, başarılı başvuru sonrası işveren şirket tarafından belirlenir.
+          </div>
+          
+          <form id="applicationForm">
+            <div class="form-group">
+              <label for="name" class="form-label">
+                <span>Tam Adınız</span> <span class="required">*</span>
+              </label>
+              <input type="text" id="name" class="form-control" placeholder="Kimlikteki gibi" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">
+                <span>Telefon Numarası</span> <span class="required">*</span>
+              </label>
+              <div class="phone-group">
+                <div class="country-code">
+                  <img src="https://flagcdn.com/w20/tr.png" alt="Türkiye Bayrağı" width="20" height="14">
+                  <span>+90</span>
+                </div>
+                <input type="tel" id="phone" class="form-control phone-input" placeholder="5xx xxx xxxx" pattern="[0-9]{10}" required>
+              </div>
+              <small>Örnek: 532 123 4567 (başında 0 olmadan)</small>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">
+                <span>E-posta Adresi</span> <span class="required">*</span>
+              </label>
+              <input type="email" id="email" class="form-control" placeholder="adiniz@email.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="city" class="form-label">
+                <span>Şehir</span> <span class="required">*</span>
+              </label>
+              <select id="city" class="form-control" required>
+                <option value="">Şehrinizi seçin</option>
+                <option value="istanbul">İstanbul</option>
+                <option value="ankara">Ankara</option>
+                <option value="izmir">İzmir</option>
+                <option value="bursa">Bursa</option>
+                <option value="antalya">Antalya</option>
+                <option value="adana">Adana</option>
+                <option value="konya">Konya</option>
+                <option value="kayseri">Kayseri</option>
+                <option value="trabzon">Trabzon</option>
+                <option value="diyarbakir">Diyarbakır</option>
+                <option value="other">Diğer</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="age" class="form-label">
+                <span>Yaş</span> <span class="required">*</span>
+              </label>
+              <input type="number" id="age" class="form-control" placeholder="25" min="18" max="65" required>
+            </div>
+            
+            <div class="form-check">
+              <input type="checkbox" id="consent" class="form-check-input" required checked>
+              <label for="consent" class="form-check-label">
+                <span>Okudum ve kabul ediyorum:</span> 
+                <a href="/privacy.html" target="_blank">Gizlilik Politikası</a> 
+                <span>ve</span> 
+                <a href="/userterms.html" target="_blank">Kullanım Şartları</a>.
+              </label>
+            </div>
+            
+            <div class="form-check mb-3">
+              <input type="checkbox" id="eligibility" class="form-check-input" required>
+              <label for="eligibility" class="form-check-label">
+                <span>Türkiye'de çalışma ve ikamet etme hakkım olduğunu onaylıyorum</span>
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane btn-icon"></i>
+              <span>Başvuruyu Gönder</span>
+            </button>
+            
+            <div class="security-badge">
+              <i class="fas fa-lock security-icon"></i>
+              <span>Bilgileriniz korunmakta olup sadece istihdam eşleştirme amaçlı kullanılır</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Şirket bilgileri -->
+  <section class="section company-info" id="about">
+    <div class="container">
+      <h3 class="section-title">Platformumuz Hakkında</h3>
+      <p>Evinizdeİş, Türkiye'de kayıtlı ve faaliyet gösteren bir istihdam eşleştirme platformudur. Nitelikli Türkiye sakinlerini, onaylı şirketlerin uzaktan çalışma fırsatlarıyla buluşturuyoruz.</p>
+      <p>Tüm ilan edilen pozisyonlar Türk iş kanunlarına ve düzenlemelerine uygundur.</p>
+      
+      <div class="compliance-links">
+        <a href="/about.html"><i class="fas fa-info-circle"></i> Hakkımızda</a>
+        <a href="/compliance.html"><i class="fas fa-balance-scale"></i> Uyumluluk Bilgileri</a>
+        <a href="/contact.html"><i class="fas fa-phone-alt"></i> Destek İletişimi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- İş İlanları Bölümü -->
+  <section class="section jobs-section" id="opportunities">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Türkiye'deki Onaylı Uzaktan Çalışma Pozisyonları</h2>
+        <p class="section-subtitle">
+          Onaylı Türk şirketlerinin güvenilir uzaktan çalışma fırsatlarını keşfedin. Tüm pozisyonlar Türkiye'de ikamet ve çalışma hakkı gerektirir.
+        </p>
+      </div>
+      
+      <!-- Maaş şeffaflığı açıklaması -->
+      <div class="salary-transparency fade-in">
+        <h4><i class="fas fa-try"></i> Ücretlendirme Bilgileri</h4>
+        <p>Tüm pozisyonlar Türk iş kanununa uygun ücretlendirme sunar. Detaylı ücret bilgileri başvuru sürecinde paylaşılır ve pozisyon, deneyim ve anlaşmalı saatlere göre değişiklik gösterir.</p>
+      </div>
+      
+      <div class="jobs-grid">
+        <!-- İş 1 -->
+        <div class="job-card fade-in">
+          <div class="job-badge">Müşteri Hizmetleri</div>
+          <h3 class="job-title">Müşteri Destek Uzmanı</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Saatlik ₺125+</span>
+          </div>
+          <span class="salary-details">Artı yasal haklar</span>
+          <span class="salary-note">Haftalık banka havalesi ile ödeme</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Çeşitli vardiyalar mevcut</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-home"></i>
+              <span>Tamamen uzaktan pozisyon</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Eğitim sağlanır</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-user-tie"></i>
+              <span>Müşteri hizmetleri deneyimi tercih sebebi</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Hemen Başvur
+          </button>
+        </div>
+        
+        <!-- İş 2 -->
+        <div class="job-card fade-in delay-1">
+          <div class="job-badge">İdari İşler</div>
+          <h3 class="job-title">Veri İşleme Asistanı</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Saatlik ₺115+</span>
+          </div>
+          <span class="salary-details">Veya proje bazlı ücret</span>
+          <span class="salary-note">Düzenli ödeme planı</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Esnek çalışma saatleri</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span>Bilgisayar ve internet gereklidir</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-file-alt"></i>
+              <span>İdari görevler</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-star"></i>
+              <span>Çeşitli deneyim seviyelerine uygun</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Hemen Başvur
+          </button>
+        </div>
+        
+        <!-- İş 3 -->
+        <div class="job-card fade-in delay-2">
+          <div class="job-badge">Destek Pozisyonu</div>
+          <h3 class="job-title">Online Destek Temsilcisi</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Saatlik ₺135+</span>
+          </div>
+          <span class="salary-details">Artı performans teşvikleri</span>
+          <span class="salary-note">İş kanununa uygun</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-headset"></i>
+              <span>Dijital platform desteği</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Vardiya sistemi mevcut</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-try"></i>
+              <span>Yasal istihdam hakları</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-gift"></i>
+              <span>Tam eğitim sağlanır</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Hemen Başvur
+          </button>
+        </div>
+        
+        <!-- İş 4 -->
+        <div class="job-card fade-in">
+          <div class="job-badge">İdari İşler</div>
+          <h3 class="job-title">İdari Destek Asistanı</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Deneyime ve role göre</span>
+          </div>
+          <span class="salary-details">Minimum saatlik ₺120</span>
+          <span class="salary-note">Resmi iş sözleşmesi</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-tasks"></i>
+              <span>İdari görevler</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span>Bilgisayar ekipmanı gerekli</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-chart-line"></i>
+              <span>Kariyer gelişimi mümkün</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Esnek çalışma seçenekleri</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Hemen Başvur
+          </button>
+        </div>
+        
+        <!-- İş 5 -->
+        <div class="job-card fade-in delay-1">
+          <div class="job-badge">Kalite Kontrol</div>
+          <h3 class="job-title">İçerik İnceleme Asistanı</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Saatlik ₺115+</span>
+          </div>
+          <span class="salary-details">Göreve göre değişir</span>
+          <span class="salary-note">Düzenli istihdam şartları</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-eye"></i>
+              <span>İçerik inceleme görevleri</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-home"></i>
+              <span>Tamamen uzaktan çalışma</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-trophy"></i>
+              <span>Kalite odaklı pozisyon</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-users"></i>
+              <span>Ekip çalışması</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Hemen Başvur
+          </button>
+        </div>
+        
+        <!-- İş 6 -->
+        <div class="job-card fade-in delay-2">
+          <div class="job-badge">Kalite Güvence</div>
+          <h3 class="job-title">Kalite Güvence Asistanı</h3>
+          <div class="job-salary">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Proje veya saatlik ücret</span>
+          </div>
+          <span class="salary-details">Minimum saatlik ₺110</span>
+          <span class="salary-note">Tüm düzenlemelere uygun</span>
+          <div class="job-features">
+            <div class="job-feature">
+              <i class="fas fa-clock"></i>
+              <span>Yarı zamanlı saatler mevcut</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-laptop"></i>
+              <span>Bilgisayar gereklidir</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Tam eğitim sağlanır</span>
+            </div>
+            <div class="job-feature">
+              <i class="fas fa-calendar-check"></i>
+              <span>Esnek başlangıç tarihleri</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block open-modal-btn">
+            Hemen Başvur
+          </button>
+        </div>
+      </div>
+      
+      <!-- İş kanunu uyarısı -->
+      <div class="employment-disclaimer mt-4">
+        <strong><i class="fas fa-balance-scale"></i> İş Kanunu Uyumluluğu:</strong> Platformumuz aracılığıyla sunulan tüm pozisyonlar, asgari ücret gereklilikleri, çalışma süresi düzenlemeleri ve istihdam sözleşmesi yükümlülükleri dahil olmak üzere Türk iş mevzuatına uygundur.
+      </div>
+    </div>
+  </section>
+
+  <!-- İstatistikler Bölümü -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number">1,250+</div>
+          <div class="stat-label">Başarılı Başvuru</div>
+        </div>
+        <div class="stat-item fade-in delay-1">
+          <div class="stat-number">85+</div>
+          <div class="stat-label">Onaylı Şirket</div>
+        </div>
+        <div class="stat-item fade-in delay-2">
+          <div class="stat-number">₺3.2M+</div>
+          <div class="stat-label">Ödenen Ücret</div>
+        </div>
+        <div class="stat-item fade-in delay-3">
+          <div class="stat-number">4.8/5</div>
+          <div class="stat-label">Kullanıcı Memnuniyeti</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nasıl Çalışır -->
+  <section class="section how-it-works" id="how">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Güvenilir Başvuru Süreci</h2>
+        <p class="section-subtitle">
+          Onaylı işverenlere bağlanmanın şeffaf süreci
+        </p>
+      </div>
+      
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Başvurunuzu Yapın</h3>
+          <p class="step-description">
+            Güvenli başvuru formumuzu bilgileriniz ve çalışma tercihlerinizle doldurun.
+          </p>
+        </div>
+        
+        <div class="step-card fade-in delay-1">
+          <div class="step-number">2</div>
+          <h3 class="step-title">İşveren Eşleştirme</h3>
+          <p class="step-description">
+            Profilinizi nitelikli aday arayan onaylı işverenlerle eşleştiriyoruz.
+          </p>
+        </div>
+        
+        <div class="step-card fade-in delay-2">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Doğrudan İletişim</h3>
+          <p class="step-description">
+            Onaylı işverenler uygun adaylarla doğrudan iletişime geçerek fırsatları görüşür.
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg open-modal-btn">
+          <i class="fas fa-play-circle btn-icon"></i>
+          <span>Başvuru Sürecini Başlat</span>
+        </button>
+        <p class="mt-2" style="color: var(--gray-600); font-size: 0.9rem;">
+          <i class="fas fa-check-circle text-primary"></i>
+          <span>İş arayanlardan ücret alınmaz - güvenilir istihdam platformu</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kullanıcı Yorumları -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Katılımcılarımız Ne Diyor?</h2>
+        <p class="section-subtitle">
+          Platformumuzdan faydalananların deneyimleri
+        </p>
+      </div>
+      
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <!-- Yorum 1 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "Evinizdeİş sayesinde pandemi döneminde işsiz kalmadım. Güvenilir bir şirketle uzaktan çalışma fırsatı buldum. Süreç şeffaf ve profesyoneldi."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">AŞ</div>
+                <div class="author-info">
+                  <h4>Ayşe Ş.</h4>
+                  <p>Müşteri Temsilcisi, İstanbul</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Yorum 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "Ankara'da yaşıyorum ve İstanbul'daki bir şirket için evden çalışıyorum. Platformun sağladığı güven ve düzenli ödeme sistemi beni en çok memnun eden özellikler oldu."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">MY</div>
+                <div class="author-info">
+                  <h4>Mehmet Y.</h4>
+                  <p>Veri Giriş Uzmanı, Ankara</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Yorum 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "İki çocuk annesiyim ve esnek çalışma saatleri benim için çok önemliydi. Bu platform sayesinde hem aileme zaman ayırıp hem de düzenli gelir elde edebiliyorum."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">FD</div>
+                <div class="author-info">
+                  <h4>Fatma D.</h4>
+                  <p>Online Destek Uzmanı, İzmir</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Yorum 4 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "Üniversite öğrencisiyim ve part-time çalışmak istiyordum. Evinizdeİş sayesinde ders programıma uygun bir iş buldum. Ödemelerim düzenli olarak yatıyor."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">CK</div>
+                <div class="author-info">
+                  <h4>Can K.</h4>
+                  <p>İçerik Denetleyici, Bursa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Yorum 5 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                "Emekli olduktan sonra ek gelir elde etmek istiyordum. Bu platform sayesinde evimden çalışarak aylık düzenli ek gelir sağlıyorum. Çok memnunum."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">HO</div>
+                <div class="author-info">
+                  <h4>Hasan Ö.</h4>
+                  <p>Kalite Kontrol Uzmanı, Antalya</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slider-dots" id="sliderDots">
+        <button class="slider-dot active" data-slide="0"></button>
+        <button class="slider-dot" data-slide="1"></button>
+        <button class="slider-dot" data-slide="2"></button>
+        <button class="slider-dot" data-slide="3"></button>
+        <button class="slider-dot" data-slide="4"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SSS -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+        <p class="section-subtitle">
+          Güvenilir istihdam eşleştirme platformumuz hakkında bilgiler
+        </p>
+      </div>
+      
+      <div class="faq-grid">
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>Platformunuzu kullanmak için ücret ödüyor muyum?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p><strong>Hayır, platformumuz iş arayanlar için tamamen ücretsizdir.</strong> Biz nitelikli adayları onaylı işverenlerle buluşturan bir istihdam eşleştirme hizmetiyiz. İş arayanlardan başvuru, yerleştirme veya hizmet ücreti talep etmiyoruz.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>İstihdam süreci nasıl işliyor?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Biz doğrudan işveren değil, bir eşleştirme platformuyuz. Başvurduğunuzda, nitelikli profillerinizi uzaktan çalışan arayan onaylı Türk şirketleriyle paylaşıyoruz. İşverenler uygun adaylarla doğrudan iletişime geçerek pozisyon, ücret ve istihdam şartlarını görüşür.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>Hangi tür şirketler platformunuzu kullanıyor?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yalnızca mevzuata uygun, kayıtlı Türk şirketleriyle çalışıyoruz. Tüm işverenler platformumuzda ilan verebilmek için öncelikle denetlenir ve onaylanır.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>Bu gerçek istihdam pozisyonları mı?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p><strong>Evet, tüm pozisyonlar gerçek istihdam fırsatlarını temsil eder.</strong> Başarılı adaylar, tüm yasal hakları ve korumaları içeren Türk iş kanununa uygun resmi iş sözleşmeleri alır.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg open-modal-btn">
+          <i class="fas fa-question-circle btn-icon"></i>
+          <span>Onaylı Pozisyonlara Başvur</span>
+        </button>
+        <p class="mt-2" style="color: var(--gray-600); font-size: 0.85rem;">
+          <i class="fas fa-phone-alt text-primary"></i>
+          <span>Yalnızca güvenilir istihdam fırsatları</span>
+        </p>
+        
+        <!-- Uyumluluk bağlantıları -->
+        <div class="compliance-links mt-3">
+          <a href="/privacy.html"><i class="fas fa-lock"></i> Gizlilik Politikası</a>
+          <a href="/userterms.html"><i class="fas fa-file-contract"></i> Kullanım Şartları</a>
+          <a href="/compliance.html"><i class="fas fa-balance-scale"></i> Uyumluluk Bilgileri</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Bölümü -->
+  <section class="section cta-section" id="apply">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="cta-title">Onaylı İşverenlerle Bağlantı Kurun</h2>
+        <p class="cta-subtitle">
+          Türkiye'deki güvenilir uzaktan çalışma fırsatları için başvurunuzu yapın
+        </p>
+        
+        <div class="mt-4">
+          <button class="btn btn-primary btn-lg open-modal-btn" style="background: white; color: var(--primary); border: 3px solid white;">
+            <i class="fas fa-briefcase btn-icon"></i>
+            <span>Onaylı Pozisyonlara Başvur</span>
+          </button>
+        </div>
+        
+        <div class="mt-3" style="color: rgba(255,255,255,0.9);">
+          <p><i class="fas fa-check-circle"></i> Ücretsiz güvenilir istihdam eşleştirme</p>
+          <p><i class="fas fa-check-circle"></i> Yalnızca onaylı Türk işverenler</p>
+          <p><i class="fas fa-check-circle"></i> İş mevzuatına tam uyum</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alt Bilgi -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="footer-logo">Evinizdeİş.com.tr</a>
+          <p class="footer-description">
+            Güvenilir istihdam eşleştirme platformu - Türkiye sakinlerini onaylı uzaktan çalışma fırsatlarıyla buluşturuyoruz.
+          </p>
+          <div class="compliance-badge">
+            <i class="fas fa-balance-scale"></i>
+            <span>Türk iş düzenlemelerine uyumlu</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>PLATFORM BİLGİLERİ</h3>
+          <ul>
+            <li><a href="#opportunities">Onaylı Pozisyonlar</a></li>
+            <li><a href="#how">Başvuru Süreci</a></li>
+            <li><a href="#about">Platform Hakkında</a></li>
+            <li><a href="#faq">SSS</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>YASAL & UYUMLULUK</h3>
+          <ul>
+            <li><a href="/privacy.html">Gizlilik Politikası</a></li>
+            <li><a href="/userterms.html">Kullanım Şartları</a></li>
+            <li><a href="/compliance.html">Uyumluluk Bilgileri</a></li>
+            <li><a href="/contact.html">Destek İletişimi</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>EK SAYFALAR</h3>
+          <ul>
+            <li><a href="/about.html">Hakkımızda</a></li>
+            <li><a href="/contact.html">İletişim</a></li>
+            <li><a href="/userterms.html">Kullanıcı Sözleşmesi</a></li>
+            <li><a href="/compliance.html">Yasal Uyumluluk</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 Evinizdeİş Türkiye | Güvenilir İstihdam Eşleştirme Platformu</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+          <i class="fas fa-flag"></i> Yalnızca Türkiye'de ikamet eden nitelikli bireylere hizmet verir
+        </p>
+        
+        <!-- Yasal uyarı -->
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; opacity: 0.6;">
+          <p>Evinizdeİş bir istihdam eşleştirme platformudur. Doğrudan işveren değiliz. Nihai istihdam şartları işveren şirket tarafından belirlenir. Tüm pozisyonlar Türkiye'de çalışma hakkı ve Türk iş kanununa uyum gerektirir.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Form -->
+  <div class="modal" id="modalForm">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      <div class="form-header">
+        <h2 class="form-title">Onaylı Uzaktan Çalışmaya Başvurun</h2>
+        <p class="form-subtitle">
+          Onaylı Türk işverenlerin güvenilir uzaktan çalışma fırsatları için bilgilerinizi gönderin.
+        </p>
+      </div>
+      
+      <!-- İstihdam sorumluluk reddi -->
+      <div class="employment-disclaimer">
+        <strong><i class="fas fa-info-circle"></i> Platform Açıklaması:</strong> Biz bir istihdam eşleştirme hizmetiyiz. İşverenler nitelikli adaylarla doğrudan iletişime geçerek spesifik fırsatları ve istihdam şartlarını görüşür.
+      </div>
+      
+      <form id="modalApplicationForm">
+        <div class="form-group">
+          <label for="modal-name" class="form-label">
+            <span>Tam Adınız</span> <span class="required">*</span>
+          </label>
+          <input type="text" id="modal-name" class="form-control" placeholder="Kimlikteki gibi" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-phone" class="form-label">
+            <span>Telefon Numarası</span> <span class="required">*</span>
+          </label>
+          <div class="phone-group">
+            <div class="country-code">
+              <img src="https://flagcdn.com/w20/tr.png" alt="Türkiye Bayrağı" width="20" height="14">
+              <span>+90</span>
+            </div>
+            <input type="tel" id="modal-phone" class="form-control phone-input" placeholder="5xx xxx xxxx" pattern="[0-9]{10}" required>
+          </div>
+          <small>Örnek: 532 123 4567 (başında 0 olmadan)</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-email" class="form-label">
+            <span>E-posta Adresi</span> <span class="required">*</span>
+          </label>
+          <input type="email" id="modal-email" class="form-control" placeholder="adiniz@email.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-city" class="form-label">
+            <span>Şehir</span> <span class="required">*</span>
+          </label>
+          <select id="modal-city" class="form-control" required>
+            <option value="">Şehrinizi seçin</option>
+            <option value="istanbul">İstanbul</option>
+            <option value="ankara">Ankara</option>
+            <option value="izmir">İzmir</option>
+            <option value="bursa">Bursa</option>
+            <option value="antalya">Antalya</option>
+            <option value="adana">Adana</option>
+            <option value="konya">Konya</option>
+            <option value="kayseri">Kayseri</option>
+            <option value="trabzon">Trabzon</option>
+            <option value="diyarbakir">Diyarbakır</option>
+            <option value="other">Diğer</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-age" class="form-label">
+            <span>Yaş</span> <span class="required">*</span>
+          </label>
+          <input type="number" id="modal-age" class="form-control" placeholder="25" min="18" max="65" required>
+        </div>
+        
+        <div class="form-check">
+          <input type="checkbox" id="modal-consent" class="form-check-input" required checked>
+          <label for="modal-consent" class="form-check-label">
+            <span>Okudum ve kabul ediyorum:</span> 
+            <a href="/privacy.html" target="_blank">Gizlilik Politikası</a> 
+            <span>ve</span> 
+            <a href="/userterms.html" target="_blank">Kullanım Şartları</a>.
+          </label>
+        </div>
+        
+        <div class="form-check mb-3">
+          <input type="checkbox" id="modal-eligibility" class="form-check-input" required>
+          <label for="modal-eligibility" class="form-check-label">
+            <span>Türkiye'de çalışma ve ikamet etme hakkım olduğunu onaylıyorum</span>
+          </label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fas fa-paper-plane btn-icon"></i>
+          <span>Başvuruyu Gönder</span>
+        </button>
+        
+        <div class="security-badge">
+          <i class="fas fa-lock security-icon"></i>
+          <span>Güvenli başvuru - yalnızca istihdam eşleştirme amaçlı</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Başarı Modalı -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <button class="modal-close" id="successCloseBtn">&times;</button>
+      <h3 class="modal-title">✅ <span>Başvurunuz Alındı</span></h3>
+      <p class="modal-message">
+        <strong>Başvurunuz için teşekkür ederiz!</strong> Bilgileriniz alınmıştır ve onaylı işverenlerle eşleştirilmek üzere işleme alınacaktır.
+      </p>
+      
+      <!-- İletişim seçenekleri -->
+      <div class="contact-options">
+        <h5><i class="fas fa-comments"></i> Sonraki Adımlar:</h5>
+        <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">Profiliniz işveren gereksinimleriyle eşleşirse, doğrudan iletişime geçilecektir (5-7 iş günü içinde).</p>
+        <p style="font-size: 0.85rem; color: var(--gray-600);">Acil sorularınız için lütfen iletişim bilgilerinizin doğru olduğunu kontrol edin.</p>
+      </div>
+      
+      <button class="btn btn-primary btn-block" id="successOkBtn">
+        <i class="fas fa-check btn-icon"></i>
+        <span>Web Sitesine Devam Et</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Türkiye WhatsApp numaraları
+      const whatsappAccounts = [ 
+       "19139959628",  // Türkiye numarası
+       "18153626795",  // Türkiye numarası  
+       "19317924918"   // Türkiye numarası
+      ];
+      
+      // Rastgele WhatsApp hesabı seç
+      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+      
+      // Elementler
+      const applicationForm = document.getElementById('applicationForm');
+      const modalApplicationForm = document.getElementById('modalApplicationForm');
+      const modalForm = document.getElementById('modalForm');
+      const successModal = document.getElementById('successModal');
+      const openModalBtns = document.querySelectorAll('.open-modal-btn');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const successCloseBtn = document.getElementById('successCloseBtn');
+      const successOkBtn = document.getElementById('successOkBtn');
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navLinks = document.querySelector('.nav-links');
+      const faqItems = document.querySelectorAll('.faq-item');
+      const testimonialsTrack = document.getElementById('testimonialsTrack');
+      const sliderDots = document.getElementById('sliderDots');
+      const dots = sliderDots ? sliderDots.querySelectorAll('.slider-dot') : [];
+      
+      // Mobil menü açma/kapama
+      mobileMenuBtn.addEventListener('click', function() {
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none';
+        } else {
+          navLinks.style.display = 'flex';
+          navLinks.style.flexDirection = 'column';
+          navLinks.style.position = 'absolute';
+          navLinks.style.top = '100%';
+          navLinks.style.left = '0';
+          navLinks.style.right = '0';
+          navLinks.style.background = 'white';
+          navLinks.style.padding = '1rem';
+          navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+          navLinks.style.gap = '1rem';
+        }
+      });
+      
+      // SSS açma/kapama
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          item.classList.toggle('active');
+        });
+      });
+      
+      // Yorum slayt gösterisi
+      let currentSlide = 0;
+      const totalSlides = 5;
+      
+      function updateSlider() {
+        if (testimonialsTrack) {
+          testimonialsTrack.style.transform = `translateX(-${currentSlide * 20}%)`;
+          
+          // Aktif noktayı güncelle
+          dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+      }
+      
+      // Slayt noktalarına tıklama
+      if (dots.length > 0) {
+        dots.forEach(dot => {
+          dot.addEventListener('click', function() {
+            currentSlide = parseInt(this.getAttribute('data-slide'));
+            updateSlider();
+          });
+        });
+      }
+      
+      // Otomatik slayt geçişi
+      let slideInterval;
+      function startSlider() {
+        if (testimonialsTrack) {
+          slideInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+          }, 5000);
+        }
+      }
+      
+      // Modal açma butonları
+      openModalBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          modalForm.classList.add('active');
+        });
+      });
+      
+      // Modal kapatma butonları
+      modalCloseBtn.addEventListener('click', function() {
+        modalForm.classList.remove('active');
+      });
+      
+      successCloseBtn.addEventListener('click', function() {
+        successModal.classList.remove('active');
+      });
+      
+      // Başarı modalı OK butonu - dönüşüm sürecini koru
+      successOkBtn.addEventListener('click', function() {
+        successModal.classList.remove('active');
+        // Dönüşüm olayını gönder ve WhatsApp'a yönlendir
+        const whatsappMessage = "Merhaba! Uzaktan çalışma fırsatlarına başvurdum ve daha fazla bilgi almak istiyorum.";
+        const whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent(whatsappMessage)}`;
+        gtag_report_conversion(whatsappLink);
+      });
+      
+      // Modal arka planına tıklayarak kapatma
+      [modalForm, successModal].forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            this.classList.remove('active');
+          }
+        });
+      });
+      
+      // Form doğrulama fonksiyonu
+      function validateForm(form) {
+        const name = form.querySelector('input[type="text"]').value.trim();
+        const phone = form.querySelector('input[type="tel"]').value.trim();
+        const email = form.querySelector('input[type="email"]').value.trim();
+        const city = form.querySelector('select').value;
+        const age = form.querySelector('input[type="number"]').value;
+        const consent = form.querySelector('#consent, #modal-consent').checked;
+        const eligibility = form.querySelector('#eligibility, #modal-eligibility').checked;
+        
+        // Stilleri sıfırla
+        const inputs = form.querySelectorAll('input, select');
+        inputs.forEach(input => {
+          input.style.borderColor = '';
+        });
+        
+        // İsim doğrulama
+        if (!name) {
+          form.querySelector('input[type="text"]').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // Telefon doğrulama (Türkiye: 10 hane, 5 ile başlar)
+        const phoneRegex = /^5[0-9]{9}$/;
+        if (!phoneRegex.test(phone)) {
+          form.querySelector('input[type="tel"]').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // E-posta doğrulama
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          form.querySelector('input[type="email"]').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // Şehir doğrulama
+        if (!city) {
+          form.querySelector('select').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // Yaş doğrulama
+        const ageNum = parseInt(age);
+        if (!age || ageNum < 18 || ageNum > 65) {
+          form.querySelector('input[type="number"]').style.borderColor = 'var(--primary)';
+          return false;
+        }
+        
+        // Onay doğrulama
+        if (!consent) {
+          return false;
+        }
+        
+        // Uygunluk doğrulama
+        if (!eligibility) {
+          return false;
+        }
+        
+        return true;
+      }
+      
+      // Form gönderme işleyicisi - olay takibini koru
+      function handleFormSubmit(form, isModalForm = false) {
+        if (validateForm(form)) {
+          // Google Analytics olayını gönder
+          try {
+            gtag('event', 'submit_form', {
+              event_category: 'lead',
+              event_label: isModalForm ? 'Modal Form Gönderimi' : 'Ana Form Gönderimi'
+            });
+            
+            // Dönüşüm olayını gönder
+            const whatsappMessage = "Merhaba! Uzaktan çalışma fırsatlarına başvurdum ve daha fazla bilgi almak istiyorum.";
+            const whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent(whatsappMessage)}`;
+            gtag_report_conversion(whatsappLink);
+          } catch (error) {
+            console.log('Google Analytics hatası:', error);
+            // Yedek
+            setTimeout(() => {
+              const whatsappMessage = "Merhaba! Uzaktan çalışma fırsatlarına başvurdum ve daha fazla bilgi almak istiyorum.";
+              const whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent(whatsappMessage)}`;
+              window.open(whatsappLink, '_blank');
+            }, 300);
+          }
+          
+          // Başarı modalını göster
+          successModal.classList.add('active');
+          
+          // Modal formu kapat
+          if (isModalForm) {
+            modalForm.classList.remove('active');
+          }
+          
+          return true;
+        }
+        return false;
+      }
+      
+      // Ana form gönderme
+      if (applicationForm) {
+        applicationForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          handleFormSubmit(this, false);
+        });
+      }
+      
+      // Modal form gönderme
+      if (modalApplicationForm) {
+        modalApplicationForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          handleFormSubmit(this, true);
+        });
+      }
+      
+      // Giriş kısıtlamaları
+      function setupInputRestrictions() {
+        // Telefon girişleri
+        const phoneInputs = document.querySelectorAll('input[type="tel"]');
+        phoneInputs.forEach(input => {
+          input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 10) {
+              this.value = this.value.slice(0, 10);
+            }
+          });
+          
+          input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text');
+            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 10);
+            this.value = numbersOnly;
+          });
+        });
+        
+        // Yaş girişleri
+        const ageInputs = document.querySelectorAll('input[type="number"]');
+        ageInputs.forEach(input => {
+          input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 2) {
+              this.value = this.value.slice(0, 2);
+            }
+          });
+          
+          input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text');
+            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 2);
+            this.value = numbersOnly;
+          });
+        });
+      }
+      
+      // Yavaş görünüm animasyonları
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // Fade-in sınıfına sahip elementleri gözle
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // Her şeyi başlat
+      function init() {
+        setupInputRestrictions();
+        startSlider();
+        
+        // Sayfa görüntüleme olayını gönder
+        gtag('event', 'page_view', {
+          page_title: 'Türkiye Uzaktan Çalışma Fırsatları - Evinizdeİş',
+          page_location: window.location.href
+        });
+        
+        // Form görüntüleme olayını gönder
+        setTimeout(() => {
+          gtag('event', 'view_form', {
+            event_category: 'engagement',
+            event_label: 'Modal Form Görüntüleme'
+          });
+        }, 1000);
+      }
+      
+      // Başlatmayı başlat
+      init();
+    });
+  </script>
+</body>
+</html>
