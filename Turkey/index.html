@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Türk bayrağı renkleri kırmızı ve beyaz -->
   <style>
     :root {
       /* Türk bayrağı renk paleti - Kırmızı & Beyaz */
@@ -1637,15 +1636,14 @@
     gtag('js', new Date());
     gtag('config', 'AW-17694994857');
     
+    // 修改转化跟踪函数
     function gtag_report_conversion(url) {
       const callback = function () {
         if (typeof(url) != 'undefined') {
           setTimeout(function() {
-            const newWindow = window.open(url, '_blank');
-            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
-              window.location.href = url;
-            }
-          }, 300);
+            // 在新标签页打开链接
+            window.open(url, '_blank');
+          }, 300); // 300ms延时
         }
       };
       
@@ -1674,6 +1672,7 @@
           if (attempts < maxAttempts) {
             setTimeout(sendEvent, 100);
           } else {
+            // 即使失败也要执行回调
             callback();
           }
         }
@@ -1681,6 +1680,7 @@
       
       sendEvent();
       
+      // 超时回退：无论如何都要跳转
       setTimeout(() => {
         if (!eventSent) {
           callback();
@@ -2607,15 +2607,12 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Türkiye WhatsApp numaraları
+      // 土耳其 WhatsApp 账号数组
       const whatsappAccounts = [ 
-      "19317924918",
-      "18153626795",
-      "19139959628"
+        "19317924918",
+        "18153626795",
+        "19139959628"
       ];
-      
-      // Rastgele WhatsApp hesabı seç
-      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
       
       // Elementler
       const applicationForm = document.getElementById('applicationForm');
@@ -2627,9 +2624,14 @@
       const successCloseBtn = document.getElementById('successCloseBtn');
       const successOkBtn = document.getElementById('successOkBtn');
       const faqItems = document.querySelectorAll('.faq-item');
-      const testimonialsTrack = document.getElementById('testimonialsTrack');
-      const sliderDots = document.getElementById('sliderDots');
-      const dots = sliderDots ? sliderDots.querySelectorAll('.slider-dot') : [];
+      
+      // WhatsApp链接存储变量
+      let currentWhatsappLink = '';
+      
+      // Rastgele WhatsApp hesabı seç函数
+      function getRandomWhatsAppAccount() {
+        return whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+      }
       
       // SSS açma/kapama
       faqItems.forEach(item => {
@@ -2642,6 +2644,9 @@
       // Yorum slayt gösterisi
       let currentSlide = 0;
       const totalSlides = 5;
+      const testimonialsTrack = document.getElementById('testimonialsTrack');
+      const sliderDots = document.getElementById('sliderDots');
+      const dots = sliderDots ? sliderDots.querySelectorAll('.slider-dot') : [];
       
       function updateSlider() {
         if (testimonialsTrack) {
@@ -2706,13 +2711,14 @@
         successModal.classList.remove('active');
       });
       
-      // Başarı modalı OK butonu - dönüşüm sürecini koru
+      // Başarı modalı OK butonu - 修复版
       successOkBtn.addEventListener('click', function() {
         successModal.classList.remove('active');
-        // Dönüşüm olayını gönder ve WhatsApp'a yönlendir
-        const whatsappMessage = "Merhaba! Uzaktan çalışma fırsatlarına başvurdum ve daha fazla bilgi almak istiyorum.";
-        const whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent(whatsappMessage)}`;
-        gtag_report_conversion(whatsappLink);
+        
+        if (currentWhatsappLink) {
+          // 上报谷歌事件并跳转
+          gtag_report_conversion(currentWhatsappLink);
+        }
       });
       
       // Modal arka planına tıklayarak kapatma
@@ -2724,93 +2730,98 @@
         });
       });
       
-      // Form doğrulama fonksiyonu (邮箱和城市字段已删除)
+      // 表单验证函数（简化版）
       function validateForm(form) {
-        // 检查蜜罐字段是否被填写（防刷）
+        // 检查蜜罐字段是否被填写
         const honeypot = form.querySelector('.honeypot-field input');
         if (honeypot && honeypot.value.trim() !== '') {
           console.log('Spam detected - honeypot field filled');
           return false;
         }
         
-        const name = form.querySelector('input[type="text"]').value.trim();
-        const phone = form.querySelector('input[type="tel"]').value.trim();
-        const age = form.querySelector('input[type="number"]').value;
-        const consent = form.querySelector('#consent, #modal-consent').checked;
-        const eligibility = form.querySelector('#eligibility, #modal-eligibility').checked;
+        // 获取表单元素
+        const nameInput = form.querySelector('input[type="text"]');
+        const phoneInput = form.querySelector('input[type="tel"]');
+        const ageInput = form.querySelector('input[type="number"]');
+        const consentCheckbox = form.querySelector('input[type="checkbox"]#consent, input[type="checkbox"]#modal-consent');
+        const eligibilityCheckbox = form.querySelector('input[type="checkbox"]#eligibility, input[type="checkbox"]#modal-eligibility');
         
-        // Stilleri sıfırla
+        // 重置所有错误样式
         const inputs = form.querySelectorAll('input, select');
         inputs.forEach(input => {
           input.style.borderColor = '';
         });
         
-        // İsim doğrulama
-        if (!name || name.length < 2) {
-          form.querySelector('input[type="text"]').style.borderColor = 'var(--primary)';
-          form.querySelector('input[type="text"]').focus();
-          return false;
+        let isValid = true;
+        
+        // 验证姓名 - 只检查非空
+        if (!nameInput || nameInput.value.trim() === '') {
+          nameInput.style.borderColor = 'var(--primary)';
+          nameInput.focus();
+          isValid = false;
         }
         
-        // Telefon doğrulama (Türkiye: 10 hane, 5 ile başlar)
-        const phoneRegex = /^5[0-9]{9}$/;
-        if (!phoneRegex.test(phone)) {
-          form.querySelector('input[type="tel"]').style.borderColor = 'var(--primary)';
-          form.querySelector('input[type="tel"]').focus();
-          return false;
+        // 验证电话 - 只检查5开头10位数字
+        if (phoneInput) {
+          const phoneValue = phoneInput.value.trim().replace(/\s/g, '');
+          const phoneRegex = /^5\d{9}$/;
+          
+          if (phoneValue === '' || !phoneRegex.test(phoneValue)) {
+            phoneInput.style.borderColor = 'var(--primary)';
+            if (isValid) phoneInput.focus();
+            isValid = false;
+          }
         }
         
-        // Yaş doğrulama
-        const ageNum = parseInt(age);
-        if (!age || ageNum < 18 || ageNum > 65) {
-          form.querySelector('input[type="number"]').style.borderColor = 'var(--primary)';
-          form.querySelector('input[type="number"]').focus();
-          return false;
+        // 验证年龄 - 只检查非空
+        if (!ageInput || ageInput.value.trim() === '') {
+          ageInput.style.borderColor = 'var(--primary)';
+          if (isValid) ageInput.focus();
+          isValid = false;
         }
         
-        // Onay doğrulama
-        if (!consent) {
+        // 验证复选框 - 只检查是否勾选
+        if (!consentCheckbox || !consentCheckbox.checked) {
+          if (isValid && consentCheckbox) consentCheckbox.focus();
+          isValid = false;
           alert('Lütfen Gizlilik Politikası ve Kullanım Şartlarını kabul edin.');
-          return false;
         }
         
-        // Uygunluk doğrulama (现在默认勾选，但依然检查)
-        if (!eligibility) {
+        // 验证资格复选框 - 只检查是否勾选
+        if (!eligibilityCheckbox || !eligibilityCheckbox.checked) {
+          if (isValid && eligibilityCheckbox) eligibilityCheckbox.focus();
+          isValid = false;
           alert('Lütfen Türkiye\'de çalışma ve ikamet etme hakkınız olduğunu onaylayın.');
-          return false;
         }
         
-        return true;
+        return isValid;
       }
       
-      // Form gönderme işleyicisi - olay takibini koru
+      // 表单提交处理函数
       function handleFormSubmit(form, isModalForm = false) {
         if (validateForm(form)) {
-          // Google Analytics olayını gönder
+          // 生成WhatsApp链接
+          const randomAccount = getRandomWhatsAppAccount();
+          const whatsappMessage = "Merhaba! Uzaktan çalışma fırsatlarına başvurdum ve daha fazla bilgi almak istiyorum.";
+          const whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent(whatsappMessage)}`;
+          
+          // 存储链接供稍后使用
+          currentWhatsappLink = whatsappLink;
+          
+          // 发送Google Analytics表单提交事件
           try {
             gtag('event', 'submit_form', {
               event_category: 'lead',
               event_label: isModalForm ? 'Modal Form Gönderimi' : 'Ana Form Gönderimi'
             });
-            
-            // Dönüşüm olayını gönder
-            const whatsappMessage = "Merhaba! Uzaktan çalışma fırsatlarına başvurdum ve daha fazla bilgi almak istiyorum.";
-            const whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent(whatsappMessage)}`;
-            gtag_report_conversion(whatsappLink);
           } catch (error) {
-            console.log('Google Analytics hatası:', error);
-            // Yedek
-            setTimeout(() => {
-              const whatsappMessage = "Merhaba! Uzaktan çalışma fırsatlarına başvurdum ve daha fazla bilgi almak istiyorum.";
-              const whatsappLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent(whatsappMessage)}`;
-              window.open(whatsappLink, '_blank');
-            }, 300);
+            console.log('Analytics hatası:', error);
           }
           
-          // Başarı modalını göster
+          // 显示成功模态框
           successModal.classList.add('active');
           
-          // Modal formu kapat
+          // 如果是从模态框提交，关闭模态框
           if (isModalForm) {
             modalForm.classList.remove('active');
           }
@@ -2820,7 +2831,7 @@
         return false;
       }
       
-      // Ana form gönderme
+      // 主表单提交事件
       if (applicationForm) {
         applicationForm.addEventListener('submit', function(e) {
           e.preventDefault();
@@ -2828,7 +2839,7 @@
         });
       }
       
-      // Modal form gönderme
+      // 模态框表单提交事件
       if (modalApplicationForm) {
         modalApplicationForm.addEventListener('submit', function(e) {
           e.preventDefault();
@@ -2836,18 +2847,21 @@
         });
       }
       
-      // Giriş kısıtlamaları
+      // 输入限制设置
       function setupInputRestrictions() {
-        // Telefon girişleri
+        // 电话输入限制 - 只允许数字，限制10位
         const phoneInputs = document.querySelectorAll('input[type="tel"]');
         phoneInputs.forEach(input => {
           input.addEventListener('input', function() {
+            // 只保留数字
             this.value = this.value.replace(/[^0-9]/g, '');
+            // 限制为10位
             if (this.value.length > 10) {
               this.value = this.value.slice(0, 10);
             }
           });
           
+          // 粘贴处理
           input.addEventListener('paste', function(e) {
             e.preventDefault();
             const pasteData = e.clipboardData.getData('text');
@@ -2856,67 +2870,32 @@
           });
         });
         
-        // Yaş girişleri
+        // 年龄输入限制 - 只允许数字
         const ageInputs = document.querySelectorAll('input[type="number"]');
         ageInputs.forEach(input => {
           input.addEventListener('input', function() {
             this.value = this.value.replace(/[^0-9]/g, '');
-            if (this.value.length > 2) {
-              this.value = this.value.slice(0, 2);
-            }
-          });
-          
-          input.addEventListener('paste', function(e) {
-            e.preventDefault();
-            const pasteData = e.clipboardData.getData('text');
-            const numbersOnly = pasteData.replace(/[^0-9]/g, '').slice(0, 2);
-            this.value = numbersOnly;
           });
         });
       }
       
-      // Yavaş görünüm animasyonları
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      };
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-      
-      // Fade-in sınıfına sahip elementleri gözle
-      document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-      });
-      
-      // Her şeyi başlat
+      // 初始化函数
       function init() {
         setupInputRestrictions();
         startSlider();
         
-        // Sayfa görüntüleme olayını gönder
-        gtag('event', 'page_view', {
-          page_title: 'Türkiye Uzaktan Çalışma Fırsatları - Evinizdeİş',
-          page_location: window.location.href
-        });
-        
-        // Form görüntüleme olayını gönder
-        setTimeout(() => {
-          gtag('event', 'view_form', {
-            event_category: 'engagement',
-            event_label: 'Form Görüntüleme'
+        // 发送页面浏览事件
+        try {
+          gtag('event', 'page_view', {
+            page_title: 'Türkiye Uzaktan Çalışma Fırsatları - Evinizdeİş',
+            page_location: window.location.href
           });
-        }, 1000);
+        } catch (error) {
+          console.log('Page view tracking error:', error);
+        }
       }
       
-      // Başlatmayı başlat
+      // 执行初始化
       init();
     });
   </script>
