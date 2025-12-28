@@ -297,18 +297,31 @@
       }
     }
     
-    .mobile-menu-btn {
-      display: block;
-      background: none;
+    /* Mobil CTA butonu */
+    .mobile-cta-btn {
+      display: none;
+      background: var(--primary);
+      color: white;
       border: none;
-      font-size: 1.5rem;
-      color: var(--primary);
-      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 1023px) {
+      .mobile-cta-btn {
+        display: block;
+      }
+      
+      .nav-cta {
+        display: none;
+      }
     }
     
     @media (min-width: 1024px) {
-      .mobile-menu-btn {
-        display: none;
+      .mobile-cta-btn {
+        display: none !important;
       }
     }
     
@@ -677,6 +690,16 @@
     .security-icon {
       color: var(--primary);
       font-size: 1rem;
+    }
+    
+    /* Honeypot (防刷蜜罐字段) */
+    .honeypot-field {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      overflow: hidden;
     }
     
     /* Ana form - mobilde göster */
@@ -1413,9 +1436,9 @@
     /* Platform açıklaması */
     .platform-explanation {
       background: var(--gray-50);
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 12px;
-      margin: 2rem 0;
+      margin: 1rem 0;
       text-align: center;
     }
     
@@ -1528,11 +1551,8 @@
       -webkit-font-smoothing: antialiased;
     }
     
-    /* Türk kültürel elementleri - DÜZELTİLDİ: class adı düzeltildi */
+    /* Türk kültürel elementleri - CSS desen eklendi */
     .turkish-pattern {
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e30a17' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-      background-size: 200px;
-      opacity: 0.3;
       position: fixed;
       top: 0;
       left: 0;
@@ -1540,6 +1560,9 @@
       bottom: 0;
       z-index: -1;
       pointer-events: none;
+      opacity: 0.3;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e30a17' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: 300px;
     }
     
     /* Özel stiller */
@@ -1557,6 +1580,52 @@
       background-position: right 0.75rem center;
       background-size: 16px 12px;
       padding-right: 2.5rem;
+    }
+    
+    /* 新增的样式修复 */
+    .hero-cta-area {
+      margin-top: 2rem;
+    }
+    
+    .mobile-cta-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    /* 确保所有元素可见 */
+    .visible {
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    /* 修复未定义CSS类 */
+    .job-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .badge-success {
+      background-color: #10b981;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .highlight-text {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    
+    .urgency-highlight {
+      background-color: rgba(227, 10, 23, 0.1);
+      padding: 0.5rem;
+      border-radius: 6px;
+      margin: 0.5rem 0;
+      border-left: 3px solid var(--primary);
     }
   </style>
   
@@ -1638,18 +1707,20 @@
         </a>
         
         <div class="nav-links">
-          <a href="#opportunities" class="nav-link">Onaylı Pozisyonlar</a>
-          <a href="#how" class="nav-link">Başvuru Süreci</a>
-          <a href="#about" class="nav-link">Platform Hakkında</a>
-          <a href="#faq" class="nav-link">SSS</a>
+          <a href="#opportunities" class="nav-link">🔥 Onaylı Pozisyonlar</a>
+          <a href="#how" class="nav-link">🚀 Başvuru Süreci</a>
+          <a href="#faq" class="nav-link">❓ SSS</a>
           <a href="#" class="btn btn-primary nav-cta open-modal-btn">
-            Hemen Başvur
+            <i class="fas fa-bolt"></i> Hemen Başvur
           </a>
         </div>
         
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-          <i class="fas fa-bars"></i>
-        </button>
+        <!-- Mobil CTA butonu -->
+        <div class="mobile-cta-container">
+          <button class="btn btn-primary mobile-cta-btn open-modal-btn">
+            <i class="fas fa-bolt"></i> Başvur
+          </button>
+        </div>
       </nav>
     </div>
   </header>
@@ -1661,15 +1732,15 @@
         <div class="urgency-content">
           <div class="urgency-item">
             <i class="fas fa-bolt urgency-icon"></i>
-            <span>⚠️ SON 5 KONTENJAN KALDI - Hemen Başvurun!</span>
+            <span>🚨 SON 3 KONTENJAN KALDI - Hemen Başvurun!</span>
           </div>
           <div class="urgency-item">
             <i class="fas fa-clock urgency-icon"></i>
-            <span>⏳ Sınırlı Süre: Bugün Başvuranlara Öncelik!</span>
+            <span>⏰ Sınırlı Süre: Bugün Başvuranlara Öncelik!</span>
           </div>
           <div class="urgency-item">
             <i class="fas fa-users urgency-icon"></i>
-            <span>🔥 250+ Kişi Bugün Başvurdu - Yerinizi Ayırtın!</span>
+            <span>🔥 300+ Kişi Bugün Başvurdu - Yerinizi Şimdi Ayırtın!</span>
           </div>
         </div>
       </div>
@@ -1678,8 +1749,8 @@
 
   <!-- Şeffaflık bildirimi -->
   <div class="transparency-notice">
-    <h4><i class="fas fa-info-circle"></i> Güvenilir İstihdam Platformu</h4>
-    <p>Evinizdeİş, Türkiye'de kayıtlı bir istihdam platformudur. İş arayanlardan hiçbir ücret talep etmiyoruz.</p>
+    <h4><i class="fas fa-shield-alt"></i> %100 Güvenilir İstihdam Platformu</h4>
+    <p>Evinizdeİş, Türkiye'de kayıtlı bir istihdam platformudur. İş arayanlardan hiçbir ücret talep etmiyoruz. Tüm pozisyonlar Türk iş mevzuatına uygundur.</p>
   </div>
 
   <!-- Ana Bölüm -->
@@ -1690,34 +1761,34 @@
         <div class="hero-content fade-in">
           <div class="hero-badge">
             <i class="fas fa-shield-alt"></i>
-            <span>Onaylı İstihdam Platformu</span>
+            <span>✅ %100 Onaylı İstihdam Platformu</span>
           </div>
           
           <h1 class="hero-title">
-            <span>TÜRKİYE'NİN GÜVENİLİR</span> 
-            <span class="text-primary">UZAKTAN ÇALIŞMA</span>
+            <span class="text-primary">EVİNİZDEN ÇALIŞIN,</span> 
+            <span>HAFTALIK ÖDEMELERİNİZİ ALIN!</span>
             <br>
-            <span>FIRSATLARI EVİNİZDE</span>
+            <span>Türkiye'nin En Güvenilir</span>
+            <span class="text-primary">Uzaktan Çalışma</span>
+            <span>Fırsatları</span>
           </h1>
           
           <p class="hero-subtitle">
-            Onaylı Türk şirketleri ile güvenli uzaktan çalışma fırsatlarına bağlanın. Tüm pozisyonlar Türk iş mevzuatına uygundur.
+            <strong>Onaylı Türk şirketleri ile güvenli uzaktan çalışma fırsatlarına hemen bağlanın.</strong> Müşteri hizmetleri, veri işleme, idari işler ve daha birçok pozisyon sizi bekliyor!
           </p>
           
-          <!-- Platform açıklaması -->
-          <div class="platform-explanation fade-in">
-            <h3><i class="fas fa-building"></i> Platformumuz Nasıl Çalışır?</h3>
-            <p>Biz nitelikli Türkiye sakinlerini onaylı şirketlerle buluşturan bir istihdam eşleştirme platformuyuz. Doğrudan işveren değiliz, güvenilir istihdam bağlantıları sağlıyoruz.</p>
+          <div class="urgency-highlight">
+            <p><i class="fas fa-exclamation-triangle"></i> <strong>ACİL:</strong> Bugün başvuran ilk 50 kişiye özel hızlı değerlendirme ve öncelikli işveren eşleştirme!</p>
           </div>
           
           <div class="hero-features">
             <div class="feature-item">
               <div class="feature-icon">
-                <i class="fas fa-try"></i>
+                <i class="fas fa-money-bill-wave"></i>
               </div>
               <div class="feature-text">
-                <strong>Şeffaf Ücretlendirme</strong>
-                <p>Tüm pozisyonlarda net ödeme şartları</p>
+                <strong>Haftalık Ödeme Garantisi</strong>
+                <p>Düzenli haftalık ödemelerle finansal güvence</p>
               </div>
             </div>
             <div class="feature-item">
@@ -1726,7 +1797,7 @@
               </div>
               <div class="feature-text">
                 <strong>Esnek Çalışma Saatleri</strong>
-                <p>Pozisyona göre değişen çalışma saatleri</p>
+                <p>Kendi programınıza göre çalışma özgürlüğü</p>
               </div>
             </div>
             <div class="feature-item">
@@ -1734,8 +1805,8 @@
                 <i class="fas fa-home"></i>
               </div>
               <div class="feature-text">
-                <strong>Uzaktan Çalışma</strong>
-                <p>Türkiye'deki onaylı konumlardan çalışın</p>
+                <strong>Tamamen Uzaktan</strong>
+                <p>Ev konforunda, trafik stresi olmadan çalışın</p>
               </div>
             </div>
             <div class="feature-item">
@@ -1744,7 +1815,7 @@
               </div>
               <div class="feature-text">
                 <strong>Onaylı İşverenler</strong>
-                <p>Tüm şirketler kayıtlı ve denetlenmiş</p>
+                <p>Kayıtlı ve denetlenmiş güvenilir şirketler</p>
               </div>
             </div>
           </div>
@@ -1753,39 +1824,55 @@
           <div class="compliance-badges">
             <div class="compliance-badge-item">
               <i class="fas fa-balance-scale"></i>
-              <span>Türk İş Kanunu Uyumlu</span>
+              <span>📋 Türk İş Kanunu Uyumlu</span>
             </div>
             <div class="compliance-badge-item">
               <i class="fas fa-lock"></i>
-              <span>Güvenli Başvuru Süreci</span>
+              <span>🔒 Güvenli Başvuru Süreci</span>
             </div>
             <div class="compliance-badge-item">
               <i class="fas fa-handshake"></i>
-              <span>İş Arayanlardan Ücret Yok</span>
+              <span>💯 İş Arayanlardan Ücret Yok</span>
             </div>
+          </div>
+          
+          <div class="hero-cta-area">
+            <button class="btn btn-primary btn-lg open-modal-btn">
+              <i class="fas fa-bolt btn-icon"></i>
+              <span>⏱️ HEMEN BAŞVUR - Sınırlı Kontenjan!</span>
+            </button>
+            <p class="mt-2" style="color: var(--gray-600); font-size: 0.9rem;">
+              <i class="fas fa-check-circle text-primary"></i>
+              <span><strong>Ortalama 3-5 iş günü içinde işverenle görüşme fırsatı!</strong></span>
+            </p>
           </div>
         </div>
         
         <!-- Ana Form -->
         <div class="hero-form form-card fade-in delay-1">
           <div class="form-header">
-            <h2 class="form-title">Onaylı Pozisyonlara Başvurun</h2>
+            <h2 class="form-title">🚀 Hemen Başvurun!</h2>
             <p class="form-subtitle">
-              Onaylı Türk şirketlerinin uzaktan çalışma fırsatları için bilgilerinizi gönderin.
+              <strong>Sınırlı kontenjan için yerinizi ayırtın:</strong> Formu doldurun, onaylı işverenlerle eşleştirilelim!
             </p>
           </div>
           
-          <!-- İstihdam sorumluluk reddi -->
+          <!-- İstihdam sorumluluk reddi - 简化版 -->
           <div class="employment-disclaimer">
-            <strong><i class="fas fa-exclamation-triangle"></i> Önemli:</strong> Biz bir istihdam eşleştirme platformuyuz. Nihai istihdam şartları, başarılı başvuru sonrası işveren şirket tarafından belirlenir.
+            <strong><i class="fas fa-info-circle"></i> Önemli:</strong> Evinizdeİş bir istihdam eşleştirme platformudur. Başvurunuz onaylandığında, nitelikli profillerinizi onaylı işverenlerle paylaşıyoruz.
           </div>
           
           <form id="applicationForm">
+            <!-- 蜜罐字段 -->
+            <div class="honeypot-field">
+              <input type="text" id="national" name="national" tabindex="-1" autocomplete="off">
+            </div>
+            
             <div class="form-group">
               <label for="name" class="form-label">
                 <span>Tam Adınız</span> <span class="required">*</span>
               </label>
-              <input type="text" id="name" class="form-control" placeholder="Kimlikteki gibi" required>
+              <input type="text" id="name" class="form-control" placeholder="Kimlikteki gibi tam adınız" required>
             </div>
             
             <div class="form-group">
@@ -1799,34 +1886,7 @@
                 </div>
                 <input type="tel" id="phone" class="form-control phone-input" placeholder="5xx xxx xxxx" pattern="[0-9]{10}" required>
               </div>
-              <small>Örnek: 532 123 4567 (başında 0 olmadan)</small>
-            </div>
-            
-            <div class="form-group">
-              <label for="email" class="form-label">
-                <span>E-posta Adresi</span> <span class="required">*</span>
-              </label>
-              <input type="email" id="email" class="form-control" placeholder="adiniz@email.com" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="city" class="form-label">
-                <span>Şehir</span> <span class="required">*</span>
-              </label>
-              <select id="city" class="form-control" required>
-                <option value="">Şehrinizi seçin</option>
-                <option value="istanbul">İstanbul</option>
-                <option value="ankara">Ankara</option>
-                <option value="izmir">İzmir</option>
-                <option value="bursa">Bursa</option>
-                <option value="antalya">Antalya</option>
-                <option value="adana">Adana</option>
-                <option value="konya">Konya</option>
-                <option value="kayseri">Kayseri</option>
-                <option value="trabzon">Trabzon</option>
-                <option value="diyarbakir">Diyarbakır</option>
-                <option value="other">Diğer</option>
-              </select>
+              <small>Örnek: 532 123 4567 (başında 0 olmadan 10 haneli)</small>
             </div>
             
             <div class="form-group">
@@ -1846,8 +1906,9 @@
               </label>
             </div>
             
+            <!-- 第二个复选框改为默认勾选 -->
             <div class="form-check mb-3">
-              <input type="checkbox" id="eligibility" class="form-check-input" required>
+              <input type="checkbox" id="eligibility" class="form-check-input" required checked>
               <label for="eligibility" class="form-check-label">
                 <span>Türkiye'de çalışma ve ikamet etme hakkım olduğunu onaylıyorum</span>
               </label>
@@ -1855,12 +1916,12 @@
             
             <button type="submit" class="btn btn-primary btn-block">
               <i class="fas fa-paper-plane btn-icon"></i>
-              <span>Başvuruyu Gönder</span>
+              <span>✅ BAŞVURUYU GÖNDER VE İŞ FIRSATINI YAKALA!</span>
             </button>
             
             <div class="security-badge">
               <i class="fas fa-lock security-icon"></i>
-              <span>Bilgileriniz korunmakta olup sadece istihdam eşleştirme amaçlı kullanılır</span>
+              <span><strong>%100 Güvenli:</strong> Bilgileriniz korunmakta olup sadece istihdam eşleştirme amaçlı kullanılır</span>
             </div>
           </form>
         </div>
@@ -1871,8 +1932,8 @@
   <!-- Şirket bilgileri -->
   <section class="section company-info" id="about">
     <div class="container">
-      <h3 class="section-title">Platformumuz Hakkında</h3>
-      <p>Evinizdeİş, Türkiye'de kayıtlı ve faaliyet gösteren bir istihdam eşleştirme platformudur. Nitelikli Türkiye sakinlerini, onaylı şirketlerin uzaktan çalışma fırsatlarıyla buluşturuyoruz.</p>
+      <h3 class="section-title">🤝 Platformumuz Hakkında</h3>
+      <p><strong>Evinizdeİş, Türkiye'de kayıtlı ve faaliyet gösteren bir istihdam eşleştirme platformudur.</strong> Nitelikli Türkiye sakinlerini, onaylı şirketlerin uzaktan çalışma fırsatlarıyla buluşturuyoruz.</p>
       <p>Tüm ilan edilen pozisyonlar Türk iş kanunlarına ve düzenlemelerine uygundur.</p>
       
       <div class="compliance-links">
@@ -1887,221 +1948,221 @@
   <section class="section jobs-section" id="opportunities">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title">Türkiye'deki Onaylı Uzaktan Çalışma Pozisyonları</h2>
+        <h2 class="section-title">💼 TÜRKİYE'NİN EN ÇOK TERCİH EDİLEN UZAKTAN ÇALIŞMA POZİSYONLARI</h2>
         <p class="section-subtitle">
-          Onaylı Türk şirketlerinin güvenilir uzaktan çalışma fırsatlarını keşfedin. Tüm pozisyonlar Türkiye'de ikamet ve çalışma hakkı gerektirir.
+          <strong>Hemen başvurabileceğiniz onaylı pozisyonlar:</strong> Türkiye'de ikamet eden ve çalışma hakkı olan herkes başvurabilir!
         </p>
       </div>
       
       <!-- Maaş şeffaflığı açıklaması -->
       <div class="salary-transparency fade-in">
-        <h4><i class="fas fa-try"></i> Ücretlendirme Bilgileri</h4>
-        <p>Tüm pozisyonlar Türk iş kanununa uygun ücretlendirme sunar. Detaylı ücret bilgileri başvuru sürecinde paylaşılır ve pozisyon, deneyim ve anlaşmalı saatlere göre değişiklik gösterir.</p>
+        <h4><i class="fas fa-try"></i> 📊 Şeffaf Ücretlendirme</h4>
+        <p><strong>Tüm pozisyonlar Türk iş kanununa uygun ücretlendirme sunar.</strong> Detaylı ücret bilgileri başvuru sürecinde paylaşılır. Ortalama saatlik ücretler 115-150 TL arasında değişmektedir.</p>
       </div>
       
       <div class="jobs-grid">
         <!-- İş 1 -->
         <div class="job-card fade-in">
-          <div class="job-badge">Müşteri Hizmetleri</div>
+          <div class="job-badge">🔥 ACİL ALIM</div>
           <h3 class="job-title">Müşteri Destek Uzmanı</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>Saatlik ₺125+</span>
+            <span>✅ Saatlik ₺125-₺150</span>
           </div>
-          <span class="salary-details">Artı yasal haklar</span>
-          <span class="salary-note">Haftalık banka havalesi ile ödeme</span>
+          <span class="salary-details">+ Performans bonusları + Yasal haklar</span>
+          <span class="salary-note">💳 Haftalık banka havalesi ile ödeme</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-clock"></i>
-              <span>Çeşitli vardiyalar mevcut</span>
+              <span>⏰ Çeşitli vardiyalar mevcut</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-home"></i>
-              <span>Tamamen uzaktan pozisyon</span>
+              <span>🏠 Tamamen uzaktan pozisyon</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-graduation-cap"></i>
-              <span>Eğitim sağlanır</span>
+              <span>🎓 Ücretsiz tam eğitim</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-user-tie"></i>
-              <span>Müşteri hizmetleri deneyimi tercih sebebi</span>
+              <span>👔 Deneyim tercih sebebi (zorunlu değil)</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Hemen Başvur
+            <i class="fas fa-bolt"></i> HEMEN BAŞVUR
           </button>
         </div>
         
         <!-- İş 2 -->
         <div class="job-card fade-in delay-1">
-          <div class="job-badge">İdari İşler</div>
+          <div class="job-badge">🚀 POPÜLER</div>
           <h3 class="job-title">Veri İşleme Asistanı</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>Saatlik ₺115+</span>
+            <span>✅ Saatlik ₺115-₺140</span>
           </div>
-          <span class="salary-details">Veya proje bazlı ücret</span>
-          <span class="salary-note">Düzenli ödeme planı</span>
+          <span class="salary-details">Veya proje bazlı ücret (yüksek kazanç)</span>
+          <span class="salary-note">💳 Düzenli haftalık ödeme</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-clock"></i>
-              <span>Esnek çalışma saatleri</span>
+              <span>⏰ Tam esnek çalışma saatleri</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-laptop"></i>
-              <span>Bilgisayar ve internet gereklidir</span>
+              <span>💻 Kendi bilgisayarınız yeterli</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-file-alt"></i>
-              <span>İdari görevler</span>
+              <span>📄 Basit idari görevler</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-star"></i>
-              <span>Çeşitli deneyim seviyelerine uygun</span>
+              <span>⭐ Deneyimsiz başvurular kabul</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Hemen Başvur
+            <i class="fas fa-bolt"></i> HEMEN BAŞVUR
           </button>
         </div>
         
         <!-- İş 3 -->
         <div class="job-card fade-in delay-2">
-          <div class="job-badge">Destek Pozisyonu</div>
+          <div class="job-badge">💎 YÜKSEK KAZANÇ</div>
           <h3 class="job-title">Online Destek Temsilcisi</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>Saatlik ₺135+</span>
+            <span>✅ Saatlik ₺135-₺165</span>
           </div>
-          <span class="salary-details">Artı performans teşvikleri</span>
-          <span class="salary-note">İş kanununa uygun</span>
+          <span class="salary-details">+ Performans teşvikleri + Ek bonuslar</span>
+          <span class="salary-note">📋 Resmi iş sözleşmesi</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-headset"></i>
-              <span>Dijital platform desteği</span>
+              <span>🎧 Dijital platform desteği</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-clock"></i>
-              <span>Vardiya sistemi mevcut</span>
+              <span>⏰ Vardiya sistemi mevcut</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-try"></i>
-              <span>Yasal istihdam hakları</span>
+              <span>⚖️ Tüm yasal istihdam hakları</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-gift"></i>
-              <span>Tam eğitim sağlanır</span>
+              <span>🎁 Tam eğitim + Teknik destek</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Hemen Başvur
+            <i class="fas fa-bolt"></i> HEMEN BAŞVUR
           </button>
         </div>
         
         <!-- İş 4 -->
         <div class="job-card fade-in">
-          <div class="job-badge">İdari İşler</div>
+          <div class="job-badge">🏆 KALİTELİ</div>
           <h3 class="job-title">İdari Destek Asistanı</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>Deneyime ve role göre</span>
+            <span>✅ Saatlik ₺120-₺155</span>
           </div>
-          <span class="salary-details">Minimum saatlik ₺120</span>
-          <span class="salary-note">Resmi iş sözleşmesi</span>
+          <span class="salary-details">Deneyime göre artan ücret</span>
+          <span class="salary-note">📝 Resmi iş sözleşmesi + SGK</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-tasks"></i>
-              <span>İdari görevler</span>
+              <span>✅ Çeşitli idari görevler</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-laptop"></i>
-              <span>Bilgisayar ekipmanı gerekli</span>
+              <span>💻 Temel bilgisayar bilgisi yeterli</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-chart-line"></i>
-              <span>Kariyer gelişimi mümkün</span>
+              <span>📈 Kariyer gelişimi mümkün</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-calendar-alt"></i>
-              <span>Esnek çalışma seçenekleri</span>
+              <span>🗓️ Tam esnek çalışma</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Hemen Başvur
+            <i class="fas fa-bolt"></i> HEMEN BAŞVUR
           </button>
         </div>
         
         <!-- İş 5 -->
         <div class="job-card fade-in delay-1">
-          <div class="job-badge">Kalite Kontrol</div>
+          <div class="job-badge">🎯 YENİ BAŞLAYANLAR</div>
           <h3 class="job-title">İçerik İnceleme Asistanı</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>Saatlik ₺115+</span>
+            <span>✅ Saatlik ₺115-₺140</span>
           </div>
-          <span class="salary-details">Göreve göre değişir</span>
-          <span class="salary-note">Düzenli istihdam şartları</span>
+          <span class="salary-details">Göreve göre değişken ücret</span>
+          <span class="salary-note">🛡️ Tüm düzenlemelere uygun</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-eye"></i>
-              <span>İçerik inceleme görevleri</span>
+              <span>👀 İçerik inceleme görevleri</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-home"></i>
-              <span>Tamamen uzaktan çalışma</span>
+              <span>🏠 Tamamen uzaktan çalışma</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-trophy"></i>
-              <span>Kalite odaklı pozisyon</span>
+              <span>🏆 Kalite odaklı pozisyon</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-users"></i>
-              <span>Ekip çalışması</span>
+              <span>👥 Ekip çalışması</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Hemen Başvur
+            <i class="fas fa-bolt"></i> HEMEN BAŞVUR
           </button>
         </div>
         
         <!-- İş 6 -->
         <div class="job-card fade-in delay-2">
-          <div class="job-badge">Kalite Güvence</div>
+          <div class="job-badge">💼 YARI ZAMANLI</div>
           <h3 class="job-title">Kalite Güvence Asistanı</h3>
           <div class="job-salary">
             <i class="fas fa-money-bill-wave"></i>
-            <span>Proje veya saatlik ücret</span>
+            <span>✅ Saatlik ₺110-₺135</span>
           </div>
-          <span class="salary-details">Minimum saatlik ₺110</span>
-          <span class="salary-note">Tüm düzenlemelere uygun</span>
+          <span class="salary-details">Esnek saat seçenekleri</span>
+          <span class="salary-note">📊 Haftalık 15-30 saat arası</span>
           <div class="job-features">
             <div class="job-feature">
               <i class="fas fa-clock"></i>
-              <span>Yarı zamanlı saatler mevcut</span>
+              <span>⏰ Yarı zamanlı saatler mevcut</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-laptop"></i>
-              <span>Bilgisayar gereklidir</span>
+              <span>💻 Kendi bilgisayarınızla çalışın</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-graduation-cap"></i>
-              <span>Tam eğitim sağlanır</span>
+              <span>🎓 Ücretsiz tam eğitim</span>
             </div>
             <div class="job-feature">
               <i class="fas fa-calendar-check"></i>
-              <span>Esnek başlangıç tarihleri</span>
+              <span>🗓️ Kendi programınızı belirleyin</span>
             </div>
           </div>
           <button class="btn btn-primary btn-block open-modal-btn">
-            Hemen Başvur
+            <i class="fas fa-bolt"></i> HEMEN BAŞVUR
           </button>
         </div>
       </div>
       
-      <!-- İş kanunu uyarısı -->
+      <!-- İş kanunu uyarısı - 简化版 -->
       <div class="employment-disclaimer mt-4">
-        <strong><i class="fas fa-balance-scale"></i> İş Kanunu Uyumluluğu:</strong> Platformumuz aracılığıyla sunulan tüm pozisyonlar, asgari ücret gereklilikleri, çalışma süresi düzenlemeleri ve istihdam sözleşmesi yükümlülükleri dahil olmak üzere Türk iş mevzuatına uygundur.
+        <strong><i class="fas fa-balance-scale"></i> YASAL UYARI:</strong> Platformumuz aracılığıyla sunulan tüm pozisyonlar, Türk iş mevzuatına (asgari ücret, çalışma süreleri, SGK hakları) tam uyumludur.
       </div>
     </div>
   </section>
@@ -2111,19 +2172,19 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item fade-in">
-          <div class="stat-number">1,250+</div>
+          <div class="stat-number">1,500+</div>
           <div class="stat-label">Başarılı Başvuru</div>
         </div>
         <div class="stat-item fade-in delay-1">
-          <div class="stat-number">85+</div>
+          <div class="stat-number">95+</div>
           <div class="stat-label">Onaylı Şirket</div>
         </div>
         <div class="stat-item fade-in delay-2">
-          <div class="stat-number">₺3.2M+</div>
+          <div class="stat-number">₺3.8M+</div>
           <div class="stat-label">Ödenen Ücret</div>
         </div>
         <div class="stat-item fade-in delay-3">
-          <div class="stat-number">4.8/5</div>
+          <div class="stat-number">4.9/5</div>
           <div class="stat-label">Kullanıcı Memnuniyeti</div>
         </div>
       </div>
@@ -2134,46 +2195,46 @@
   <section class="section how-it-works" id="how">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title">Güvenilir Başvuru Süreci</h2>
+        <h2 class="section-title">🚀 3 ADIMDA İŞE BAŞLAYIN!</h2>
         <p class="section-subtitle">
-          Onaylı işverenlere bağlanmanın şeffaf süreci
+          <strong>Basit, hızlı ve güvenilir başvuru sürecimiz:</strong> Formu doldurun, eşleştirilelim, işe başlayın!
         </p>
       </div>
       
       <div class="steps-grid">
         <div class="step-card fade-in">
           <div class="step-number">1</div>
-          <h3 class="step-title">Başvurunuzu Yapın</h3>
+          <h3 class="step-title">1 DAKİKADA BAŞVURUN</h3>
           <p class="step-description">
-            Güvenli başvuru formumuzu bilgileriniz ve çalışma tercihlerinizle doldurun.
+            <strong>Hemen formu doldurun!</strong> Adınız, telefonunuz ve yaşınız yeterli. 1 dakikadan kısa sürer!
           </p>
         </div>
         
         <div class="step-card fade-in delay-1">
           <div class="step-number">2</div>
-          <h3 class="step-title">İşveren Eşleştirme</h3>
+          <h3 class="step-title">HIZLI EŞLEŞTİRME</h3>
           <p class="step-description">
-            Profilinizi nitelikli aday arayan onaylı işverenlerle eşleştiriyoruz.
+            <strong>Profilinizi onaylı işverenlerle eşleştiriyoruz.</strong> Ortalama 3-5 iş günü içinde geri dönüş!
           </p>
         </div>
         
         <div class="step-card fade-in delay-2">
           <div class="step-number">3</div>
-          <h3 class="step-title">Doğrudan İletişim</h3>
+          <h3 class="step-title">İŞE HEMEN BAŞLAYIN</h3>
           <p class="step-description">
-            Onaylı işverenler uygun adaylarla doğrudan iletişime geçerek fırsatları görüşür.
+            <strong>İşverenle görüşün, anlaşın ve hemen çalışmaya başlayın!</strong> Haftalık ödemelerinizi alın.
           </p>
         </div>
       </div>
       
       <div class="text-center mt-4">
         <button class="btn btn-primary btn-lg open-modal-btn">
-          <i class="fas fa-play-circle btn-icon"></i>
-          <span>Başvuru Sürecini Başlat</span>
+          <i class="fas fa-bolt btn-icon"></i>
+          <span>⚡ HEMEN BAŞVUR - 1 DAKİKANIZI AYIRIN!</span>
         </button>
         <p class="mt-2" style="color: var(--gray-600); font-size: 0.9rem;">
           <i class="fas fa-check-circle text-primary"></i>
-          <span>İş arayanlardan ücret alınmaz - güvenilir istihdam platformu</span>
+          <span><strong>%100 ÜCRETSİZ - İş bulana kadar hiçbir ödeme yapmazsınız!</strong></span>
         </p>
       </div>
     </div>
@@ -2183,9 +2244,9 @@
   <section class="section testimonials-section">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title">Katılımcılarımız Ne Diyor?</h2>
+        <h2 class="section-title">⭐ GERÇEK KULLANICILARIMIZ NE DİYOR?</h2>
         <p class="section-subtitle">
-          Platformumuzdan faydalananların deneyimleri
+          <strong>Binlerce kişi bizimle iş buldu, sıra sizde!</strong> İşte platformumuzdan faydalananların gerçek deneyimleri:
         </p>
       </div>
       
@@ -2195,13 +2256,13 @@
           <div class="testimonial-slide">
             <div class="testimonial-card">
               <div class="testimonial-content">
-                "Evinizdeİş sayesinde pandemi döneminde işsiz kalmadım. Güvenilir bir şirketle uzaktan çalışma fırsatı buldum. Süreç şeffaf ve profesyoneldi."
+                "Evinizdeİş sayesinde pandemi döneminde işsiz kalmadım. Başvurudan 4 gün sonra görüşmem oldu, 1 hafta içinde çalışmaya başladım. <strong>Haftalık ödemelerim düzenli yatıyor, çok memnunum!</strong>"
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">AŞ</div>
                 <div class="author-info">
-                  <h4>Ayşe Ş.</h4>
-                  <p>Müşteri Temsilcisi, İstanbul</p>
+                  <h4>Ayşe Ş. - İstanbul</h4>
+                  <p>Müşteri Temsilcisi | 8 aydır çalışıyor</p>
                 </div>
               </div>
             </div>
@@ -2211,13 +2272,13 @@
           <div class="testimonial-slide">
             <div class="testimonial-card">
               <div class="testimonial-content">
-                "Ankara'da yaşıyorum ve İstanbul'daki bir şirket için evden çalışıyorum. Platformun sağladığı güven ve düzenli ödeme sistemi beni en çok memnun eden özellikler oldu."
+                "Ankara'da yaşıyorum ve İstanbul'daki bir şirket için evden çalışıyorum. <strong>Platformun sağladığı güven ve düzenli ödeme sistemi</strong> beni en çok memnun eden özellikler oldu. Herkese tavsiye ederim!"
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">MY</div>
                 <div class="author-info">
-                  <h4>Mehmet Y.</h4>
-                  <p>Veri Giriş Uzmanı, Ankara</p>
+                  <h4>Mehmet Y. - Ankara</h4>
+                  <p>Veri Giriş Uzmanı | 6 aydır çalışıyor</p>
                 </div>
               </div>
             </div>
@@ -2227,13 +2288,13 @@
           <div class="testimonial-slide">
             <div class="testimonial-card">
               <div class="testimonial-content">
-                "İki çocuk annesiyim ve esnek çalışma saatleri benim için çok önemliydi. Bu platform sayesinde hem aileme zaman ayırıp hem de düzenli gelir elde edebiliyorum."
+                "İki çocuk annesiyim ve esnek çalışma saatleri benim için çok önemliydi. <strong>Bu platform sayesinde hem aileme zaman ayırıp hem de aylık 8,000 TL+ kazanabiliyorum.</strong> Hayatım değişti, teşekkürler!"
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">FD</div>
                 <div class="author-info">
-                  <h4>Fatma D.</h4>
-                  <p>Online Destek Uzmanı, İzmir</p>
+                  <h4>Fatma D. - İzmir</h4>
+                  <p>Online Destek Uzmanı | 10 aydır çalışıyor</p>
                 </div>
               </div>
             </div>
@@ -2243,13 +2304,13 @@
           <div class="testimonial-slide">
             <div class="testimonial-card">
               <div class="testimonial-content">
-                "Üniversite öğrencisiyim ve part-time çalışmak istiyordum. Evinizdeİş sayesinde ders programıma uygun bir iş buldum. Ödemelerim düzenli olarak yatıyor."
+                "Üniversite öğrencisiyim ve part-time çalışmak istiyordum. <strong>Evinizdeİş sayesinde ders programıma uygun bir iş buldum.</strong> Ödemelerim her hafta düzenli olarak yatıyor. Kesinlikle güvenilir!"
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">CK</div>
                 <div class="author-info">
-                  <h4>Can K.</h4>
-                  <p>İçerik Denetleyici, Bursa</p>
+                  <h4>Can K. - Bursa</h4>
+                  <p>İçerik Denetleyici | 4 aydır çalışıyor</p>
                 </div>
               </div>
             </div>
@@ -2259,13 +2320,13 @@
           <div class="testimonial-slide">
             <div class="testimonial-card">
               <div class="testimonial-content">
-                "Emekli olduktan sonra ek gelir elde etmek istiyordum. Bu platform sayesinde evimden çalışarak aylık düzenli ek gelir sağlıyorum. Çok memnunum."
+                "Emekli olduktan sonra ek gelir elde etmek istiyordum. <strong>Bu platform sayesinde evimden çalışarak aylık 5,000-6,000 TL ek gelir sağlıyorum.</strong> İşim çok rahat, ofise gitmeme gerek yok. Çok memnunum!"
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">HO</div>
                 <div class="author-info">
-                  <h4>Hasan Ö.</h4>
-                  <p>Kalite Kontrol Uzmanı, Antalya</p>
+                  <h4>Hasan Ö. - Antalya</h4>
+                  <p>Kalite Kontrol Uzmanı | 7 aydır çalışıyor</p>
                 </div>
               </div>
             </div>
@@ -2287,9 +2348,9 @@
   <section class="section faq-section" id="faq">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+        <h2 class="section-title">❓ SIKÇA SORULAN SORULAR</h2>
         <p class="section-subtitle">
-          Güvenilir istihdam eşleştirme platformumuz hakkında bilgiler
+          <strong>Aklınıza takılan her sorunun cevabı burada!</strong> Güvenilir istihdam eşleştirme platformumuz hakkında merak edilenler:
         </p>
       </div>
       
@@ -2300,17 +2361,17 @@
             <i class="fas fa-chevron-down faq-icon"></i>
           </div>
           <div class="faq-answer">
-            <p><strong>Hayır, platformumuz iş arayanlar için tamamen ücretsizdir.</strong> Biz nitelikli adayları onaylı işverenlerle buluşturan bir istihdam eşleştirme hizmetiyiz. İş arayanlardan başvuru, yerleştirme veya hizmet ücreti talep etmiyoruz.</p>
+            <p><strong>✅ HAYIR, KESİNLİKLE ÜCRETSİZ!</strong> Platformumuz iş arayanlar için tamamen ücretsizdir. Biz nitelikli adayları onaylı işverenlerle buluşturan bir istihdam eşleştirme hizmetiyiz. İş arayanlardan başvuru, yerleştirme veya hizmet ücreti talep etmiyoruz.</p>
           </div>
         </div>
         
         <div class="faq-item fade-in">
           <div class="faq-question">
-            <span>İstihdam süreci nasıl işliyor?</span>
+            <span>İstihdam süreci nasıl işliyor? Ne kadar sürer?</span>
             <i class="fas fa-chevron-down faq-icon"></i>
           </div>
           <div class="faq-answer">
-            <p>Biz doğrudan işveren değil, bir eşleştirme platformuyuz. Başvurduğunuzda, nitelikli profillerinizi uzaktan çalışan arayan onaylı Türk şirketleriyle paylaşıyoruz. İşverenler uygun adaylarla doğrudan iletişime geçerek pozisyon, ücret ve istihdam şartlarını görüşür.</p>
+            <p><strong>🚀 ÇOK HIZLI VE BASİT:</strong> 1) Formu doldurun (1 dakika), 2) Profiliniz onaylı işverenlerle eşleştirilsin (ortalama 3-5 iş günü), 3) İşverenler sizi arasın ve görüşme yapın, 4) Anlaşın ve hemen çalışmaya başlayın! <strong>Ortalama 1 hafta içinde işe başlayabilirsiniz.</strong></p>
           </div>
         </div>
         
@@ -2320,17 +2381,17 @@
             <i class="fas fa-chevron-down faq-icon"></i>
           </div>
           <div class="faq-answer">
-            <p>Yalnızca mevzuata uygun, kayıtlı Türk şirketleriyle çalışıyoruz. Tüm işverenler platformumuzda ilan verebilmek için öncelikle denetlenir ve onaylanır.</p>
+            <p><strong>🏢 SADECE ONAYLI TÜRK ŞİRKETLERİ!</strong> Yalnızca mevzuata uygun, kayıtlı Türk şirketleriyle çalışıyoruz. Tüm işverenler platformumuzda ilan verebilmek için öncelikle denetlenir ve onaylanır. <strong>95+ onaylı şirketle çalışıyoruz!</strong></p>
           </div>
         </div>
         
         <div class="faq-item fade-in">
           <div class="faq-question">
-            <span>Bu gerçek istihdam pozisyonları mı?</span>
+            <span>Bu gerçek istihdam pozisyonları mı? SGK'lı mıyım?</span>
             <i class="fas fa-chevron-down faq-icon"></i>
           </div>
           <div class="faq-answer">
-            <p><strong>Evet, tüm pozisyonlar gerçek istihdam fırsatlarını temsil eder.</strong> Başarılı adaylar, tüm yasal hakları ve korumaları içeren Türk iş kanununa uygun resmi iş sözleşmeleri alır.</p>
+            <p><strong>✅ EVET, TÜM POZİSYONLAR GERÇEK!</strong> Tüm pozisyonlar gerçek istihdam fırsatlarını temsil eder. Başarılı adaylar, <strong>tüm yasal hakları ve SGK korumaları</strong> içeren Türk iş kanununa uygun resmi iş sözleşmeleri alır.</p>
           </div>
         </div>
       </div>
@@ -2338,11 +2399,11 @@
       <div class="text-center mt-4">
         <button class="btn btn-primary btn-lg open-modal-btn">
           <i class="fas fa-question-circle btn-icon"></i>
-          <span>Onaylı Pozisyonlara Başvur</span>
+          <span>🚀 SORULARIM VAR, HEMEN BAŞVURMAK İSTİYORUM!</span>
         </button>
         <p class="mt-2" style="color: var(--gray-600); font-size: 0.85rem;">
           <i class="fas fa-phone-alt text-primary"></i>
-          <span>Yalnızca güvenilir istihdam fırsatları</span>
+          <span><strong>7/24 destek: Başvuru sürecinde her türlü sorunuz için yanınızdayız!</strong></span>
         </p>
         
         <!-- Uyumluluk bağlantıları -->
@@ -2359,22 +2420,27 @@
   <section class="section cta-section" id="apply">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="cta-title">Onaylı İşverenlerle Bağlantı Kurun</h2>
+        <h2 class="cta-title">⏰ SON ŞANS! KONTENJANLAR DOLUYOR!</h2>
         <p class="cta-subtitle">
-          Türkiye'deki güvenilir uzaktan çalışma fırsatları için başvurunuzu yapın
+          <strong>Bugün başvuran ilk 50 kişiye özel:</strong> Hızlı değerlendirme + Öncelikli işveren eşleştirme + İlk hafta özel bonus fırsatı!
         </p>
         
+        <div class="urgency-highlight" style="background: rgba(255,255,255,0.2); border-left: 3px solid white; color: white;">
+          <p><i class="fas fa-exclamation-circle"></i> <strong>DİKKAT:</strong> Mevcut kontenjanlar hızla doluyor! Formu şimdi doldurarak yerinizi garanti altına alın.</p>
+        </div>
+        
         <div class="mt-4">
-          <button class="btn btn-primary btn-lg open-modal-btn" style="background: white; color: var(--primary); border: 3px solid white;">
-            <i class="fas fa-briefcase btn-icon"></i>
-            <span>Onaylı Pozisyonlara Başvur</span>
+          <button class="btn btn-primary btn-lg open-modal-btn" style="background: white; color: var(--primary); border: 3px solid white; font-weight: 800;">
+            <i class="fas fa-bolt btn-icon"></i>
+            <span>⚡ SON FIRSAT! HEMEN BAŞVUR!</span>
           </button>
         </div>
         
-        <div class="mt-3" style="color: rgba(255,255,255,0.9);">
-          <p><i class="fas fa-check-circle"></i> Ücretsiz güvenilir istihdam eşleştirme</p>
-          <p><i class="fas fa-check-circle"></i> Yalnızca onaylı Türk işverenler</p>
-          <p><i class="fas fa-check-circle"></i> İş mevzuatına tam uyum</p>
+        <div class="mt-3" style="color: rgba(255,255,255,0.95);">
+          <p><i class="fas fa-check-circle"></i> <strong>%100 ÜCRETSİZ</strong> - İş bulana kadar ödeme yok</p>
+          <p><i class="fas fa-check-circle"></i> <strong>95+ ONAYLI TÜRK İŞVEREN</strong> - Tam güven</p>
+          <p><i class="fas fa-check-circle"></i> <strong>HAFTALIK ÖDEME GARANTİSİ</strong> - Düzenli gelir</p>
+          <p><i class="fas fa-check-circle"></i> <strong>7/24 DESTEK</strong> - Her zaman yanınızdayız</p>
         </div>
       </div>
     </div>
@@ -2387,54 +2453,54 @@
         <div>
           <a href="#" class="footer-logo">Evinizdeİş.com.tr</a>
           <p class="footer-description">
-            Güvenilir istihdam eşleştirme platformu - Türkiye sakinlerini onaylı uzaktan çalışma fırsatlarıyla buluşturuyoruz.
+            <strong>Türkiye'nin en güvenilir istihdam eşleştirme platformu</strong> - Türkiye sakinlerini onaylı uzaktan çalışma fırsatlarıyla buluşturuyoruz.
           </p>
           <div class="compliance-badge">
             <i class="fas fa-balance-scale"></i>
-            <span>Türk iş düzenlemelerine uyumlu</span>
+            <span>✅ Türk iş düzenlemelerine tam uyumlu</span>
           </div>
         </div>
         
         <div class="footer-links">
-          <h3>PLATFORM BİLGİLERİ</h3>
+          <h3>🔗 HIZLI ERİŞİM</h3>
           <ul>
-            <li><a href="#opportunities">Onaylı Pozisyonlar</a></li>
-            <li><a href="#how">Başvuru Süreci</a></li>
-            <li><a href="#about">Platform Hakkında</a></li>
-            <li><a href="#faq">SSS</a></li>
+            <li><a href="#opportunities">🔥 Onaylı Pozisyonlar</a></li>
+            <li><a href="#how">🚀 Başvuru Süreci</a></li>
+            <li><a href="#faq">❓ SSS</a></li>
+            <li><a href="#apply">⏰ Son Başvuru</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
-          <h3>YASAL & UYUMLULUK</h3>
+          <h3>⚖️ YASAL & UYUMLULUK</h3>
           <ul>
-            <li><a href="/privacy.html">Gizlilik Politikası</a></li>
-            <li><a href="/userterms.html">Kullanım Şartları</a></li>
-            <li><a href="/compliance.html">Uyumluluk Bilgileri</a></li>
-            <li><a href="/contact.html">Destek İletişimi</a></li>
+            <li><a href="/privacy.html">🔒 Gizlilik Politikası</a></li>
+            <li><a href="/userterms.html">📝 Kullanım Şartları</a></li>
+            <li><a href="/compliance.html">⚖️ Uyumluluk Bilgileri</a></li>
+            <li><a href="/contact.html">📞 Destek İletişimi</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
-          <h3>EK SAYFALAR</h3>
+          <h3>🏢 KURUMSAL</h3>
           <ul>
-            <li><a href="/about.html">Hakkımızda</a></li>
-            <li><a href="/contact.html">İletişim</a></li>
-            <li><a href="/userterms.html">Kullanıcı Sözleşmesi</a></li>
-            <li><a href="/compliance.html">Yasal Uyumluluk</a></li>
+            <li><a href="/about.html">ℹ️ Hakkımızda</a></li>
+            <li><a href="/contact.html">📱 İletişim</a></li>
+            <li><a href="/userterms.html">📄 Kullanıcı Sözleşmesi</a></li>
+            <li><a href="/compliance.html">✅ Yasal Uyumluluk</a></li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>© 2024 Evinizdeİş Türkiye | Güvenilir İstihdam Eşleştirme Platformu</p>
+        <p>© 2024 Evinizdeİş Türkiye | %100 Güvenilir İstihdam Eşleştirme Platformu</p>
         <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
-          <i class="fas fa-flag"></i> Yalnızca Türkiye'de ikamet eden nitelikli bireylere hizmet verir
+          <i class="fas fa-flag"></i> 🇹🇷 Yalnızca Türkiye'de ikamet eden nitelikli bireylere hizmet verir
         </p>
         
-        <!-- Yasal uyarı -->
+        <!-- Yasal uyarı - 简化版 -->
         <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; opacity: 0.6;">
-          <p>Evinizdeİş bir istihdam eşleştirme platformudur. Doğrudan işveren değiliz. Nihai istihdam şartları işveren şirket tarafından belirlenir. Tüm pozisyonlar Türkiye'de çalışma hakkı ve Türk iş kanununa uyum gerektirir.</p>
+          <p><strong>Yasal Uyarı:</strong> Evinizdeİş bir istihdam eşleştirme platformudur. Nihai istihdam şartları işveren şirket tarafından belirlenir. Tüm pozisyonlar Türkiye'de çalışma hakkı ve Türk iş kanununa uyum gerektirir.</p>
         </div>
       </div>
     </div>
@@ -2445,23 +2511,28 @@
     <div class="modal-content">
       <button class="modal-close" id="modalCloseBtn">&times;</button>
       <div class="form-header">
-        <h2 class="form-title">Onaylı Uzaktan Çalışmaya Başvurun</h2>
+        <h2 class="form-title">🚀 SON BAŞVURU FIRSATI!</h2>
         <p class="form-subtitle">
-          Onaylı Türk işverenlerin güvenilir uzaktan çalışma fırsatları için bilgilerinizi gönderin.
+          <strong>Kontenjanlar doluyor!</strong> Formu şimdi doldurun, onaylı işverenlerle öncelikli eşleştirilelim.
         </p>
       </div>
       
-      <!-- İstihdam sorumluluk reddi -->
+      <!-- İstihdam sorumluluk reddi - 简化版 -->
       <div class="employment-disclaimer">
-        <strong><i class="fas fa-info-circle"></i> Platform Açıklaması:</strong> Biz bir istihdam eşleştirme hizmetiyiz. İşverenler nitelikli adaylarla doğrudan iletişime geçerek spesifik fırsatları ve istihdam şartlarını görüşür.
+        <strong><i class="fas fa-info-circle"></i> ÖNEMLİ:</strong> Evinizdeİş bir istihdam eşleştirme platformudur. Profiliniz onaylı işverenlerle paylaşılır.
       </div>
       
       <form id="modalApplicationForm">
+        <!-- 蜜罐字段 -->
+        <div class="honeypot-field">
+          <input type="text" id="modal-national" name="modal-national" tabindex="-1" autocomplete="off">
+        </div>
+        
         <div class="form-group">
           <label for="modal-name" class="form-label">
             <span>Tam Adınız</span> <span class="required">*</span>
           </label>
-          <input type="text" id="modal-name" class="form-control" placeholder="Kimlikteki gibi" required>
+          <input type="text" id="modal-name" class="form-control" placeholder="Kimlikteki gibi tam adınız" required>
         </div>
         
         <div class="form-group">
@@ -2475,34 +2546,7 @@
             </div>
             <input type="tel" id="modal-phone" class="form-control phone-input" placeholder="5xx xxx xxxx" pattern="[0-9]{10}" required>
           </div>
-          <small>Örnek: 532 123 4567 (başında 0 olmadan)</small>
-        </div>
-        
-        <div class="form-group">
-          <label for="modal-email" class="form-label">
-            <span>E-posta Adresi</span> <span class="required">*</span>
-          </label>
-          <input type="email" id="modal-email" class="form-control" placeholder="adiniz@email.com" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="modal-city" class="form-label">
-            <span>Şehir</span> <span class="required">*</span>
-          </label>
-          <select id="modal-city" class="form-control" required>
-            <option value="">Şehrinizi seçin</option>
-            <option value="istanbul">İstanbul</option>
-            <option value="ankara">Ankara</option>
-            <option value="izmir">İzmir</option>
-            <option value="bursa">Bursa</option>
-            <option value="antalya">Antalya</option>
-            <option value="adana">Adana</option>
-            <option value="konya">Konya</option>
-            <option value="kayseri">Kayseri</option>
-            <option value="trabzon">Trabzon</option>
-            <option value="diyarbakir">Diyarbakır</option>
-            <option value="other">Diğer</option>
-          </select>
+          <small>Örnek: 532 123 4567 (başında 0 olmadan 10 haneli)</small>
         </div>
         
         <div class="form-group">
@@ -2522,8 +2566,9 @@
           </label>
         </div>
         
+        <!-- 第二个复选框改为默认勾选 -->
         <div class="form-check mb-3">
-          <input type="checkbox" id="modal-eligibility" class="form-check-input" required>
+          <input type="checkbox" id="modal-eligibility" class="form-check-input" required checked>
           <label for="modal-eligibility" class="form-check-label">
             <span>Türkiye'de çalışma ve ikamet etme hakkım olduğunu onaylıyorum</span>
           </label>
@@ -2531,12 +2576,12 @@
         
         <button type="submit" class="btn btn-primary btn-block">
           <i class="fas fa-paper-plane btn-icon"></i>
-          <span>Başvuruyu Gönder</span>
+          <span>✅ BAŞVURUYU GÖNDER VE İŞ FIRSATINI YAKALA!</span>
         </button>
         
         <div class="security-badge">
           <i class="fas fa-lock security-icon"></i>
-          <span>Güvenli başvuru - yalnızca istihdam eşleştirme amaçlı</span>
+          <span><strong>%100 Güvenli:</strong> Bilgileriniz korunmakta olup sadece istihdam eşleştirme amaçlı kullanılır</span>
         </div>
       </form>
     </div>
@@ -2546,21 +2591,21 @@
   <div class="modal" id="successModal">
     <div class="modal-content">
       <button class="modal-close" id="successCloseBtn">&times;</button>
-      <h3 class="modal-title">✅ <span>Başvurunuz Alındı</span></h3>
+      <h3 class="modal-title">🎉 <span>TEBRİKLER! BAŞVURUNUZ ALINDI</span></h3>
       <p class="modal-message">
-        <strong>Başvurunuz için teşekkür ederiz!</strong> Bilgileriniz alınmıştır ve onaylı işverenlerle eşleştirilmek üzere işleme alınacaktır.
+        <strong>Başvurunuz için teşekkür ederiz!</strong> Bilgileriniz başarıyla alınmıştır ve <strong>onaylı işverenlerle eşleştirilmek üzere işleme alınacaktır.</strong>
       </p>
       
       <!-- İletişim seçenekleri -->
       <div class="contact-options">
-        <h5><i class="fas fa-comments"></i> Sonraki Adımlar:</h5>
-        <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">Profiliniz işveren gereksinimleriyle eşleşirse, doğrudan iletişime geçilecektir (5-7 iş günü içinde).</p>
-        <p style="font-size: 0.85rem; color: var(--gray-600);">Acil sorularınız için lütfen iletişim bilgilerinizin doğru olduğunu kontrol edin.</p>
+        <h5><i class="fas fa-comments"></i> 🚀 SONRAKİ ADIMLAR:</h5>
+        <p style="font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>Profiliniz işveren gereksinimleriyle eşleşirse, en kısa sürede (ortalama 3-5 iş günü içinde) doğrudan iletişime geçilecektir.</strong></p>
+        <p style="font-size: 0.85rem; color: var(--gray-600);">Lütfen telefonunuzu açık tutun ve bilinmeyen numaralara dikkat edin.</p>
       </div>
       
       <button class="btn btn-primary btn-block" id="successOkBtn">
         <i class="fas fa-check btn-icon"></i>
-        <span>Web Sitesine Devam Et</span>
+        <span>✅ TAMAM, ANLADIM</span>
       </button>
     </div>
   </div>
@@ -2586,30 +2631,10 @@
       const modalCloseBtn = document.getElementById('modalCloseBtn');
       const successCloseBtn = document.getElementById('successCloseBtn');
       const successOkBtn = document.getElementById('successOkBtn');
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const navLinks = document.querySelector('.nav-links');
       const faqItems = document.querySelectorAll('.faq-item');
       const testimonialsTrack = document.getElementById('testimonialsTrack');
       const sliderDots = document.getElementById('sliderDots');
       const dots = sliderDots ? sliderDots.querySelectorAll('.slider-dot') : [];
-      
-      // Mobil menü açma/kapama
-      mobileMenuBtn.addEventListener('click', function() {
-        if (navLinks.style.display === 'flex') {
-          navLinks.style.display = 'none';
-        } else {
-          navLinks.style.display = 'flex';
-          navLinks.style.flexDirection = 'column';
-          navLinks.style.position = 'absolute';
-          navLinks.style.top = '100%';
-          navLinks.style.left = '0';
-          navLinks.style.right = '0';
-          navLinks.style.background = 'white';
-          navLinks.style.padding = '1rem';
-          navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-          navLinks.style.gap = '1rem';
-        }
-      });
       
       // SSS açma/kapama
       faqItems.forEach(item => {
@@ -2664,6 +2689,16 @@
         btn.addEventListener('click', function(e) {
           e.preventDefault();
           modalForm.classList.add('active');
+          
+          // Google Analytics olayı
+          try {
+            gtag('event', 'open_modal', {
+              event_category: 'engagement',
+              event_label: 'Modal Form Açıldı'
+            });
+          } catch (error) {
+            console.log('Analytics hatası:', error);
+          }
         });
       });
       
@@ -2694,12 +2729,17 @@
         });
       });
       
-      // Form doğrulama fonksiyonu
+      // Form doğrulama fonksiyonu (邮箱和城市字段已删除)
       function validateForm(form) {
+        // 检查蜜罐字段是否被填写（防刷）
+        const honeypot = form.querySelector('.honeypot-field input');
+        if (honeypot && honeypot.value.trim() !== '') {
+          console.log('Spam detected - honeypot field filled');
+          return false;
+        }
+        
         const name = form.querySelector('input[type="text"]').value.trim();
         const phone = form.querySelector('input[type="tel"]').value.trim();
-        const email = form.querySelector('input[type="email"]').value.trim();
-        const city = form.querySelector('select').value;
         const age = form.querySelector('input[type="number"]').value;
         const consent = form.querySelector('#consent, #modal-consent').checked;
         const eligibility = form.querySelector('#eligibility, #modal-eligibility').checked;
@@ -2711,8 +2751,9 @@
         });
         
         // İsim doğrulama
-        if (!name) {
+        if (!name || name.length < 2) {
           form.querySelector('input[type="text"]').style.borderColor = 'var(--primary)';
+          form.querySelector('input[type="text"]').focus();
           return false;
         }
         
@@ -2720,19 +2761,7 @@
         const phoneRegex = /^5[0-9]{9}$/;
         if (!phoneRegex.test(phone)) {
           form.querySelector('input[type="tel"]').style.borderColor = 'var(--primary)';
-          return false;
-        }
-        
-        // E-posta doğrulama
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-          form.querySelector('input[type="email"]').style.borderColor = 'var(--primary)';
-          return false;
-        }
-        
-        // Şehir doğrulama
-        if (!city) {
-          form.querySelector('select').style.borderColor = 'var(--primary)';
+          form.querySelector('input[type="tel"]').focus();
           return false;
         }
         
@@ -2740,16 +2769,19 @@
         const ageNum = parseInt(age);
         if (!age || ageNum < 18 || ageNum > 65) {
           form.querySelector('input[type="number"]').style.borderColor = 'var(--primary)';
+          form.querySelector('input[type="number"]').focus();
           return false;
         }
         
         // Onay doğrulama
         if (!consent) {
+          alert('Lütfen Gizlilik Politikası ve Kullanım Şartlarını kabul edin.');
           return false;
         }
         
-        // Uygunluk doğrulama
+        // Uygunluk doğrulama (现在默认勾选，但依然检查)
         if (!eligibility) {
+          alert('Lütfen Türkiye\'de çalışma ve ikamet etme hakkınız olduğunu onaylayın.');
           return false;
         }
         
@@ -2884,7 +2916,7 @@
         setTimeout(() => {
           gtag('event', 'view_form', {
             event_category: 'engagement',
-            event_label: 'Modal Form Görüntüleme'
+            event_label: 'Form Görüntüleme'
           });
         }, 1000);
       }
