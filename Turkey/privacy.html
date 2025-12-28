@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gizlilik Politikası | Evinizdeİş - Türkiye'nin Güvenilir Uzaktan Çalışma Platformu</title>
+  <meta name="description" content="Evinizdeİş gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı ve korunduğu hakkında bilgi edinin." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Türk bayrağı renkleri kırmızı ve beyaz -->
+  <style>
+    :root {
+      /* Türk bayrağı renk paleti - Kırmızı & Beyaz */
+      --primary: #E30A17;
+      --secondary: #FFFFFF;
+      --accent: #C40000;
+      --light: #FFFFFF;
+      --dark: #1A202C;
+      --gray-50: #F9FAFB;
+      --gray-100: #F8F9FA;
+      --gray-200: #E9ECEF;
+      --gray-300: #DEE2E6;
+      --gray-600: #6C757D;
+      --gray-700: #495057;
+      --gray-800: #343A40;
+      
+      /* Türk sembolü ek renkler */
+      --turquoise: #1CA3A6;
+      --gold: #FFB300;
+      
+      /* Tipografi */
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* Boşluklar - Mobil için optimize */
+      --space-xs: 0.25rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      
+      /* Kenar yuvarlaklığı */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      
+      /* Gölgeler */
+      --shadow-sm: 0 1px 3px rgba(227, 10, 23, 0.1);
+      --shadow-md: 0 3px 10px rgba(227, 10, 23, 0.12);
+      --shadow-lg: 0 5px 20px rgba(227, 10, 23, 0.15);
+      
+      /* Geçişler */
+      --transition-fast: 0.15s ease;
+      --transition-base: 0.25s ease;
+    }
+    
+    /* === SIFIRLAMA & TEMEL STİLLER === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-800);
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-sm);
+    }
+    
+    .section {
+      padding: var(--space-lg) 0;
+    }
+    
+    @media (max-width: 768px) {
+      .section {
+        padding: var(--space-md) 0;
+      }
+    }
+    
+    /* === DÜĞMELER === */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-family: var(--font-heading);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-base);
+      text-align: center;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, #C40000, #A30000);
+      text-decoration: none;
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn-primary:hover::after {
+      left: 100%;
+    }
+    
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+    
+    .btn-block {
+      width: 100%;
+    }
+    
+    .btn-icon {
+      font-size: 1.1em;
+    }
+    
+    /* === BAŞLIK & NAVİGASYON === */
+    .header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      box-shadow: 0 2px 10px rgba(227, 10, 23, 0.1);
+    }
+    
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    @media (max-width: 1024px) {
+      .nav {
+        flex-wrap: wrap;
+      }
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .nav-links {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--gray-800);
+      text-decoration: none;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-cta {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .nav-cta {
+        display: block;
+        margin-left: 0.5rem;
+      }
+    }
+    
+    /* Mobil CTA butonu */
+    .mobile-cta-btn {
+      display: none;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 1023px) {
+      .mobile-cta-btn {
+        display: block;
+      }
+      
+      .nav-cta {
+        display: none;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-cta-btn {
+        display: none !important;
+      }
+    }
+    
+    /* === PRIVACY CONTENT === */
+    .privacy-content {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-md);
+      margin-top: var(--space-md);
+      line-height: 1.7;
+    }
+    
+    .privacy-header {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 2px solid var(--gray-200);
+    }
+    
+    .privacy-title {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .last-updated {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .privacy-section {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .privacy-section h2 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-top: var(--space-md);
+      margin-bottom: var(--space-sm);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .privacy-section h3 {
+      color: var(--dark);
+      font-size: 1.25rem;
+      margin-top: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .privacy-section p {
+      margin-bottom: 1rem;
+      color: var(--gray-700);
+    }
+    
+    .highlight-box {
+      background: var(--gray-50);
+      border-left: 4px solid var(--primary);
+      padding: var(--space-md);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: var(--space-md) 0;
+    }
+    
+    .highlight-box strong {
+      color: var(--primary);
+    }
+    
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-md) 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .info-table th {
+      background: var(--primary);
+      color: white;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .info-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--gray-200);
+      color: var(--gray-700);
+    }
+    
+    .info-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .info-table tr:nth-child(even) {
+      background: var(--gray-50);
+    }
+    
+    /* === ALT BİLGİ === */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: var(--space-lg) 0 var(--space-md);
+      border-top: 3px solid var(--primary);
+      margin-top: var(--space-xl);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .footer-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .footer-description {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+    
+    .footer-links h3 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .footer-links ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-left: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: var(--space-md);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.8rem;
+    }
+    
+    .compliance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+    
+    /* === ANİMASYONLAR === */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.4s ease forwards;
+    }
+    
+    /* === YARDIMCI SINIFLAR === */
+    .text-center {
+      text-align: center;
+    }
+    
+    .text-primary {
+      color: var(--primary);
+    }
+    
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 0.75rem; }
+    .mb-3 { margin-bottom: 1.25rem; }
+    .mb-4 { margin-bottom: 1.5rem; }
+    
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 0.75rem; }
+    .mt-3 { margin-top: 1.25rem; }
+    .mt-4 { margin-top: 1.5rem; }
+    
+    /* Türkçe font optimizasyonu */
+    body {
+      font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Türk kültürel elementleri */
+    .turkish-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e30a17' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: 300px;
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition-base);
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      border: none;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      transform: translateY(-5px);
+      background: var(--accent);
+    }
+    
+    /* Mobil optimizasyon */
+    @media (max-width: 768px) {
+      .privacy-content {
+        padding: var(--space-md);
+      }
+      
+      .privacy-title {
+        font-size: 1.5rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .info-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Türk deseni arka plan -->
+  <div class="turkish-pattern"></div>
+  
+  <!-- Başlık -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <span class="logo-text">Evinizdeİş</span>
+        </a>
+        
+        <div class="nav-links">
+          <a href="index.html#opportunities" class="nav-link">🔥 Onaylı Pozisyonlar</a>
+          <a href="index.html#how" class="nav-link">🚀 Başvuru Süreci</a>
+          <a href="index.html#faq" class="nav-link">❓ SSS</a>
+          <a href="index.html" class="btn btn-primary nav-cta">
+            <i class="fas fa-bolt"></i> Ana Sayfaya Dön
+          </a>
+        </div>
+        
+        <!-- Mobil CTA butonu -->
+        <div class="mobile-cta-container">
+          <a href="index.html" class="btn btn-primary mobile-cta-btn">
+            <i class="fas fa-home"></i> Ana Sayfa
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Ana İçerik -->
+  <section class="section">
+    <div class="container">
+      <div class="privacy-header fade-in">
+        <h1 class="privacy-title"><i class="fas fa-lock"></i> Gizlilik Politikası</h1>
+        <p class="last-updated">Son güncelleme: 15 Ocak 2024</p>
+        <p>Evinizdeİş olarak, gizliliğinize ve kişisel verilerinizin güvenliğine büyük önem veriyoruz. Bu politika, web sitemizi ziyaret ettiğinizde veya hizmetlerimizi kullandığınızda kişisel verilerinizi nasıl topladığımız, kullandığımız, koruduğumuz ve paylaştığımızı açıklar.</p>
+      </div>
+      
+      <div class="privacy-content fade-in">
+        <!-- Önemli Bilgi Kutusu -->
+        <div class="highlight-box">
+          <p><strong><i class="fas fa-info-circle"></i> ÖNEMLİ:</strong> Evinizdeİş bir istihdam eşleştirme platformudur. Kişisel verileriniz sadece istihdam eşleştirme amacıyla kullanılır ve 6698 sayılı Kişisel Verilerin Korunması Kanunu'na (KVKK) tam uyumludur.</p>
+        </div>
+        
+        <div class="privacy-section">
+          <h2>1. Topladığımız Bilgiler</h2>
+          <p>Platformumuzu kullanırken aşağıdaki türde bilgileri toplayabiliriz:</p>
+          
+          <h3>1.1. Doğrudan Sizden Toplanan Bilgiler</h3>
+          <ul>
+            <li><strong>Kimlik bilgileri:</strong> Tam adınız</li>
+            <li><strong>İletişim bilgileri:</strong> Telefon numaranız</li>
+            <li><strong>Demografik bilgiler:</strong> Yaşınız</li>
+            <li><strong>İstihdam bilgileri:</strong> Çalışma tercihleriniz ve yetkinlikleriniz (başvuru sırasında)</li>
+          </ul>
+          
+          <h3>1.2. Otomatik Olarak Toplanan Bilgiler</h3>
+          <ul>
+            <li><strong>Teknik bilgiler:</strong> IP adresiniz, tarayıcı türü, işletim sistemi</li>
+            <li><strong>Kullanım bilgileri:</strong> Web sitemizde geçirdiğiniz zaman, ziyaret ettiğiniz sayfalar</li>
+            <li><strong>Çerezler ve benzer teknolojiler:</strong> Web sitesi deneyiminizi iyileştirmek için</li>
+          </ul>
+        </div>
+        
+        <div class="privacy-section">
+          <h2>2. Bilgilerinizi Nasıl Kullanıyoruz?</h2>
+          <p>Topladığımız bilgileri aşağıdaki amaçlarla kullanıyoruz:</p>
+          
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>Kullanım Amacı</th>
+                <th>Açıklama</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>İstihdam Eşleştirme</strong></td>
+                <td>Profilinizi onaylı işverenlerle eşleştirmek</td>
+              </tr>
+              <tr>
+                <td><strong>İletişim</strong></td>
+                <td>İş fırsatları hakkında sizinle iletişime geçmek</td>
+              </tr>
+              <tr>
+                <td><strong>Hizmet Geliştirme</strong></td>
+                <td>Platformumuzu iyileştirmek ve yeni özellikler eklemek</td>
+              </tr>
+              <tr>
+                <td><strong>Güvenlik</strong></td>
+                <td>Platformumuzu kötüye kullanıma karşı korumak</td>
+              </tr>
+              <tr>
+                <td><strong>Yasal Yükümlülükler</strong></td>
+                <td>Yasal gerekliliklere uymak</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="privacy-section">
+          <h2>3. Bilgilerin Paylaşımı</h2>
+          <p>Kişisel verilerinizi yalnızca aşağıdaki durumlarda paylaşırız:</p>
+          
+          <h3>3.1. Onaylı İşverenlerle Paylaşım</h3>
+          <p>İstihdam eşleştirme amacıyla, sadece <strong>onaylı Türk şirketleriyle</strong> sınırlı bilgilerinizi paylaşırız:</p>
+          <ul>
+            <li>Adınız (tam ad)</li>
+            <li>Yaşınız</li>
+            <li>Çalışma tercihleriniz</li>
+            <li>İletişim bilgileriniz (sadece eşleştirme sonrasında ve açık onayınızla)</li>
+          </ul>
+          
+          <h3>3.2. Diğer Paylaşımlar</h3>
+          <p>Kişisel verilerinizi aşağıdaki durumlarda paylaşabiliriz:</p>
+          <ul>
+            <li><strong>Yasal zorunluluklar:</strong> Mahkeme kararı veya yasal gereklilik durumunda</li>
+            <li><strong>İş ortakları:</strong> Hizmet sağlayıcılarımız (hosting, analiz vb.)</li>
+            <li><strong>İzin verdiğinizde:</strong> Açık onayınızla üçüncü taraflarla</li>
+          </ul>
+          
+          <div class="highlight-box">
+            <p><strong><i class="fas fa-shield-alt"></i> ÖNEMLİ GÜVENLİK NOTU:</strong> Telefon numaranız, sadece başarılı eşleştirme sonrasında ve açık onayınızla işverenlerle paylaşılır. Ön eşleştirme aşamasında iletişim bilgileriniz paylaşılmaz.</p>
+          </div>
+        </div>
+        
+        <div class="privacy-section">
+          <h2>4. Veri Güvenliği</h2>
+          <p>Kişisel verilerinizi korumak için çeşitli güvenlik önlemleri alıyoruz:</p>
+          
+          <ul>
+            <li><strong>Şifreleme:</strong> Verileriniz şifrelenmiş bağlantılar (HTTPS) üzerinden iletilir</li>
+            <li><strong>Erişim kontrolleri:</strong> Verilerinize sadece yetkili personel erişebilir</li>
+            <li><strong>Düzenli denetimler:</strong> Güvenlik sistemlerimiz düzenli olarak test edilir</li>
+            <li><strong>Eğitim:</strong> Personelimiz veri güvenliği konusunda düzenli eğitim alır</li>
+          </ul>
+        </div>
+        
+        <div class="privacy-section">
+          <h2>5. Veri Saklama Süresi</h2>
+          <p>Kişisel verilerinizi, amacını gerçekleştirmek için gerekli olan süre boyunca saklarız:</p>
+          
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>Veri Türü</th>
+                <th>Saklama Süresi</th>
+                <th>Silme Koşulu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Başvuru bilgileri</td>
+                <td>2 yıl</td>
+                <td>Başvuru tarihinden itibaren</td>
+              </tr>
+              <tr>
+                <td>Başarılı eşleştirme</td>
+                <td>5 yıl</td>
+                <td>İş ilişkisi sona erdikten sonra</td>
+              </tr>
+              <tr>
+                <td>Teknik veriler</td>
+                <td>1 yıl</td>
+                <td>Otomatik olarak silinir</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p class="mt-3">Verilerinizi daha erken silmek isterseniz, <a href="#contact">İletişim</a> bölümündeki bilgileri kullanarak bize ulaşabilirsiniz.</p>
+        </div>
+        
+        <div class="privacy-section">
+          <h2>6. KVKK Haklarınız</h2>
+          <p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında aşağıdaki haklara sahipsiniz:</p>
+          
+          <ul>
+            <li><strong>Bilgi edinme hakkı:</strong> Verilerinizin işlenip işlenmediğini öğrenme</li>
+            <li><strong>Erişim hakkı:</strong> Verilerinize erişim talep etme</li>
+            <li><strong>Düzeltme hakkı:</strong> Yanlış veya eksik verilerin düzeltilmesini isteme</li>
+            <li><strong>Silme hakkı:</strong> Verilerinizin silinmesini isteme (unutulma hakkı)</li>
+            <li><strong>İşleme itiraz hakkı:</strong> Verilerinizin işlenmesine itiraz etme</li>
+            <li><strong>Aktarım hakkı:</strong> Verilerinizin başka bir kuruluşa aktarılmasını isteme</li>
+          </ul>
+          
+          <div class="highlight-box mt-3">
+            <p><strong><i class="fas fa-file-contract"></i> HAKLARINIZI KULLANMAK İÇİN:</strong> Yukarıdaki haklarınızı kullanmak için <a href="#contact">İletişim</a> bölümündeki bilgileri kullanarak bize ulaşabilirsiniz. Talebinizi en geç 30 gün içinde yanıtlayacağız.</p>
+          </div>
+        </div>
+        
+        <div class="privacy-section">
+          <h2>7. Çerezler (Cookies)</h2>
+          <p>Web sitemiz, kullanıcı deneyiminizi iyileştirmek için çerezler ve benzer teknolojiler kullanır:</p>
+          
+          <h3>7.1. Kullandığımız Çerez Türleri</h3>
+          <ul>
+            <li><strong>Zorunlu çerezler:</strong> Web sitesinin düzgün çalışması için gerekli</li>
+            <li><strong>Performans çerezleri:</strong> Site performansını analiz etmek için</li>
+            <li><strong>İşlevsellik çerezleri:</strong> Tercihlerinizi hatırlamak için</li>
+          </ul>
+          
+          <h3>7.2. Çerez Tercihlerinizi Yönetme</h3>
+          <p>Tarayıcınızın ayarlarından çerezleri kontrol edebilir veya devre dışı bırakabilirsiniz. Ancak, bazı çerezleri devre dışı bırakırsanız web sitemizin bazı özellikleri düzgün çalışmayabilir.</p>
+        </div>
+        
+        <div class="privacy-section">
+          <h2>8. Üçüncü Taraf Bağlantılar</h2>
+          <p>Web sitemizde, gizlilik politikaları bize ait olmayan diğer web sitelerine bağlantılar bulunabilir. Bu bağlantılara tıkladığınızda, üçüncü taraf web sitelerinin gizlilik politikaları geçerli olacaktır. Lütfen bu sitelerin gizlilik politikalarını inceleyin.</p>
+        </div>
+        
+        <div class="privacy-section">
+          <h2>9. Çocukların Gizliliği</h2>
+          <p>Hizmetlerimiz 18 yaşından küçük bireylere yönelik değildir. Bilerek 18 yaşından küçük bireylerden kişisel veri toplamıyoruz. Eğer bir ebeveyn veya veli iseniz ve çocuğunuzun bize kişisel veri gönderdiğini düşünüyorsanız, lütfen bizimle iletişime geçin. Bu tür verileri derhal sileceğiz.</p>
+        </div>
+        
+        <div class="privacy-section">
+          <h2 id="contact">10. İletişim</h2>
+          <p>Gizlilik politikamızla ilgili sorularınız, endişeleriniz veya KVKK kapsamındaki haklarınızı kullanmak için aşağıdaki iletişim bilgilerinden bize ulaşabilirsiniz:</p>
+          
+          <div class="highlight-box">
+            <p><strong>Veri Sorumlusu:</strong> Evinizdeİş Platformu</p>
+            <p><strong>E-posta:</strong> gizlilik@ins.baby</p>
+            <p><strong>Telefon:</strong> +90 (212) 123 45 67 (Hafta içi 09:00-18:00)</p>
+            <p><strong>Adres:</strong> [Şirket Adresi], İstanbul, Türkiye</p>
+            <p class="mt-2"><strong>Yanıt süresi:</strong> Taleplerinizi en geç 30 iş günü içinde yanıtlayacağız.</p>
+          </div>
+        </div>
+        
+        <div class="privacy-section">
+          <h2>11. Politika Değişiklikleri</h2>
+          <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Politikada önemli değişiklikler yapıldığında, web sitemizde yayınlayarak ve gerekirse e-posta yoluyla sizi bilgilendirerek size bildireceğiz. Politikanın en güncel versiyonuna her zaman bu sayfadan ulaşabilirsiniz.</p>
+          
+          <div class="highlight-box mt-3">
+            <p><strong><i class="fas fa-history"></i> POLİTİKA GEÇMİŞİ:</strong></p>
+            <ul>
+              <li><strong>15 Ocak 2024:</strong> Kapsamlı güncelleme - KVKK uyumluluğu geliştirmeleri</li>
+              <li><strong>1 Temmuz 2023:</strong> İlk yayınlanma</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="text-center mt-4">
+          <a href="index.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-home btn-icon"></i>
+            <span>Ana Sayfaya Dön</span>
+          </a>
+          <p class="mt-3" style="color: var(--gray-600); font-size: 0.9rem;">
+            <i class="fas fa-shield-alt text-primary"></i>
+            <span>Gizliliğiniz bizim için önemlidir. Verilerinizi güvende tutmak için çalışıyoruz.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alt Bilgi -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">Evinizdeİş.com.tr</a>
+          <p class="footer-description">
+            Türkiye'nin en güvenilir istihdam eşleştirme platformu - Türkiye sakinlerini onaylı uzaktan çalışma fırsatlarıyla buluşturuyoruz.
+          </p>
+          <div class="compliance-badge">
+            <i class="fas fa-balance-scale"></i>
+            <span>KVKK ve Türk iş mevzuatına uyumlu</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>🔗 HIZLI ERİŞİM</h3>
+          <ul>
+            <li><a href="index.html#opportunities">🔥 Onaylı Pozisyonlar</a></li>
+            <li><a href="index.html#how">🚀 Başvuru Süreci</a></li>
+            <li><a href="index.html#faq">❓ SSS</a></li>
+            <li><a href="index.html#apply">⏰ Son Başvuru</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>⚖️ YASAL & UYUMLULUK</h3>
+          <ul>
+            <li><a href="privacy.html" class="active">🔒 Gizlilik Politikası</a></li>
+            <li><a href="userterms.html">📝 Kullanım Şartları</a></li>
+            <li><a href="compliance.html">⚖️ Uyumluluk Bilgileri</a></li>
+            <li><a href="contact.html">📞 Destek İletişimi</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>🏢 KURUMSAL</h3>
+          <ul>
+            <li><a href="about.html">ℹ️ Hakkımızda</a></li>
+            <li><a href="contact.html">📱 İletişim</a></li>
+            <li><a href="userterms.html">📄 Kullanıcı Sözleşmesi</a></li>
+            <li><a href="compliance.html">✅ Yasal Uyumluluk</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 Evinizdeİş Türkiye | %100 Güvenilir İstihdam Eşleştirme Platformu</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+          <i class="fas fa-flag"></i> 🇹🇷 Yalnızca Türkiye'de ikamet eden nitelikli bireylere hizmet verir
+        </p>
+        
+        <!-- Yasal uyarı -->
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; opacity: 0.6;">
+          <p><strong>Yasal Uyarı:</strong> Evinizdeİş bir istihdam eşleştirme platformudur. Nihai istihdam şartları işveren şirket tarafından belirlenir. Tüm pozisyonlar Türkiye'de çalışma hakkı ve Türk iş kanununa uyum gerektirir.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Back to top button
+      const backToTop = document.getElementById('backToTop');
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+      
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Fade in animations
+      const fadeElements = document.querySelectorAll('.fade-in');
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      fadeElements.forEach(el => {
+        observer.observe(el);
+      });
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          if (this.getAttribute('href') !== '#') {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId.startsWith('#')) {
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                window.scrollTo({
+                  top: targetElement.offsetTop - 80,
+                  behavior: 'smooth'
+                });
+              }
+            }
+          }
+        });
+      });
+      
+      // Add active class to current page in footer
+      const currentPage = window.location.pathname.split('/').pop();
+      const footerLinks = document.querySelectorAll('.footer-links a');
+      footerLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
